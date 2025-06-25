@@ -1,0 +1,13 @@
+baseURL      = 'https://brick.camp/'
+languageCode = 'en-us'
+title        = 'BrickCamp'
+
+[caches]
+  [caches.getresource]
+    dir = ':resourceDir/_req'
+
+[taxonomies]
+part = 'parts'
+size = 'size'
+uses = 'uses'
+list = 'lists'

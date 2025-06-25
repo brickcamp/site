@@ -1,0 +1,55 @@
+{{/* ################################*/}}
+{{ $url         := .Get "url"         -}}
+{{ $anchor      := .Get "anchor"      -}}
+{{ $title       := .Get "title"       -}}
+{{ $date        := .Get "date"        -}}
+{{ $author      := .Get "author"      -}}
+{{ $publisher   := .Get "publisher"   -}}
+{{ $imageURL    := .Get "image"       -}}
+{{ $description := .Get "description" -}}
+{{/* ################################*/}}
+
+{{/* check URL */}}
+{{ with $url -}}
+  {{ $url = urls.Parse . -}}
+{{ else -}}
+  {{ errorf "Linkbox shortcode must have a url parameter." -}}  
+{{ end -}}
+{{ if not $url.IsAbs -}}
+  {{ errorf "Linkbox can't link non-absolute url %q" $url.String -}}
+{{ end -}}
+
+{{/* prepare API */}}
+{{ $apiURL  := print "https://api.microlink.io/?url=" $url -}}
+{{ $apiKey  := site.Data.secrets.microlink -}}
+{{ $apiArgs := dict -}}
+{{ with $apiKey -}}
+  {{ $apiArgs = dict "headers" (dict "x-api-key" . ) -}}
+{{ end -}}
+
+{{/* call API */}}
+{{- $apiResponse := "{}" }}
+{{ with try (resources.GetRemote $apiURL $apiArgs) -}}
+  {{ with .Err -}}
+    {{ warnf "%s" . -}}
+  {{ else with .Content -}}
+    {{ $apiResponse = . -}}
+  {{ else -}}
+    {{ warnf "Unable to get remote resource %q" $apiURL -}}
+  {{ end -}}
+{{ end -}}
+
+{{/* parse response */}}
+{{- with ($apiResponse | transform.Unmarshal ) -}}
+  {{ $url         := urls.Parse .url | default $url -}}
+  {{ $title       := $title          | default .title       | default "Untitled"     -}}
+  {{ $date        := $date           | default .date        | default time.Now.UTC   -}}
+  {{ $author      := $author         | default .author      | default $.Get "author" -}}
+  {{ $publisher   := $publisher      | default .publisher   | default $url.Hostname  -}}
+  {{ $imageURL    := $imageURL       | default .image.url   | default "" -}}
+  {{ $description := $description    | default .description | default "" -}}
+{{ else -}}
+  {{ warnf "Unable to parse remote resource %q" $apiURL -}}
+{{ end -}}
+
+<!-- TODO -->

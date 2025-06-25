@@ -1,0 +1,16 @@
+.DS_Store
+.vscode
+node_modules
+tmp
+
+.env
+/data/secrets.toml
+
+/hugo.exe
+/hugo
+/hugo_stats.json
+/.hugo_build.lock
+
+/public
+/resources/_gen
+/dist
