@@ -1,0 +1,121 @@
+{{ $any  := "__any" }}
+{{ $else := "__else" }}
+
+{{/* Collect all combinations per filter */}}
+{{ $combinations := newScratch }}
+{{ range $f := $.Site.Data.entries.filters }}
+  {{/* Any Type + Any Value */}}
+  {{ $basePath := print "filtered/" $f.slug }}
+  {{ $filterPath := print $basePath "-" $any "-" $any }}
+  {{ $combinations.Add $filterPath (dict 
+    "base" $f.slug
+  )}}
+
+  {{/* Any Type + Listed Value */}}
+  {{ $values := slice }}
+  {{ range $v := $f.values }}
+    {{ $valuePath := print $basePath "-" $any "-" $v.slug }}
+    {{ $combinations.Add $valuePath (dict
+      "base"  $f.slug
+      "value" $v.slug
+    )}}
+    {{ $values = $values | append $v.slug }}
+  {{ end }}
+
+  {{/* Any Type + Unlisted Value */}}
+  {{ with $values }}
+    {{ $valuePath := print $basePath "-" $any "-" $else }}
+    {{ $combinations.Add $valuePath (dict
+      "base"      $f.slug
+      "notValues" $values
+    )}}
+  {{ end }}
+
+  {{/* Listed Type + Any Value */}}
+  {{ $types := slice }}
+  {{ range $t := $f.types }}
+    {{ $typePath := print $basePath "-" $t.slug "-" $any }}
+    {{ $combinations.Add $typePath (dict
+      "base"  $f.slug
+      "type"  $t.slug
+    )}}
+    {{ $types = $types | append $t.slug }}
+
+    {{/* Listed Type + Listed Value */}}
+    {{ range $v := $f.values }}
+      {{ $valuePath := print $basePath "-" $t.slug "-" $v.slug }}
+      {{ $combinations.Add $valuePath (dict
+        "base"  $f.slug
+        "type"  $t.slug
+        "value" $v.slug
+      )}}
+    {{ end }}
+
+    {{/* Listed Type + Unlisted Value */}}
+    {{ with $values }}
+      {{ $valuePath := print $basePath "-" $t.slug "-" $else }}
+      {{ $combinations.Add $valuePath (dict
+        "base"      $f.slug
+        "type"      $t.slug
+        "notValues" $values
+      )}}
+    {{ end }}
+  {{ end }}
+
+  {{/* Unlisted Type + Any Value */}}
+  {{ with $types }}
+    {{ $typePath := print $basePath "-" $else "-" $any }}
+    {{ $combinations.Add $typePath (dict
+      "base"     $f.slug
+      "notTypes" $types
+    )}}
+
+    {{/* Unlisted Type + Listed Value */}}
+    {{ range $v := $f.values }}
+      {{ $valuePath := print $basePath "-" $else "-" $v.slug }}
+      {{ $combinations.Add $valuePath (dict
+        "base"     $f.slug
+        "notTypes" $types
+        "value"    $v.slug
+      )}}
+    {{ end }}
+
+    {{/* Unlisted Type + Unlisted Value */}}
+    {{ with $values }}
+      {{ $valuePath := print $basePath "-" $else "-" $else }}
+      {{ $combinations.Add $valuePath (dict
+        "base"      $f.slug
+        "notTypes"  $types
+        "notValues" $values
+      )}}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Create lookup file for each combination */}}
+{{ range $path, $filter := $combinations.Values }}
+  {{ $page := dict
+    "title"   $path
+    "kind"    "page"
+    "path"    $path
+    "outputs" (slice "json")
+    "layout"  "filtered"
+    "params"  (dict "filter" $filter)
+    "sitemap" (dict "disable" true)
+  }}
+  {{ $.AddPage $page }}
+{{ end }}
+
+{{/* Create lookup file for each sort order */}}
+{{ range $sorting := $.Site.Data.entries.sortings.options }}
+  {{ $page := dict
+    "title"   $sorting.title
+    "kind"    "page"
+    "path"    (print "sorted/" $sorting.slug)
+    "outputs" (slice "json")
+    "layout"  "sorted"
+    "params"  (dict "sorting" $sorting)
+    "sitemap" (dict "disable" true)
+  }}
+  {{ $.AddPage $page }}
+{{ end }}

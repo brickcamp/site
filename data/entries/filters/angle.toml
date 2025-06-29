@@ -1,0 +1,31 @@
+title = 'Angles'
+slug  = 'angle'
+sort  = 10
+
+[[types]]
+title = 'Stud Tilt'
+slug  = 'studtilt'
+
+[[types]]
+title = 'Stud Turn'
+slug  = 'studturn'
+
+[[values]]
+title = '180°'
+slug  = '180'
+
+[[values]]
+title = '90°'
+slug  = '90'
+
+[[values]]
+title = '60°'
+slug  = '60'
+
+[[values]]
+title = '45°'
+slug  = '45'
+
+[[values]]
+title = '30°'
+slug  = '30'

@@ -1,0 +1,54 @@
+default = 'by-date-descending'
+
+[[options]]
+title = 'Newest'
+slug  = 'by-date-descending'
+field = 'Date'
+order = 'desc'
+
+[[options]]
+title = 'Oldest'
+slug  = 'by-date-ascending'
+field = 'Date'
+order = 'asc'
+
+[[options]]
+title = 'A – Z'
+slug  = 'by-title-ascending'
+field = 'Title'
+order = 'asc'
+
+[[options]]
+title = 'Z – A'
+slug  = 'by-title-descending'
+field = 'Title'
+order = 'desc'
+
+[[options]]
+title = 'Least Parts'
+slug  = 'by-partcount-ascending'
+field = 'Store.max_partcounts'  # assume worst case
+order = 'asc'
+
+[[options]]
+title = 'Most Parts'
+slug  = 'by-partcount-descending'
+field = 'Store.min_partcounts'  # assume worst case
+order = 'desc'
+
+[[options]]
+title = 'Smallest'
+slug  = 'by-volume-ascending'
+field = 'Store.volume'
+order = 'asc'
+
+[[options]]
+title = 'Largest'
+slug  = 'by-volume-descending'
+field = 'Store.volume'
+order = 'desc'
+
+[[options]]
+title = 'Random'
+slug  = 'in-random-order'
+field = 'Random'
