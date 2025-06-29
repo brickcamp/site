@@ -6,6 +6,14 @@ title        = 'BrickCamp'
   [caches.getresource]
     dir = ':resourceDir/_req'
 
+[outputs]
+  home = ['html', 'rss']
+  page = ['html']
+  rss = ['rss']
+  section = ['html']
+  taxonomy = ['html']
+  term = ['html']
+
 [uglyURLs]
   _data = true
 
