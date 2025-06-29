@@ -1,0 +1,79 @@
+# Part-based units by size
+[ l ]
+title  = 'LDraw Unit'
+one    = 'LDU'
+many   = 'LDU'
+factor = 1
+system = 'parts'
+
+[ p ]
+title  = 'Height of a plate'
+one    = 'plate'
+many   = 'plates'
+factor = 8
+system = 'parts'
+
+[ s ]
+title  = 'Width of a stud'
+one    = 'stud'
+many   = 'studs'
+factor = 20
+system = 'parts'
+
+[ b ]
+title  = 'Height of a brick'
+one    = 'brick'
+many   = 'bricks'
+factor = 24
+system = 'parts'
+
+[ t ]
+title  = 'Length of a train track'
+one    = 'track'
+many   = 'tracks'
+factor = 320
+system = 'parts'
+
+# Metric units by size
+[ mm ]
+title  = 'Millimeters'
+one    = 'mm'
+many   = 'mm'
+factor = 2.5047
+system = 'metric'
+
+[ cm ]
+title  = 'Centimeters'
+one    = 'cm'
+many   = 'cm'
+factor = 25.0470
+system = 'metric'
+
+[ m ]
+title  = 'Meters'
+one    = 'm'
+many   = 'm'
+factor = 2504.6963
+system = 'metric'
+
+# Imperial units by size
+[ in ]
+title  = 'Inches'
+one    = 'in'
+many   = 'in'
+factor = 63.6193
+system = 'imperial'
+
+[ ft ]
+title  = 'Feet'
+one    = 'ft'
+many   = 'ft'
+factor = 763.4314
+system = 'imperial'
+
+[ yd ]
+title  = 'Yard'
+one    = 'yd'
+many   = 'yd'
+factor = 2290.2943
+system = 'imperial'

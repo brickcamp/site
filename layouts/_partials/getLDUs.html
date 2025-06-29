@@ -1,0 +1,15 @@
+{{/* ****************** */}}
+{{- $numberWithUnit := . -}}
+{{/* ****************** */}}
+
+{{- $number := int   (index (findRE `^\d+`       $numberWithUnit 1) 0) -}}
+{{- $string := lower (index (findRE `[a-zA-Z]+$` $numberWithUnit 1) 0) -}}
+
+{{- $units := site.Data.entries.units.lengths -}}
+{{- $unit  := index $units $string -}}
+{{- if eq $unit nil -}}
+  {{- errorf "Invalid unit in '%s'" $numberWithUnit -}}
+{{- end -}}
+
+{{- $result := mul $unit.factor $number -}}
+{{- return $result -}}
