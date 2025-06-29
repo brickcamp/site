@@ -1,0 +1,7 @@
+{{- $sorting := .Params.sorting -}}
+{{- $pages := where site.RegularPages "Section" "entries" -}}
+{{- $pages := sort $pages $sorting.field $sorting.order -}}
+
+{{- range $pages }}
+"{{ .RelPermalink }}"
+{{- end -}}

@@ -6,8 +6,11 @@ title        = 'BrickCamp'
   [caches.getresource]
     dir = ':resourceDir/_req'
 
+[uglyURLs]
+  _data = true
+
 [taxonomies]
-part = 'parts'
-size = 'size'
-uses = 'uses'
-list = 'lists'
+  part = 'parts'
+  size = 'size'
+  uses = 'uses'
+  tag  = 'tags'

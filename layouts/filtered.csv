@@ -1,0 +1,47 @@
+{{- $filter := .Params.filter -}}
+
+{{- $entries  := slice -}}
+{{- range $tag, $weightedPages := site.Taxonomies.tags -}}
+  {{- $tagFilter := partial "getFilterForTag" $tag -}}
+
+  {{- with $filter.base -}}
+    {{- if ne . $tagFilter.base -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with $filter.type -}}
+    {{- if ne . $tagFilter.type -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with $filter.value -}}
+    {{- if ne . $tagFilter.value -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with $filter.notTypes -}}
+    {{- if in . $tagFilter.type -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with $filter.notValues -}}
+    {{- if in . $tagFilter.value -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+  
+  {{- range $weightedPages }}
+    {{- $entry := print "'" .RelPermalink "'" -}}
+    {{- $entries = $entries | append $entry -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $entries = sort $entries -}}
+{{- $entries = $entries | uniq -}}
+{{- range $entries -}}
+{{ . }}
+{{ end -}}

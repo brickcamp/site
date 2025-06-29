@@ -98,7 +98,7 @@
     "title"   $path
     "kind"    "page"
     "path"    $path
-    "outputs" (slice "json")
+    "outputs" (slice "csv")
     "layout"  "filtered"
     "params"  (dict "filter" $filter)
     "sitemap" (dict "disable" true)
@@ -109,13 +109,13 @@
 {{/* Create lookup file for each sort order */}}
 {{ range $sorting := $.Site.Data.entries.sortings.options }}
   {{ $page := dict
-    "title"   $sorting.title
-    "kind"    "page"
-    "path"    (print "sorted/" $sorting.slug)
-    "outputs" (slice "json")
-    "layout"  "sorted"
-    "params"  (dict "sorting" $sorting)
-    "sitemap" (dict "disable" true)
+    "title"    $sorting.title
+    "kind"     "page"
+    "path"     (print "sorted/" $sorting.slug)
+    "outputs"  (slice "csv")
+    "layout"   "sorted"
+    "params"   (dict "sorting" $sorting)
+    "sitemap"  (dict "disable" true)
   }}
   {{ $.AddPage $page }}
 {{ end }}
