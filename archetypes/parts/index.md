@@ -32,8 +32,8 @@ aliases = [
 {{- end }}
 
 [params]
-  part_url = '{{ $url }}'
+rebrickableURL = '{{ $url }}'
   {{ with $image -}}
-  images   = ['{{ $image }}']
+images = ['{{ $image }}']
   {{- end }}
 +++
