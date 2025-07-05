@@ -1,0 +1,14 @@
+.dark-only,
+.light-only {
+  display: none;
+}
+:root[data-bs-theme="dark"] .dark-only {
+  display: initial;
+}
+:root[data-bs-theme="light"] .light-only {
+  display: initial;
+}
+
+:root[data-bs-theme="dark"] img.dark-filter {
+  filter: brightness(95%) invert() hue-rotate(180deg);
+}

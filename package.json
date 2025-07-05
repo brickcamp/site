@@ -1,0 +1,16 @@
+{
+  "name": "brick-camp",
+  "version": "1.0.0",
+  "description": "Visual Dictionary of Brick Building Techniques",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BrickCamp",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1"
+  }
+}

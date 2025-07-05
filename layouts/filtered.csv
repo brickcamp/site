@@ -2,34 +2,34 @@
 
 {{- $entries  := slice -}}
 {{- range $tag, $weightedPages := site.Taxonomies.tags -}}
-  {{- $tagFilter := partial "getFilterForTag" $tag -}}
+  {{- $tagSegments := partial "func/getTagSegments" $tag -}}
 
   {{- with $filter.base -}}
-    {{- if ne . $tagFilter.base -}}
+    {{- if ne . $tagSegments.base -}}
       {{- continue -}}
     {{- end -}}
   {{- end -}}
 
   {{- with $filter.type -}}
-    {{- if ne . $tagFilter.type -}}
+    {{- if ne . $tagSegments.type -}}
       {{- continue -}}
     {{- end -}}
   {{- end -}}
 
   {{- with $filter.value -}}
-    {{- if ne . $tagFilter.value -}}
+    {{- if ne . $tagSegments.value -}}
       {{- continue -}}
     {{- end -}}
   {{- end -}}
 
   {{- with $filter.notTypes -}}
-    {{- if in . $tagFilter.type -}}
+    {{- if in . $tagSegments.type -}}
       {{- continue -}}
     {{- end -}}
   {{- end -}}
 
   {{- with $filter.notValues -}}
-    {{- if in . $tagFilter.value -}}
+    {{- if in . $tagSegments.value -}}
       {{- continue -}}
     {{- end -}}
   {{- end -}}

@@ -1,0 +1,20 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <meta name="description" content="A brief description of your page.">
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  {{- $css := resources.Match "css/**.css" | resources.Concat "main.css" | css.PostCSS }} 
+  {{- $css = $css | minify | resources.PostProcess }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $css.Data.Integrity }}"{{ end }} />
+
+  {{- $js := resources.Get "js/_darkmode.js" | minify }}
+  <script>
+    {{- $js.Content | safe.JS -}}
+  </script>
+</head>

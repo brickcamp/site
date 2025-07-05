@@ -2,6 +2,10 @@ baseURL      = 'https://brick.camp/'
 languageCode = 'en-us'
 title        = 'BrickCamp'
 
+[build]
+  [build.buildStats]
+    enable = true
+
 [caches]
   [caches.getresource]
     dir = ':resourceDir/_req'
@@ -14,11 +18,11 @@ title        = 'BrickCamp'
   taxonomy = ['html']
   term = ['html']
 
-[uglyURLs]
-  _data = true
-
 [taxonomies]
   part = 'parts'
   size = 'size'
   uses = 'uses'
   tag  = 'tags'
+
+[uglyURLs]
+  _data = true

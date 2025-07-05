@@ -1,0 +1,35 @@
+title = 'Lengths'
+slug  = 'length'
+sort  = 20
+
+[[types]]
+title = 'Stud Lift'
+slug  = 'studlift'
+
+[[types]]
+title = 'Stud Shift'
+slug  = 'studshift'
+
+[[filters]]
+slug    = 'lengths'
+default = 'any-length'
+
+[[values]]
+title = '½ Stud'
+slug  = '10'
+
+[[values]]
+title = '¼ Stud'
+slug  = '5'
+
+[[values]]
+title = '⅕ Stud'
+slug  = '4'
+
+[[values]]
+title = '⅒ Stud'
+slug  = '2'
+
+[[values]]
+title = '1 LDU'
+slug  = '1'

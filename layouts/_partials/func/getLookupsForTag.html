@@ -1,0 +1,36 @@
+{{/* ******* */}}
+{{- $tag := . -}}
+{{/* ******* */}}
+
+{{/* parts of a tag */}}
+{{- $segments := split $tag "-" -}}
+{{- $minimum  :=  0 -}}
+{{- $maximum  := -1 -}}
+
+{{/* parse tag into these parts */}}
+{{- $anyNumber   := `^\d+$` -}}
+{{- $segmentLast := index (last 1 $segments) 0 -}}
+{{- if (findRE $anyNumber $segmentLast) -}}
+  {{- $minimum = $segmentLast -}}
+  {{- $segment2ndLast := index (last 2 $segments) 0 -}}
+  {{- if (findRE $anyNumber $segment2ndLast) -}}
+    {{- $maximum  = $segment2ndLast -}}
+    {{- $segments = first (sub (len $segments) 2) $segments -}}
+  {{- else -}}
+    {{- $maximum  = $minimum -}}
+    {{- $segments = first (sub (len $segments) 1) $segments -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* combine parts into all relevant list */}}
+{{- $results  := slice -}}
+{{- $numRange := sub $maximum $minimum -1 -}}
+{{- range (len $segments) -}}
+  {{- $slug   := delimit (first . $segments) "-" -}}
+  {{- $results = append $results $slug -}}
+  {{- range $numRange -}}
+    {{- $num    := add $minimum . -}}
+    {{- $results = append $results ( print $slug "-" $num ) -}}
+  {{- end -}}
+{{- end -}}
+{{- return $results -}}
