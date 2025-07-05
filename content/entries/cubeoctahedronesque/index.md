@@ -6,10 +6,9 @@ aliases = ['/tech/cubeoctahedronesque']
 parts = ['75937', '59443', '48729b', '57585']
 size  = ['11s', '11s', '11s']
 tags  = [
-  'partcount-total-62',
-  'function-backup: ["shape_3D"]',
-  'shape-polyhedron-6',
   'partcount-segment-10',
+  'partcount-total-62',
+  'shape-polyhedron-6',
 ]
 
 [[resources]]

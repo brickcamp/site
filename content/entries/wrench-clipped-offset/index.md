@@ -6,9 +6,8 @@ aliases = ['/tech/wrench-clipped-offset']
 parts = ['55300', '2555', '3024']
 size  = ['3s', '1s', '2p']
 tags  = [
-  'partcount-total-3',
-  'function-backup: stud_lift',
   'length-studlift-2',
+  'partcount-total-3',
 ]
 
 [[resources]]

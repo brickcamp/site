@@ -6,10 +6,9 @@ aliases = ['/tech/train-track-ring']
 parts = ['53400']
 size  = ['88s', '88s', '1b']
 tags  = [
-  'partcount-total-16',
-  'function-backup: shape_2D',
-  'shape-polygon-16',
   'partcount-segment-1',
+  'partcount-total-16',
+  'shape-polygon-16',
 ]
 
 [[resources]]

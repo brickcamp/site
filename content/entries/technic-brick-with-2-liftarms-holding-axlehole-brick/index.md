@@ -6,11 +6,10 @@ aliases = ['/tech/technic-brick-with-2-liftarms-holding-axlehole-brick']
 parts = ['85943', '32064a', '32062']
 size  = ['3s', '2s', '2s']
 tags  = [
-  'partcount-total-3',
-  'function-backup: [stud_tilt, stud_shift]',
-  'length-studshift-10',
   'angle-studtilt-90',
   'angle-studtilt-180',
+  'length-studshift-10',
+  'partcount-total-3',
 ]
 
 [[resources]]

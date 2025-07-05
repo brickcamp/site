@@ -6,9 +6,8 @@ aliases = ['/tech/technic-plates-with-axlehole-plates-on-axle']
 parts = ['3709', '32062', '4032a', '3022' ]
 size  = ['4s', '2s', '2b']
 tags  = [
-  'partcount-total-7',
-  'function-backup: ["stud_tilt"]',
   'angle-studtilt-180',
+  'partcount-total-7',
 ]
 
 [[resources]]

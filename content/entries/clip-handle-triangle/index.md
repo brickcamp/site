@@ -6,11 +6,10 @@ aliases = ['/tech/clip-handle-triangle']
 parts = ['60470b', '48336']
 size  = ['3s', '2s', '7p']
 tags  = [
-  'partcount-total-6',
-  'function-backup: [shape_2D, stud_tilt]',
-  'shape-polygon-3',
-  'partcount-segment-2',
   'angle-studtilt-120',
+  'partcount-segment-2',
+  'partcount-total-6',
+  'shape-polygon-3',
 ]
 
 [[resources]]

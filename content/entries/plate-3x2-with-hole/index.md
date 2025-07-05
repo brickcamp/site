@@ -6,9 +6,8 @@ aliases = ['/tech/plate-3x2-with-hole']
 parts = ['3176']
 size  = ['3s', '2s', '1p']
 tags  = [
-  'partcount-total-1',
-  'function-backup: ["stud_shift"]',
   'length-studshift-10',
+  'partcount-total-1',
 ]
 
 [[resources]]

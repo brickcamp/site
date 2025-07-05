@@ -6,10 +6,9 @@ aliases = ['/tech/plate-2x2-round-ring']
 parts = ['4032a']
 size  = ['9s', '9s', '3p']
 tags  = [
-  'partcount-total-27',
-  'function-backup: shape_2D',
-  'shape-polygon-9',
   'partcount-segment-3',
+  'partcount-total-27',
+  'shape-polygon-9',
 ]
 
 [[resources]]

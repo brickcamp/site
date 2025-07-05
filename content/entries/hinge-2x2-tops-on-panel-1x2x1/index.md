@@ -6,9 +6,8 @@ aliases = ['/tech/hinge-2x2-tops-on-panel-1x2x1']
 parts = ['6134', '3937', '4865a', '3004']
 size  = ['2s', '2s', '2b']
 tags  = [
-  'partcount-total-6',
-  'function-backup: ["stud_tilt"]',
   'angle-studtilt-90',
+  'partcount-total-6',
 ]
 
 [[resources]]

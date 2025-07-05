@@ -6,10 +6,9 @@ aliases = ['/tech/clip-handle-plates-1x1-framing-1x2-bricks']
 parts = ['26047', '6019', '3069b', '3023', '3004' ]
 size  = ['8p', '1s', '11p']
 tags  = [
-  'partcount-total-14',
-  'function-backup: ["stud_tilt"]',
   'angle-studtilt-90',
   'angle-studtilt-180',
+  'partcount-total-14',
 ]
 
 [[resources]]

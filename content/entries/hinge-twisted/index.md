@@ -6,9 +6,8 @@ aliases = ['/tech/hinge-twisted']
 parts = ['3639', '3640', '44567a', '60471', '44301a', '44302a', '4275b', '4276b', '30540', '30541', '30364', '30365', '30386', '4315','4213']
 size  = ['5s', '1s', '1p']
 tags  = [
-  'partcount-total-2',
-  'function-backup: stud_tilt',
   'angle-studtilt-180',
+  'partcount-total-2',
 ]
 
 [[resources]]

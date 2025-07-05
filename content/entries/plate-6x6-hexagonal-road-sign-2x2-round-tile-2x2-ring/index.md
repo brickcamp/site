@@ -6,10 +6,9 @@ aliases = ['/tech/plate-6x6-hexagonal-road-sign-2x2-round-tile-2x2-ring']
 parts = ['27255', '30261', '14769']
 size  = ['6s', '6s', '1s']
 tags  = [
-  'partcount-total-7',
-  'function-backup: ["shape_2D"]',
-  'shape-polygon-6',
   'partcount-segment-1',
+  'partcount-total-7',
+  'shape-polygon-6',
 ]
 
 [[resources]]

@@ -6,9 +6,8 @@ aliases = ['/tech/technic-axle-in-brick-tube']
 parts = ['3001', '32062']
 size  = ['4s', '2s', '2b']
 tags  = [
-  'partcount-total-4',
-  'function-backup: stud_tilt',
   'angle-studtilt-180',
+  'partcount-total-4',
 ]
 
 [[resources]]

@@ -6,10 +6,9 @@ aliases = ['/tech/dome-on-technic-beam-3x0.5-sphere']
 parts = ['86500', '3623', '6632']
 size  = ['4s', '4s', '4s']
 tags  = [
-  'partcount-total-6',
-  'function-backup: ["shape_3D"]',
-  'shape-polyhedron-2',
   'partcount-segment-3',
+  'partcount-total-6',
+  'shape-polyhedron-2',
 ]
 
 [[resources]]

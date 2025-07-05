@@ -6,9 +6,8 @@ aliases = ['/tech/technic-brick-with-halfpins']
 parts = ['4274', '6541', '32000', '3701']
 size  = ['1s', '1s', '1b']
 tags  = [
-  'partcount-total-2',
-  'function-backup: stud_tilt',
   'angle-studtilt-90',
+  'partcount-total-2',
 ]
 
 [[resources]]

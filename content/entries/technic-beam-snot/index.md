@@ -6,9 +6,8 @@ aliases = ['/tech/technic-beam-snot']
 parts = ['43857', '32523', '18654']
 size  = ['1s', '1s', '1s']
 tags  = [
-  'partcount-total-1',
-  'function-backup: [stud_tilt]',
   'angle-studtilt-180',
+  'partcount-total-1',
 ]
 
 [[resources]]

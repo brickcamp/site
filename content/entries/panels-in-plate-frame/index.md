@@ -6,10 +6,9 @@ aliases = ['/tech/panels-in-plate-frame']
 parts = ['2362b', '3710', '3005', '3023', '3069b']
 size  = ['4s', '2s', '3b']
 tags  = [
-  'partcount-total-8',
-  'function-backup: stud_tilt',
   'angle-studtilt-90',
   'angle-studtilt-180',
+  'partcount-total-8',
 ]
 
 [[resources]]

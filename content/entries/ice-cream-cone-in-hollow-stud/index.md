@@ -6,9 +6,8 @@ aliases = ['/tech/ice-cream-cone-in-hollow-stud']
 parts = ['11610', '59900']
 size  = ['1s', '1s', '5p']
 tags  = [
-  'partcount-total-2',
-  'function-backup: ["stud_tilt"]',
   'angle-studtilt-180',
+  'partcount-total-2',
 ]
 
 [[resources]]

@@ -6,9 +6,8 @@ aliases = ['/tech/hinge-topbase-in-bracket-snot']
 parts = ['99207', '3023', '3937', '3938', '3022']
 size  = ['2s', '2s', '4p']
 tags  = [
-  'partcount-total-5',
-  'function-backup: ["stud_tilt"]',
   'angle-studtilt-180',
+  'partcount-total-5',
 ]
 
 [[resources]]

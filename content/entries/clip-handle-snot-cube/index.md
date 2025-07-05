@@ -6,9 +6,8 @@ aliases = ['/tech/clip-handle-snot-cube']
 parts = ['4085c', '2921', '3024', '3023']
 size  = ['2s', '2s', '1b']
 tags  = [
-  'partcount-total-6',
-  'function-backup: stud_tilt',
   'angle-studtilt-180',
+  'partcount-total-6',
 ]
 
 [[resources]]

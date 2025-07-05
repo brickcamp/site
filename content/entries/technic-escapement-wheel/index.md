@@ -6,10 +6,9 @@ aliases = ['/tech/technic-escapement-wheel']
 parts = ['6536', '32126', '2825', '2780', '32002', '4519', '4185', '3706']
 size  = ['3s', '3s', '3s']
 tags  = [
-  'partcount-total-77',
-  'function-backup: ["shape_2D"]',
-  'shape-polygon-12',
   'partcount-segment-6',
+  'partcount-total-77',
+  'shape-polygon-12',
 ]
 
 [[resources]]

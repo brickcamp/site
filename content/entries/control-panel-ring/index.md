@@ -6,10 +6,9 @@ aliases = ['/tech/control-panel-ring']
 parts = ['2342']
 size  = ['14s', '2s', '14s']
 tags  = [
-  'partcount-total-18',
-  'function-backup: shape_2D',
-  'shape-polygon-18',
   'partcount-segment-1',
+  'partcount-total-18',
+  'shape-polygon-18',
 ]
 
 [[resources]]

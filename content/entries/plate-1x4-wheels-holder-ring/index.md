@@ -6,10 +6,9 @@ aliases = ['/tech/plate-1x4-wheels-holder-ring']
 parts = ['2926']
 size  = ['80p', '80p', '1s']
 tags  = [
-  'partcount-total-80',
-  'function-backup: [shape_2D]',
-  'shape-polygon-80',
   'partcount-segment-1',
+  'partcount-total-80',
+  'shape-polygon-80',
 ]
 
 [[resources]]

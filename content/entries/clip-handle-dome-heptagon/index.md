@@ -6,10 +6,9 @@ aliases = ['/tech/clip-handle-dome-heptagon']
 parts = ['48336', '60470b', '3022', '30367b']
 size  = ['8s', '2s', '8s']
 tags  = [
-  'partcount-total-35',
-  'function-backup: shape_2D',
-  'shape-polygon-7',
   'partcount-segment-5',
+  'partcount-total-35',
+  'shape-polygon-7',
 ]
 
 [[resources]]

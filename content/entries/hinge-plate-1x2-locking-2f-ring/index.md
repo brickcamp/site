@@ -6,10 +6,9 @@ aliases = ['/tech/hinge-plate-1x2-locking-2f-ring']
 parts = ['44302a']
 size  = ['15s', '15s', '1s']
 tags  = [
-  'partcount-total-72',
-  'function-backup: shape_2D',
-  'shape-polygon-72',
   'partcount-segment-1',
+  'partcount-total-72',
+  'shape-polygon-72',
 ]
 
 [[resources]]

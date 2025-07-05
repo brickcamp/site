@@ -6,10 +6,9 @@ aliases = ['/tech/dish-8x8-hinged-ring']
 parts = ['3961', '44301a', '44302a']
 size  = ['54p', '8s', '54p']
 tags  = [
-  'partcount-total-90',
-  'function-backup: shape_2D',
-  'shape-polygon-18',
   'partcount-segment-5',
+  'partcount-total-90',
+  'shape-polygon-18',
 ]
 
 [[resources]]

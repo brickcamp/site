@@ -6,9 +6,8 @@ aliases = ['/tech/cheese-in-brick']
 parts = ['3002', '3021', '54200']
 size  = ['3s', '2s', '4p']
 tags  = [
-  'partcount-total-4',
-  'function-backup: stud_tilt',
   'angle-studtilt-180',
+  'partcount-total-4',
 ]
 
 [[resources]]

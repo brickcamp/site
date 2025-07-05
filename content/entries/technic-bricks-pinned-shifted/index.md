@@ -6,9 +6,8 @@ aliases = ['/tech/technic-bricks-pinned-shifted']
 parts = ['6541', '32000', '3700', '3701', '2780']
 size  = ['2s', '2s', '1b']
 tags  = [
-  'partcount-total-3',
-  'function-backup: stud_shift',
   'length-studshift-10',
+  'partcount-total-3',
 ]
 
 [[resources]]

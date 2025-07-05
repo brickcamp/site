@@ -6,10 +6,10 @@ aliases = ['/tech/plate-2x2-round-on-door-rails']
 parts = ['32028', '3023', '4032a', '3031']
 size  = ['4s', '4s', '4p']
 tags  = [
+  'length-studlift-3',
+  'length-studlift-5',
+  'length-studshift',
   'partcount-total-7',
-  'function-backup: ["stud_shift", "stud_lift"]',
-  'length-studshift-flex',
-  'length-studlift-[3, 5]',
 ]
 
 [[resources]]

@@ -6,10 +6,9 @@ aliases = ['/tech/technic-axle-pin-axle-connector-3L-cube']
 parts = ['32184', '4519']
 size  = ['3s', '3s', '3s']
 tags  = [
-  'partcount-total-12',
-  'function-backup: ["shape_3D"]',
-  'shape-polyhedron-6',
   'partcount-segment-2',
+  'partcount-total-12',
+  'shape-polyhedron-6',
 ]
 
 [[resources]]

@@ -6,10 +6,9 @@ aliases = ['/tech/minifig-hands-on-dinner-plate']
 parts = ['6256', '3820']
 size  = ['5s', '5s', '1b']
 tags  = [
-  'partcount-total-16',
-  'function-backup: ["shape_2D"]',
-  'shape-polygon-15',
   'partcount-segment-1',
+  'partcount-total-16',
+  'shape-polygon-15',
 ]
 
 [[resources]]

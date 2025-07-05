@@ -6,10 +6,9 @@ aliases = ['/tech/technic-steering-arms-connector-pentagon']
 parts = ['32068', '32069']
 size  = ['8s', '2s', '8s']
 tags  = [
-  'partcount-total-10',
-  'function-backup: shape_2D',
-  'shape-polygon-5',
   'partcount-segment-2',
+  'partcount-total-10',
+  'shape-polygon-5',
 ]
 
 [[resources]]

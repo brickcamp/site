@@ -6,10 +6,9 @@ aliases = ['/tech/hinge-topbase-cheese-donut']
 parts = ['3937', '6134', '85984']
 size  = ['19p', '19p', '3s']
 tags  = [
-  'partcount-total-48',
-  'function-backup: shape_2D',
-  'shape-polygon-8',
   'partcount-segment-6',
+  'partcount-total-48',
+  'shape-polygon-8',
 ]
 
 [[resources]]

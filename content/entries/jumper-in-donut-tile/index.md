@@ -6,9 +6,8 @@ aliases = ['/tech/jumper-in-donut-tile']
 parts = ['15535', '87580']
 size  = ['2s', '2s', '2p']
 tags  = [
-  'partcount-total-2',
-  'function-backup: stud_tilt',
   'angle-studtilt-180',
+  'partcount-total-2',
 ]
 
 [[resources]]

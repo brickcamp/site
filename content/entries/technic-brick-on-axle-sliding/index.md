@@ -6,9 +6,8 @@ aliases = ['/tech/technic-brick-on-axle-sliding']
 parts = ['6541', '3706', '32064a']
 size  = ['4s', '2s', '1b']
 tags  = [
+  'length-studshift',
   'partcount-total-4',
-  'function-backup: stud_shift',
-  'length-studshift-flex',
 ]
 
 [[resources]]

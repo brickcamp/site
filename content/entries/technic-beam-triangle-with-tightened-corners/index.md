@@ -6,10 +6,9 @@ aliases = ['/tech/technic-beam-triangle-with-tightened-corners']
 parts = ['32316', '41677', '6632', '32062']
 size  = ['6s', '6s', '2s']
 tags  = [
-  'partcount-total-27',
-  'function-backup: shape_2D',
-  'shape-polygon-3',
   'partcount-segment-9',
+  'partcount-total-27',
+  'shape-polygon-3',
 ]
 
 [[resources]]

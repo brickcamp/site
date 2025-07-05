@@ -6,10 +6,9 @@ aliases = ['/tech/hinged-43x43-octagon']
 parts = ['3830', '3831', '3623', '3666', '3460', '4282', '3005', '3009']
 size  = ['43s', '43s', '5p']
 tags  = [
-  'partcount-total-80',
-  'function-backup: shape_2D',
-  'shape-polygon-8',
   'partcount-segment-10',
+  'partcount-total-80',
+  'shape-polygon-8',
 ]
 
 [[resources]]
