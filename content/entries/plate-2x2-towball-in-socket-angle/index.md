@@ -1,0 +1,27 @@
++++
+title = 'Towball in Socket Angle'
+date  = '2019-02-19'
+
+parts = ['63082', '3731', '3022', '3020']
+size  = ['4s', '2s', '4s']
+tags  = [
+  'partcount-total-8',
+  'function-backup: ["stud_tilt"]',
+  'angle-studtilt-30',
+]
+
+[[resources]]
+src              = 'image.png'
+params.copyright = '©2025 BrickCamp'
+
+[[resources]]
+src              = 'model.ldr'
+params.copyright = '©2025 BrickCamp'
++++
+
+{{< linkbox
+    url="https://www.flickr.com/photos/128561206@N08/24772591696/"
+    title="Curve"
+    author="Joeri Ridder"
+    date="2016-02-03"
+>}}
