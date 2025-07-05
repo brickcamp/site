@@ -1,0 +1,23 @@
++++
+title = 'Wedge Plate 3 x 6 Torus'
+date  = '2019-07-06'
+
+parts = ['2419']
+size  = ['18s', '18s', '6s']
+tags  = [
+  'partcount-segment-3',
+  'partcount-total-144',
+  'shape-polyhedron-48',
+]
+
+[[resources]]
+src              = 'image.png'
+params.copyright = '©2025 BrickCamp'
+
+[[resources]]
+src              = 'model.ldr'
+params.copyright = '©2025 BrickCamp'
+
+# TODO: related_pages:
+#   - /tech/plate-ring
++++
