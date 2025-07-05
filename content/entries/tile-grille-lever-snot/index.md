@@ -2,6 +2,7 @@
 title = 'Grilled Levers'
 date  = '2015-09-14'
 
+aliases = ['/tech/tile-grille-lever-snot']
 parts = ['2412b', '4593']
 size  = ['3s', '1s', '2p']
 tags  = [

@@ -2,6 +2,7 @@
 title = 'Jumper in Donut'
 date  = '2015-09-14'
 
+aliases = ['/tech/jumper-in-donut-tile']
 parts = ['15535', '87580']
 size  = ['2s', '2s', '2p']
 tags  = [

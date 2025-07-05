@@ -2,6 +2,7 @@
 title = 'Plate 6 x 6 Hexagonal'
 date  = '2019-04-22'
 
+aliases = ['/tech/plate-6x6-hexagonal']
 parts = ['27255']
 size  = ['6s', '6s', '1s']
 tags  = [

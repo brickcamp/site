@@ -2,6 +2,7 @@
 title = "Pythagora's Twist"
 date  = '2015-12-06'
 
+aliases = ['/tech/pythagoras-twist']
 parts = ['3024', '3666']
 size  = ['5s', '4s', '2p']
 tags  = [

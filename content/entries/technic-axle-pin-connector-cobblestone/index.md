@@ -2,6 +2,7 @@
 title = 'Technic Axle Pin Connector Cobblestone'
 date  = '2016-09-29'
 
+aliases = ['/tech/technic-axle-pin-connector-cobblestone']
 parts = ['3651']
 size  = ['2s', '2s', '2s']
 uses  = ['technic-axle-pin-connector']

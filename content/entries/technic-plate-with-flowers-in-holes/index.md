@@ -2,7 +2,7 @@
 title = 'Flowers in Technic Brick Holes'
 date  = '2015-09-14'
 
-aliases = ['/tech/flower-in-technic-plate-hole']
+aliases = ['/tech/technic-plate-with-flowers-in-holes', '/tech/flower-in-technic-plate-hole']
 parts = ['33291', '3709']
 size  = ['2s', '4s', '2p']
 tags  = [

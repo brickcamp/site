@@ -2,6 +2,7 @@
 title = 'Pneumatic T with Plate 1x4 Offset'
 date  = '2015-09-14'
 
+aliases = ['/tech/pneumatic-t-and-plate-1x4-offset-snot']
 parts = ['4697b', '4590', '3004']
 size  = ['4s', '2s', '5p']
 tags  = [

@@ -2,6 +2,7 @@
 title = 'SNOT Cube'
 date  = '2015-09-27'
 
+aliases = ['/tech/brick-1x1-4sidestuds-plate-cube']
 parts = ['4733', '3022']
 size  = ['7p', '7p', '7p']
 tags  = [

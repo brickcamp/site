@@ -2,6 +2,7 @@
 title = 'Pony-Ear Turn'
 date  = '2019-04-14'
 
+aliases = ['/tech/toples-turn']
 parts = ['3022', '3069b']
 size  = ['2s', '2s', '5p']
 tags  = [

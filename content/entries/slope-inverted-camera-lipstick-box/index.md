@@ -2,6 +2,7 @@
 title = 'Slope Inverted Camera Lipstick Box'
 date  = '2019-07-27'
 
+aliases = ['/tech/slope-inverted-camera-lipstick-box']
 parts = ['3676', '3660', '4595', '93094pat0001']
 size  = ['5s', '5s', '21s']
 tags  = [

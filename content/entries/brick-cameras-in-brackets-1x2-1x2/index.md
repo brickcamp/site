@@ -2,6 +2,7 @@
 title = 'Camera Bracket SNOT'
 date  = '2019-01-29'
 
+aliases = ['/tech/brick-cameras-in-brackets-1x2-1x2']
 parts = ['99781', '4595']
 size  = ['3s', '2s', '1s']
 tags  = [

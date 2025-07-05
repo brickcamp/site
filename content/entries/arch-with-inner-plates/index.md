@@ -2,6 +2,7 @@
 title = 'Plates in Arch'
 date  = '2015-08-29'
 
+aliases = ['/tech/arch-with-inner-plates']
 parts = ['2339', '3024']
 size  = ['5s', '1s', '4b']
 tags  = [

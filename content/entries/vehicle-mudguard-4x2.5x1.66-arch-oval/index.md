@@ -2,6 +2,7 @@
 title = 'Mudguard Oval'
 date  = '2015-10-09'
 
+aliases = ['/tech/vehicle-mudguard-4x2.5x1.66-arch-oval']
 parts = ['50745', '3956', '3004', '3023', '3020']
 size  = ['5s', '4s', '8p']
 tags  = [

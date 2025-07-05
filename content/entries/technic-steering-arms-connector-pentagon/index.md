@@ -2,6 +2,7 @@
 title = 'Steering Arms Pentagon'
 date  = '2015-08-29'
 
+aliases = ['/tech/technic-steering-arms-connector-pentagon']
 parts = ['32068', '32069']
 size  = ['8s', '2s', '8s']
 tags  = [

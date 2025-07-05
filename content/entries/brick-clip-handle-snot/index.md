@@ -2,6 +2,7 @@
 title = 'Clip Handle Flip'
 date  = '2016-01-01'
 
+aliases = ['/tech/brick-clip-handle-snot']
 parts = ['60475b', '2921', '85861']
 size  = ['3s', '1s', '1b']
 tags  = [

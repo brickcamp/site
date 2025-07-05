@@ -2,6 +2,7 @@
 title = 'Hinge Swivel Hypotenuse-Mirror'
 date  = '2015-12-06'
 
+aliases = ['/tech/hinge-swivel-hypotenuse-mirror']
 parts = ['73983', '3623']
 size  = ['4s', '4s', '2p']
 tags  = [

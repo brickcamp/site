@@ -2,6 +2,7 @@
 title = 'Plate 6 x 6 Hexagonal Icosahedron'
 date  = '2019-01-27'
 
+aliases = ['/tech/plate-6x6-hexagonal-icosahedron']
 parts = ['27255', '4085c','3023']
 size  = ['16s', '16s', '16s']
 tags  = [

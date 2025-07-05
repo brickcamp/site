@@ -2,6 +2,7 @@
 title = 'Gear between Plates'
 date  = '2015-08-23'
 
+aliases = ['/tech/gear-between-plates']
 parts = ['4019', '3648a', '3031']
 size  = ['4s', '4s', '4p']
 tags  = [

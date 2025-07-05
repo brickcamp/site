@@ -2,6 +2,7 @@
 title = 'Brick 1 x 2 with Handle Interlocked'
 date  = '2019-04-17'
 
+aliases = ['/tech/brick-1x2-with-handle-interlocked']
 parts = ['30236']
 size  = ['3b', '2s', '3s']
 tags  = [

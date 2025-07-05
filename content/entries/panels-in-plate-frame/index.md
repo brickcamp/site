@@ -2,6 +2,7 @@
 title = 'Panels in Plate Frame'
 date  = '2015-10-09'
 
+aliases = ['/tech/panels-in-plate-frame']
 parts = ['2362b', '3710', '3005', '3023', '3069b']
 size  = ['4s', '2s', '3b']
 tags  = [

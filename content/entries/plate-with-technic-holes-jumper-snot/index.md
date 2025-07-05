@@ -2,6 +2,7 @@
 title = 'Plate with Technic Holes and Jumpers'
 date  = '2015-09-14'
 
+aliases = ['/tech/plate-with-technic-holes-jumper-snot']
 parts = ['2817', '3794b']
 size  = ['2s', '1s', '7p']
 tags  = [

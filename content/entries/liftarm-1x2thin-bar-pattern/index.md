@@ -2,6 +2,7 @@
 title = 'Liftarms and Bars'
 date  = '2015-08-29'
 
+aliases = ['/tech/liftarm-1x2thin-bar-pattern']
 parts = ['41677', '30374']
 size  = ['5s', '1s', '4s']
 tags  = [

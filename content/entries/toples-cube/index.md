@@ -2,6 +2,7 @@
 title = 'ToPLES Cube'
 date  = '2015-08-23'
 
+aliases = ['/tech/toples-cube']
 parts = ['4865a', '3068b', '3022', '3794b']
 size  = ['7p', '7p', '7p']
 tags  = [

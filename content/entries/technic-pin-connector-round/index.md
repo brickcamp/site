@@ -2,6 +2,7 @@
 title = 'Technic Pin Connector Round'
 date  = '2019-01-19'
 
+aliases = ['/tech/technic-pin-connector-round']
 parts = ['62462', '4274']
 size  = ['1s', '1s', '5p']
 tags  = [

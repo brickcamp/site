@@ -2,6 +2,7 @@
 title = 'Pony-Ear Technique'
 date  = '2015-08-23'
 
+aliases = ['/tech/toples']
 parts = ['3021', '3023', '3069b']
 size  = ['2s', '2s', '4p']
 tags  = [

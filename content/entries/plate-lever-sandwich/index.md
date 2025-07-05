@@ -2,6 +2,7 @@
 title = 'Plate Lever Sandwich'
 date  = '2015-08-23'
 
+aliases = ['/tech/plate-lever-sandwich']
 parts = ['4593', '3031']
 size  = ['4s', '4s', '2p']
 tags  = [

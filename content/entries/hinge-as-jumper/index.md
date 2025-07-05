@@ -2,6 +2,7 @@
 title = 'Hinges as Jumper'
 date  = '2015-08-26'
 
+aliases = ['/tech/hinge-as-jumper']
 parts = ['30389b', '40902', '30364', '30365', '2452', '4276b', '60471', '44567a', '44301a', '44302a']
 size  = ['4s', '2s', '1p']
 tags  = [

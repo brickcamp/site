@@ -2,7 +2,7 @@
 title = '2 x 2 Tile Twisted on Jumper'
 date  = '2015-12-06'
 
-aliases = ['/tech/tile-2x2-twisted-gaps']
+aliases = ['/tech/tile-2x2-twisted-on-jumper', '/tech/tile-2x2-twisted-gaps']
 parts = ['3068b', '3794b', '3070b']
 size  = ['4s', '4s', '2p']
 tags  = [

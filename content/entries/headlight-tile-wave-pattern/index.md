@@ -2,6 +2,7 @@
 title = 'Headlight Tile Wave Pattern'
 date  = '2015-12-06'
 
+aliases = ['/tech/headlight-tile-wave-pattern']
 parts = ['4070', '3070b', '3024']
 size  = ['2s', '2s', '7p']
 tags  = [

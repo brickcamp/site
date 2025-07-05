@@ -2,6 +2,7 @@
 title = 'Minifig Goblet Offset'
 date  = '2019-01-30'
 
+aliases = ['/tech/minifig-goblet-offset']
 parts = ['2343', '6141']
 size  = ['1s', '1s', '2b']
 tags  = [

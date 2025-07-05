@@ -2,6 +2,7 @@
 title = 'Wrench SNOT'
 date  = '2015-09-14'
 
+aliases = ['/tech/wrench-snot']
 parts = ['55300']
 size  = ['3s', '1s', '1p']
 tags  = [

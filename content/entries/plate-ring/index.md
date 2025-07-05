@@ -2,6 +2,7 @@
 title = 'Plate Ring'
 date  = '2015-08-30'
 
+aliases = ['/tech/plate-ring']
 parts = ['3666', '3710']
 size  = ['24s', '24s', '1s']
 tags  = [

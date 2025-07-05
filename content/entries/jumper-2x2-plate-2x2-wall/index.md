@@ -2,6 +2,7 @@
 title = 'Jumper Plate Wall'
 date  = '2019-07-06'
 
+aliases = ['/tech/jumper-2x2-plate-2x2-wall']
 parts = ['3022', '87580']
 size  = ['4s', '2s', '4p']
 tags  = [

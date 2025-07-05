@@ -2,6 +2,7 @@
 title = 'Plate 1 x 2 Flex Tooth Ring'
 date  = '2016-01-01'
 
+aliases = ['/tech/plate-1x2-flex-tooth-ring']
 parts = ['61406', '73983']
 size  = ['18s', '18s', '1b']
 tags  = [

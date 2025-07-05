@@ -2,6 +2,7 @@
 title = 'Minifig Hands on Plate'
 date  = '2019-04-17'
 
+aliases = ['/tech/minifig-hands-on-plate']
 parts = ['3820', '3031']
 size  = ['4s', '4s', '2p']
 tags  = [

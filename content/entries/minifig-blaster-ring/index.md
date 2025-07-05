@@ -2,7 +2,7 @@
 title = 'Blaster Ring'
 date  = '2015-08-29'
 
-aliases = ['/tech/blaster-ring']
+aliases = ['/tech/minifig-blaster-ring', '/tech/blaster-ring']
 parts = ['15071']
 size  = ['12s', '1s', '12s']
 tags  = [

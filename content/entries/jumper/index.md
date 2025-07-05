@@ -2,6 +2,7 @@
 title = 'Jumper'
 date  = '2019-01-19'
 
+aliases = ['/tech/jumper']
 parts = ['3794b', '87580']
 size  = ['2s', '1s', '1p']
 tags  = [

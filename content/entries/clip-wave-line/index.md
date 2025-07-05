@@ -2,6 +2,7 @@
 title = 'Clip Wave Line'
 date  = '2016-01-03'
 
+aliases = ['/tech/clip-wave-line']
 parts = ['2555', '4085c', '99780', '3023', '4070', '2431']
 size  = ['4s', '2s', '9p']
 tags  = [

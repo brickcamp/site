@@ -2,6 +2,7 @@
 title = 'GSNOT'
 date  = '2015-08-23'
 
+aliases = ['/tech/gsnot']
 parts = ['30365', '30540', '3004']
 size  = ['4s', '2s', '1b']
 tags  = [

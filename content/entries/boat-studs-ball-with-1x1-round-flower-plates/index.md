@@ -2,6 +2,7 @@
 title = 'Boat Studs Ball via Flower Plates'
 date  = '2019-01-19'
 
+aliases = ['/tech/boat-studs-ball-with-1x1-round-flower-plates']
 parts = ['2654', '33291', '4733']
 size  = ['7p', '7p', '7p']
 tags  = [

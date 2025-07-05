@@ -2,6 +2,7 @@
 title = 'Technic Axle Pin Connector'
 date  = '2015-09-27'
 
+aliases = ['/tech/technic-axle-pin-connector']
 parts = ['3651']
 size  = ['2s', '1s', '1s']
 tags  = [

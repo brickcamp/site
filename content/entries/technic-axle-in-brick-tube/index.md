@@ -2,6 +2,7 @@
 title = 'Technic Axle in Brick Tube'
 date  = '2015-08-23'
 
+aliases = ['/tech/technic-axle-in-brick-tube']
 parts = ['3001', '32062']
 size  = ['4s', '2s', '2b']
 tags  = [

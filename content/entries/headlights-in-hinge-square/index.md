@@ -2,6 +2,7 @@
 title = 'Headlights in Hinge Square'
 date  = '2019-01-19'
 
+aliases = ['/tech/headlights-in-hinge-square']
 parts = ['30386', '4070']
 size  = ['4s', '4s', '3p']
 tags  = [

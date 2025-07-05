@@ -2,6 +2,7 @@
 title = 'Doorrail Pattern'
 date  = '2015-12-06'
 
+aliases = ['/tech/plate-doorrail-pattern']
 parts = ['32028', '3023', '3794b']
 size  = ['20p', '2s', '3s']
 tags  = [

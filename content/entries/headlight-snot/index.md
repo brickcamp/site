@@ -2,6 +2,7 @@
 title = 'Headlight SNOT'
 date  = '2019-04-14'
 
+aliases = ['/tech/headlight-snot']
 parts = ['4070', '3024']
 size  = ['2s', '1s', '1b']
 tags  = [

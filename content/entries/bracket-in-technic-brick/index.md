@@ -2,6 +2,7 @@
 title = 'Bracket in Technic Brick'
 date  = '2019-02-24'
 
+aliases = ['/tech/bracket-in-technic-brick']
 parts = ['32000', '99781']
 size  = ['2s', '2s', '1b']
 tags  = [

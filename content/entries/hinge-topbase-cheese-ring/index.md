@@ -2,6 +2,7 @@
 title = 'Hinge Cheese Ring'
 date  = '2015-08-30'
 
+aliases = ['/tech/hinge-topbase-cheese-ring']
 parts = ['3021', '3022', '3937', '6134', '85984']
 size  = ['6s', '6s', '2s']
 tags  = [

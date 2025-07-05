@@ -2,6 +2,7 @@
 title = 'Stud in Tube'
 date  = '2015-08-26'
 
+aliases = ['/tech/plate-stud-in-tube']
 parts = ['3020', '3623']
 size  = ['3s', '2s', '2p']
 tags  = [
