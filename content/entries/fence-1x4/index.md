@@ -6,9 +6,8 @@ aliases = ['/tech/fence-1x4']
 parts = ['3185', '3633']
 size  = ['4s', '1s', '1b']
 tags  = [
-  'partcount-total-1',
-  'function-backup: ["stud_tilt"]',
   'angle-studtilt-90',
+  'partcount-total-1',
 ]
 
 [[resources]]

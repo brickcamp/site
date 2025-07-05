@@ -6,10 +6,9 @@ aliases = ['/tech/set-7041-wheel']
 parts = ['30386', '4032a', '3941', '32073', '6222']
 size  = ['17s', '17s', '2s']
 tags  = [
-  'partcount-total-61',
-  'function-backup: shape_2D',
-  'shape-polygon-16',
   'partcount-segment-2',
+  'partcount-total-61',
+  'shape-polygon-16',
 ]
 
 [[resources]]

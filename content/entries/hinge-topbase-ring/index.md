@@ -6,10 +6,9 @@ aliases = ['/tech/hinge-topbase-ring']
 parts = ['3937', '6134']
 size  = ['5s', '2s', '5s']
 tags  = [
-  'partcount-total-20',
-  'function-backup: shape_2D',
-  'shape-polygon-10',
   'partcount-segment-2',
+  'partcount-total-20',
+  'shape-polygon-10',
 ]
 
 [[resources]]

@@ -6,9 +6,8 @@ aliases = ['/tech/technic-pin-connector-round']
 parts = ['62462', '4274']
 size  = ['1s', '1s', '5p']
 tags  = [
-  'partcount-total-1',
-  'function-backup: ["stud_tilt"]',
   'angle-studtilt-180',
+  'partcount-total-1',
 ]
 
 [[resources]]

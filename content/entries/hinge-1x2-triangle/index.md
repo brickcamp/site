@@ -6,10 +6,9 @@ aliases = ['/tech/hinge-1x2-triangle']
 parts = ['4276b', '4275b']
 size  = ['4s', '1s', '9p']
 tags  = [
-  'partcount-total-6',
-  'function-backup: shape_2D',
-  'shape-polygon-3',
   'partcount-segment-2',
+  'partcount-total-6',
+  'shape-polygon-3',
 ]
 
 [[resources]]

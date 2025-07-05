@@ -6,9 +6,8 @@ aliases = ['/tech/plate-2x2-towball-in-socket-angle']
 parts = ['63082', '3731', '3022', '3020']
 size  = ['4s', '2s', '4s']
 tags  = [
-  'partcount-total-8',
-  'function-backup: ["stud_tilt"]',
   'angle-studtilt-30',
+  'partcount-total-8',
 ]
 
 [[resources]]

@@ -6,10 +6,9 @@ aliases = ['/tech/plate-with-technic-holes-jumper-snot']
 parts = ['2817', '3794b']
 size  = ['2s', '1s', '7p']
 tags  = [
-  'partcount-total-3',
-  'function-backup: stud_tilt',
   'angle-studtilt-90',
   'angle-studtilt-180',
+  'partcount-total-3',
 ]
 
 [[resources]]

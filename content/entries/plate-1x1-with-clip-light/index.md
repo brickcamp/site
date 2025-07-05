@@ -6,10 +6,9 @@ aliases = ['/tech/plate-1x1-with-clip-light']
 parts = ['4081b']
 size  = ['2s', '1s', '2p']
 tags  = [
-  'partcount-total-1',
-  'function-backup: ["stud_tilt"]',
   'angle-studtilt-90',
   'angle-studtilt-180',
+  'partcount-total-1',
 ]
 
 [[resources]]

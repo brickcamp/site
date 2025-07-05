@@ -6,10 +6,9 @@ aliases = ['/tech/minifig-tool-holder']
 parts = ['2516', '3062b']
 size  = ['2s', '4s', '2s']
 tags  = [
-  'partcount-total-3',
-  'function-backup: stud_tilt',
   'angle-studtilt-90',
   'angle-studtilt-180',
+  'partcount-total-3',
 ]
 
 [[resources]]

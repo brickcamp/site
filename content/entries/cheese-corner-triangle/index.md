@@ -6,10 +6,9 @@ aliases = ['/tech/cheese-corner-triangle']
 parts = ['2420', '3622', '54200', '3024']
 size  = ['5s', '5s', '4p']
 tags  = [
-  'partcount-total-15',
-  'function-backup: shape_2D',
-  'shape-polygon-3',
   'partcount-segment-5',
+  'partcount-total-15',
+  'shape-polygon-3',
 ]
 
 [[resources]]

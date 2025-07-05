@@ -6,11 +6,10 @@ aliases = ['/tech/hinge-topbase-cheese-ring']
 parts = ['3021', '3022', '3937', '6134', '85984']
 size  = ['6s', '6s', '2s']
 tags  = [
-  'partcount-total-36',
-  'function-backup: ["stud_tilt", "shape_2D"]',
   'angle-studtilt-30',
-  'shape-polygon-60',
   'partcount-segment-4',
+  'partcount-total-36',
+  'shape-polygon-60',
 ]
 
 [[resources]]

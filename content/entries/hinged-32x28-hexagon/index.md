@@ -6,10 +6,9 @@ aliases = ['/tech/hinged-32x28-hexagon']
 parts = ['3830', '3831', '3623', '3666', '4282', '3005', '3010', '3009']
 size  = ['32s', '28s', '5p']
 tags  = [
-  'partcount-total-64',
-  'function-backup: shape_2D',
-  'shape-polygon-6',
   'partcount-segment-10',
+  'partcount-total-64',
+  'shape-polygon-6',
 ]
 
 [[resources]]

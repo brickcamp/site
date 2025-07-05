@@ -6,9 +6,8 @@ aliases = ['/tech/plate-1xn-on-hollow-studs']
 parts = ['3700', '3623']
 size  = ['3s', '1s', '4p']
 tags  = [
-  'partcount-total-2',
-  'function-backup: stud_shift',
   'length-studshift-10',
+  'partcount-total-2',
 ]
 
 [[resources]]

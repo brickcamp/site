@@ -6,9 +6,8 @@ aliases = ['/tech/plate-stud-in-tube']
 parts = ['3020', '3623']
 size  = ['3s', '2s', '2p']
 tags  = [
-  'partcount-total-2',
-  'function-backup: stud_shift',
   'length-studshift-10',
+  'partcount-total-2',
 ]
 
 [[resources]]

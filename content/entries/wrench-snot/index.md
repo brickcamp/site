@@ -6,9 +6,8 @@ aliases = ['/tech/wrench-snot']
 parts = ['55300']
 size  = ['3s', '1s', '1p']
 tags  = [
-  'partcount-total-1',
-  'function-backup: [stud_tilt]',
   'angle-studtilt-180',
+  'partcount-total-1',
 ]
 
 [[resources]]

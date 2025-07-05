@@ -6,11 +6,10 @@ aliases = ['/tech/hinge-bricks-1x2-locking-y']
 parts = ['30364', '30540', '30565']
 size  = ['6s', '6s', '4p']
 tags  = [
-  'partcount-total-5',
-  'function-backup: [stud_tilt, stud_twist]',
+  'angle-studturn-45',
   'angle-studtilt-90',
   'angle-studtilt-180',
-  'angle-studturn-45',
+  'partcount-total-5',
 ]
 
 [[resources]]

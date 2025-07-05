@@ -6,9 +6,8 @@ aliases = ['/tech/plate-lever-sandwich']
 parts = ['4593', '3031']
 size  = ['4s', '4s', '2p']
 tags  = [
-  'partcount-total-3',
-  'function-backup: stud_tilt',
   'angle-studtilt-180',
+  'partcount-total-3',
 ]
 
 [[resources]]

@@ -6,9 +6,8 @@ aliases = ['/tech/tile-1x1-with-pin-in-hollow-stud']
 parts = ['20482', '85861']
 size  = ['1s', '1s', '1b']
 tags  = [
-  'partcount-total-2',
-  'function-backup: ["stud_tilt"]',
   'angle-studtilt-180',
+  'partcount-total-2',
 ]
 
 [[resources]]

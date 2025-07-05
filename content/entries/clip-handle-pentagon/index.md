@@ -6,10 +6,9 @@ aliases = ['/tech/clip-handle-pentagon']
 parts = ['48336', '60470b', '3022']
 size  = ['6s', '2s', '6s']
 tags  = [
-  'partcount-total-20',
-  'function-backup: shape_2D',
-  'shape-polygon-5',
   'partcount-segment-4',
+  'partcount-total-20',
+  'shape-polygon-5',
 ]
 
 [[resources]]

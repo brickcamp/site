@@ -6,10 +6,9 @@ aliases = ['/tech/slopes-2x2-round-on-bracket-square']
 parts = ['30602', '44728', '3022', '3021', '3004']
 size  = ['7s', '7s', '2s']
 tags  = [
-  'partcount-total-24',
-  'function-backup: shape_2D',
-  'shape-polygon-4',
   'partcount-segment-6',
+  'partcount-total-24',
+  'shape-polygon-4',
 ]
 
 [[resources]]

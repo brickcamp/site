@@ -6,10 +6,9 @@ aliases = ['/tech/technic-brick-octagon']
 parts = ['3894', '32000', '2780']
 size  = ['14s', '14s', '2s']
 tags  = [
-  'partcount-total-80',
-  'function-backup: shape_2D',
-  'shape-polygon-8',
   'partcount-segment-5',
+  'partcount-total-80',
+  'shape-polygon-8',
 ]
 
 [[resources]]

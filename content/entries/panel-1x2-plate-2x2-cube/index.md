@@ -6,12 +6,11 @@ aliases = ['/tech/panel-1x2-plate-2x2-cube']
 parts = ['3022', '4865a']
 size  = ['7p', '7p', '7p']
 tags  = [
-  'partcount-total-8',
-  'function-backup: ["stud_tilt", "shape_3D"]',
   'angle-studtilt-90',
   'angle-studtilt-180',
-  'shape-polyhedron-6',
   'partcount-segment-1',
+  'partcount-total-8',
+  'shape-polyhedron-6',
 ]
 
 [[resources]]

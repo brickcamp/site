@@ -6,10 +6,9 @@ aliases = ['/tech/slope-curved-4x2-ring']
 parts = ['93606', '3794b', '3023', '3023', '48336', '60470b']
 size  = ['15s', '15s', '2s']
 tags  = [
-  'partcount-total-50',
-  'function-backup: shape_2D',
-  'shape-polygon-10',
   'partcount-segment-5',
+  'partcount-total-50',
+  'shape-polygon-10',
 ]
 
 [[resources]]

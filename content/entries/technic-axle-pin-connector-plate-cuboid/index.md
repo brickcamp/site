@@ -6,11 +6,9 @@ aliases = ['/tech/technic-axle-pin-connector-plate-cuboid']
 parts = ['3651', '3020']
 size  = ['7p', '7p', '4s']
 tags  = [
-  'partcount-total-12',
-  'function-backup: stud_tilt',
   'angle-studtilt-90',
   'angle-studtilt-180',
-
+  'partcount-total-12',
   'warning-improvable',
 ]
 

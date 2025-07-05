@@ -6,9 +6,8 @@ aliases = ['/tech/clip-kiss']
 parts = ['2555']
 size  = ['1s', '1s', '3p']
 tags  = [
-  'partcount-total-2',
-  'function-backup: stud_tilt',
   'angle-studtilt-180',
+  'partcount-total-2',
 ]
 
 [[resources]]

@@ -6,11 +6,13 @@ aliases = ['/tech/hinge-tops-on-binoculars-octagon']
 parts = ['3938', '30162', '4733']
 size  = ['3s', '3s', '4s']
 tags  = [
-  'partcount-total-18',
-  'function-backup: [shape_2D, stud_tilt]',
-  'shape-polygon-8',
+  'angle-studtilt-45',
+  'angle-studtilt-90',
+  'angle-studtilt-135',
+  'angle-studtilt-180',
   'partcount-segment-1',
-  'angle-studtilt-[45, 90, 135, 180]',
+  'partcount-total-18',
+  'shape-polygon-8',
 ]
 
 [[resources]]

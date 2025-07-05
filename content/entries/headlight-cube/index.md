@@ -6,12 +6,11 @@ aliases = ['/tech/headlight-cube']
 parts = ['4070']
 size  = ['2s', '2s', '2s']
 tags  = [
-  'partcount-total-8',
-  'function-backup: [stud_tilt, shape_3D]',
   'angle-studtilt-90',
   'angle-studtilt-180',
-  'shape-polyhedron-8',
   'partcount-segment-1',
+  'partcount-total-8',
+  'shape-polyhedron-8',
 ]
 
 [[resources]]

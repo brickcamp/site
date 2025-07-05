@@ -6,10 +6,9 @@ aliases = ['/tech/clip-handle-tridecagon']
 parts = ['48336', '60470b', '3022', '3003']
 size  = ['14s', '2s', '14s']
 tags  = [
-  'partcount-total-78',
-  'function-backup: shape_2D',
-  'shape-polygon-13',
   'partcount-segment-6',
+  'partcount-total-78',
+  'shape-polygon-13',
 ]
 
 [[resources]]

@@ -6,9 +6,8 @@ aliases = ['/tech/tile-1x2-handles-snot']
 parts = ['2432','60470b']
 size  = ['2s', '2s', '4p']
 tags  = [
-  'partcount-total-4',
-  'function-backup: stud_tilt',
   'angle-studtilt-180',
+  'partcount-total-4',
 ]
 
 [[resources]]

@@ -6,10 +6,9 @@ aliases = ['/tech/technic-axle-pin-connector-type4-ring']
 parts = ['32192', '32062']
 size  = ['10s', '10s', '1s']
 tags  = [
-  'partcount-total-16',
-  'function-backup: shape_2D',
-  'shape-polygon-8',
   'partcount-segment-2',
+  'partcount-total-16',
+  'shape-polygon-8',
 ]
 
 [[resources]]

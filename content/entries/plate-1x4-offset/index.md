@@ -6,9 +6,8 @@ aliases = ['/tech/plate-1x4-offset']
 parts = ['4590']
 size  = ['4s', '2s', '1b']
 tags  = [
-  'partcount-total-1',
-  'function-backup: ["stud_shift"]',
   'length-studshift-10',
+  'partcount-total-1',
 ]
 
 [[resources]]

@@ -6,9 +6,8 @@ aliases = ['/tech/minifig-goblet-offset']
 parts = ['2343', '6141']
 size  = ['1s', '1s', '2b']
 tags  = [
-  'partcount-total-2',
-  'function-backup: ["stud_lift"]',
   'length-studlift-3',
+  'partcount-total-2',
 ]
 
 [[resources]]

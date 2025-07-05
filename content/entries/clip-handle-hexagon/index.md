@@ -6,10 +6,9 @@ aliases = ['/tech/clip-handle-hexagon']
 parts = ['48336', '60470b', '3022']
 size  = ['7s', '2s', '7s']
 tags  = [
-  'partcount-total-30',
-  'function-backup: shape_2D',
-  'shape-polygon-6',
   'partcount-segment-5',
+  'partcount-total-30',
+  'shape-polygon-6',
 ]
 
 [[resources]]

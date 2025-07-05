@@ -6,10 +6,8 @@ aliases = ['/tech/tile-grille-lever-snot']
 parts = ['2412b', '4593']
 size  = ['3s', '1s', '2p']
 tags  = [
-  'partcount-total-4',
-  'function-backup: stud_tilt',
   'angle-studtilt-180',
-
+  'partcount-total-4',
   'warning-instable',
 ]
 
