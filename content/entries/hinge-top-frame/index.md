@@ -2,6 +2,7 @@
 title = 'Hinge Top Frame'
 date  = '2015-08-23'
 
+aliases = ['/tech/hinge-top-frame']
 parts = ['3938']
 size  = ['4s', '1s', '2s']
 tags  = [

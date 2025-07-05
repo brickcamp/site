@@ -2,6 +2,7 @@
 title = 'Double Bracket'
 date  = '2015-08-23'
 
+aliases = ['/tech/bracket-bracket']
 parts = ['2436', '3023', '3710']
 size  = ['4s', '2s', '1b']
 uses  = ['bracket']

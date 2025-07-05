@@ -2,6 +2,7 @@
 title = 'Cheese on Cheese'
 date  = '2019-01-30'
 
+aliases = ['/tech/cheese-on-cheese']
 parts = ['54200', '6541', '3666']
 size  = ['6s', '5p', '1b']
 tags  = [

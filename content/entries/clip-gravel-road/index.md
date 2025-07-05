@@ -2,6 +2,7 @@
 title = 'Clip Gravel Road'
 date  = '2015-12-06'
 
+aliases = ['/tech/clip-gravel-road']
 parts = ['2555']
 size  = ['2s', '2s', '1s']
 tags  = [

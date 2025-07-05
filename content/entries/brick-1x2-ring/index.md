@@ -2,6 +2,7 @@
 title = 'Brick 1 x 2 Ring'
 date  = '2018-05-27'
 
+aliases = ['/tech/brick-1x2-ring']
 parts = ['3004']
 size  = ['41s', '41s', '12p']
 tags  = [

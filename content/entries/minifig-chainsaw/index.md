@@ -2,6 +2,7 @@
 title = 'Minifig Chainsaw'
 date  = '2015-09-14'
 
+aliases = ['/tech/minifig-chainsaw']
 parts = ['6117']
 size  = ['4s', '2s', '2p']
 tags  = [

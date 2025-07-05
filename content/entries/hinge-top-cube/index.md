@@ -2,6 +2,7 @@
 title = 'Hinge Top Cube'
 date  = '2019-01-19'
 
+aliases = ['/tech/hinge-top-cube']
 parts = ['3938', '6134']
 size  = ['4s', '2s', '2b']
 tags  = [

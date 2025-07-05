@@ -2,6 +2,7 @@
 title = '1 x 4 Wheels Holder Ring'
 date  = '2015-09-27'
 
+aliases = ['/tech/plate-1x4-wheels-holder-ring']
 parts = ['2926']
 size  = ['80p', '80p', '1s']
 tags  = [

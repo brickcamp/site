@@ -2,6 +2,7 @@
 title = 'Technic Plates on Axle'
 date  = '2019-01-29'
 
+aliases = ['/tech/technic-plates-with-axlehole-plates-on-axle']
 parts = ['3709', '32062', '4032a', '3022' ]
 size  = ['4s', '2s', '2b']
 tags  = [

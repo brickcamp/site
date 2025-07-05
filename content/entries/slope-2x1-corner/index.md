@@ -2,6 +2,7 @@
 title = 'Slope Corner'
 date  = '2016-01-04'
 
+aliases = ['/tech/slope-2x1-corner']
 parts = ['52107', '3040b', '3005']
 size  = ['4s', '2b', '2s']
 tags  = [

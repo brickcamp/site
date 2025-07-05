@@ -2,6 +2,7 @@
 title = 'Switch Diagonals'
 date  = '2015-12-06'
 
+aliases = ['/tech/plate-switch-diagonals']
 parts = ['6141', '3021', '3865']
 size  = ['3s', '3s', '3p']
 tags  = [

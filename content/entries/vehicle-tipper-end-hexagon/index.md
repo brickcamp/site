@@ -2,7 +2,7 @@
 title = 'Tipper End Hexagon'
 date  = '2015-10-09'
 
-aliases = ['/tech/tipper-end-hexagon']
+aliases = ['/tech/vehicle-tipper-end-hexagon', '/tech/tipper-end-hexagon']
 parts = ['30022', '6061']
 size  = ['16s', '37p', '2s']
 tags  = [

@@ -2,6 +2,7 @@
 title = 'Palm Top in Bracket Square'
 date  = '2015-10-11'
 
+aliases = ['/tech/palm-top-in-bracket-square']
 parts = ['2566', '44728']
 size  = ['3s', '3s', '4s']
 uses  = ['bracket-square']

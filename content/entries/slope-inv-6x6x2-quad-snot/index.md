@@ -2,6 +2,7 @@
 title = 'Quad Slope SNOT'
 date  = '2015-08-23'
 
+aliases = ['/tech/slope-inv-6x6x2-quad-snot']
 parts = ['30373']
 size  = ['9s', '9s', '4b']
 tags  = [

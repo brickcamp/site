@@ -2,6 +2,7 @@
 title = 'Plate on Hollow Studs'
 date  = '2015-08-26'
 
+aliases = ['/tech/plate-1xn-on-hollow-studs']
 parts = ['3700', '3623']
 size  = ['3s', '1s', '4p']
 tags  = [

@@ -2,6 +2,7 @@
 title = 'Tile Jumper Roof'
 date  = '2015-12-06'
 
+aliases = ['/tech/tile-jumper-roof']
 parts = ['3794b', '3022', '3023', '3666', '3069b']
 size  = ['6s', '6s', '4p']
 tags  = [

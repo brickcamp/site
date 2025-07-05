@@ -2,6 +2,7 @@
 title = 'Brick 1 x 2 Ring with 1 x 1 Round Bricks'
 date  = '2015-09-14'
 
+aliases = ['/tech/brick-1x2-brick-1x1-round-ring']
 parts = ['3062b', '3004']
 size  = ['11s', '11s', '9p']
 tags  = [

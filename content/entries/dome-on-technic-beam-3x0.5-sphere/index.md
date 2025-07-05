@@ -2,6 +2,7 @@
 title = 'Dome Sphere'
 date  = '2019-01-31'
 
+aliases = ['/tech/dome-on-technic-beam-3x0.5-sphere']
 parts = ['86500', '3623', '6632']
 size  = ['4s', '4s', '4s']
 tags  = [

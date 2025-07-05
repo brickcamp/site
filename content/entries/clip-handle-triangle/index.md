@@ -2,6 +2,7 @@
 title = 'Clip-Handle Triangle'
 date  = '2015-10-11'
 
+aliases = ['/tech/clip-handle-triangle']
 parts = ['60470b', '48336']
 size  = ['3s', '2s', '7p']
 tags  = [

@@ -2,6 +2,7 @@
 title = 'Lowell Sphere'
 date  = '2015-12-06'
 
+aliases = ['/tech/lowell-sphere']
 parts = ['3022', '2420', '3710', '3794b', '4733']
 size  = ['16p', '16p', '16p']
 tags  = [

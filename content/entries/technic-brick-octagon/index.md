@@ -2,6 +2,7 @@
 title = 'Technic Brick Octagon'
 date  = '2016-01-01'
 
+aliases = ['/tech/technic-brick-octagon']
 parts = ['3894', '32000', '2780']
 size  = ['14s', '14s', '2s']
 tags  = [

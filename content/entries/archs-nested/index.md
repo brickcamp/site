@@ -2,6 +2,7 @@
 title = 'Nested Archs'
 date  = '2015-10-10'
 
+aliases = ['/tech/archs-nested']
 parts = ['6091', '6005', '6060', '2339']
 size  = ['7s', '1s', '4b']
 tags  = [

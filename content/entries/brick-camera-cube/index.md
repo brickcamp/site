@@ -2,6 +2,7 @@
 title = 'Camera Cube'
 date  = '2015-08-23'
 
+aliases = ['/tech/brick-camera-cube']
 parts = ['4595', '3022']
 size  = ['7p', '7p', '3b']
 tags  = [

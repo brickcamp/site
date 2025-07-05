@@ -2,6 +2,7 @@
 title = 'Toothed Slopes'
 date  = '2016-01-03'
 
+aliases = ['/tech/slopes-toothed-pattern']
 parts = ['4070', '87087', '3024', '3040b', '3665', '4460b', '2449']
 size  = ['9s', '3s', '1b']
 tags  = [

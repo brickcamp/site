@@ -2,6 +2,7 @@
 title = 'Control Panel Ring'
 date  = '2015-08-29'
 
+aliases = ['/tech/control-panel-ring']
 parts = ['2342']
 size  = ['14s', '2s', '14s']
 tags  = [

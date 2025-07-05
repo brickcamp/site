@@ -2,7 +2,7 @@
 title = 'Techbrick-Plate-Sidestud Offset'
 date  = '2016-01-16'
 
-aliases = ['/tech/sidestud-plate-technicbrick-offset']
+aliases = ['/tech/technic-brick-plate-sidestud-offset', '/tech/sidestud-plate-technicbrick-offset']
 parts = ['3700', '4274', '6141']
 size  = ['3s', '2s', '1b']
 tags  = [

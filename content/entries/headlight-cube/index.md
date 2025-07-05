@@ -2,6 +2,7 @@
 title = 'Headlight Cube'
 date  = '2015-08-23'
 
+aliases = ['/tech/headlight-cube']
 parts = ['4070']
 size  = ['2s', '2s', '2s']
 tags  = [

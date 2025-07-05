@@ -2,6 +2,7 @@
 title = 'Cheese Corner Triangle'
 date  = '2015-12-06'
 
+aliases = ['/tech/cheese-corner-triangle']
 parts = ['2420', '3622', '54200', '3024']
 size  = ['5s', '5s', '4p']
 tags  = [

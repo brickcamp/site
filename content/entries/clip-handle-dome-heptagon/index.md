@@ -2,6 +2,7 @@
 title = 'Clip-Handle Heptagon with Domes'
 date  = '2015-08-26'
 
+aliases = ['/tech/clip-handle-dome-heptagon']
 parts = ['48336', '60470b', '3022', '30367b']
 size  = ['8s', '2s', '8s']
 tags  = [

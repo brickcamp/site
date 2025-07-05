@@ -2,6 +2,7 @@
 title = 'Technic Beam Triangle'
 date  = '2015-11-08'
 
+aliases = ['/tech/technic-beam-triangle-with-tightened-corners']
 parts = ['32316', '41677', '6632', '32062']
 size  = ['6s', '6s', '2s']
 tags  = [

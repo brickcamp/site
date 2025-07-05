@@ -2,6 +2,7 @@
 title = 'Slope Brick 45° 3 x 1 Inv. Double Square'
 date  = '2019-01-29'
 
+aliases = ['/tech/slope-brick-45-3x1-inv-double-square']
 parts = ['18759', '4733']
 size  = ['3s', '3s', '1b']
 tags  = [

@@ -2,6 +2,7 @@
 title = 'Headlight Ring'
 date  = '2019-02-11'
 
+aliases = ['/tech/headlight-ring']
 parts = ['4070']
 size  = ['13s', '13s', '1s']
 tags  = [

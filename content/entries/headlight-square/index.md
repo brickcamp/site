@@ -2,6 +2,7 @@
 title = 'Headlight Square'
 date  = '2019-04-02'
 
+aliases = ['/tech/headlight-square']
 parts = ['4070']
 size  = ['2s', '2s', '1s']
 tags  = [

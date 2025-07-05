@@ -2,6 +2,7 @@
 title = 'Slopes 2 x 2 Round on Bracket Square'
 date  = '2015-08-29'
 
+aliases = ['/tech/slopes-2x2-round-on-bracket-square']
 parts = ['30602', '44728', '3022', '3021', '3004']
 size  = ['7s', '7s', '2s']
 tags  = [

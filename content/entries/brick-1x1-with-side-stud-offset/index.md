@@ -2,6 +2,7 @@
 title = 'Brick 1 x 1 with Side Stud Offset'
 date  = '2019-04-17'
 
+aliases = ['/tech/brick-1x1-with-side-stud-offset']
 parts = ['87087']
 size  = ['4s', '2s', '3p']
 tags  = [

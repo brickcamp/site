@@ -2,6 +2,7 @@
 title = 'Hinge Brick Y'
 date  = '2015-08-23'
 
+aliases = ['/tech/hinge-bricks-1x2-locking-y']
 parts = ['30364', '30540', '30565']
 size  = ['6s', '6s', '4p']
 tags  = [

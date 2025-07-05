@@ -2,6 +2,7 @@
 title = 'Roadsign on Pneumatic Connectors Hexagon'
 date  = '2019-01-31'
 
+aliases = ['/tech/roadsign-on-pneumatic-connectors-hexagon']
 parts = ['57585', '30259', '99021']
 size  = ['12p', '11p', '5p']
 tags  = [

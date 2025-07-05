@@ -2,6 +2,7 @@
 title = 'Hinge Cheese Donut'
 date  = '2015-10-09'
 
+aliases = ['/tech/hinge-topbase-cheese-donut']
 parts = ['3937', '6134', '85984']
 size  = ['19p', '19p', '3s']
 tags  = [

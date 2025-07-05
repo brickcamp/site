@@ -2,6 +2,7 @@
 title = 'A-Plate Octagon'
 date  = '2019-07-26'
 
+aliases = ['/tech/plate-1x4-1x4-45degrees']
 parts = ['15706']
 size  = ['11s', '11s', '2p']
 tags  = [

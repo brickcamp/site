@@ -2,6 +2,7 @@
 title = 'Bracket Square'
 date  = '2015-08-23'
 
+aliases = ['/tech/bracket-square']
 parts = ['2436', '3020']
 size  = ['2s', '2s', '4s']
 tags  = [

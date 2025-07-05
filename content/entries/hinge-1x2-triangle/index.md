@@ -2,6 +2,7 @@
 title = 'Hinge 1 x 2 Triangle'
 date  = '2015-09-27'
 
+aliases = ['/tech/hinge-1x2-triangle']
 parts = ['4276b', '4275b']
 size  = ['4s', '1s', '9p']
 tags  = [

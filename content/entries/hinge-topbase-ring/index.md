@@ -2,6 +2,7 @@
 title = 'Hinge Top Ring'
 date  = '2015-08-27'
 
+aliases = ['/tech/hinge-topbase-ring']
 parts = ['3937', '6134']
 size  = ['5s', '2s', '5s']
 tags  = [

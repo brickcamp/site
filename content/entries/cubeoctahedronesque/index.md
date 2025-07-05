@@ -2,6 +2,7 @@
 title = 'Cubeoctahedronesque'
 date  = '2019-04-15'
 
+aliases = ['/tech/cubeoctahedronesque']
 parts = ['75937', '59443', '48729b', '57585']
 size  = ['11s', '11s', '11s']
 tags  = [

@@ -2,6 +2,7 @@
 title = 'Bracket ToPLES Frame'
 date  = '2015-08-23'
 
+aliases = ['/tech/bracket-toples-frame']
 parts = ['44728']
 size  = ['5s', '5s', '2s']
 tags  = [

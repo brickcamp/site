@@ -2,6 +2,7 @@
 title = 'Brick Log Pentagon'
 date  = '2015-08-27'
 
+aliases = ['/tech/brick-log-pentagon']
 parts = ['30137']
 size  = ['8s', '8s', '2b']
 tags  = [

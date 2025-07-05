@@ -2,6 +2,7 @@
 title = 'Clip-Handle Tridecagon'
 date  = '2015-08-26'
 
+aliases = ['/tech/clip-handle-tridecagon']
 parts = ['48336', '60470b', '3022', '3003']
 size  = ['14s', '2s', '14s']
 tags  = [

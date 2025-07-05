@@ -2,6 +2,7 @@
 title = 'Technic Axle Pin Connector 3 x 120° Ring'
 date  = '2016-11-19'
 
+aliases = ['/tech/technic-axle-pin-connector-3x120-ring']
 parts = ['10288', '32062']
 size  = ['10s', '10s', '1s']
 tags  = [

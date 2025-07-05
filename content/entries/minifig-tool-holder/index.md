@@ -2,6 +2,7 @@
 title = 'Minifig Tool Holder'
 date  = '2015-09-14'
 
+aliases = ['/tech/minifig-tool-holder']
 parts = ['2516', '3062b']
 size  = ['2s', '4s', '2s']
 tags  = [

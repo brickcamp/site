@@ -2,6 +2,7 @@
 title = 'Hinged 32 x 28 Hexagon'
 date  = '2015-08-27'
 
+aliases = ['/tech/hinged-32x28-hexagon']
 parts = ['3830', '3831', '3623', '3666', '4282', '3005', '3010', '3009']
 size  = ['32s', '28s', '5p']
 tags  = [

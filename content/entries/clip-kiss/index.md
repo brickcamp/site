@@ -2,6 +2,7 @@
 title = 'Kissing Clips'
 date  = '2015-10-10'
 
+aliases = ['/tech/clip-kiss']
 parts = ['2555']
 size  = ['1s', '1s', '3p']
 tags  = [

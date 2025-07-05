@@ -2,7 +2,7 @@
 title = 'Mudguard in Plate'
 date  = '2019-01-30'
 
-aliases = ['/tech/mudguard-in-plate']
+aliases = ['/tech/vehicle-mudguard-in-plate', '/tech/mudguard-in-plate']
 parts = ['50745', '3666']
 size  = ['6s', '3s', '2b']
 tags  = [

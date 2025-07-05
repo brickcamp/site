@@ -2,6 +2,7 @@
 title = 'Wedge Ring'
 date  = '2015-08-29'
 
+aliases = ['/tech/wedge-ring']
 parts = ['6565', '6564']
 size  = ['13s', '13s', '3b']
 tags  = [
