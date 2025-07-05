@@ -5,7 +5,9 @@
 
 {{ partial "header" . }}
 
-{{ partial "main" . }}
+<main>
+{{ block "main" .}}{{ end }}
+</main>
 
 {{ partial "footer" . }}
 
