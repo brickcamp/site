@@ -1,0 +1,15 @@
+title = 'Repeat'
+slug  = 'repeat'
+sort  = 30
+
+[[types]]
+title = 'Linear'
+slug  = 'linear'
+
+[[types]]
+title = 'Planar'
+slug  = 'planar'
+
+[[types]]
+title = 'Spacial'
+slug  = 'spacial'

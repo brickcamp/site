@@ -10,10 +10,6 @@ slug  = 'studlift'
 title = 'Stud Shift'
 slug  = 'studshift'
 
-[[filters]]
-slug    = 'lengths'
-default = 'any-length'
-
 [[values]]
 title = '½ Stud'
 slug  = '10'
