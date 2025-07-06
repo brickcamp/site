@@ -9,6 +9,8 @@
 {{ $description := .Get "description" -}}
 {{/* ******************************* */}}
 
+{{ if eq 1 2 }}
+
 {{/* check URL */}}
 {{ with $url -}}
   {{ $url = urls.Parse . -}}
@@ -51,5 +53,7 @@
 {{ else -}}
   {{ warnf "Unable to parse remote resource %q" $apiURL -}}
 {{ end -}}
+
+{{ end }}
 
 <!-- TODO -->
