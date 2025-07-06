@@ -1,0 +1,63 @@
+title = 'Shapes'
+slug  = 'shape'
+sort  = 40
+
+[[types]]
+title = 'Polygon'
+slug  = 'polygon'
+
+[[types]]
+title = 'Polyhedron'
+slug  = 'polyhedron'
+
+[[types]]
+title = 'Circle'
+slug  = 'circle'
+
+[[types]]
+title = 'Ellipse'
+slug  = 'ellipse'
+
+[[types]]
+title = 'Sphere'
+slug  = 'sphere'
+
+[[types]]
+title = 'Star'
+slug  = 'star'
+
+[[types]]
+title = 'Toroid'
+slug  = 'toroid'
+
+[[values]]
+title = '3 Sides'
+slug  = '3'
+
+[[values]]
+title = '4 Sides'
+slug  = '4'
+
+[[values]]
+title = '5 Sides'
+slug  = '5'
+
+[[values]]
+title = '6 Sides'
+slug  = '6'
+
+[[values]]
+title = '8 Sides'
+slug  = '8'
+
+[[values]]
+title = '10 Sides'
+slug  = '10'
+
+[[values]]
+title = '12 Sides'
+slug  = '12'
+
+[[values]]
+title = '16 Sides'
+slug  = '16'
