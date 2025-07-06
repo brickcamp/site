@@ -6,7 +6,9 @@ aliases = ['/tech/tile-1x1-with-clips-hexagonal']
 parts = ['2555', '3070b']
 size  = ['3s', '1s', '3s']
 tags  = [
-  'angle-studtilt-[60, 120, 180]',
+  'angle-studtilt-60',
+  'angle-studtilt-120',
+  'angle-studtilt-180',
   'partcount-segment-1',
   'partcount-total-7',
   'shape-polygon-6',

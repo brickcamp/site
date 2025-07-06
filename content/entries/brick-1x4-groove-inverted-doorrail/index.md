@@ -7,7 +7,7 @@ parts = ['2653', '32028', '4510', '3710']
 size  = ['4s', '2s', '1b']
 tags  = [
   'angle-studtilt-180',
-  'length-studshift-flex',
+  'length-studshift',
   'partcount-total-5',
 ]
 
