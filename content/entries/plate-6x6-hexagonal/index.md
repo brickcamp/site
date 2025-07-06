@@ -6,7 +6,8 @@ aliases = ['/tech/plate-6x6-hexagonal']
 parts = ['27255']
 size  = ['6s', '6s', '1s']
 tags  = [
-  'angle-studturn-[60, 120]',
+  'angle-studturn-60',
+  'angle-studturn-120',
   'partcount-total-1',
 ]
 
