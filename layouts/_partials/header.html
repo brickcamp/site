@@ -1,8 +1,36 @@
 <header>
   <nav>
-    <ul class="navbar">
-      <li id="nav-item-base">
-        Test
+    <ul id="navigation">
+      <li id="nav-filter-base">
+        <ul>
+        {{- range site.Data.entries.filters }}
+          <li>
+            {{ .title }}
+          </li>
+        {{end -}}
+        </ul>
+      </li>
+      <li id="nav-filter-type">
+        <ul>
+        {{- range $filter := site.Data.entries.filters }}
+        {{- range $type := .types }}
+          <li data-base="{{ $filter.slug }}" data-slug="{{ $type.slug }}">
+            {{ $type.title }}
+          </li>
+        {{end -}}
+        {{end -}}
+        </ul>
+      </li>
+      <li id="nav-filter-value">
+        <ul>
+        {{- range $filter := site.Data.entries.filters }}
+        {{- range $value := .values }}
+          <li data-base="{{ $filter.slug }}" data-slug="{{ $value.slug }}">
+            {{ $value.title }}
+          </li>
+        {{end -}}
+        {{end -}}
+        </ul>
       </li>
     </ul>
   </nav>

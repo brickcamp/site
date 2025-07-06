@@ -10,6 +10,17 @@ title        = 'BrickCamp'
   [caches.getresource]
     dir = ':resourceDir/_req'
 
+[module]
+  [module.hugoVersion]
+    extended = false
+    min      = "0.145.0"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "hugo_stats.json"
+    target = "assets/watching/hugo_stats.json"
+
 [outputs]
   home = ['html', 'rss']
   page = ['html']
