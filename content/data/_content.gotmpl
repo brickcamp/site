@@ -92,6 +92,11 @@
   {{ end }}
 {{ end }}
 
+{{/* Unfiltered + Any Type + Any Value */}}
+{{ $basePath := print "filtered/" $any }}
+{{ $filterPath := print $basePath "-" $any "-" $any }}
+{{ $combinations.Add $filterPath dict}}
+
 {{/* Create lookup file for each combination */}}
 {{ range $path, $filter := $combinations.Values }}
   {{ $page := dict
