@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="87.652" height="87.652" viewBox="0 0 23.191 23.191">
+  <defs>
+    <linearGradient>
+      <stop offset="0" stop-color="#0a0" />
+      <stop offset="1" stop-color="#f60" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(-1.634 -1.634)" paint-order="markers stroke fill" stroke="#000" stroke-linejoin="round">
+    <circle cx="13.229" cy="13.229" r="11.096" fill="#0a0" paint-order="markers fill stroke" />
+    <path d="M4.053 18.733h18.223M2.651 13.007h21.27M4.068 7.725h18.275" paint-order="markers fill stroke" fill="#000"
+      stroke-linecap="square" />
+    <ellipse cx="13.229" cy="13.245" rx="6.302" ry="10.924" fill="none" paint-order="markers fill stroke" />
+    <path d="M12.993 23.614V2.867" fill="#000" stroke-linecap="round" paint-order="markers fill stroke" />
+  </g>
+</svg>

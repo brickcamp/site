@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="97.054" height="97.054" viewBox="0 0 25.679 25.679">
+  <g transform="matrix(-.673428 .673428 -.673428 -.673428 57.780097 -64.197311)" stroke="#000" stroke-width="1.575"
+    stroke-linejoin="round">
+    <use href="#B" />
+    <g fill="#0a0">
+      <use href="#B" x="8.976" />
+      <use href="#B" x="-8.976" />
+    </g>
+  </g>
+  <defs>
+    <path id="B" d="M86.077-28.318h8.976v8.976h-8.976z" />
+  </defs>
+</svg>

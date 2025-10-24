@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96.899" height="93.373" viewBox="0 0 25.638 24.705">
+  <style>
+    <![CDATA[
+    .B {
+      stroke-linejoin: round
+    }
+
+    .C {
+      fill: #0a0
+    }
+
+    .D {
+      stroke: #000
+    }
+
+    .E {
+      stroke-width: 1.314
+    }
+    ]]>
+  </style>
+  <g transform="matrix(-.673428 .673428 -.673428 -.673428 57.759614 -64.684135)" class="B">
+    <g transform="matrix(.799113 .000042 .000042 .799113 12.096625 -10.888596)" stroke="#0a0" stroke-width="1.183">
+      <use href="#B" paint-order="markers fill stroke" />
+      <use href="#C" paint-order="markers fill stroke" />
+      <use href="#D" paint-order="markers fill stroke" />
+    </g>
+    <g transform="matrix(.799113 .000042 .000042 .799113 18.194216 -4.791004)" class="C D E">
+      <use href="#B" paint-order="markers fill stroke" />
+      <use href="#C" paint-order="markers fill stroke" />
+      <use href="#D" paint-order="markers fill stroke" />
+    </g>
+    <g transform="matrix(.799113 .000042 .000042 .799113 20.425532 -13.119912)" class="C D E">
+      <use href="#B" paint-order="markers fill stroke" />
+      <use href="#C" paint-order="markers fill stroke" />
+      <use href="#D" paint-order="markers fill stroke" />
+    </g>
+    <g transform="matrix(.799113 .000042 .000042 .799113 14.327939 -19.217504)" class="C D E">
+      <use href="#B" paint-order="markers fill stroke" />
+      <use href="#C" paint-order="markers fill stroke" />
+      <use href="#D" paint-order="markers fill stroke" />
+    </g>
+    <g transform="matrix(.799113 .000042 .000042 .799113 5.999033 -16.986188)" class="C D E">
+      <use href="#B" paint-order="markers fill stroke" />
+      <use href="#C" paint-order="markers fill stroke" />
+      <use href="#D" paint-order="markers fill stroke" />
+    </g>
+    <g transform="matrix(.799113 .000042 .000042 .799113 3.767716 -8.657281)" class="C D E">
+      <use href="#B" paint-order="markers fill stroke" />
+      <use href="#C" paint-order="markers fill stroke" />
+      <use href="#D" paint-order="markers fill stroke" />
+    </g>
+    <g transform="matrix(.799113 .000042 .000042 .799113 9.865307 -2.55969)" class="C D E">
+      <use href="#B" paint-order="markers fill stroke" />
+      <use href="#C" paint-order="markers fill stroke" />
+      <use href="#D" paint-order="markers fill stroke" />
+    </g>
+  </g>
+  <defs>
+    <path id="B" d="M99.807-10.183l4.405-4.405-1.612-6.018-4.405 4.405z" />
+    <path id="C" d="M102.6-20.605l-6.018-1.612-4.405 4.405 6.018 1.612z" />
+    <path id="D" d="M93.789-11.795l-1.612-6.018 6.018 1.612 1.612 6.018z" />
+  </defs>
+</svg>

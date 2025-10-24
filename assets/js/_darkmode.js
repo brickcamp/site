@@ -18,7 +18,7 @@ function setDark(enabled) {
   isDark = enabled;
 
   const theme = isDark ? "dark" : "light";
-  document.documentElement.setAttribute("data-theme", theme);
+  document.documentElement.setAttribute("data-bs-theme", theme);
   localStorage.setItem("theme", theme);
 }
 

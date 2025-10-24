@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="87.651" height="87.651" viewBox="0 0 23.191 23.191">
+  <defs>
+    <linearGradient>
+      <stop offset="0" stop-color="#0a0" />
+      <stop offset="1" stop-color="#f60" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(-1.634 -1.634)" paint-order="markers stroke fill" stroke="#000" stroke-linejoin="round">
+    <path
+      d="M13.229 2.134A11.096 11.096 0 0 0 2.134 13.229a11.096 11.096 0 0 0 22.191 0A11.096 11.096 0 0 0 13.229 2.134zm0 5.798a5.298 5.298 0 1 1 0 10.596 5.298 5.298 0 1 1 0-10.596z"
+      fill="#0a0" paint-order="markers fill stroke" />
+    <g fill="#000" stroke-linecap="round">
+      <path
+        d="M5.561 5.774l3.443 3.443m-6.461 4.05h4.869m-1.705 7.432l3.443-3.443m4.05 6.461v-4.869m3.99-1.738l3.443 3.443m-1.851-7.493h4.869"
+        paint-order="markers fill stroke" />
+      <path d="M17.044 9.07l3.443-3.443m-7.494 1.851V2.609" paint-order="markers fill stroke" />
+    </g>
+    <circle cx="13.229" cy="13.229" r="8.197" fill="none" paint-order="markers fill stroke" />
+  </g>
+</svg>
