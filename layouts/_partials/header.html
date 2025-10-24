@@ -1,52 +1,104 @@
 <header>
-  <nav>
-    <ul id="navigation">
-      <li id="nav-filter-base">
-        <ul>
-          <li data-slug="__any">
-            All
-          </li>
-        {{- range site.Data.entries.filters }}
-          <li data-slug="{{ .slug }}">
+  <nav class="bg-body-secondary">
+    <div id="main-nav" class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <div class="nav col-12 col-lg-auto my-2 justify-content-center">
+          {{- range site.Data.entries.filters }}
+          <a href="#" class="nav-link link-body-emphasis" data-slug="{{ .slug }}">
+            <img src="/icons/icon-{{ .slug }}.svg" class="d-block mx-auto mb-1" width=40 height=40>
             {{ .title }}
-          </li>
-        {{end -}}
-        </ul>
-      </li>
-      <li id="nav-filter-type">
-        <ul>
-          <li data-slug="__any">
+          </a>
+          {{- end }}
+          <button class="btn" id="darkmode-toggle" title="Toggle Dark Mode" type="button">
+            <span class="dark-only">🌙</span>
+            <span class="light-only">☀️</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-expand-sm bg-body-tertiary py-0">
+    <div class="container">
+      <ul id="filter-nav" class="navbar-nav">
+        <li id="nav-filter-base" class="nav-item dropdown" hidden>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            All
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" data-slug="__any" hidden>
+              All
+            </a>
+            {{- range site.Data.entries.filters }}
+            <a class="dropdown-item" data-slug="{{ .slug }}">
+              {{ .title }}
+            </a>
+            {{- end }}
+          </div>
+        </li>
+
+        <li id="nav-filter-type" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
             All Types
-          </li>
-        {{- range $filter := site.Data.entries.filters }}
-        {{- range $type := .types }}
-          <li data-base="{{ $filter.slug }}" data-slug="{{ $type.slug }}">
-            {{ $type.title }}
-          </li>
-        {{end -}}
-        {{end -}}
-          <li data-slug="__else">
-            ...
-          </li>
-        </ul>
-      </li>
-      <li id="nav-filter-value">
-        <ul>
-          <li data-slug="__any">
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" data-slug="__any" hidden>
+              All Types
+            </a>
+            {{- range $filter := site.Data.entries.filters }}
+            {{- range $type := .types }}
+            <a class="dropdown-item" data-base="{{ $filter.slug }}" data-slug="{{ $type.slug }}">
+              <img src="/icons/icon-{{ $filter.slug}}-{{ $type.slug }}.svg" width=25 height=25 class="pe-2">
+              {{ $type.title }}
+            </a>
+            {{- end }}
+            {{- end }}
+            <a class="dropdown-item" data-slug="__else">
+              ...
+            </a>
+          </div>
+        </li>
+
+        <li id="nav-filter-value" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
             All Values
-          </li>
-        {{- range $filter := site.Data.entries.filters }}
-        {{- range $value := .values }}
-          <li data-base="{{ $filter.slug }}" data-slug="{{ $value.slug }}">
-            {{ $value.title }}
-          </li>
-        {{end -}}
-        {{end -}}
-          <li data-slug="__else">
-            ...
-          </li>
-        </ul>
-      </li>
-    </ul>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" data-slug="__any" hidden>
+              All Values
+            </a>
+            {{- range $filter := site.Data.entries.filters }}
+            {{- range $value := .values }}
+            <a class="dropdown-item" data-base="{{ $filter.slug }}" data-slug="{{ $value.slug }}">
+              {{ $value.title }}
+            </a>
+            {{- end }}
+            {{- end }}
+            <a class="dropdown-item" data-slug="__else">
+              ...
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav">
+        <li id="nav-sorting" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Sort
+          </a>
+          <div class="dropdown-menu">
+            {{- range $sorting := site.Data.entries.sortings.options }}
+            <a class="dropdown-item" data-slug="{{ $sorting.slug }}">
+              {{ $sorting.title }}
+            </a>
+            {{- end }}
+          </div>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>

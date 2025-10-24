@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="79.968" height="74.715" viewBox="0 0 21.158 19.768">
+  <g transform="matrix(1.114285 .010482 -.010482 1.114285 -51.233994 -60.087947)">
+    <path d="M47.549 56.608l17.121-.161.109 11.61-17.121.161z" paint-order="markers fill stroke" />
+    <path
+      d="M47.386 56.417l.112 11.926 17.177-.162-.112-11.926zm7.132 3.491l.091 4.81-4.212-2.327zm2.98-.028l4.167 2.406-4.167 2.405z"
+      fill="#0a0" paint-order="markers stroke fill" />
+    <path d="M64.58 54.215l.076 15.945m-17.05.16l-.216-15.882" fill="none" stroke="#000" stroke-width="1.795"
+      stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>
