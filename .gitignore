@@ -11,6 +11,8 @@ tmp
 /hugo_stats.json
 /.hugo_build.lock
 
-/public
-/resources/_gen
 /dist
+/i18n
+/public
+/resources
+/themes
