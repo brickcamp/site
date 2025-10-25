@@ -1,3 +1,11 @@
 {{ define "main" }}
-{{ .Title }}
+<div class="container">
+  <div id="entries" class="row row-cols-2 row-cols-md-4 g-4">
+  </div>
+</div>
+
+{{- $js := resources.Get "js/home.js" }}
+<script>
+  {{ $js.Content | safe.JS }}
+</script>
 {{ end }}
