@@ -1,26 +1,26 @@
-default = 'by-date-descending'
+default = 'date-desc'
 
 [[options]]
 title = 'Newest'
-slug  = 'by-date-descending'
+slug  = 'date-desc'
 field = 'Date'
 order = 'desc'
 
 [[options]]
 title = 'Oldest'
-slug  = 'by-date-ascending'
+slug  = 'date-asc'
 field = 'Date'
 order = 'asc'
 
 [[options]]
 title = 'A – Z'
-slug  = 'by-title-ascending'
+slug  = 'title-asc'
 field = 'Title'
 order = 'asc'
 
 [[options]]
 title = 'Z – A'
-slug  = 'by-title-descending'
+slug  = 'title-desc'
 field = 'Title'
 order = 'desc'
 

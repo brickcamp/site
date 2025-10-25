@@ -3,13 +3,13 @@
 {{ partial "head" . }}
 <body>
 
-{{ partial "header" . }}
+  {{ partial "header" . }}
 
-<main>
-{{ block "main" .}}{{ end }}
-</main>
+  <main class="my-3">
+    {{ block "main" .}}{{ end }}
+  </main>
 
-{{ partial "footer" . }}
+  {{ partial "footer" . }}
 
 </body>
 </html>

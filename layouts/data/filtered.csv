@@ -35,7 +35,7 @@
   {{- end -}}
   
   {{- range $weightedPages }}
-    {{- $entry := print "'" .RelPermalink "'" -}}
+    {{- $entry := print .RelPermalink ",'" .Title "'" -}}
     {{- $entries = $entries | append $entry -}}
   {{- end -}}
 {{- end -}}
