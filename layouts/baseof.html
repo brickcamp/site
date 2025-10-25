@@ -3,13 +3,16 @@
 {{ partial "head" . }}
 <body>
 
-  {{ partial "header" . }}
+<header>
+  {{ partial "navigation/main" . }}
+  {{ block "subnavigation" . }}{{ end }}
+</header>
 
-  <main class="my-3">
-    {{ block "main" .}}{{ end }}
-  </main>
+<main class="my-3">
+  {{ block "main" . }}{{ end }}
+</main>
 
-  {{ partial "footer" . }}
+{{ partial "footer" . }}
 
 </body>
 </html>
