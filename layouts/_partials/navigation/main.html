@@ -1,0 +1,20 @@
+<nav class="bg-body-secondary">
+  <div id="main-nav" class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center">
+      <div class="nav col-12 col-lg-auto my-2 justify-content-center">
+        
+        {{- range site.Data.entries.filters }}
+        <a href="#" class="nav-link link-body-emphasis" data-slug="{{ .slug }}">
+          <img src="/icons/icon-{{ .slug }}.svg" class="d-block mx-auto mb-1" width=40 height=40>
+          {{ .title }}
+        </a>
+        {{- end }}
+        
+        <button class="btn" id="darkmode-toggle" title="Toggle Dark Mode" type="button">
+          <span class="dark-only">🌙</span>
+          <span class="light-only">☀️</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
