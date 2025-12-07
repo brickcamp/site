@@ -11,7 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initFilterDropdowns() {
   const links = document.querySelectorAll("#filter-nav .dropdown-item");
-  links.forEach(link => link.addEventListener("click", onFilterLinkClicked));
+  links.forEach(link => {
+    link.addEventListener("click", onFilterLinkClicked);
+    link.addEventListener("keydown", e => {
+      if (e.key === "Enter") onFilterLinkClicked(e);
+    });
+  });
 }
 
 function refresh() {
