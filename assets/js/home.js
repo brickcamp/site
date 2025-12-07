@@ -5,11 +5,11 @@ var value = params.get("value") || "__any";
 var sort  = params.get("sort")  || "date-desc";
 
 document.addEventListener("DOMContentLoaded", () => {
-  initFilterNav();
+  initFilterDropdowns();
   refresh();
 });
 
-function initFilterNav() {
+function initFilterDropdowns() {
   const links = document.querySelectorAll("#filter-nav .dropdown-item");
   links.forEach(link => link.addEventListener("click", onFilterLinkClicked));
 }
@@ -27,7 +27,19 @@ function refreshFilterDropdowns() {
     "nav-value": value,
     "nav-sort": sort,
   }
-  dropdowns.forEach(d => copySpanText(d.id + "-" + selected[d.id], d.id));
+  dropdowns.forEach(dropdown => {
+    copySpanText(dropdown.id + "-" + selected[dropdown.id], dropdown.id)
+    switch(dropdown.id) {
+      case "nav-type":
+      case "nav-value":
+        dropdown.hidden = (base == "__any");
+    }
+  });
+
+  const links = document.querySelectorAll("#filter-nav .dropdown-item");
+  links.forEach(link => {
+    link.hidden = link.dataset.base && link.dataset.base != base;
+  });
 }
 
 async function refreshEntries() {
@@ -70,10 +82,15 @@ function appendEntry(entry) {
   elCard.classList.add("card", "h-100");
   elCol.appendChild(elCard);
 
+  const elSquared = document.createElement("div");
+  elSquared.classList.add("ratio", "ratio-1x1");
+  elCard.appendChild(elSquared);
+
   const elImage = document.createElement("img");
-  elImage.classList.add("card-img-top");
+  elImage.classList.add("card-img-top", "object-fit-cover");
   elImage.src = entry[0] + "/image.png";
-  elCard.appendChild(elImage);
+  elImage.loading = "lazy";
+  elSquared.appendChild(elImage);
 
   const elFooter = document.createElement("div");
   elFooter.classList.add("card-footer", "text-center", "h-100");
@@ -88,14 +105,16 @@ function appendEntry(entry) {
 
 function onFilterLinkClicked(e) {
   const id = e.target.closest("[id]")?.id;
-  const segments = id.split("-", 3);
+  const segments = id.split("-");
   if (segments.length < 2 || segments[0] != "nav") {
     return;
   }
 
   switch (segments[1]) {
     case "base":
-      base = segments[2];
+      base  = segments[2];
+      type  = "__any";
+      value = "__any";
       break;
     case "type":
       type = segments[2];
@@ -104,7 +123,7 @@ function onFilterLinkClicked(e) {
       value = segments[2];
       break;
     case "sort":
-      sort = segments[2];
+      sort = segments[2] + "-" + segments[3];
       break;
     default:
       return;
