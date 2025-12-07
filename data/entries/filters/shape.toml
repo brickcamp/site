@@ -3,14 +3,6 @@ slug  = 'shape'
 sort  = 40
 
 [[types]]
-title = 'Polygon'
-slug  = 'polygon'
-
-[[types]]
-title = 'Polyhedron'
-slug  = 'polyhedron'
-
-[[types]]
 title = 'Circle'
 slug  = 'circle'
 
@@ -19,12 +11,20 @@ title = 'Ellipse'
 slug  = 'ellipse'
 
 [[types]]
-title = 'Sphere'
-slug  = 'sphere'
+title = 'Polygon'
+slug  = 'polygon'
 
 [[types]]
 title = 'Star'
 slug  = 'star'
+
+[[types]]
+title = 'Polyhedron'
+slug  = 'polyhedron'
+
+[[types]]
+title = 'Sphere'
+slug  = 'sphere'
 
 [[types]]
 title = 'Toroid'

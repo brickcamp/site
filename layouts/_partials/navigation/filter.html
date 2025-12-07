@@ -4,11 +4,14 @@
 {{ $dropdowns.Add "value" slice -}}
 {{ $dropdowns.Add "sort"  slice -}}
 
+{{ $dropdowns.Add "base"  (dict "id" "__any" "title" "All Entries" ) -}}
+{{ $dropdowns.Add "type"  (dict "id" "__any" "title" "All Types" ) -}}
 {{ $dropdowns.Add "value" (dict "id" "__any" "title" "All Values" ) -}}
+
 {{ range $filter := site.Data.entries.filters -}}
-  {{ $dropdowns.Add "base" (dict "id" $filter.slug "title" $filter.title ) -}}
+  {{ $dropdowns.Add "base" (dict "id" $filter.slug "title" $filter.title "icon" true) -}}
   {{ range .types -}}
-    {{ $dropdowns.Add "type" (dict "parent" $filter.slug "id" .slug "title" .title ) -}}
+    {{ $dropdowns.Add "type" (dict "parent" $filter.slug "id" .slug "title" .title  "icon" true) -}}
   {{ end -}}
   {{ range .values -}}
     {{ $dropdowns.Add "value" (dict "parent" $filter.slug "id" .slug "title" .title ) -}}
