@@ -1,0 +1,16 @@
+{{- $id    := .id    -}}
+{{- $items := .items -}}
+
+<div id="nav-{{ $id }}" class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span>{{ index (index .items 0) "title" }}</span>
+  </a>
+  <div class="dropdown-menu">
+    {{- range $items }}
+    <a id="nav-{{ $id }}-{{ with .parent }}{{ . }}-{{ end }}{{ .id }}" class="dropdown-item">
+      <img src="/icons/icon-{{ with .parent }}{{ . }}-{{ end }}{{ $id }}-{{ .id }}.svg" width=25 height=25 class="pe-2">
+      <span>{{ .title }}</span>
+    </a>
+    {{- end }}
+  </div>
+</div>

@@ -1,6 +1,7 @@
-baseURL      = 'https://brick.camp/'
-languageCode = 'en-us'
-title        = 'BrickCamp'
+baseURL       = 'https://brick.camp/'
+languageCode  = 'en-us'
+title         = 'BrickCamp'
+enableGitInfo = true
 
 [build]
   [build.buildStats]
