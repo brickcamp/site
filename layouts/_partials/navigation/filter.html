@@ -24,11 +24,11 @@
 
 <nav class="navbar navbar-expand-sm bg-body-tertiary py-0">
   <div class="container">
-    <div id="filter-nav" class="navbar-nav">
+    <div id="filter-nav" class="navbar-nav w-100">
       {{- partial "navigation/dropdown.html" (dict "id" "base"  "items" ($dropdowns.Get "base")) -}}
       {{- partial "navigation/dropdown.html" (dict "id" "type"  "items" ($dropdowns.Get "type")) -}}
       {{- partial "navigation/dropdown.html" (dict "id" "value" "items" ($dropdowns.Get "value")) -}}
-      {{- partial "navigation/dropdown.html" (dict "id" "sort"  "items" ($dropdowns.Get "sort")) -}}
+      {{- partial "navigation/dropdown.html" (dict "id" "sort"  "items" ($dropdowns.Get "sort") "class" "ms-auto" ) -}}
     </div>
   </div>
 </nav>
