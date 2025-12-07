@@ -24,5 +24,5 @@ params.copyright = '©2025 BrickCamp'
     url="https://www.flickr.com/photos/megustakapusta/14187894578"
     title="Greek-like Pattern Technique"
     author="Piotr Hofman"
-    date="2014-00-00"
+    date="2014-06-08"
 >}}

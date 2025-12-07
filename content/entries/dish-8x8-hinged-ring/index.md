@@ -24,5 +24,5 @@ params.copyright = '©2025 BrickCamp'
     url="https://www.flickr.com/photos/bobdequatre/19890912805/"
     title="8x8 dishes trick"
     author="BobDeQuatre"
-    date="20-06-2015 "
+    date="2015-06-20"
 >}}
