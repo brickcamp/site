@@ -22,7 +22,7 @@
   {{ $dropdowns.Add "sort" (dict "id" .slug "title" .title ) -}}
 {{ end -}}
 
-<nav class="navbar navbar-expand-sm bg-body-tertiary py-0">
+<nav class="navbar navbar-expand bg-body-tertiary py-0">
   <div class="container">
     <ul id="filter-nav" class="navbar-nav w-100">
       {{- partial "navigation/dropdown.html" (dict "id" "base"  "items" ($dropdowns.Get "base")) -}}
