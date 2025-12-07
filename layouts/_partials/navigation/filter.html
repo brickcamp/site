@@ -1,84 +1,31 @@
+{{ $dropdowns := newScratch -}}
+{{ $dropdowns.Add "base"  slice -}}
+{{ $dropdowns.Add "type"  slice -}}
+{{ $dropdowns.Add "value" slice -}}
+{{ $dropdowns.Add "sort"  slice -}}
+
+{{ $dropdowns.Add "value" (dict "id" "__any" "title" "All Values" ) -}}
+{{ range $filter := site.Data.entries.filters -}}
+  {{ $dropdowns.Add "base" (dict "id" $filter.slug "title" $filter.title ) -}}
+  {{ range .types -}}
+    {{ $dropdowns.Add "type" (dict "parent" $filter.slug "id" .slug "title" .title ) -}}
+  {{ end -}}
+  {{ range .values -}}
+    {{ $dropdowns.Add "value" (dict "parent" $filter.slug "id" .slug "title" .title ) -}}
+  {{ end -}}
+{{ end -}}
+{{ $dropdowns.Add "value" (dict "id" "__else" "title" "..." ) -}}
+{{ range site.Data.entries.sortings.options -}}
+  {{ $dropdowns.Add "sort" (dict "id" .slug "title" .title ) -}}
+{{ end -}}
+
 <nav class="navbar navbar-expand-sm bg-body-tertiary py-0">
   <div class="container">
-
-    <ul id="filter-nav" class="navbar-nav">
-      <li id="nav-filter-base" class="nav-item dropdown" hidden>
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
-          All
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" data-slug="__any" hidden>
-            All
-          </a>
-          {{- range site.Data.entries.filters }}
-          <a class="dropdown-item" data-slug="{{ .slug }}">
-            {{ .title }}
-          </a>
-          {{- end }}
-        </div>
-      </li>
-
-      <li id="nav-filter-type" class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
-          All Types
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" data-slug="__any" hidden>
-            All Types
-          </a>
-          {{- range $filter := site.Data.entries.filters }}
-          {{- range $type := .types }}
-          <a class="dropdown-item" data-base="{{ $filter.slug }}" data-slug="{{ $type.slug }}">
-            <img src="/icons/icon-{{ $filter.slug}}-{{ $type.slug }}.svg" width=25 height=25 class="pe-2">
-            {{ $type.title }}
-          </a>
-          {{- end }}
-          {{- end }}
-          <a class="dropdown-item" data-slug="__else">
-            ...
-          </a>
-        </div>
-      </li>
-
-      <li id="nav-filter-value" class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
-          All Values
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" data-slug="__any" hidden>
-            All Values
-          </a>
-          {{- range $filter := site.Data.entries.filters }}
-          {{- range $value := .values }}
-          <a class="dropdown-item" data-base="{{ $filter.slug }}" data-slug="{{ $value.slug }}">
-            {{ $value.title }}
-          </a>
-          {{- end }}
-          {{- end }}
-          <a class="dropdown-item" data-slug="__else">
-            ...
-          </a>
-        </div>
-      </li>
-    </ul>
-
-    <ul id="nav-sorting" class="navbar-nav">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
-          Sort
-        </a>
-        <div class="dropdown-menu">
-          {{- range $sorting := site.Data.entries.sortings.options }}
-          <a class="dropdown-item" data-slug="{{ $sorting.slug }}">
-            {{ $sorting.title }}
-          </a>
-          {{- end }}
-        </div>
-      </li>
-    </ul>
+    <div id="filter-nav" class="navbar-nav">
+      {{- partial "navigation/dropdown.html" (dict "id" "base"  "items" ($dropdowns.Get "base")) -}}
+      {{- partial "navigation/dropdown.html" (dict "id" "type"  "items" ($dropdowns.Get "type")) -}}
+      {{- partial "navigation/dropdown.html" (dict "id" "value" "items" ($dropdowns.Get "value")) -}}
+      {{- partial "navigation/dropdown.html" (dict "id" "sort"  "items" ($dropdowns.Get "sort")) -}}
+    </div>
   </div>
 </nav>

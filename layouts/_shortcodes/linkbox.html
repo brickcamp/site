@@ -1,6 +1,5 @@
 {{/* ******************************* */}}
 {{ $url         := .Get "url"         -}}
-{{ $anchor      := .Get "anchor"      -}}
 {{ $title       := .Get "title"       -}}
 {{ $date        := .Get "date"        -}}
 {{ $author      := .Get "author"      -}}
@@ -9,8 +8,6 @@
 {{ $description := .Get "description" -}}
 {{/* ******************************* */}}
 
-{{ if eq 1 2 }}
-
 {{/* check URL */}}
 {{ with $url -}}
   {{ $url = urls.Parse . -}}
@@ -18,42 +15,38 @@
   {{ errorf "Linkbox shortcode must have a url parameter." -}}  
 {{ end -}}
 {{ if not $url.IsAbs -}}
-  {{ errorf "Linkbox can't link non-absolute url %q" $url.String -}}
+  {{ errorf "Linkbox can't link non-absolute url '%q'." $url.String -}}
 {{ end -}}
 
-{{/* prepare API */}}
-{{ $apiURL  := print "https://api.microlink.io/?url=" $url -}}
-{{ $apiKey  := site.Data.secrets.microlink -}}
-{{ $apiArgs := dict -}}
-{{ with $apiKey -}}
-  {{ $apiArgs = dict "headers" (dict "x-api-key" . ) -}}
-{{ end -}}
+{{/* set default values */}}
+{{ $title     = $title     | default "Untitled" -}}
+{{ $date      = $date      | default (dateFormat "2023-10-15" .Page.Lastmod) -}}
+{{ $author    = $author    | default "Unknown author" -}}
+{{ $publisher = $publisher | default $url.Hostname -}}
+{{ $imageURL  = $imageURL  | default "/icons/icon-image-not-found.png" -}}
 
-{{/* call API */}}
-{{- $apiResponse := "{}" }}
-{{ with try (resources.GetRemote $apiURL $apiArgs) -}}
-  {{ with .Err -}}
-    {{ warnf "%s" . -}}
-  {{ else with .Content -}}
-    {{ $apiResponse = . -}}
-  {{ else -}}
-    {{ warnf "Unable to get remote resource %q" $apiURL -}}
-  {{ end -}}
-{{ end -}}
-
-{{/* parse response */}}
-{{- with ($apiResponse | transform.Unmarshal ) -}}
-  {{ $url         := urls.Parse .url | default $url -}}
-  {{ $title       := $title          | default .title       | default "Untitled"     -}}
-  {{ $date        := $date           | default .date        | default time.Now.UTC   -}}
-  {{ $author      := $author         | default .author      | default $.Get "author" -}}
-  {{ $publisher   := $publisher      | default .publisher   | default $url.Hostname  -}}
-  {{ $imageURL    := $imageURL       | default .image.url   | default "" -}}
-  {{ $description := $description    | default .description | default "" -}}
-{{ else -}}
-  {{ warnf "Unable to parse remote resource %q" $apiURL -}}
-{{ end -}}
-
-{{ end }}
-
-<!-- TODO -->
+{{/* render link preview */}}
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-3 col-lg-2 rounded-start bg-image" style="background-image: url({{ $imageURL }})">
+    </div>
+    <div class="col-8">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ $title }}
+        </h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">
+          {{ $author }} ({{ $date }}, {{ $publisher }})
+        </h6>
+        <p class="card-text">
+          {{ with $description -}}
+            <p>{{ . }}</p>
+          {{ else -}}
+            <i>No description provided - follow link for details</i>
+          {{- end }}          
+        </p>
+        <a href="{{ $url.String }}" class="stretched-link"></a>
+      </div>
+    </div>
+  </div>
+</div>
