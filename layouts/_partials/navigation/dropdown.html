@@ -2,18 +2,20 @@
 {{- $items := .items -}}
 {{- $class := .class -}}
 
-<div id="nav-{{ $id }}" class="nav-item dropdown {{ $class }}">
-  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<li id="nav-{{ $id }}" class="nav-item dropdown {{ $class }}">
+  <a id="nav-label-{{ $id }}" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
     <span>{{ index (index .items 0) "title" }}</span>
   </a>
-  <div class="dropdown-menu">
+  <ul class="dropdown-menu" aria-labelledby="nav-label-{{ $id }}">
     {{- range $items }}
-    <a id="nav-{{ $id }}-{{ .id }}" class="dropdown-item" data-base="{{ .parent }}">
-      {{ if .icon -}}
-      <img src="/icons/icon-{{ with .parent }}{{ . }}-{{ end }}{{ $id }}-{{ .id }}.svg" width=25 height=25 class="pe-2">
-      {{ end -}}
-      <span>{{ .title }}</span>
-    </a>
+    <li>
+      <a id="nav-{{ $id }}-{{ .id }}" class="dropdown-item" data-base="{{ .parent }}" href="#">
+        {{ if .icon -}}
+        <img src="/icons/icon-{{ with .parent }}{{ . }}-{{ end }}{{ $id }}-{{ .id }}.svg" width=25 height=25 class="pe-2">
+        {{ end -}}
+        <span>{{ .title }}</span>
+      </a>
+    </li>
     {{- end }}
-  </div>
-</div>
+  </ul>
+</li>
