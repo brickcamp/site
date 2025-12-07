@@ -43,11 +43,8 @@ function refreshFilterDropdowns() {
 }
 
 async function refreshEntries() {
-  const csvSorted = "/sorted/" + sort;
-  const csvFilter = "/filtered/" + base + "-" + type + "-" + value;
-
   clearEntries();
-  Promise.all([loadCSV(csvSorted), loadCSV(csvFilter)])
+  Promise.all([loadEntrySorting(), loadEntryFiltering()])
     .then(([listSort, listFilter]) => {
       const indexMap = new Map(listSort.map((item, index) => [item, index]));
       listFilter
@@ -57,6 +54,18 @@ async function refreshEntries() {
         .forEach(appendEntry);
     })
     .catch((err) => console.error("refreshEntries failed:", err));
+}
+
+async function loadEntrySorting() {
+  if (sort == "random") {
+    return loadCSV("/sorted/title-asc").then(list => shuffle(list));
+  } else {
+    return loadCSV("/sorted/" + sort);
+  }
+}
+
+async function loadEntryFiltering() {
+  return loadCSV("/filtered/" + base + "-" + type + "-" + value);
 }
 
 async function loadCSV(url) {
@@ -123,7 +132,7 @@ function onFilterLinkClicked(e) {
       value = segments[2];
       break;
     case "sort":
-      sort = segments[2] + "-" + segments[3];
+      sort = [segments[2], segments[3]].filter(Boolean).join("-");
       break;
     default:
       return;
@@ -145,4 +154,12 @@ function setSpanText(id, text) {
   if (span){
     span.innerText = text;
   }
+}
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
 }

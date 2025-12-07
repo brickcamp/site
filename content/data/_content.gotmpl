@@ -122,5 +122,7 @@
     "params"   (dict "sorting" $sorting)
     "sitemap"  (dict "disable" true)
   }}
-  {{ $.AddPage $page }}
+  {{ if not $sorting.nocsv }}
+    {{ $.AddPage $page }}
+  {{ end }}
 {{ end }}

@@ -48,7 +48,7 @@ order = 'desc'
 # field = 'Store.volume'
 # order = 'desc'
 
-# [[options]]
-# title = 'Random'
-# slug  = 'in-random-order'
-# field = 'Random'
+[[options]]
+title = 'Random'
+slug  = 'random'
+nocsv = true
