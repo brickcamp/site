@@ -12,6 +12,8 @@
       <a id="nav-{{ $id }}-{{ .id }}" class="dropdown-item" data-base="{{ .parent }}" href="#">
         {{ if .icon -}}
         <img src="/icons/icon-{{ with .parent }}{{ . }}-{{ end }}{{ $id }}-{{ .id }}.svg" width=25 height=25 class="pe-2">
+        {{ else }}
+        <i class="no-icon"></i>
         {{ end -}}
         <span>{{ .title }}</span>
       </a>
