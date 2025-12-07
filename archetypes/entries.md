@@ -35,6 +35,7 @@ tags = [
 [[resources]]
 src              = 'image.jpg'
 params.copyright = '©{{ time.Now.Format "2006" }} BrickCamp'
+params.reference = 'https://brick.camp'
 
 +++
 
