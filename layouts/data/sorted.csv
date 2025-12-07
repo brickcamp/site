@@ -3,5 +3,5 @@
 {{- $pages := sort $pages $sorting.field $sorting.order -}}
 
 {{- range $pages }}
-'{{ .RelPermalink }}'
+{{ .RelPermalink }}
 {{- end -}}
