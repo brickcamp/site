@@ -1,7 +1,12 @@
 {{- $sorting := .Params.sorting -}}
 {{- $pages := where site.RegularPages "Section" "entries" -}}
-{{- $pages := sort $pages $sorting.field $sorting.order -}}
+{{- $sorted := slice -}}
+{{- if hasPrefix $sorting.field "_" -}}
+  {{- $sorted = partial "func/sortPagesByStore" (slice $pages $sorting.field $sorting.order) -}}
+{{- else -}}
+  {{- $sorted = sort $pages $sorting.field $sorting.order -}}
+{{- end -}}
 
-{{- range $pages }}
+{{- range $sorted }}
 {{ .RelPermalink }}
 {{- end -}}

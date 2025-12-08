@@ -1,0 +1,45 @@
+{{ $page   := . }}
+{{ $result := dict }}
+
+{{ with $page.Store.Get "_values" }}
+  {{ $result = . }}
+{{ else }}
+  {{ $sizeX := 0 }}
+  {{ $sizeY := 0 }}
+  {{ $sizeZ := 0 }}
+  {{ with $page.Param "size" -}}
+    {{ $sizeX = partialCached "func/getLDUs" (index . 0) }}
+    {{ $sizeY = partialCached "func/getLDUs" (index . 1) }}
+    {{ $sizeZ = partialCached "func/getLDUs" (index . 2) }}
+  {{- end -}}
+
+  {{- $parts := slice -}}
+  {{ range $page.Param "tags" -}}
+    {{ if hasPrefix . "partcount-total-" }}
+      {{ $parts = $parts | append (index (split . "-") 2) }}
+    {{ end }}
+  {{- end -}}
+
+  {{- $sizeAsc := sort (slice $sizeX $sizeY $sizeZ) "value" "asc" -}}
+  {{- $sizeMin := index $sizeAsc 0 -}}
+  {{- $sizeMed := index $sizeAsc 1 -}}
+  {{- $sizeMax := index $sizeAsc 2 -}}
+  {{- $partsMin := math.Min $parts }}
+  {{- $partsMax := math.Max $parts }}
+
+  {{- $result = dict 
+      "_sizeX"    $sizeX
+      "_sizeY"    $sizeY
+      "_sizeZ"    $sizeZ
+      "_sizeMin"  $sizeMin
+      "_sizeMed"  $sizeMed
+      "_sizeMax"  $sizeMax
+      "_sizeArea" (mul $sizeMax $sizeMed)
+      "_sizeVol"  (mul $sizeX $sizeY $sizeZ)
+      "_partsMin" $partsMin
+      "_partsMax" $partsMax
+  -}}
+  {{ $page.Store.Set "_values" $result }}
+{{ end }}
+
+{{- return $result -}}
