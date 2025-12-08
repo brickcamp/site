@@ -24,29 +24,29 @@ slug  = 'title-desc'
 field = 'Title'
 order = 'desc'
 
-# [[options]]
-# title = 'Least Parts'
-# slug  = 'by-partcount-ascending'
-# field = 'Store.max_partcounts'  # assume worst case
-# order = 'asc'
+[[options]]
+title = 'Least Parts'
+slug  = 'parts-asc'
+field = '_partsMax'  # assume worst case
+order = 'asc'
 
-# [[options]]
-# title = 'Most Parts'
-# slug  = 'by-partcount-descending'
-# field = 'Store.min_partcounts'  # assume worst case
-# order = 'desc'
+[[options]]
+title = 'Most Parts'
+slug  = 'parts-desc'
+field = '_partsMin'  # assume worst case
+order = 'desc'
 
-# [[options]]
-# title = 'Smallest'
-# slug  = 'by-volume-ascending'
-# field = 'Store.volume'
-# order = 'asc'
+[[options]]
+title = 'Smallest'
+slug  = 'volume-asc'
+field = '_sizeVol'
+order = 'asc'
 
-# [[options]]
-# title = 'Largest'
-# slug  = 'by-volume-descending'
-# field = 'Store.volume'
-# order = 'desc'
+[[options]]
+title = 'Largest'
+slug  = 'volume-desc'
+field = '_sizeVol'
+order = 'desc'
 
 [[options]]
 title = 'Random'
