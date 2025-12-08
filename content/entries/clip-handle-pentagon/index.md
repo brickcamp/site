@@ -3,7 +3,7 @@ title = 'Clip-Handle Pentagon'
 date  = '2015-08-26'
 
 aliases = ['/tech/clip-handle-pentagon']
-parts = ['48336', '60470b', '3022']
+parts = ['48336', '60470', '3022']
 size  = ['6s', '2s', '6s']
 tags  = [
   'partcount-segment-4',

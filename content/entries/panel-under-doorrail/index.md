@@ -3,7 +3,7 @@ title = 'Panel under Doorrail'
 date  = '2015-08-23'
 
 aliases = ['/tech/panel-under-doorrail']
-parts = ['4864b', '32028', '3023', '3022']
+parts = ['4864', '32028', '3023', '3022']
 size  = ['2s', '2s', '7p']
 tags  = [
   'angle-studtilt-180',

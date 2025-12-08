@@ -3,7 +3,7 @@ title = 'Clip slides on Handle'
 date  = '2015-08-26'
 
 aliases = ['/tech/clip-slides-on-handle']
-parts = ['48336', '6019', '4081b', '30374']
+parts = ['48336', '6019', '4081', '30374']
 size  = ['3s', '2s', '1p']
 tags  = [
   'length-studshift',

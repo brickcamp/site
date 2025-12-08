@@ -3,7 +3,7 @@ title = 'Marakoeschtras Wall'
 date  = '2015-12-06'
 
 aliases = ['/tech/marakoeschtras-wall']
-parts = ['87087', '3005', '3070b', '3069b']
+parts = ['87087', '3005', '3070', '3069']
 size  = ['10s', '2s', '6p']
 tags  = [
   'partcount-segment-24',

@@ -3,7 +3,7 @@ title = 'Hinge Star Pentagon'
 date  = '2015-09-27'
 
 aliases = ['/tech/hinge-pentagon-star']
-parts = ['30386', '3048b', '3044b', '54200']
+parts = ['30386', '3048', '3044', '54200']
 size  = ['16p', '1s', '16p']
 tags  = [
   'partcount-segment-2',

@@ -3,7 +3,7 @@ title = '7041er-Set Wheel'
 date  = '2015-11-08'
 
 aliases = ['/tech/set-7041-wheel']
-parts = ['30386', '4032a', '3941', '32073', '6222']
+parts = ['30386', '4032', '3941', '32073', '6222']
 size  = ['17s', '17s', '2s']
 tags  = [
   'partcount-segment-2',

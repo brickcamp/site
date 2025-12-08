@@ -1,0 +1,3 @@
+{{ range .Data.Terms.Alphabetical }}
+{{- .Page.Slug }},{{ .Page.Title }}
+{{ end }}

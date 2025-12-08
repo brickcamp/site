@@ -3,7 +3,7 @@ title = 'Axle 3 with Stud in Technic Brick'
 date  = '2015-08-23'
 
 aliases = ['/tech/axle-3-stud-in-technic-brick']
-parts = ['6587', '32064a']
+parts = ['6587', '32064']
 size  = ['4s', '2s', '1b']
 tags  = [
   'angle-studtilt-90',

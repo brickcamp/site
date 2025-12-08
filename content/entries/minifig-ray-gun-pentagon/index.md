@@ -3,7 +3,7 @@ title = 'Minifig Ray Gun Pentagon'
 date  = '2015-08-29'
 
 aliases = ['/tech/minifig-ray-gun-pentagon']
-parts = ['87993']
+parts = ['13608']
 size  = ['6s', '6s', '1s']
 tags  = [
   'partcount-segment-1',
