@@ -2,7 +2,7 @@
 
 {{- $entries  := slice -}}
 {{- range $tag, $weightedPages := site.Taxonomies.tags -}}
-  {{- $tagSegments := partialCached "func/getTagSegments" $tag -}}
+  {{- $tagSegments := partial "func/getTagSegments" $tag -}}
 
   {{- with $filter.base -}}
     {{- if ne . $tagSegments.base -}}
