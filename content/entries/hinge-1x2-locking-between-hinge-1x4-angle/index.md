@@ -3,7 +3,7 @@ title = 'Hinge 1 x 2 Locking between Hinges 1 x 4 Angle'
 date  = '2019-02-19'
 
 aliases = ['/tech/hinge-1x2-locking-between-hinge-1x4-angle']
-parts = ['30414', '44301a', '44302a', '73983']
+parts = ['30414', '44301', '44302', '73983']
 size  = ['8s', '5s', '5p']
 tags  = [
   'angle-studtilt-40',

@@ -3,7 +3,7 @@ title = 'Tile Grille Sandwich'
 date  = '2016-01-16'
 
 aliases = ['/tech/tile-grille-sandwich-offset']
-parts = ['2412b']
+parts = ['2412']
 size  = ['2s', '2s', '2p']
 tags  = [
   'angle-studtilt-180',

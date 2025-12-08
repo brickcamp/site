@@ -3,7 +3,7 @@ title = 'Minifig Tool Holder'
 date  = '2015-09-14'
 
 aliases = ['/tech/minifig-tool-holder']
-parts = ['2516', '3062b']
+parts = ['2516', '3062']
 size  = ['2s', '4s', '2s']
 tags  = [
   'angle-studtilt-90',

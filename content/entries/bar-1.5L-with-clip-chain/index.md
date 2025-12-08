@@ -3,7 +3,7 @@ title = 'Bar 1.5L with Clip Chain'
 date  = '2019-04-02'
 
 aliases = ['/tech/bar-1.5L-with-clip-chain']
-parts = ['48729b']
+parts = ['48729']
 size  = ['2s', '2s', '1s']
 tags  = [
   'partcount-total-2',

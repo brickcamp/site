@@ -3,7 +3,7 @@ title = 'Clip-Handle Hexagon'
 date  = '2015-08-26'
 
 aliases = ['/tech/clip-handle-hexagon']
-parts = ['48336', '60470b', '3022']
+parts = ['48336', '60470', '3022']
 size  = ['7s', '2s', '7s']
 tags  = [
   'partcount-segment-5',

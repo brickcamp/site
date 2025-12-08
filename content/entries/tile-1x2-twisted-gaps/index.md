@@ -3,7 +3,7 @@ title = 'Twisted 1 x 2 Tile Gaps'
 date  = '2015-12-06'
 
 aliases = ['/tech/tile-1x2-twisted-gaps']
-parts = ['3794b', '3070b', '3069b']
+parts = ['3794', '3070', '3069']
 size  = ['3s', '3s', '2p']
 tags  = [
   'partcount-segment-5',

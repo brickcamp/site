@@ -3,7 +3,7 @@ title = 'Jumper Wall'
 date  = '2019-07-06'
 
 aliases = ['/tech/jumper-1x2-jumper-2x2-wall']
-parts = ['3794b', '87580']
+parts = ['3794', '87580']
 size  = ['4s', '2s', '3p']
 tags  = [
   'partcount-segment-2',

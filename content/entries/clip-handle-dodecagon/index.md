@@ -3,7 +3,7 @@ title = 'Clip-Handle Dodecagon'
 date  = '2015-08-26'
 
 aliases = ['/tech/clip-handle-dodecagon']
-parts = ['48336', '60470b', '3022', '3003']
+parts = ['48336', '60470', '3022', '3003']
 size  = ['13s', '2s', '13s']
 tags  = [
   'partcount-segment-5',

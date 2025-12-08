@@ -3,7 +3,7 @@ title = 'Double/Inverted Slopes Square'
 date  = '2016-01-03'
 
 aliases = ['/tech/slope-2x1-double-inv-square']
-parts = ['3049d']
+parts = ['3049']
 size  = ['3s', '3s', '1b']
 tags  = [
   'partcount-segment-4',

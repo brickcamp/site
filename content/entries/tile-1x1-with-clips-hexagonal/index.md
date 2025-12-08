@@ -3,7 +3,7 @@ title = 'Tile 1 x 1 with Clips Hexagonal'
 date  = '2019-01-28'
 
 aliases = ['/tech/tile-1x1-with-clips-hexagonal']
-parts = ['2555', '3070b']
+parts = ['2555', '3070']
 size  = ['3s', '1s', '3s']
 tags  = [
   'angle-studtilt-60',

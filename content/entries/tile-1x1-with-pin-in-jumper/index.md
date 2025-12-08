@@ -3,7 +3,7 @@ title = 'Tile 1 x 1 with Pin in Jumper'
 date  = '2019-01-19'
 
 aliases = ['/tech/tile-1x1-with-pin-in-jumper']
-parts = ['20482', '3794b', '87580']
+parts = ['20482', '3794', '87580']
 size  = ['2s', '1s', '1b']
 tags  = [
   'angle-studtilt-180',
