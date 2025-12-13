@@ -107,7 +107,7 @@ function appendEntry(entry) {
   elSquared.appendChild(elImage);
 
   const elFooter = document.createElement("div");
-  elFooter.classList.add("card-footer", "text-center", "h-100");
+  elFooter.classList.add("card-footer", "text-center", "h-100", "d-flex", "justify-content-center", "align-items-center");
   elFooter.innerText = entry[1];
   elCard.appendChild(elFooter);
 
