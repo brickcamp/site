@@ -14,11 +14,11 @@ tags  = [
 
 [[resources]]
 src              = 'image.png'
-params.copyright = '©2025 BrickCamp'
+params.copyright = '2025 BrickCamp'
 
 [[resources]]
 src              = 'model.ldr'
-params.copyright = '©2025 BrickCamp'
+params.copyright = '2025 BrickCamp'
 
 # TODO: related_pages:
 #   - /tech/wedge-plate-3x6-torus
