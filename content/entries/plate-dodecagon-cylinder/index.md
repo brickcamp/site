@@ -13,11 +13,11 @@ tags  = [
 
 [[resources]]
 src              = 'image.png'
-params.copyright = '©2025 BrickCamp'
+params.copyright = '2025 BrickCamp'
 
 [[resources]]
 src              = 'model.ldr'
-params.copyright = '©2025 BrickCamp'
+params.copyright = '2025 BrickCamp'
 +++
 
 Todo: Source Brickbending kaputtgegangen
