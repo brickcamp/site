@@ -1,13 +1,23 @@
-const params = new URLSearchParams(window.location.search);
-var base  = params.get("base")  || "__any";
-var type  = params.get("type")  || "__any";
-var value = params.get("value") || "__any";
-var sort  = params.get("sort")  || "date-desc";
+var base, type, value, sort;
 
 document.addEventListener("DOMContentLoaded", () => {
+  initQueryParams();
   initFilterDropdowns();
   refresh();
 });
+
+window.addEventListener("popstate", (event) => {
+  initQueryParams();
+  refresh();
+})
+
+function initQueryParams() {
+  const params = new URLSearchParams(window.location.search);
+  base  = params.get("base")  || "__any";
+  type  = params.get("type")  || "__any";
+  value = params.get("value") || "__any";
+  sort  = params.get("sort")  || "date-desc";
+}
 
 function initFilterDropdowns() {
   const links = document.querySelectorAll("#filter-nav .dropdown-item");
@@ -17,6 +27,23 @@ function initFilterDropdowns() {
       if (e.key === "Enter") onFilterLinkClicked(e);
     });
   });
+}
+
+function changeQueryParams() {
+  const url = new URL(location);
+
+  const params = url.searchParams;
+  const before = params.toString();
+  base  == "__any"     ? params.delete("base")  : params.set("base", base);
+  type  == "__any"     ? params.delete("type")  : params.set("type", type);
+  value == "__any"     ? params.delete("value") : params.set("value", value);
+  sort  == "date-desc" ? params.delete("sort")  : params.set("sort", sort);
+  const after = params.toString();
+
+  if (before != after) {
+    history.pushState(null, "", url);
+    refresh();
+  }
 }
 
 function refresh() {
@@ -142,7 +169,7 @@ function onFilterLinkClicked(e) {
     default:
       return;
   }
-  refresh();
+  changeQueryParams();
 }
 
 function copySpanText(from, to) {
