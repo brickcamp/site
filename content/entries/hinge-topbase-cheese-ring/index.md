@@ -9,7 +9,8 @@ tags  = [
   'angle-studtilt-30',
   'partcount-segment-4',
   'partcount-total-36',
-  'shape-polygon-60',
+  'shape-polygon-12',
+  'shape-circle',
 ]
 
 [[resources]]

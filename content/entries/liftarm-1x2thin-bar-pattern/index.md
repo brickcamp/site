@@ -9,6 +9,7 @@ tags  = [
   'partcount-segment-6',
   'partcount-total-12',
   'shape-polygon-6',
+  'shape-circle',
   'repeat-linear',
 ]
 

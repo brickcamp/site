@@ -8,7 +8,7 @@ size  = ['5s', '4s', '8p']
 tags  = [
   'partcount-segment-3',
   'partcount-total-7',
-  'shape-polygon-2',
+  'shape-ellipse',
 ]
 
 [[resources]]
