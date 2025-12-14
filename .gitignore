@@ -14,5 +14,10 @@ tmp
 /dist
 /i18n
 /public
-/resources
 /themes
+
+/resources/*
+/resources/_gen/*
+!/resources/
+!/resources/_gen/
+!/resources/_gen/images/
