@@ -1,3 +1,8 @@
-{{ range .Data.Terms.Alphabetical }}
-{{- .Page.Slug }},{{ .Page.Title }}
+{{- $entries  := slice -}}
+{{- range .Data.Terms -}}
+  {{- $entries = $entries | append .Page -}}
+{{- end -}}
+
+{{ range (sort $entries "Title") }}
+{{- path.BaseName .Page.Path }},{{ .Page.Title }}
 {{ end }}
