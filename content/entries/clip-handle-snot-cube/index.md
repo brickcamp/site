@@ -3,7 +3,7 @@ title = 'Clip-Handle SNOT Cube'
 date  = '2015-08-23'
 
 aliases = ['/tech/clip-handle-snot-cube']
-parts = ['4085c', '2921', '3024', '3023']
+parts = ['4085', '2921', '3024', '3023']
 size  = ['2s', '2s', '1b']
 tags  = [
   'angle-studtilt-180',

@@ -3,7 +3,7 @@ title = 'Connected Grille Slopes'
 date  = '2016-01-03'
 
 aliases = ['/tech/slope-grilles-connected']
-parts = ['61409', '4085c', '2921']
+parts = ['61409', '4085', '2921']
 size  = ['4s', '3b', '1s']
 tags  = [
   'partcount-segment-3',
