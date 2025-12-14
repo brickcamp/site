@@ -35,7 +35,11 @@
   {{- end -}}
   
   {{- range $weightedPages }}
-    {{- $entry := print .RelPermalink ",'" .Title "'" -}}
+    {{- $copyright := print (time.Now.Format "2006") " BrickCamp" -}}
+    {{- with (.Resources.GetMatch "image.*").Params.Copyright -}}
+      {{- $copyright = . -}}
+    {{- end -}}
+    {{- $entry := print .RelPermalink ",'" .Title "','" $copyright "'" -}}
     {{- $entries = $entries | append $entry -}}
   {{- end -}}
 {{- end -}}
