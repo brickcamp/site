@@ -8,6 +8,24 @@
   </div>
 </div>
 
+<template id="entry-template">
+  <div class="col">
+    <div class="card h-100">
+      <div class="ratio ratio-1x1">
+        <img class="insert-image-src card-img-top object-fit-cover dark-filter" loading="lazy">
+        <div class="card-img-overlay">
+          <small class="insert-copyright position-absolute bottom-0 end-0 px-1 bg-light-subtle"
+            style="opacity: 0.75;">
+          </small>
+        </div>
+      </div>
+      <div class="insert-title card-footer text-center h-100 d-flex justify-content-center align-items-center lh-sm">
+      </div>
+      <a href="/entries/panel-1x2-plate-2x2-cube/" class="stretched-link"></a>
+    </div>
+  </div>
+</template>
+
 {{- $js := resources.Get "js/home.js" }}
 <script>
   {{ $js.Content | safe.JS }}

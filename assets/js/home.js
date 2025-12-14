@@ -115,43 +115,14 @@ function clearEntries() {
 }
 
 function appendEntry(entry) {
-  const elCol = document.createElement("div");
-  elCol.classList.add("col");
-  document.getElementById("entries").appendChild(elCol);
+  const template = document.getElementById("entry-template");
+  const clone = template.content.cloneNode(true);
 
-  const elCard = document.createElement("div");
-  elCard.classList.add("card", "h-100");
-  elCol.appendChild(elCard);
+  clone.querySelector(".insert-image-src").src = entry[0] + "/image.png";
+  clone.querySelector(".insert-title").innerText = entry[1];
+  clone.querySelector(".insert-copyright").innerText = "© " + entry[2];
 
-  const elSquared = document.createElement("div");
-  elSquared.classList.add("ratio", "ratio-1x1");
-  elCard.appendChild(elSquared);
-
-  const elImage = document.createElement("img");
-  elImage.classList.add("card-img-top", "object-fit-cover", "dark-filter");
-  elImage.src = entry[0] + "/image.png";
-  elImage.loading = "lazy";
-  elSquared.appendChild(elImage);
-
-  const elImgOverlay = document.createElement("div");
-  elImgOverlay.classList.add("card-img-overlay");
-  elSquared.appendChild(elImgOverlay);
-
-  const elImgCopyright = document.createElement("small");
-  elImgCopyright.classList.add("position-absolute", "bottom-0", "end-0", "px-1", "bg-light-subtle");
-  elImgCopyright.style = "opacity: 0.75;";
-  elImgCopyright.innerText = "© " + entry[2];
-  elImgOverlay.appendChild(elImgCopyright);
-
-  const elFooter = document.createElement("div");
-  elFooter.classList.add("card-footer", "text-center", "h-100", "d-flex", "justify-content-center", "align-items-center", "lh-sm");
-  elFooter.innerText = entry[1];
-  elCard.appendChild(elFooter);
-
-  const elLink = document.createElement("a");
-  elLink.href = entry[0];
-  elLink.classList.add("stretched-link");
-  elCard.appendChild(elLink);
+  document.getElementById("entries").appendChild(clone);
 }
 
 function onFilterLinkClicked(e) {
