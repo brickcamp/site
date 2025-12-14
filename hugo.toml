@@ -11,6 +11,13 @@ enableGitInfo = true
   [caches.getresource]
     dir = ':resourceDir/_req'
 
+[imaging]
+  anchor = 'Center'
+  bgColor = '#ffffff'
+  hint = 'drawing'
+  quality = 95
+  resampleFilter = 'Lanczos'
+
 [module]
   [module.hugoVersion]
     extended = false
