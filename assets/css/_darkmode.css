@@ -10,5 +10,5 @@
 }
 
 :root[data-bs-theme="dark"] img.dark-filter {
-  filter: brightness(95%) invert() hue-rotate(180deg);
+  filter: brightness(90%);
 }
