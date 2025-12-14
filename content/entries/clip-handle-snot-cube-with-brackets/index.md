@@ -3,7 +3,7 @@ title = 'Clip-Handle SNOT Cube with Brackets'
 date  = '2015-08-23'
 
 aliases = ['/tech/clip-handle-snot-cube-with-brackets']
-parts = ['44728', '4085c', '2921', '3024', '3023']
+parts = ['44728', '4085', '2921', '3024', '3023']
 size  = ['3s', '3s', '2s']
 uses  = ['clip-handle-snot-cube']
 tags  = [
