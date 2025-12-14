@@ -2,10 +2,6 @@
   --bs-border-radius: 0;
 }
 
-#main-nav {
-  display: none;
-}
-
 body {
   min-width: 450px;
 }
