@@ -119,6 +119,7 @@ function appendEntry(entry) {
   const clone = template.content.cloneNode(true);
 
   clone.querySelector(".insert-link").href = entry[0];
+  clone.querySelector(".insert-link").title = entry[1];
   clone.querySelector(".insert-image-src").src = entry[0] + "/__image-min.webp";
   clone.querySelector(".insert-title").innerText = entry[1];
   clone.querySelector(".insert-copyright").innerText = "© " + entry[2];
