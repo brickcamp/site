@@ -144,7 +144,7 @@ function appendEntry(entry) {
   elImgOverlay.appendChild(elImgCopyright);
 
   const elFooter = document.createElement("div");
-  elFooter.classList.add("card-footer", "text-center", "h-100", "d-flex", "justify-content-center", "align-items-center");
+  elFooter.classList.add("card-footer", "text-center", "h-100", "d-flex", "justify-content-center", "align-items-center", "lh-sm");
   elFooter.innerText = entry[1];
   elCard.appendChild(elFooter);
 
