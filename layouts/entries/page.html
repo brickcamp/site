@@ -1,0 +1,50 @@
+{{ define "main" }}
+<div class="container-lg">
+  <div class="row">
+    <div class="col col-12">
+      <h1 class="text-center mb-2">{{ .Title }}</h1>
+    </div>
+    <div class="col col-12 col-sm-6">
+      <div class="card mb-3">
+        {{ with .Resources.GetMatch "image.*" }}
+        <img src="{{ .RelPermalink }}" class="card-img dark-filter" alt="image of the building technique">
+        <div class="card-img-overlay">
+          <small class="position-absolute bottom-0 end-0 px-1 bg-light-subtle" style="opacity: 0.75;">
+            {{ with .Params.Copyright }}
+              <span class="pr-1">©</span><span>{{ . }}</span>
+            {{ end }}
+            {{ with .Params.Reference }}
+              <span class="card-link"><a href="{{ . }}">Source</a></span>
+            {{ end }}
+          </small>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    <div class="col col-12 col-sm-6">
+      <div>{{ .Date.Format "2006-01-02" }}</div>
+      {{- with .Params.size }}
+      <div>{{ index . 0 }} &times; {{ index . 1 }} &times; {{ index . 2 }}</div>
+      {{- end }}
+      {{- with .GetTerms "parts" }}
+      <div class="row g-2">
+        {{- range . }}
+        <div class="col col-3 col-sm-4 col-md-3 col-xl-2">
+          <div class="card">
+            <img src="{{ with .Resources.GetMatch "image.*" }}{{ .RelPermalink }}{{ end }}" class="card-img-top dark-filter" title="{{ .LinkTitle }}" alt="{{ .LinkTitle }}">
+            <div class="card-footer p-1 text-center">
+              <small class="text-muted">
+                {{ path.Base .Path }}
+                <a href="/" class="stretched-link" title="{{ .LinkTitle }}"></a>
+              </small>
+            </div>
+          </div>
+        </div>
+        {{- end }}
+      </div>
+      {{- end }}
+    </div>
+  </div>
+  {{ .Content }}
+</div>
+{{ end }}
