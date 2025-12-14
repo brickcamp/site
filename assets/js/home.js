@@ -118,6 +118,7 @@ function appendEntry(entry) {
   const template = document.getElementById("entry-template");
   const clone = template.content.cloneNode(true);
 
+  clone.querySelector(".insert-link").href = entry[0];
   clone.querySelector(".insert-image-src").src = entry[0] + "/image.png";
   clone.querySelector(".insert-title").innerText = entry[1];
   clone.querySelector(".insert-copyright").innerText = "© " + entry[2];
