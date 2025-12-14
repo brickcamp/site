@@ -133,6 +133,16 @@ function appendEntry(entry) {
   elImage.loading = "lazy";
   elSquared.appendChild(elImage);
 
+  const elImgOverlay = document.createElement("div");
+  elImgOverlay.classList.add("card-img-overlay");
+  elSquared.appendChild(elImgOverlay);
+
+  const elImgCopyright = document.createElement("small");
+  elImgCopyright.classList.add("position-absolute", "bottom-0", "end-0", "px-1", "bg-light-subtle");
+  elImgCopyright.style = "opacity: 0.75;";
+  elImgCopyright.innerText = "© " + entry[2];
+  elImgOverlay.appendChild(elImgCopyright);
+
   const elFooter = document.createElement("div");
   elFooter.classList.add("card-footer", "text-center", "h-100", "d-flex", "justify-content-center", "align-items-center");
   elFooter.innerText = entry[1];
