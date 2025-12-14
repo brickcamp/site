@@ -9,6 +9,7 @@ tags  = [
   'partcount-segment-5',
   'partcount-total-90',
   'shape-polygon-18',
+  'shape-circle',
 ]
 
 [[resources]]

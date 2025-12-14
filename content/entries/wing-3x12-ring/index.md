@@ -9,6 +9,7 @@ tags  = [
   'partcount-segment-5',
   'partcount-total-95',
   'shape-polygon-19',
+  'shape-circle',
   'warning-link_404',
 ]
 

@@ -9,6 +9,8 @@ tags  = [
   'partcount-segment-1',
   'partcount-total-120',
   'shape-polygon-60',
+  'shape-circle',
+  'shape-star-60',
   'warning-instable',
 ]
 

@@ -8,7 +8,7 @@ size  = ['4s', '4s', '4s']
 tags  = [
   'partcount-segment-3',
   'partcount-total-6',
-  'shape-polyhedron-2',
+  'shape-sphere',
 ]
 
 [[resources]]

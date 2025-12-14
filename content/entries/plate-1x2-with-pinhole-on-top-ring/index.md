@@ -10,6 +10,7 @@ tags  = [
   'partcount-total-34',
   'repeat-linear',
   'shape-polygon-34',
+  'shape-circle',
 ]
 
 [[resources]]
