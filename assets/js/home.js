@@ -128,7 +128,7 @@ function appendEntry(entry) {
   elCard.appendChild(elSquared);
 
   const elImage = document.createElement("img");
-  elImage.classList.add("card-img-top", "object-fit-cover");
+  elImage.classList.add("card-img-top", "object-fit-cover", "dark-filter");
   elImage.src = entry[0] + "/image.png";
   elImage.loading = "lazy";
   elSquared.appendChild(elImage);
