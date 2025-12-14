@@ -7,7 +7,7 @@ const purgecss = purgeCSSPlugin({
     return [...(els.tags || []), ...(els.classes || []), ...(els.ids || [])];
   },
   safelist: {
-    deep: [/dropdown-menu$/],
+    deep: [/dropdown-menu$/, /hidden/],
     greedy: [/data-bs-theme/],
   },
 });
