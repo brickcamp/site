@@ -23,8 +23,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/135669374@N02/29397153466/in/pool-788191@N24/"
-    title="Studs on 5 sides square"
     author="durazno_33"
     date="2016-09-03"
+    image="link_01.jpg"
+    title="Studs on 5 sides square"
+    url="https://www.flickr.com/photos/135669374@N02/29397153466/"
 >}}
+This is a building technique that I stumbled into that makes studs on five of the six sides and is really hard to get apart.
+{{< /linkbox >}}

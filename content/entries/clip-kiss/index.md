@@ -20,8 +20,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/proudlove/403603821"
-    title="IMG_1461"
     author="Nathan Proudlove"
     date="2007-02-26"
+    image="link_01.jpg"
+    title="IMG_1461"
+    url="https://www.flickr.com/photos/proudlove/403603821"
 >}}
+two more potential solutions to the 2 x 2, 4 plate high problem presented by nenn on classic-space.com
+{{< /linkbox >}}

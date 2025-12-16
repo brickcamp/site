@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/biplex/9662786582"
-    title="howitsdone"
     author="the_jetboy"
     date="2013-09-03"
+    image="link_01.png"
+    title="howitsdone"
+    url="https://www.flickr.com/photos/biplex/9662786582/"
 >}}
+Some people asked me to post it from the back, and asked how does it not fell apart. I think this picture explains it well enough.
+{{< /linkbox >}}

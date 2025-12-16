@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/gambort/11072499513/"
-    title="Because MATHS"
     author="Tim Gould"
     date="2013-11-27"
+    image="link_01.jpg"
+    title="Because MATHS"
+    url="https://www.flickr.com/photos/gambort/11072499513/"
 >}}
+26/15 is a very accurate (under 0.1%) approximation for sqrt(3). So hooray for maths.
+{{< /linkbox >}}

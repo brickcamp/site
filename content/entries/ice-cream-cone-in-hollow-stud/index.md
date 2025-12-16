@@ -20,8 +20,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="http://www.dagsbricks.com/2014/01/lego-techniques-cones.html"
-    title="LEGO Techniques - Cones"
     author="Dag"
     date="2014-01-15"
+    image="link_01.png"
+    title="LEGO Techniques - Cones"
+    url="http://www.dagsbricks.com/2014/01/lego-techniques-cones.html"
 >}}
+Cones come in several shapes and sizes.  From the tiny 1x1x2/3 "Fez" to a gigantic 8x8x6 built from two halves.  But until only recently were the studs on the small end.  In 2013 TLG released a cone that is upside down.
+{{< /linkbox >}}

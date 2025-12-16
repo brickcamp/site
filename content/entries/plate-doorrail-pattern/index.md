@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/megustakapusta/14187894578"
-    title="Greek-like Pattern Technique"
     author="Piotr Hofman"
     date="2014-06-08"
+    image="link_01.jpg"
+    title="Greek-like Pattern Technique"
+    url="https://www.flickr.com/photos/megustakapusta/14187894578"
 >}}
+I don't know if it hasn't been done before, but maybe someone will find it useful.
+{{< /linkbox >}}

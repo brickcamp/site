@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/138986803@N03/32353149783"
-    title="wall technique no. 7 and 8"
     author="Simon NH"
     date="2017-02-28"
+    image="/images/links/jumper-plate-wall.jpg"
+    title="wall technique no. 7 and 8"
+    url="https://www.flickr.com/photos/138986803@N03/32353149783"
 >}}
+Playing around with 2x2-jumpers. These two technqiues are very simple, but quite handy. They look the same from both sides which is good for 360 degree creations. 
+{{< /linkbox >}}

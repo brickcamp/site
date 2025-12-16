@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/eklund-1/8685771543"
-    title="Cobblestone Technique"
     author="Tommy M."
     date="2013-04-27"
+    image="link_01.jpg"
+    title="Cobblestone Technique"
+    url="https://www.flickr.com/photos/eklund-1/8685771543"
 >}}
+Here is the cobblestone technique I used here. It makes a slight pattern, but it is barely noticeable, especially in pictures.
+{{< /linkbox >}}

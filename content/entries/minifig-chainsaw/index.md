@@ -20,8 +20,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/bohman/819791707"
-    title="misc2"
     author="Linus Bohman"
     date="2007-07-15"
->}}
+    image="link_01.jpg"
+    title="misc2"
+    url="https://www.flickr.com/photos/bohman/819791707"
+/>}}

@@ -23,8 +23,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/156114156@N07/29595683788"
-    title="LEGO Technique 0370"
     author="ZoulBrick"
     date="2018-07-17"
+    image="link_01.jpg"
+    title="LEGO Technique 0370"
+    url="https://www.flickr.com/photos/156114156@N07/29595683788"
 >}}
+Here is a new set of LEGO ideas and techniques, made with LDD. I'm sure you'll find a use to this idea
+{{< /linkbox >}}

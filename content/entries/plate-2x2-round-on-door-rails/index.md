@@ -22,6 +22,8 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://i.pinimg.com/originals/2f/24/5a/2f245ab2d11afece9b0844fb884618e4.jpg"
-    title="Unknown"
->}}
+    author="B Und"
+    image="link_01.png"
+    title="Amazon.fr : Lego Technic Vaisseaux"
+    url="https://de.pinterest.com/pin/819303357189461600/"
+/>}}

@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/bikicsmilan/6694991405"
-    title="Olympics"
     author="Milán Bikics"
     date="2011-09-14"
+    image="link_01.jpg"
+    title="Olympics"
+    url="https://www.flickr.com/photos/bikicsmilan/6694991405"
 >}}
+Control panels and control panels...you just can't have enough of them!
+{{< /linkbox >}}

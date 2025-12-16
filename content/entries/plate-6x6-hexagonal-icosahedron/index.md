@@ -22,8 +22,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/legoman19892/33250196252"
-    title="Truncated Icosahedron"
     author="Legoman19892"
     date="2017-03-12"
->}}
+    image="link_01.jpg"
+    title="Truncated Icosahedron"
+    url="https://www.flickr.com/photos/legoman19892/33250196252"
+/>}}

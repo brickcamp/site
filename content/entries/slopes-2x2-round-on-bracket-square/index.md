@@ -22,8 +22,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/25678535@N06/5060479780"
-    title="The useless Thing"
     author="George Panteleon (ZetoVince)"
     date="2010-09-10"
->}}
+    image="link_01.jpg"
+    title="The useless Thing"
+    url="https://www.flickr.com/photos/25678535@N06/5060479780"
+/>}}

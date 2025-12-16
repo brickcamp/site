@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/59352975@N08/7218201886"
-    title="Star Techniques"
     author="Water Snap"
     date="2012-05-17"
+    image="link_01.jpg"
+    title="Star Techniques"
+    url="https://www.flickr.com/photos/59352975@N08/7218201886"
 >}}
+I've discovered two ways of making 5 point stars, but I'm having trouble finding uses for them because they are tricky to attach to a moc.
+{{< /linkbox >}}

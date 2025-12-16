@@ -21,7 +21,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="http://swooshable.com/snot/chainsaw-body"
-    title="Chainsaw Body"
     author="Linus Bohman"
->}}
+    date="2015-11-29"
+    image="link_01.png"
+    title="Chainsaw Body"
+    url="http://swooshable.com/snot/chainsaw-body"
+/>}}

@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/kaille/5536199960"
-    title="135 Degree Corner"
     author="Kaille400"
     date="2011-03-17"
+    image="link_01.jpg"
+    title="135 Degree Corner"
+    url="https://www.flickr.com/photos/kaille/5536199960"
 >}}
+Used to get the octagon on my SHIP.
+{{< /linkbox >}}

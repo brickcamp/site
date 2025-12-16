@@ -20,7 +20,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="http://swooshable.com/snot/minifig-wrench"
-    title="Minifig Wrench"
     author="Linus Bohman"
->}}
+    date="2015-09-19"
+    image="link_01.png"
+    title="Minifig Wrench"
+    url="http://swooshable.com/snot/minifig-wrench"
+/>}}

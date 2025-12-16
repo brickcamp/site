@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/65992320@N05/6230552713"
-    title="Technique"
     author="4estFeller"
     date="2011-10-10"
+    image="link_01.jpg"
+    title="Technique"
+    url="https://www.flickr.com/photos/65992320@N05/6230552713"
 >}}
+I found this cool connection while building this.
+{{< /linkbox >}}

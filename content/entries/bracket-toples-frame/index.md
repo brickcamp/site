@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/50983505@N05/4873096343"
-    title="Bordeded"
     author="Element Stacker"
     date="2010-08-08"
+    image="link_01.jpg"
+    title="Bordeded"
+    url="https://www.flickr.com/photos/50983505@N05/4873096343"
 >}}
+Interesting...
+{{< /linkbox >}}

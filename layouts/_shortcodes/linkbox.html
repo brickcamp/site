@@ -4,48 +4,77 @@
 {{ $date        := .Get "date"        -}}
 {{ $author      := .Get "author"      -}}
 {{ $publisher   := .Get "publisher"   -}}
-{{ $imageURL    := .Get "image"       -}}
-{{ $description := .Get "description" -}}
+{{ $image       := .Get "image"       -}}
+{{ $description := .Inner             -}}
 {{/* ******************************* */}}
 
-{{/* check URL */}}
+{{/* check link URL */}}
+{{ $parsedURL := "" -}}
+{{ $archived := false -}}
 {{ with $url -}}
-  {{ $url = urls.Parse . -}}
+  {{ $archivedURL := replaceRE "^https?://web\\.archive\\.org/web/[0-9]+/+" "" $url -}}
+  {{ if eq $url $archivedURL -}}
+    {{ $parsedURL = urls.Parse $url -}}
+  {{ else -}}
+    {{ $parsedURL = urls.Parse $archivedURL -}}
+    {{ $archived = true -}}
+  {{ end -}}
 {{ else -}}
   {{ errorf "Linkbox shortcode must have a url parameter." -}}  
 {{ end -}}
-{{ if not $url.IsAbs -}}
+{{ if not $parsedURL.IsAbs -}}
   {{ errorf "Linkbox can't link non-absolute url '%q'." $url.String -}}
 {{ end -}}
 
+{{/* set image url */}}
+{{- $imageURL := "/icon.svg" -}}
+{{- $noImage := true -}}
+{{- with $image -}}
+  {{- $noImage = false -}}
+  {{- $imageParsed := urls.Parse $image -}}
+  {{- if $imageParsed.IsAbs -}}
+    {{- $imageURL = $imageParsed.String -}}
+  {{- else -}}
+    {{- with or ($.Page.Resources.Get $imageParsed.Path) (resources.Get $imageParsed.Path) -}}
+      {{- $imageURL = .RelPermalink -}}
+    {{- else -}}
+      {{ errorf "Linkbox has invalid image parameter '%q'." $image -}}  
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
 {{/* set default values */}}
-{{ $title     = $title     | default "Untitled" -}}
-{{ $date      = $date      | default (dateFormat "2023-10-15" .Page.Lastmod) -}}
-{{ $author    = $author    | default "Unknown author" -}}
-{{ $publisher = $publisher | default $url.Hostname -}}
-{{ $imageURL  = $imageURL  | default "/icons/icon-image-not-found.png" -}}
+{{ $title       = $title       | default "Untitled" -}}
+{{ $date        = $date        | default (dateFormat "2023-10-15" .Page.Lastmod) -}}
+{{ $author      = $author      | default "Unknown author" -}}
+{{ $publisher   = $publisher   | default (strings.TrimPrefix "www." $parsedURL.Hostname) -}}
+{{ $description = $description | strings.TrimSpace | .Page.RenderString -}}
 
 {{/* render link preview */}}
 <div class="card mb-3">
   <div class="row g-0">
-    <div class="col-3 col-lg-2 rounded-start bg-image" style="background-image: url({{ $imageURL }})">
+    <div class="col col-3 col-lg-2 rounded-start bg-image border-end{{ if eq $noImage true }} filter-grayscale{{ end }}" style="background-image: url('{{ $imageURL }}')">
     </div>
-    <div class="col-8">
+    <div class="col col-9 col-lg-10">
       <div class="card-body">
         <h5 class="card-title">
           {{ $title }}
         </h5>
         <h6 class="card-subtitle mb-2 text-body-secondary">
-          {{ $author }} ({{ $date }}, {{ $publisher }})
+          {{ $author }} 
+          ({{ $date }}, 
+          {{ if $archived }}<span class="text-decoration-line-through">{{ end }}
+          {{ $publisher -}}
+          {{ if $archived }}</span>&nbsp;†{{ end }})
         </h6>
-        <p class="card-text">
+        <p class="card-text mb-0">
           {{ with $description -}}
-            <p>{{ . }}</p>
+            {{ . }}
           {{ else -}}
             <i>No description provided - follow link for details</i>
           {{- end }}          
         </p>
-        <a href="{{ $url.String }}" class="stretched-link"></a>
+        <a href="{{ $url }}" title="{{ if $archived }}[Archived] {{ end }}{{ $title }}" class="stretched-link" target="_blank" rel="noopener"></a>
       </div>
     </div>
   </div>

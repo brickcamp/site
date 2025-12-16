@@ -23,8 +23,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://swooshable.com/snot/dsnot2"
-    title="DSnot #2"
     author="Linus Bohman"
-    date="2017-08-20"
+    date="2017-02-24"
+    image="link_01.jpg"
+    title="dsnot2 cutaway2"
+    url="https://swooshable.com/snot/dsnot2"
 >}}
+If we play with DSnot a bit more we can create an almost cube. It's quite sturdy and very symmetrical, so it should have some application.
+{{< /linkbox >}}

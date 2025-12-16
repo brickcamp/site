@@ -25,8 +25,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/42725373@N02/3944562691"
-    title="DSCF8702"
     author="Logan Thyr"
     date="2008-08-31"
+    image="link_01.jpg"
+    title="DSCF8702"
+    url="https://www.flickr.com/photos/42725373@N02/3944562691"
 >}}
+i was just playing around with binoculars...and it occured 2 me that a lot of different objects could fit in the lens holes
+{{< /linkbox >}}

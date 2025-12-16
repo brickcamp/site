@@ -23,8 +23,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/bohman/19938491366/"
-    title="roughly 60 degree slope technique"
     author="Linus Bohman"
     date="2015-07-24"
+    image="link_01.jpg"
+    title="roughly 60 degree slope technique"
+    url="https://www.flickr.com/photos/bohman/19938491366/"
 >}}
+I didn't know about this relation, but like it. Seems like an efficient way to create a good looking angle.
+{{< /linkbox >}}

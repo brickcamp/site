@@ -24,8 +24,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="http://www.dagsbricks.com/2014/01/lego-techniques-frames.html"
-    title="LEGO Techniques - A Frames"
-    author="Dag"
-    date="2014-01-01"
+    author="Tips&Bricks"
+    date="2023-05-13"
+    image="link-01.png"
+    title="#2016 TECHNIQUES: The Jordan Corner by @ak_brickster"
+    url="https://www.tipsandbricks.co.uk/post/2016-techniques-the-jordan-corner-by-ak_brickster"
 >}}
+“If you’ve ever been frustrated trying to perfectly fill the gap in an octagonal tower, this new technique might be for you!” – Jordan P, AKA @ak_brickster and the designer behind this clever corner technique.
+{{< /linkbox >}}

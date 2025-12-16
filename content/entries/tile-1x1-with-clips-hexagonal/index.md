@@ -24,8 +24,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/the-magic-tuba-pixie/3505240953"
-    title="Tablescraps."
     author="The Magic Tuba Pixie"
     date="2009-05-05"
+    image="link_01.jpg"
+    title="Tablescraps."
+    url="https://www.flickr.com/photos/the-magic-tuba-pixie/3505240953"
 >}}
+These things kinda accumulate over time. Note: the Tablescrap in the center is a variation of SlyOwl's Lantern Technique.
+{{< /linkbox >}}

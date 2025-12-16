@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/legohungary/15814313979"
-    title="Diagonal shaping"
     author="Péter Ittzés"
     date="2014-12-11"
+    image="link_01.jpg"
+    title="Diagonal shaping"
+    url="https://www.flickr.com/photos/legohungary/15814313979"
 >}}
+One easy trick to make roof pieces line up precisely.
+{{< /linkbox >}}

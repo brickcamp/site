@@ -23,8 +23,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/buildingsblockd/3938272712"
-    title="Rounds and Curves"
     author="Deborah Higdon"
     date="2009-09-20"
->}}
+    image="link_01.jpg"
+    title="Rounds and Curves"
+    url="https://www.flickr.com/photos/buildingsblockd/3938272712"
+/>}}

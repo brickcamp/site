@@ -22,8 +22,8 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/captainredstorm/432694019"
-    title="Steampunk unicycle maybe?"
     author="Captain Redstorm"
     date="2007-03-24"
->}}
+    title="Steampunk unicycle maybe?"
+    url="https://www.flickr.com/photos/captainredstorm/432694019"
+/>}}

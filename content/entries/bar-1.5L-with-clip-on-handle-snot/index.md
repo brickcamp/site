@@ -20,8 +20,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/14099938@N00/45765670052"
-    title="LEGO SNOT technique"
     author="FunBrix"
     date="2018-11-10"
+    image="link_01.png"
+    title="LEGO SNOT technique"
+    url="https://www.flickr.com/photos/14099938@N00/45765670052/"
 >}}
+Not sure if it’s been shared by others. This is a simple SNOT technique that has small footprint and is quite stable.
+{{< /linkbox >}}

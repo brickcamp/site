@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/infrapinklizzard/6218715033"
-    title="Mudguard Technique"
     author="infrapinklizzard"
     date="2011-10-07"
+    image="link_01.jpg"
+    title="Mudguard Technique"
+    url="https://www.flickr.com/photos/infrapinklizzard/6218715033"
 >}}
+How to connect sets of four mudguards end-to-end. In a sudden brainstorm I thought of those old piston ends from the "Expert Builder" sets - before they were Technic. And here's the answer.
+{{< /linkbox >}}

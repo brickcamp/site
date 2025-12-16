@@ -20,8 +20,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/bohman/16061656820/"
-    title="headlight-and-clip"
     author="Linus Bohman"
     date="2015-01-10"
+    image="link_01.jpg"
+    title="headlight-and-clip"
+    url="https://www.flickr.com/photos/bohman/16061656820/"
 >}}
+I'm trying to put together a SNOT reference. Details on this technique can be found here.
+{{< /linkbox >}}

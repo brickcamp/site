@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/matt_the_backward_one/7059062471"
-    title="Grow a Spine!"
     author="The Backward One"
     date="2012-04-08"
+    image="link_01.png"
+    title="Grow a Spine!"
+    url="https://www.flickr.com/photos/matt_the_backward_one/7059062471/"
 >}}
+It’s actually quite flexible.
+{{< /linkbox >}}

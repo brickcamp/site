@@ -26,13 +26,9 @@ params.copyright = '2025 BrickCamp'
 ToPLES: Tiles or Plates Located between Enough Studs
 
 {{< linkbox
-    url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"
-    title="The Unofficial LEGO Advanced Building Techniques Guide"
     author="Didier Enjary"
     date="2007-02-11"
->}}
-
-{{< linkbox
-    url="https://www.bricklink.com/v2/catalog/catalogitem.page?S=375-2"
-    title="LEGO Set with Pony Ears"
->}}
+    image="/images/links/advanced-building-techniques-guide.png"
+    title="The Unofficial LEGO Advanced Building Techniques Guide"
+    url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"
+/>}}

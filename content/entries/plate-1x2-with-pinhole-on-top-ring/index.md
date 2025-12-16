@@ -23,8 +23,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://sites.google.com/view/emporiumlug/creations/nathans-toolbox"
-    title="Nathan's Toolbox"
     author="Nathan Masters"
     date="2019-02-26"
+    image="link_01.png"
+    title="Nathan's Toolbox"
+    url="https://sites.google.com/view/emporiumlug/creations/nathans-toolbox"
 >}}
+While messing around with part #11458 in May 2018, Nathan discovered that by attaching the hole to a stud and adding a slight twist a ring structure could be formed. By slowly turning each individual piece, rings of different sizes can be constructed.
+{{< /linkbox >}}

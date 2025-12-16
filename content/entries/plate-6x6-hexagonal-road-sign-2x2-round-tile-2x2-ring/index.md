@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/timjohnsonlego/31895361190"
-    title="Clip roadsigns with Hexagonal LEGO Combo NEXO Power shield plate"
     author="Tim Johnson"
     date="2017-01-12"
+    image="link_01.jpg"
+    title="Clip roadsigns with Hexagonal LEGO Combo NEXO Power shield plate"
+    url="https://www.flickr.com/photos/timjohnsonlego/31895361190"
 >}}
+Using roadsigns and tiles with the hexagonal plate. More techniques and analysis on the blog.
+{{< /linkbox >}}

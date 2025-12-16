@@ -20,8 +20,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/ltdemartinet/7085826707"
-    title="Why?"
     author="Ryan Howerter"
     date="2012-04-16"
+    image="link_01.jpg"
+    title="Why?"
+    url="https://www.flickr.com/photos/ltdemartinet/7085826707"
 >}}
+For a discussion in the LEGO flickr group.
+{{< /linkbox >}}

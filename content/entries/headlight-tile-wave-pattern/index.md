@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/pmiaki/5106823089/"
-    title="Cobblestone idea"
     author="Mike"
     date="2010-10-23"
+    image="link_01.jpg"
+    title="Cobblestone idea"
+    url="https://www.flickr.com/photos/pmiaki/5106823089/"
 >}}
+this may have been done already, but I was unable to find a reference to something like it. A little parts intensive, but I think it will be worth the investment.
+{{< /linkbox >}}

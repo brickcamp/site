@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/crazy_texan/16375956292"
-    title="Ring"
     author="John Moffatt"
     date="2015-01-27"
+    image="link_01.jpg"
+    title="Ring"
+    url="https://www.flickr.com/photos/crazy_texan/16375956292"
 >}}
+Works in real life too, just tried it. AND that hexagon piece comes in black. The bricks are canted 5 degrees in.
+{{< /linkbox >}}

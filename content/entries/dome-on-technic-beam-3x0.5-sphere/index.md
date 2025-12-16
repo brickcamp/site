@@ -21,8 +21,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/legodoumoko/7454310422"
-    title="000"
     author="Moko"
     date="2012-06-27"
->}}
+    image="link_01.png"
+    title="000"
+    url="https://web.archive.org/web/20130430071435/http://www.flickr.com/photos/legodoumoko"
+/>}}

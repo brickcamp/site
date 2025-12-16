@@ -20,8 +20,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/aka_zero/7586911092"
-    title="Gear Technique"
     author="Sandy"
     date="2012-07-16"
+    image="link_01.jpg"
+    title="Gear Technique"
+    url="https://www.flickr.com/photos/aka_zero/7586911092"
 >}}
+As shown above, the spacing between the plates on the left is one plate wide, and on the right it's two plates wide. Unfortunately, the larger gears can't be fitted next to each other like the smaller ones.
+{{< /linkbox >}}

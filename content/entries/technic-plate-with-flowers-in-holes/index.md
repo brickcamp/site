@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/thomas_reincke/14356864278/"
-    title="Snotblumen"
     author="Thomas Reincke"
     date="2014-06-29"
+    image="link_01.jpg"
+    title="Snotblumen"
+    url="https://www.flickr.com/photos/thomas_reincke/14356864278/"
 >}}
+Die Blumen 33291 passen genau in eine Technik-Platte
+{{< /linkbox >}}

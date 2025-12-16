@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="http://www.1000steine.de/de/gemeinschaft/forum/?entry=1&id=340717#id340717"
-    title="Bahnübergang"
     author="MTM"
     date="2015-08-12"
+    image="link_01.png"
+    title="Bahnübergang"
+    url="http://www.1000steine.de/de/gemeinschaft/forum/?entry=1&id=340717#id340717"
 >}}
+"Ein weiteres Problem sind unsere schlechten Straßen. Schlaglöcher, wo man hinschaut. Dieses hier ist noch vergleichsweise klein. Aber was soll man auch erwarten, wenn sämtliche Straßen noch kopfsteingepflastert sind. Das ist ja sowas von Neunziger! Aber es ist eine bewährte und stabile Bautechnik."
+{{< /linkbox >}}

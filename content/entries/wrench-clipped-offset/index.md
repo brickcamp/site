@@ -20,8 +20,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/davidhensley/8448388481"
-    title="Slim ¼ plate offset"
     author="David Hensley"
     date="2013-02-05"
+    image="link_01.jpg"
+    title="Slim ¼ plate offset"
+    url="https://www.flickr.com/photos/davidhensley/8448388481"
 >}}
+Smallest way I can find to do a quarter plate offset. Very simple too.
+{{< /linkbox >}}

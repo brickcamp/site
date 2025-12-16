@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/78006269@N04/15209752054"
-    title="Slanted Tile Technique"
     author="Brickwielder"
     date="2014-11-20"
+    image="link_01.jpg"
+    title="Slanted Tile Technique"
+    url="https://www.flickr.com/photos/78006269@N04/15209752054"
 >}}
+This is not my own technique, but Clonemaker829 asked how it was done and I couldn't find a photo that explained how to do it, so I thought I would upload this photo for him and others who don't know the technique.
+{{< /linkbox >}}

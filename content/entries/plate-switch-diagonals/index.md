@@ -21,11 +21,14 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/peggyjdb/13603677904/"
-    title="Building off the grid"
     author="James Pegrum"
     date="2014-04-03"
+    image="link_01.jpg"
+    title="Building off the grid"
+    url="https://www.flickr.com/photos/peggyjdb/13603677904/"
 >}}
+This is pretty much old school, but for anyone who isn't aware of this technique its a nice way to build off the grid.
+{{< /linkbox >}}
 
 | ×   | 2     | 3     | 4     | 5     | 6     | 7     | 8     | 9     | 10    | 11    | 12    | 13    | 14   | 15   | 16   |
 | --- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ---- | ---- | ---- |

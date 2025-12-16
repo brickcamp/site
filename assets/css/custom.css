@@ -16,6 +16,10 @@ body {
   background-position: center;
 }
 
+.filter-grayscale {
+  filter: grayscale(100%) !important;
+}
+
 #toTop {
   bottom: 20px; 
   right: 20px; 

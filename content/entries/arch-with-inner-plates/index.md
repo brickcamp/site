@@ -24,8 +24,12 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/62bricks/4917543775"
-    title="1x5x4 Arch Geometry"
     author="Don Rogerson"
     date="2010-08-22"
+    description="Fitting plates onto the underside of arches is not a new technique, but the 1x5x4 arch presents an interesting geometry. When the plates are placed snugly together, they form 15° angles. This is an angle that is otherwise difficult to achieve with LEGO bricks, especially if it must be repeated in the same plane."
+    image="link_01.jpg"
+    title="1x5x4 Arch Geometry"
+    url="https://www.flickr.com/photos/62bricks/4917543775"
 >}}
+Fitting plates onto the underside of arches is not a new technique, but the 1x5x4 arch presents an interesting geometry. When the plates are placed snugly together, they form 15° angles. This is an angle that is otherwise difficult to achieve with LEGO bricks, especially if it must be repeated in the same plane. 
+{{< /linkbox >}}

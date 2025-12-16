@@ -23,8 +23,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/koffykat/47651815412/"
-    title="Ten sided \"circle\" template"
     author="Daniel Fortine"
     date="2019-04-26"
->}}
+    image="link_01.jpg"
+    url="https://www.flickr.com/photos/koffykat/47651815412/"
+    title="Ten sided \"circle\" template"
+/>}}

@@ -41,7 +41,10 @@ params.copyright = '2025 BrickCamp'
 _Download as [tab-seperated CSV](table.csv) or [Spreadsheet](table.ods)_
 
 {{< linkbox
-    url="http://www.l3go.bugge.com/articles/technique/Hypotech1.shtml"
-    title="Hypo-technique 1: Lego rotation principles and basic hinged Hypo-tech"
     author="Sir Bugges"
+    image="link_01.png"
+    title="Hypo-technique 1: Lego rotation principles and basic hinged Hypo-tech"
+    url="http://www.l3go.bugge.com/articles/technique/Hypotech1.shtml"
 >}}
+Basically, the Hypo-technique or “mirrored Hypotenuse technique” is a 4-point rotation technique that circumvent the problems with odd-length hypotenuses by simply leaving them out!
+{{< /linkbox >}}

@@ -23,8 +23,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/lemon_boy/6106788264"
-    title="180 in 2 x 2 x 2 (sort of)"
     author="Erik"
     date="2011-09-02"
->}}
+    image="link_01.jpg"
+    title="180 in 2 x 2 x 2 (sort of)"
+    url="https://www.flickr.com/photos/lemon_boy/6106788264"
+/>}}

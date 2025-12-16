@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/joel_baker/4412360018"
-    title="Cheesy Donut aka 'Baker's Dozen'"
     author="Joel Baker"
     date="2010-02-26"
+    image="link_01.jpg"
+    title="Cheesy Donut aka 'Baker's Dozen'"
+    url="https://www.flickr.com/photos/joel_baker/4412360018"
 >}}
+lots of cheese!! (and rocker hinges)
+{{< /linkbox >}}

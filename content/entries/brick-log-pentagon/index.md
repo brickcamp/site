@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/rucorder/6674899121"
-    title="Hmmm..."
     author="Ru Corder"
     date="2012-01-08"
+    image="link_01.jpg"
+    title="Hmmm..."
+    url="https://www.flickr.com/photos/rucorder/6674899121"
 >}}
+Messing around with my bricks has lead to this... Anyone else done/seen this before?
+{{< /linkbox >}}

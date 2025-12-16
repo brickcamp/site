@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/127525305@N02/26741448412"
-    title="Cube"
     author="nobu_tary"
     date="2016-05-06"
+    image="link_01.png"
+    title="Cube"
+    url="https://www.flickr.com/photos/127525305@N02/26741448412/"
 >}}
+Processed with MOLDIV
+{{< /linkbox >}}

@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/legozilla/4480821240/"
-    title="P3310143"
     author="Legozilla"
     date="2010-03-31"
+    image="link_01.jpg"
+    title="P3310143"
+    url="https://www.flickr.com/photos/legozilla/4480821240/"
 >}}
+SNOT used to invert the building direction
+{{< /linkbox >}}

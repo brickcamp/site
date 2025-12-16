@@ -21,8 +21,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/28192677@N06/4317222438/"
-    title="Behind the controls"
     author="Larry Lars"
     date="2010-01-30"
->}}
+    image="link_01.jpg"
+    title="Behind the controls"
+    url="https://www.flickr.com/photos/28192677@N06/4317222438/"
+/>}}

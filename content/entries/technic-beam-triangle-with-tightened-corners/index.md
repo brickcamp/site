@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="http://www.technicbricks.com/2008/02/tbs-techtips-010-triangle-and-hexagon.html"
-    title="TBs TechTips 011 - Triangle and Hexagon TECHNIC structures"
     author="Fernando Correia"
     date="2008-02-25"
+    image="link_01.png"
+    title="TBs TechTips 011 - Triangle and Hexagon TECHNIC structures"
+    url="https://web.archive.org/web/20140727223730/http://www.technicbricks.com/2008/02/tbs-techtips-010-triangle-and-hexagon.html"
 >}}
+After the TECHNIC Meta-Parts, let me present another article from Kevin Knuth at BrickEngineer, which describes us some good examples and techniques to build triangular and hexagonal structures.
+{{< /linkbox >}}

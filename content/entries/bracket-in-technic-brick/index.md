@@ -20,8 +20,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/28192677@N06/5004593024"
-    title="Reversed studs"
     author="Larry Lars"
     date="2010-09-19"
+    image="link_01.png"
+    title="Reversed studs"
+    url="https://www.flickr.com/photos/28192677@N06/5004593024/"
 >}}
+Very stable and versatile with connections in many directions. Useful mainly due to the even measurements resulted when reversing studs this way.
+{{< /linkbox >}}

@@ -22,8 +22,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.eurobricks.com/forum/index.php?/forums/topic/21936-advanced-building-techniques/&do=findComment&comment=370700"
-    title="Advanced Building Techniques"
-    author="KimT"
-    date="2008-10-07"
->}}
+    author="Didier Enjary"
+    date="2007-02-11"
+    image="/images/links/advanced-building-techniques-guide.png"
+    title="The Unofficial LEGO Advanced Building Techniques Guide"
+    url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"
+/>}}

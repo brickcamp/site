@@ -22,8 +22,8 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/dragon55/40177047383/"
-    title="Island in the Sun"
     author="Karf Oohlu"
     date="2019-02-19"
->}}
+    title="Island in the Sun"
+    url="https://web.archive.org/web/20190225120659/http://www.flickr.com/photos/dragon55/40177047383/"
+/>}}

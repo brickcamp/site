@@ -23,8 +23,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/matt_the_backward_one/5527832139"
-    title="Rule#3"
     author="The Backward One"
     date="2011-03-14"
+    image="link_01.jpg"
+    title="Rule#3"
+    url="https://www.flickr.com/photos/matt_the_backward_one/5527832139"
 >}}
+Referencing to "A Lesson in SNOT"
+{{< /linkbox >}}

@@ -39,4 +39,12 @@ params.reference = 'https://brick.camp'
 
 +++
 
-{{< linkbox url="https://example.com" >}}
+{{< linkbox
+    author="[Name/Nickname of the author]"
+    date="{{ time.Now.UTC.Format "2006-01-02" }}"
+    image="link_01.jpg"
+    title="[Title of the page]"
+    url="[URL of the page]"
+>}}
+Description or summary of the linked page. Should not be longer than a fex sentences.
+{{< /linkbox >}}

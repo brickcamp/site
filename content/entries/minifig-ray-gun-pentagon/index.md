@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/66864568@N00/5507975002"
-    title="Thought you might like to know"
     author="whateverly"
     date="2011-03-07"
+    image="link_01.png"
+    title="Thought you might like to know"
+    url="https://www.flickr.com/photos/66864568@N00/5507975002"
 >}}
+As it turns out, the blasters form a pentagon without even trying. Of course, in the 'too good to be true' category, no, they do not fit any even stud distance.
+{{< /linkbox >}}

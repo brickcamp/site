@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/o0ger/23849547995"
-    title="Roof technique"
     author="Oscar Cederwall (o0ger)"
     date="2015-12-19"
+    image="link_01.jpg"
+    title="Roof technique"
+    url="https://www.flickr.com/photos/o0ger/23849547995"
 >}}
+This works really well in theory and digitally. Not so easy to do IRL though
+{{< /linkbox >}}

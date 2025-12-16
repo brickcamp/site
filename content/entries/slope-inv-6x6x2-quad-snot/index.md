@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/51476462@N03/5205076235"
-    title="Odd connection"
     author="Andrew Somers"
     date="2010-11-24"
+    image="link_01.jpg"
+    title="Odd connection"
+    url="https://www.flickr.com/photos/51476462@N03/5205076235"
 >}}
+Don't know what on Earth it could be used for, and don't know if anyone has used it before, but I do know that it is a pretty stable connection.
+{{< /linkbox >}}

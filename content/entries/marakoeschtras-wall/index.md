@@ -21,9 +21,10 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="http://www.brickshelf.com/cgi-bin/gallery.cgi?f=145764"
-    title="Basic Brick Wall"
     author="Marakoeschtra"
     date="2005-09-16"
->}}
+    image="link_01.png"
+    title="Basic Brick Wall"
+    url="https://web.archive.org/web/20051223095522/http://brickshelf.com/cgi-bin/gallery.cgi?f=145764"
+/>}}
 

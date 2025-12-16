@@ -20,8 +20,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/bradslegoroom/4512069587"
+    author="bradk918"
+    date="2010-04-12"
+    image="link_01.jpg"
     title="SNOT Techniques 7"
-    author="鉄男"
-    date="2010-04-11"
->}}
+    url="https://www.flickr.com/photos/bradslegoroom/4512069587"
+/>}}
