@@ -1,0 +1,78 @@
+{{ define "main" }}
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-md-6 col-lg-4">
+      <form id="myForm" class="mb-3 p-3 border">
+        <div class="mb-3">
+          <label for="apiKey" class="form-label">API Key</label>
+          <input type="text" class="form-control" id="apiKey" placeholder="Enter microlink API key">
+        </div>
+        <div class="mb-3">
+          <label for="apiUrl" class="form-label">URL</label>
+          <input type="url" class="form-control" id="apiUrl" placeholder="Enter URL">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+      </form>
+    </div>
+
+    <div class="col col-12 col-md-6 col-lg-8">
+      <textarea id="result" class="form-control" rows="10" readonly></textarea>
+    </div>
+
+    <div class="col col-12 text-center">
+      <img src="" id="image" class="img-fluid">
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("apiKey").value = localStorage.getItem("microlink-api-key");
+  document.getElementById("myForm").addEventListener("submit", async e => {
+    e.preventDefault();
+    
+    const apiKey = document.getElementById("apiKey").value;
+    const apiUrl = document.getElementById("apiUrl").value;
+    const resultArea = document.getElementById("result");
+    const resultImg = document.getElementById("image");
+
+    localStorage.setItem("microlink-api-key", apiKey);
+    var headers = {};
+    if (apiKey) {
+      headers = { "x-api-key": `${apiKey}` }
+    }
+
+    try {
+      resultArea.value = "... please wait ...";
+      const apiRequest = "https://api.microlink.io/?url=" + encodeURI(apiUrl);
+      const response = await fetch(apiRequest, { headers: headers });
+      const data = await response.json();
+
+      console.log(data);
+
+      var linkbox = `{{ print "{" "{" "<" }} linkbox
+    author="${data.data.author}"
+    date="${data.data.date}"${
+      data.data.image ? `
+    image="link_01.png"` : ""}
+    title="${data.data.title.replace(/"/g, "&quot;")}"
+    url="${data.data.url}"`;
+
+      if (data.data.description) {
+        linkbox += `
+{{ print ">" "}" "}" }}
+${data.data.description}
+{{ print "{" "{" "<" }} /linkbox {{ print ">" "}" "}" }}`;
+      } else {
+        linkbox += `
+{{ print "/>" "}" "}" }}`;
+      }
+
+      resultArea.value = linkbox;
+      resultImg.src = data.data.image ? data.data.image.url : "";
+    } catch (err) {
+      resultArea.value = "Error: " + err;
+      resultImg.src = "";
+    }
+  });
+</script>
+{{ end }}

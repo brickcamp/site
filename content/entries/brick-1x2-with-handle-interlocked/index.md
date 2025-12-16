@@ -21,8 +21,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/lego27bricks/6965435351"
-    title="New technique?"
     author="DξβS"
     date="2012-03-07"
->}}
+    image="link_01.jpg"
+    title="New technique?"
+    url="https://www.flickr.com/photos/lego27bricks/6965435351"
+/>}}

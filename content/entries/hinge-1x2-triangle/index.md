@@ -21,8 +21,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/numo/3403588235"
-    title="Lego Triangle 3"
     author="Arran Hearn"
     date="2015-09-27"
->}}
+    image="link_01.jpg"
+    title="Lego Triangle 3"
+    url="https://www.flickr.com/photos/numo/3403588235"
+/>}}

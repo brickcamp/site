@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/vynsane/5514015532"
-    title="Slotted SNOT"
     author="Vyn Raskopf"
     date="2011-03-10"
+    image="link_01.jpg"
+    title="Slotted SNOT"
+    url="https://www.flickr.com/photos/vynsane/5514015532"
 >}}
+Nice SNOT technique with no offset. Could be useful. Don't know if anyone's done and/or submitted this technique before.
+{{< /linkbox >}}

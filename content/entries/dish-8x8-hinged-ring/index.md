@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/bobdequatre/19890912805/"
-    title="8x8 dishes trick"
     author="BobDeQuatre"
     date="2015-06-20"
+    image="link_01.jpg"
+    title="8x8 dishes trick"
+    url="https://www.flickr.com/photos/bobdequatre/19890912805/"
 >}}
+I was asked "how?", so here it is. Simple solution, but the 2 fingers hinges must go on top.
+{{< /linkbox >}}

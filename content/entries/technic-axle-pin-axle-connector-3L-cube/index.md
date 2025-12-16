@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/28134808@N02/4598427796"
-    title="Assembly"
     author="mahjqa"
     date="2010-05-11"
+    image="link_01.jpg"
+    title="Assembly"
+    url="https://www.flickr.com/photos/28134808@N02/4598427796"
 >}}
+Sometimes I get something stuck in my head. Those times, the only way to get rid of it is to build it.
+{{< /linkbox >}}

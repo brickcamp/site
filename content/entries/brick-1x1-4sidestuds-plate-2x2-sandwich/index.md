@@ -20,8 +20,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/legocy/18383654893/"
-    title="Techniques: #2 Studs to Studs"
-    author="Sean & Steph Mayo"
+    author="Sean and Steph Mayo"
     date="2015-06-21"
+    image="link_01.png"
+    title="Techniques: #2 Studs to Studs"
+    url="https://www.flickr.com/photos/legocy/18383654893/"
 >}}
+Over the years we’ve stumbled upon some very useful connections and builds which people have often asked questions about. If you would like to follow short instructional videos, they will be located in the Lego Techniques folder on our youtube. Watch on YouTube! And follow for weekly updates.
+{{< /linkbox >}}

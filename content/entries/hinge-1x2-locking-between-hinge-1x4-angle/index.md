@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/legohungary/19923379288/"
-    title="Strengthened angle"
     author="Péter Ittzés"
     date="2015-07-29"
+    image="link_01.jpg"
+    title="Strengthened angle"
+    url="https://www.flickr.com/photos/legohungary/19923379288/"
 >}}
+The angle is a bit smaller than 45 degrees (so it's techniclly forced). It's very sturdy. You can also use 2x1 plates with clip and handle if you want.[Rendered in Bluerender.]
+{{< /linkbox >}}

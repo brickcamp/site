@@ -24,7 +24,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="http://uniquebriquetechniques.blogspot.de/2006/08/various-snot-techniques.html"
-    title="Various SNOT Techniques"
     author="Unique Brique Techniques"
+    date="2006-08-18"
+    image="link_01.png"
+    title="Various SNOT Techniques"
+    url="https://web.archive.org/web/20120128191837/http://uniquebriquetechniques.blogspot.com/2006/08/various-snot-techniques.html"
 >}}
+Today I'm going to bypass creations that use great building techniques and just focus on the techniques themselves, such as Studs Not On Top. Check out these classic techniques presented by Chris Malloy.
+{{< /linkbox >}}

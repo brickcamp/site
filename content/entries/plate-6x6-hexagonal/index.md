@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="http://www.newelementary.com/2017/01/combo-nexo-power-shields.html"
-    title="Combo NEXO Power shields"
     author="Tim Johnson"
     date="2017-01-12"
+    image="link_01.png"
+    title="Combo NEXO Power shields"
+    url="http://www.newelementary.com/2017/01/combo-nexo-power-shields.html"
 >}}
+The LEGO® NEXO KNIGHTS™ theme introduced many exciting and useful new elements into the LEGO System in 2016 and this trend continues into 2017. Today we look at a highly unusual piece which is set to take your building into totally new dimensions, literally!
+{{< /linkbox >}}

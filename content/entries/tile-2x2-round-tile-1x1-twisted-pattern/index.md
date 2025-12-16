@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/138986803@N03/24632788723"
-    title="floor pattern"
     author="Simon NH"
     date="2016-02-25"
+    image="link_01.jpg"
+    title="floor pattern"
+    url="https://www.flickr.com/photos/138986803@N03/24632788723"
 >}}
+Notice the angle! This looks pretty simple but its actually kinda tricky. I definately really like the result.
+{{< /linkbox >}}

@@ -20,8 +20,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/marinstipkovic/16440008257"
-    title="Height difference"
     author="Marin Stipkovic"
     date="2015-02-25"
+    image="link_01.jpg"
+    title="Height difference"
+    url="https://www.flickr.com/photos/marinstipkovic/16440008257"
 >}}
+Just to demonstrate the problem of goblet connections.
+{{< /linkbox >}}

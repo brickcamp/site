@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/tekf/5694391960/"
-    title="Herringbone foundation"
     author="Ben Weston"
     date="2011-05-06"
+    image="link_01.jpg"
+    title="Herringbone foundation"
+    url="https://www.flickr.com/photos/tekf/5694391960/"
 >}}
+Here's what lies beneath my herringbone pattern. Notice that the studs form a rotated square grid, slightly more than 2x2 apart. It's quite a good base for various patterns with mortar.
+{{< /linkbox >}}

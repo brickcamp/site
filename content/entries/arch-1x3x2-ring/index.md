@@ -22,8 +22,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/pepa_quin/5157991423"
-    title="Candy Swirl"
     author="Matt De Lanoy"
     date="2010-11-08"
->}}
+    image="link_01.jpg"
+    title="Candy Swirl"
+    url="https://www.flickr.com/photos/pepa_quin/5157991423"
+/>}}

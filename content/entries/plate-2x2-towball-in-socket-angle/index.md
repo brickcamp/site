@@ -20,8 +20,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/128561206@N08/24772591696/"
-    title="Curve"
     author="Joeri Ridder"
     date="2016-02-03"
+    image="link_01.jpg"
+    title="Curve"
+    url="https://www.flickr.com/photos/128561206@N08/24772591696/"
 >}}
+Seamless and no pressure between the plates! It would be perfect for towers or zeppelins, but I don't have that many joint bricks.
+{{< /linkbox >}}

@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/eilonwy77/8206929651"
-    title="Wheel Holders..."
     author="Katie Walker"
     date="2012-11-22"
+    image="link_01.jpg"
+    title="Wheel Holders..."
+    url="https://www.flickr.com/photos/eilonwy77/8206929651"
 >}}
+I didn't realize those plates with wheel holders (especially the upper ones) made such perfect arches when stacked. They just tip so naturally. I rather like it.
+{{< /linkbox >}}

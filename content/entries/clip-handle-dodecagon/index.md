@@ -22,8 +22,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/11181786@N02/2049543905"
-    title="Rigid Dodecagon"
     author="Paramat"
     date="2007-10-15"
->}}
+    image="link_01.jpg"
+    title="Rigid Dodecagon"
+    url="https://www.flickr.com/photos/11181786@N02/2049543905"
+/>}}

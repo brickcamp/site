@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/donsolo/3706017309"
-    title="more than one way to skin a cat"
     author="Solo"
     date="2009-07-10"
+    image="link_01.jpg"
+    url="https://www.flickr.com/photos/donsolo/3706017309"
+    title="more than one way to skin a cat"
 >}}
+That's some high grade crazy sauce if you ask me.
+{{< /linkbox >}}

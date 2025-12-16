@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/proudlove/7974975607"
-    title="5-way-symmetry"
     author="Nathan Proudlove"
     date="2012-09-11"
+    image="link_01.jpg"
+    title="5-way-symmetry"
+    url="https://www.flickr.com/photos/proudlove/7974975607"
 >}}
+I can't think of a clever user for this right now so I thought I'd put it out there.
+{{< /linkbox >}}

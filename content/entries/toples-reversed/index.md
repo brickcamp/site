@@ -23,7 +23,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://swooshable.com/snot/reverse-pony-ear"
-    title="Reverse pony ear"
     author="Linus Bohman"
->}}
+    date="2016-04-16"
+    image="link_01.png"
+    title="Reverse pony ear"
+    url="https://swooshable.com/snot/reverse-pony-ear"
+/>}}

@@ -25,4 +25,4 @@ params.copyright = '2025 BrickCamp'
     title="SNOT Techniques 10"
     author="鉄男"
     date="2010-05-13"
->}}
+/>}}

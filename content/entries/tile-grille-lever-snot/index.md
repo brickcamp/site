@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="http://swooshable.com/snot/grill-tiles-and-levers"
-    title="Grill Tiles and Levers"
     author="Linus Bohman"
+    date="2015-09-19"
+    image="link_01.png"
+    title="Grill Tiles and Levers"
+    url="http://swooshable.com/snot/grill-tiles-and-levers"
 >}}
-  [source] [brickbending.com]
+Grill tiles and levers can be used to create a very small 180 degree inverted stud rotation. The technique isn't very sturdy, so it's best used for details.
+{{< /linkbox >}}

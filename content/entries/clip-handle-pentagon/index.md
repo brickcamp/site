@@ -21,8 +21,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/11181786@N02/2879599244"
-    title="Rigid Pentagon"
     author="Paramat"
     date="2008-09-22"
->}}
+    image="link_01.jpg"
+    title="Rigid Pentagon"
+    url="https://www.flickr.com/photos/11181786@N02/2879599244"
+/>}}

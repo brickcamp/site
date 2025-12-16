@@ -21,8 +21,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/66475636@N02/15563354438"
-    title="Diagonal Tiles Detail"
     author="Mitah Val Karem"
     date="2014-11-09"
->}}
+    image="link_01.jpg"
+    title="Diagonal Tiles Detail"
+    url="https://www.flickr.com/photos/66475636@N02/15563354438"
+/>}}

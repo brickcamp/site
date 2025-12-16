@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://staff.fnwi.uva.nl/l.dorst/lego/escapement.html"
-    title="Clock Escapement"
     author="Leo Dorst"
     date="2000-01-21"
+    image="link_01.png"
+    title="Clock Escapement"
+    url="https://staff.fnwi.uva.nl/l.dorst/lego/escapement.html"
 >}}
+This escapement serves the purpose of converting the pendulum motion into an intermittent rotary motion for the operation of the clock. It also transfers the potential energy of the weight into the pendulum motion, so that the pendulum keeps swinging.
+{{< /linkbox >}}

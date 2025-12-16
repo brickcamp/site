@@ -21,8 +21,12 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/bram/449129582"
-    title="5 sides x 4 studs..."
     author="Bram"
     date="2007-04-07"
+    image="link_01.jpg"
+    title="5 sides x 4 studs..."
+    url="https://www.flickr.com/photos/bram/449129582"
 >}}
+5 sides x 4 studs + 1 side with 4 holes. If you want flush mount SNOT on the four sides, this is a better solution.
+{{< /linkbox >}}
+

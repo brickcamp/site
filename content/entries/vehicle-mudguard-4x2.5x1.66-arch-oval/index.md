@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/gladius/1505160591"
-    title="Wheel-Hub SNOT Guide"
     author="Lukas"
     date="2007-10-07"
+    image="link_01.jpg"
+    title="Wheel-Hub SNOT Guide"
+    url="https://www.flickr.com/photos/gladius/1505160591"
 >}}
+This is one of many ways to make a nifty round shape fit into a brick-built hull. Go crazy and view it large.
+{{< /linkbox >}}

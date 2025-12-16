@@ -21,8 +21,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/guanness/43502081982"
-    title="An impossibility connection :)"
     author="Raymond Soh"
     date="2018-07-21"
->}}
+    image="link_01.jpg"
+    title="An impossibility connection :)"
+    url="https://www.flickr.com/photos/guanness/43502081982"
+/>}}

@@ -22,8 +22,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/biplex/13779694214"
-    title="Ode to the element - part 1"
     author="the_jetboy"
     date="2014-04-11"
->}}
+    image="link_01.jpg"
+    title="Ode to the element - part 1"
+    url="https://www.flickr.com/photos/biplex/13779694214"
+/>}}

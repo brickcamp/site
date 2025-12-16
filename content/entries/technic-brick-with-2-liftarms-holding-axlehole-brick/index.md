@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/catsy/3989317916"
-    title="Why I really wanted piece #85943"
     author="Catsy"
     date="2009-10-06"
+    image="link_01.jpg"
+    title="Why I really wanted piece #85943"
+    url="https://www.flickr.com/photos/catsy/3989317916"
 >}}
+I don't know about anyone else, but the moment I saw this new piece in the Space Police sets, my head started swimming with possibilities. This was the #1 piece I lusted after in the draft, and I was lucky enough to get 32 of them as one of my draft picks.
+{{< /linkbox >}}

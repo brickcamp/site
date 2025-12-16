@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/mainman/4558556165"
-    title="Click hinge curves"
     author="Mainman"
     date="2010-04-27"
+    image="link_01.jpg"
+    title="Click hinge curves"
+    url="https://www.flickr.com/photos/mainman/4558556165"
 >}}
+I saw stenertje's spiffy little ship and just felt like playing with click hinge stacks. alternating types gives a very plesent slow curve. I'm sure there's tons of variations that can be applied here.
+{{< /linkbox >}}

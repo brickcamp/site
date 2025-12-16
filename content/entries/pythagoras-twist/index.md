@@ -21,11 +21,14 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="http://www.eurobricks.com/forum/index.php?showtopic=21942"
-    title="Angled walls"
     author="Teddy"
     date="2008-10-07"
+    image="link_01.png"
+    title="Angled walls"
+    url="http://www.eurobricks.com/forum/index.php?showtopic=21942"
 >}}
+I wrote a small computer program to calculate how you can build angled walls without stressing the bricks. So, basically, when pythagoras gives an integer output for two integer inputs. 
+{{< /linkbox >}}
 
 | base    | diagonal | A°   | B°   |
 | ------- | -------- | ---- | ---- |

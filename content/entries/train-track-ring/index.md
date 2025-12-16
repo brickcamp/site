@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.youtube.com/watch?v=z8T2LR1GMOA"
-    title="IHS Gravtec Odyssey"
     author="Robert Turner"
     date="2015-06-28"
+    image="link_01.png"
+    title="IHS Gravtec Odyssey"
+    url="https://www.youtube.com/watch?v=z8T2LR1GMOA"
 >}}
+Joshua Hanlon from BrickPodcast.com talks with Robert Turner about his custom LEGO spaceship.
+{{< /linkbox >}}

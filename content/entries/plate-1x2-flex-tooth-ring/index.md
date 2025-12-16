@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/reasonablyclever/3581739315/"
-    title="pinwheel"
     author="Chris Doyle"
     date="2009-05-31"
+    image="link_01.jpg"
+    title="pinwheel"
+    url="https://www.flickr.com/photos/reasonablyclever/3581739315/"
 >}}
+The only nice thing to come from 12 battle pack's worth of attempts at a Chrome Vader.
+{{< /linkbox >}}

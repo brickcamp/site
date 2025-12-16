@@ -20,8 +20,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/legohungary/31164198135"
-    title="Snot 180"
     author="Péter Ittzés"
     date="2016-11-21"
+    image="link_01.jpg"
+    title="Snot 180"
+    url="https://www.flickr.com/photos/legohungary/31164198135"
 >}}
+Just a small digital tabelscrap.
+{{< /linkbox >}}

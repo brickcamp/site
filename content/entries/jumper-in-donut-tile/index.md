@@ -20,7 +20,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="http://swooshable.com/snot/donut-and-jumper"
-    title="Donut and Jumper"
     author="Linus Bohman"
+    date="2025-09-19"
+    image="link_01.png"
+    title="Donut and Jumper"
+    url="http://swooshable.com/snot/donut-and-jumper"
 >}}
+Its symmetry makes it very useful. This photo by Brian shows another useful trait: you can rotate the technique for some fun results.
+{{< /linkbox >}}

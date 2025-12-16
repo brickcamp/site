@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/pmiaki/7451841124/in/pool-lego_math/"
-    title="3 LDU"
     author="Mike"
     date="2012-06-26"
+    image="link_01.jpg"
+    title="3 LDU"
+    url="https://www.flickr.com/photos/pmiaki/7451841124"
 >}}
+also bonus offset steps. Stepping by 1/8th plate (1 LDU). I didn't believe Tim's Claim that the neck bracket has a thickness of 3/8th of a plate. The part on the left shows that to be true.
+{{< /linkbox >}}

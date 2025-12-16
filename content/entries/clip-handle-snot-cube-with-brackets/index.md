@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/bram/449129578"
-    title="6 sides x 4 studs..."
     author="Bram"
     date="2007-04-07"
+    image="link_01.jpg"
+    title="6 sides x 4 studs..."
+    url="https://www.flickr.com/photos/bram/449129578"
 >}}
+6 sides x 4 studs. A compact, square arrangement for studs in all directions. Not a real cube though.
+{{< /linkbox >}}

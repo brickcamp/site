@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/66864568@N00/5535726032/"
-    title="Grid"
     author="whateverly"
     date="2011-03-16"
+    image="link_01.png"
+    title="Grid"
+    url="https://www.flickr.com/photos/66864568@N00/5535726032/"
 >}}
+Grillwork 'in the brick.' Two pieces repeated ad nauseum or ad infinitum, whichever comes first.
+{{< /linkbox >}}

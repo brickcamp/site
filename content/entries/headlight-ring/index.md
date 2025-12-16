@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/34822682@N00/3824563064/"
-    title="Headlight Brick Ring With Minifig"
     author="Skinny Pete Deux"
     date="2009-08-15"
+    image="link_01.jpg"
+    title="Headlight Brick Ring With Minifig"
+    url="https://www.flickr.com/photos/34822682@N00/3824563064/"
 >}}
+Now with new and improved minifig scale reference.
+{{< /linkbox >}}

@@ -21,11 +21,14 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/96307745@N02/15216911566"
-    title="Technical Exercise 2b 003"
     author="Gregory Brick"
     date="2014-09-14"
+    image="link_01.png"
+    title="Technical Exercise 2b 003"
+    url="https://www.flickr.com/photos/96307745@N02/15216911566"
 >}}
+A series of angled plates, done without having to calculate angles. There is no more stress on the elements than any other normal construction; nothing is forced or approximate (otherwise I wouldn't have bothered). See the rest of the set for details.
+{{< /linkbox >}}
 
 **Overview of angles** that can be archived by a middle part of _x_ studs wide (cols) and _y_ plates height (rows).
 

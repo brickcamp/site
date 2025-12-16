@@ -22,7 +22,7 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/sheogorath/16285434127"
-    title="Clip Wave Technique"
     author="Sheo"
->}}
+    title="Clip Wave Technique"
+    url="https://www.flickr.com/photos/sheogorath/16285434127"
+/>}}

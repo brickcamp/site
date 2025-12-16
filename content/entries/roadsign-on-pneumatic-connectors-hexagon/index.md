@@ -21,8 +21,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/horlack/36264590134"
-    title="Published-0004"
     author="Horlack"
     date="2017-09-08"
->}}
+    image="link_01.jpg"
+    title="Published-0004"
+    url="https://www.flickr.com/photos/horlack/36264590134"
+/>}}

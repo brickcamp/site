@@ -21,8 +21,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/11181786@N02/2049548243"
-    title="Rigid Hexagon"
     author="Paramat"
     date="2007-10-15"
->}}
+    image="link_01.jpg"
+    title="Rigid Hexagon"
+    url="https://www.flickr.com/photos/11181786@N02/2049548243"
+/>}}

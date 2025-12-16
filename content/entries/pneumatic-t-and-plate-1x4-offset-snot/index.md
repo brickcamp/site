@@ -20,7 +20,9 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="http://swooshable.com/snot/pneumatic-t-with-plate-1x4-offset"
-    title="Pneumatic T with Plate 1x4 Offset"
     author="Linus Bohman"
->}}
+    date="2015-09-19"
+    image="link_01.png"
+    title="Pneumatic T with Plate 1x4 Offset"
+    url="http://swooshable.com/snot/pneumatic-t-with-plate-1x4-offset"
+/>}}

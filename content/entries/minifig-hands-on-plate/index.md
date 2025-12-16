@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/133427946@N06/22576475632"
-    title="Roof Technique"
     author="Micah the Fire-Breathing Hobbit"
     date="2015-10-29"
+    image="link_01.jpg"
+    title="Roof Technique"
+    url="https://www.flickr.com/photos/133427946@N06/22576475632"
 >}}
+This is a technique I invented for roofs it is made by clipping mini figure hands to an upside-down plate.
+{{< /linkbox >}}

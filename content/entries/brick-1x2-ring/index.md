@@ -23,7 +23,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="http://www.brickbending.com/"
-    title="BrickBending.com"
     author="Jeff Sanders"
+    date="2011-06-24"
+    image="link_01.png"
+    title="Brick Bending"
+    url="https://www.brickbending.com/"
 >}}
+Images of the artwork of geometric artist Jeff Sanders
+{{< /linkbox >}}

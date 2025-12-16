@@ -22,23 +22,37 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="http://www.brucelowell.com/lowell-sphere/"
-    title="Lowell Sphere"
     author="Bruce Lowell"
     date="2003-05-29"
+    image="link_01.png"
+    title="Lowell Sphere"
+    url="http://www.brucelowell.com/lowell-sphere/"
 >}}
+The Lowell Sphere is a SNOT (Studs Not On Top) LEGO sphere design that consists of six identical curved panels built onto a cubic frame. The original sphere uses a 4x4x4 stud core with an outside diameter of 6.8 studs.
+{{< /linkbox >}}
 
 {{< linkbox
+    author="Bruce Lowell"
+    date="2004-11-14"
+    image="link_02.png"
     title="Original Design"
-    url="http://www.brickshelf.com/cgi-bin/gallery.cgi?f=44794"
->}}
+    url="https://web.archive.org/web/20041114052433/http://www.brickshelf.com/cgi-bin/gallery.cgi?f=44794"
+/>}}
 
 {{< linkbox
+    author="Tyler"
+    date="2010-10-09"
+    image="link_03.jpg"
     title="Alternate Design"
-    url="https://www.flickr.com/photos/legohaulic/5065049929/in/faves-64049564@N03/"
+    url="https://www.flickr.com/photos/legohaulic/5065049929"
 >}}
+This is nothing new to most builders. A young Lego enthusiast came and saw my collection and was baffled by how I was able to make a sphere. I made him instructions keeping in mind his small collection and lack of Travis bricks. I just thought I'd upload it anyway. 
+{{< /linkbox >}}
 
 {{< linkbox
+    author="Bram Lambrecht"
+    date="2005-11-24"
+    image="link_04.png"
     title="Bram Sphere Generator"
     url="http://lego.bldesign.org/sphere/"
->}}
+/>}}

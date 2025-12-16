@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/umamen/23999220611/in/pool-788191@N24/"
-    title="How to make ball"
     author="umamen"
     date="2015-12-31"
+    image="link_01.png"
+    title="How to make ball"
+    url="https://www.flickr.com/photos/umamen/23999220611/"
 >}}
+But not perfect
+{{< /linkbox >}}

@@ -21,8 +21,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/moctagon/7392011202"
-    title="The Moctagon SNOT Connection"
     author="Moctagon Jones"
     date="2012-06-18"
+    image="link_01.jpg"
+    title="The Moctagon SNOT Connection"
+    url="https://www.flickr.com/photos/moctagon/7392011202"
 >}}
+18 elements. Pretty happy about finding this, haven't seen it before.
+{{< /linkbox >}}

@@ -21,4 +21,12 @@ src              = 'model.ldr'
 params.copyright = '2025 BrickCamp'
 +++
 
-Todo: Source Brickbending kaputtgegangen
+{{< linkbox
+    author="Grantmasters"
+    date="2019-10-04"
+    image="link_01.jpg"
+    title="Technique"
+    url="https://www.flickr.com/photos/72062810@N08/48839678353/"
+>}}
+I made a water tower for an upcoming build and used this technique to make it. Not sure if it's new/ of use to anyone but thought I'd post it anyway. Would work for stairs too?
+{{< /linkbox >}}

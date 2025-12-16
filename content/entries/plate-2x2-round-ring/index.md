@@ -22,8 +22,11 @@ params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
-    url="https://www.flickr.com/photos/153437010@N05/29249010987"
-    title="Lego Building Technique: 2x2 Round Plate Pieces (Variation 2)"
     author="thebrickccentric"
     date="2018-08-02"
+    image="link_01.jpg"
+    title="Lego Building Technique: 2x2 Round Plate Pieces (Variation 2)"
+    url="https://www.flickr.com/photos/153437010@N05/29249010987"
 >}}
+This technique is made entirely of the 2x2 round plate (part 4032). This technique could be useful for things like old towers or flowers (or just organic shapes in general). Feel free to use this creation however you want, but be sure to give me proper credit for it.
+{{< /linkbox >}}
