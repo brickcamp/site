@@ -107,13 +107,6 @@
 {{ $combinations.Add $filterPath (dict "from" "tags" )}}
 
 {{/* Create lookup file for each combination */}}
-{{ $.AddPage (dict 
-    "content" (dict 
-        "mediaType" "text/markdown" 
-        "value"     (debug.Dump $combinations.Values))
-    "title"   "test"
-    "path"    "test") }}
-
 {{ range $path, $filter := $combinations.Values }}
   {{ $page := dict
     "title"   $path
