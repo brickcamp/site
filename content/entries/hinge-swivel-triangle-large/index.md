@@ -2,7 +2,10 @@
 title = 'Hinge Swivel Triangle'
 date  = '2015-12-06'
 
-aliases = ['/tech/hinge-swivel-triangle']
+aliases = [
+  '/tech/hinge-swivel-triangle',
+  '/entries/hinge-swivel-triangle',
+]
 parts = ['73983', '3710']
 size  = ['5s', '5s', '2p']
 tags  = [
