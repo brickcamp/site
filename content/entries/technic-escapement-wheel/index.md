@@ -4,7 +4,7 @@ date  = '2019-07-13'
 
 aliases = ['/tech/technic-escapement-wheel']
 parts = ['6536', '32126', '2825', '2780', '32002', '4519', '4185', '3706']
-size  = ['11s', '11s', '3s']
+size  = ['11s', '11s', '4s']
 tags  = [
   'partcount-segment-6',
   'partcount-total-77',
