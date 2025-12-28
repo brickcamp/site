@@ -175,7 +175,7 @@ function copySpanText(from, to) {
 }
 
 function getSpanText(id) {
-  return document.getElementById(id)?.querySelector("span")?.innerText;
+  return document.querySelector("#" + id + ":not([hidden])")?.querySelector("span")?.innerText;
 }
 
 function setSpanText(id, text) {
