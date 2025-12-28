@@ -1,0 +1,4 @@
+title = 'Parts'
+slug  = 'part'
+sort  = 60
+from  = 'parts'
