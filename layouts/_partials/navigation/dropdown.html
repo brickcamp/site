@@ -11,7 +11,11 @@
     <li>
       <a id="nav-{{ $id }}-{{ .id }}" class="dropdown-item" data-base="{{ .parent }}" href="#">
         {{ if .icon -}}
-        <img src="/icons/icon-{{ with .parent }}{{ . }}-{{ end }}{{ $id }}-{{ .id }}.svg" width=25 height=25 class="pe-2">
+        <img  src="/icons/icon-{{ with .parent }}{{ . }}-{{ end }}{{ $id }}-{{ .id }}.svg" 
+              width=25 
+              height=25
+              onerror="this.src='/icon.svg'; this.style='filter: grayscale(100%);'"
+              class="pe-2" >
         {{ else }}
         <i class="no-icon"></i>
         {{ end -}}
