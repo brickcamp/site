@@ -1,13 +1,14 @@
 var base, type, value, sort;
+const basesWithoutTypes  = ["__any", "part"];
+const basesWithoutValues = ["__any", "part", "repeat", "size"];
+const typesWithoutValues = ["ellipse", "circle", "sphere", "toroid"];
 
 document.addEventListener("DOMContentLoaded", () => {
-  initQueryParams();
   initFilterDropdowns();
   refresh();
 });
 
 window.addEventListener("popstate", (event) => {
-  initQueryParams();
   refresh();
 })
 
@@ -17,6 +18,13 @@ function initQueryParams() {
   type  = params.get("type")  || "__any";
   value = params.get("value") || "__any";
   sort  = params.get("sort")  || "date-desc";
+  cleanupQueryParams();
+}
+
+function cleanupQueryParams() {
+  if (basesWithoutTypes.includes(base))  type  = "__any";
+  if (basesWithoutValues.includes(base)) value = "__any";
+  if (typesWithoutValues.includes(type)) value = "__any";
 }
 
 function initFilterDropdowns() {
@@ -30,8 +38,9 @@ function initFilterDropdowns() {
 }
 
 function changeQueryParams() {
-  const url = new URL(location);
+  cleanupQueryParams();
 
+  const url = new URL(location);
   const params = url.searchParams;
   const before = params.toString();
   base  == "__any"     ? params.delete("base")  : params.set("base", base);
@@ -47,6 +56,7 @@ function changeQueryParams() {
 }
 
 function refresh() {
+  initQueryParams();
   refreshFilterDropdowns();
   refreshEntries();
 }
@@ -61,10 +71,14 @@ function refreshFilterDropdowns() {
   }
   dropdowns.forEach(dropdown => {
     copySpanText(dropdown.id + "-" + selected[dropdown.id], dropdown.id)
+    console.log(dropdown.id + "/" + base);
     switch(dropdown.id) {
       case "nav-type":
+        dropdown.hidden = (basesWithoutTypes.includes(base));
+        break;
       case "nav-value":
-        dropdown.hidden = (base == "__any");
+        dropdown.hidden = (basesWithoutValues.includes(base) || typesWithoutValues.includes(type));
+        break;
     }
   });
 

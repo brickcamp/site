@@ -8,7 +8,7 @@
 {{ $dropdowns.Add "type"  (dict "id" "__any" "title" "All Types" ) -}}
 {{ $dropdowns.Add "value" (dict "id" "__any" "title" "All Values" ) -}}
 
-{{ range $filter := site.Data.entries.filters -}}
+{{ range $filter := (sort site.Data.entries.filters "sort" "asc") -}}
   {{ $dropdowns.Add "base" (dict "id" $filter.slug "title" $filter.title "icon" true) -}}
   {{ range .types -}}
     {{ $dropdowns.Add "type" (dict "parent" $filter.slug "id" .slug "title" .title  "icon" true) -}}
