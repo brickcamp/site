@@ -27,27 +27,41 @@
       </div>
     </div>
     <div class="col col-12 col-sm-6">
-      <div>{{ .Date.Format "2006-01-02" }}</div>
-      {{- with .Params.size }}
-      <div>{{ index . 0 }} &times; {{ index . 1 }} &times; {{ index . 2 }}</div>
-      {{- end }}
-      {{- with .GetTerms "parts" }}
-      <div class="row g-2">
-        {{- range . }}
-        <div class="col col-3 col-sm-4 col-md-3 col-xl-2">
-          <div class="card">
-            <img src="{{ with .Resources.GetMatch "image.*" }}{{ .RelPermalink }}{{ end }}" class="card-img-top dark-filter" title="{{ .LinkTitle }}" alt="{{ .LinkTitle }}">
-            <div class="card-footer p-1 text-center">
-              <small class="text-muted">
-                {{ path.Base .Path }}
-                <a href="/" class="stretched-link" title="{{ .LinkTitle }}"></a>
-              </small>
-            </div>
-          </div>
+      <div class="row row-cols-4 row-cols-sm-3 row-cols-xl-4 g-2 mb-2">
+        {{ with .GitInfo }}
+          {{ $link := print "https://github.com/brickcamp/site/commit/" .Hash -}}
+          {{ $created := dict 
+              "date"   .CommitDate 
+              "link"   $link 
+              "title" "Updated" -}}
+        <div class="col">
+          {{ partial "card/date.html" $created }}
+        </div>
+        {{ end }}
+
+        {{ with .Resources.GetMatch "model.ldr" -}}
+        <div class="col">
+          {{ partial "card/download.html" (dict 
+              "link"  .
+              "name"  (print (path.BaseName $.Path) ".ldr")
+              "title" "CAD file") }}
         </div>
         {{- end }}
+
+        {{- with .Params.size }}
+        <div class="col">
+          {{ partial "card/size.html" . }}
+        </div>
+        {{ end }}
+
+        {{ with .GetTerms "parts" -}}
+        {{ range . -}}
+        <div class="col">
+          {{ partial "card/part.html" . }}
+        </div>
+        {{- end }}
+        {{- end }}
       </div>
-      {{- end }}
     </div>
   </div>
   {{ .Content }}

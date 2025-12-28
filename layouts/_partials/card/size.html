@@ -1,0 +1,29 @@
+{{ $size := . -}}
+{{ $type := partial "func/getSizeType" . -}}
+<div class="card h-100 text-center">
+  <div class="class-body ratio ratio-1x1 overflow-hidden">
+    <div class="h-100 d-flex flex-column bg-white">
+      <svg viewBox="0 0 70 70" class="flex-fill">
+        <text x="50%" y="1%"  dominant-baseline="hanging" text-anchor="middle">
+          {{- index $size 0 -}}
+        </text>
+        <text x="50%" y="34%" dominant-baseline="middle" text-anchor="middle" fill="#aaa">
+          &times;
+        </text>
+        <text x="50%" y="53%" dominant-baseline="middle" text-anchor="middle">
+          {{- index $size 1 -}}
+        </text>
+        <text x="50%" y="72%" dominant-baseline="middle" text-anchor="middle" fill="#aaa">
+          &times;
+        </text>
+        <text x="50%" y="95%" dominant-baseline="auto" text-anchor="middle">
+          {{- index $size 2 -}}
+        </text>
+      </svg>
+    </div>
+  </div>
+  <small class="card-footer p-1">
+    {{ $type.title }}
+    <a href="/" class="stretched-link" title="Size" data-bs-toggle="tooltip"></a>
+  </small>
+</div>
