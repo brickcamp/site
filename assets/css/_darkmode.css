@@ -12,3 +12,7 @@
 :root[data-bs-theme="dark"] img.dark-filter {
   filter: brightness(90%);
 }
+
+:root[data-bs-theme="dark"] .bg-white {
+  --bs-bg-opacity: 0.9;
+}
