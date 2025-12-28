@@ -1,0 +1,13 @@
+{{- $sizeX   := partial "func/getLDUs" (index . 0) -}}
+{{- $sizeY   := partial "func/getLDUs" (index . 1) -}}
+{{- $sizeZ   := partial "func/getLDUs" (index . 2) -}}
+{{- $sizeMax := math.Max $sizeX $sizeY $sizeZ -}}
+
+{{- $result := slice -}}
+{{- range site.Data.entries.filters.size.types | collections.Reverse -}}
+  {{- if ge .ldus $sizeMax -}}
+    {{- $result = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $result -}}

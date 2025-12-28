@@ -8,6 +8,7 @@
   {{ $basePath := print "filtered/" $f.slug }}
   {{ $filterPath := print $basePath "-" $any "-" $any }}
   {{ $combinations.Add $filterPath (dict 
+    "from" $f.from
     "base" $f.slug
   )}}
 
@@ -16,6 +17,7 @@
   {{ range $v := $f.values }}
     {{ $valuePath := print $basePath "-" $any "-" $v.slug }}
     {{ $combinations.Add $valuePath (dict
+      "from"  $f.from
       "base"  $f.slug
       "value" $v.slug
     )}}
@@ -26,6 +28,7 @@
   {{ with $values }}
     {{ $valuePath := print $basePath "-" $any "-" $else }}
     {{ $combinations.Add $valuePath (dict
+      "from"      $f.from
       "base"      $f.slug
       "notValues" $values
     )}}
@@ -36,6 +39,7 @@
   {{ range $t := $f.types }}
     {{ $typePath := print $basePath "-" $t.slug "-" $any }}
     {{ $combinations.Add $typePath (dict
+      "from"  $f.from
       "base"  $f.slug
       "type"  $t.slug
     )}}
@@ -45,6 +49,7 @@
     {{ range $v := $f.values }}
       {{ $valuePath := print $basePath "-" $t.slug "-" $v.slug }}
       {{ $combinations.Add $valuePath (dict
+        "from"  $f.from
         "base"  $f.slug
         "type"  $t.slug
         "value" $v.slug
@@ -55,6 +60,7 @@
     {{ with $values }}
       {{ $valuePath := print $basePath "-" $t.slug "-" $else }}
       {{ $combinations.Add $valuePath (dict
+        "from"      $f.from
         "base"      $f.slug
         "type"      $t.slug
         "notValues" $values
@@ -66,6 +72,7 @@
   {{ with $types }}
     {{ $typePath := print $basePath "-" $else "-" $any }}
     {{ $combinations.Add $typePath (dict
+      "from"     $f.from
       "base"     $f.slug
       "notTypes" $types
     )}}
@@ -74,6 +81,7 @@
     {{ range $v := $f.values }}
       {{ $valuePath := print $basePath "-" $else "-" $v.slug }}
       {{ $combinations.Add $valuePath (dict
+        "from"     $f.from
         "base"     $f.slug
         "notTypes" $types
         "value"    $v.slug
@@ -84,6 +92,7 @@
     {{ with $values }}
       {{ $valuePath := print $basePath "-" $else "-" $else }}
       {{ $combinations.Add $valuePath (dict
+        "from"      $f.from
         "base"      $f.slug
         "notTypes"  $types
         "notValues" $values
@@ -95,9 +104,16 @@
 {{/* Unfiltered + Any Type + Any Value */}}
 {{ $basePath := print "filtered/" $any }}
 {{ $filterPath := print $basePath "-" $any "-" $any }}
-{{ $combinations.Add $filterPath dict}}
+{{ $combinations.Add $filterPath (dict "from" "tags" )}}
 
 {{/* Create lookup file for each combination */}}
+{{ $.AddPage (dict 
+    "content" (dict 
+        "mediaType" "text/markdown" 
+        "value"     (debug.Dump $combinations.Values))
+    "title"   "test"
+    "path"    "test") }}
+
 {{ range $path, $filter := $combinations.Values }}
   {{ $page := dict
     "title"   $path
