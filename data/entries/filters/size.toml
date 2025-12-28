@@ -1,0 +1,29 @@
+title = 'Sizes'
+slug  = 'size'
+sort  = 50
+from  = 'size'
+
+[[types]]
+title = 'Very Small'
+slug  = 'xs'
+ldus  = 40
+
+[[types]]
+title = 'Small'
+slug  = 's'
+ldus  = 80
+
+[[types]]
+title = 'Medium'
+slug  = 'm'
+ldus  = 160
+
+[[types]]
+title = 'Large'
+slug  = 'l'
+ldus  = 320
+
+[[types]]
+title = 'Very Large'
+slug  = 'xl'
+ldus  = 999999999

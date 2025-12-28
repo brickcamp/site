@@ -4,13 +4,15 @@
 {{ with $page.Store.Get "_values" }}
   {{ $result = . }}
 {{ else }}
-  {{ $sizeX := 0 }}
-  {{ $sizeY := 0 }}
-  {{ $sizeZ := 0 }}
+  {{ $sizeX    := 0 }}
+  {{ $sizeY    := 0 }}
+  {{ $sizeZ    := 0 }}
+  {{ $sizeType := "" }}
   {{ with $page.Param "size" -}}
-    {{ $sizeX = partial "func/getLDUs" (index . 0) }}
-    {{ $sizeY = partial "func/getLDUs" (index . 1) }}
-    {{ $sizeZ = partial "func/getLDUs" (index . 2) }}
+    {{ $sizeX    = partial "func/getLDUs" (index . 0) }}
+    {{ $sizeY    = partial "func/getLDUs" (index . 1) }}
+    {{ $sizeZ    = partial "func/getLDUs" (index . 2) }}
+    {{ $sizeType = index (partial "func/getSizeType" .) "slug" }}
   {{- end -}}
 
   {{- $parts := slice -}}
@@ -38,6 +40,7 @@
       "_sizeMax"  $sizeMax
       "_sizeVol"  $sizeVol
       "_sizeArea" $sizeArea
+      "_sizeType" $sizeType
       "_partsMin" $partsMin
       "_partsMax" $partsMax
   -}}

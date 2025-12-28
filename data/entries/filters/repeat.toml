@@ -1,6 +1,7 @@
 title = 'Repeat'
 slug  = 'repeat'
 sort  = 30
+from  = 'tags'
 
 [[types]]
 title = 'Linear'
