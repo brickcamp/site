@@ -5,7 +5,7 @@ date  = '2025-12-28'
 parts = ['73983', '3023']
 size  = ['4s', '4s', '1b']
 tags  = [
-  'angle-studturn',
+  'angle-studturn-60',
   'partcount-segment-2',
   'partcount-total-6',
   'shape-polygon-3',
