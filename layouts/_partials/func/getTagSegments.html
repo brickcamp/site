@@ -1,9 +1,9 @@
 {{/* ******* */}}
 {{- $tag := . -}}
 {{/* ******* */}}
+{{- $tag = strings.TrimPrefix "/tags/" $tag -}}
 
 {{- $split := split $tag "-" -}}
-
 {{- $base  := index $split 0 -}}
 {{- $type  := index $split 1 | default "else" -}}
 {{- $value := index $split 2 | default 0 -}}

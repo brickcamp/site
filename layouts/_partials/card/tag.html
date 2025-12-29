@@ -1,0 +1,60 @@
+{{ $tag := . -}}
+
+{{ $link  := false -}}
+{{ $title := false -}}
+{{ $icon  := false -}}
+{{ $value := false -}}
+{{ $unit  := false -}}
+{{ $badge := false -}}
+
+{{ $segments := partial "func/getTagSegments" .Path -}}
+{{ if eq $segments.base "partcount" -}}
+  {{ $title = "Partcount" -}}
+  {{ $value = $segments.value -}}
+  {{ if eq $segments.type "total" -}}
+    {{ $unit  = "in Total" -}}
+  {{ else if eq $segments.type "segment" -}}
+    {{ $unit  = "per Segment" -}}
+  {{ else -}}
+    {{ $unit  = "Parts" -}}
+  {{ end -}}
+{{ else if eq $segments.base "warning" -}}
+  {{ $title = "Warning" -}}
+  {{ $icon  = "/icon.svg" -}}
+{{ else -}}
+  {{ $title = title $segments.base -}}
+  {{ $icon  = print "/icons/icon-" $segments.base "-type-" $segments.type ".svg" -}}
+  {{ $link  = print "/?base=" $segments.base "&type=" $segments.type -}}
+  {{ if gt $segments.value 0 }}
+    {{ $link  = print $link "&value=" $segments.value -}}
+  {{ end }}
+  {{ $badge = $segments.value -}}
+{{ end -}}
+
+<div class="card h-100 text-center">
+  <div class="class-body ratio ratio-1x1 overflow-hidden bg-white">
+    {{ with $icon -}}
+    <img src="{{ $icon }}">
+    {{ else -}}
+    <div class="h-100 d-flex flex-column bg-white">
+      <div class="flex-fill d-flex">
+        <svg viewBox="0 0 30 14" class="flex-fill">
+          <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle">{{ $value }}</text>
+        </svg>
+      </div>
+      <small class="d-block text-dark">{{ $unit }}</small>
+    </div>
+    {{ end -}}
+  </div>
+  {{ with $badge -}}
+  <span class="badge text-bg-dark position-absolute top-0 end-0 m-2 fs-5">
+    {{- $badge -}}
+  </span>
+  {{ end -}}
+  <small class="card-footer p-1">
+    {{ $title }}
+    {{ with $link -}}
+    <a href="{{ $link }}" class="stretched-link" title="{{ $title }}"></a>
+    {{ end -}}
+  </small>
+</div>

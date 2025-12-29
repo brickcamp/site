@@ -54,6 +54,14 @@
         </div>
         {{ end }}
 
+        {{- with .GetTerms "tags" -}}
+        {{- range . -}}
+        <div class="col">
+          {{ partial "card/tag.html" . }}
+        </div>
+        {{- end -}}
+        {{- end -}}
+
         {{ with .GetTerms "parts" -}}
         {{ range . -}}
         <div class="col">
