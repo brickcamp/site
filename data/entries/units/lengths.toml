@@ -1,79 +1,121 @@
-# Part-based units by size
+# Part-based units
 [ l ]
-title  = 'LDraw Unit'
+title  = 'LDraw Units'
 one    = 'LDU'
 many   = 'LDU'
 factor = 1
 system = 'parts'
 
 [ p ]
-title  = 'Height of a plate'
+title  = 'Stacked Plates'
 one    = 'plate'
 many   = 'plates'
 factor = 8
 system = 'parts'
 
 [ s ]
-title  = 'Width of a stud'
+title  = 'Studs'
 one    = 'stud'
 many   = 'studs'
 factor = 20
 system = 'parts'
 
 [ b ]
-title  = 'Height of a brick'
+title  = 'Stacked Bricks'
 one    = 'brick'
 many   = 'bricks'
 factor = 24
 system = 'parts'
 
+[ cl ]
+title  = 'Chain Links'
+one    = 'link'
+many   = 'links'
+factor = 17.333
+system = 'parts'
+
+[ tl ]
+title  = 'Tread Links'
+one    = 'tread'
+many   = 'treads'
+factor = 32.5
+system = 'parts'
+
 [ t ]
-title  = 'Length of a train track'
+title  = 'Train Tracks'
 one    = 'track'
 many   = 'tracks'
 factor = 320
 system = 'parts'
 
-# Metric units by size
+[ bp ]
+title  = 'Baseplate ×32'
+one    = '×32'
+many   = '×32s'
+factor = 640
+system = 'parts'
+
+[ bq ]
+title  = 'Baseplate ×48'
+one    = '×48'
+many   = '×48s'
+factor = 960
+system = 'parts'
+
+# Metric units
 [ mm ]
 title  = 'Millimeters'
 one    = 'mm'
 many   = 'mm'
-factor = 2.5047
+factor = 2.5
 system = 'metric'
 
 [ cm ]
 title  = 'Centimeters'
 one    = 'cm'
 many   = 'cm'
-factor = 25.0470
+factor = 25
 system = 'metric'
 
 [ m ]
 title  = 'Meters'
 one    = 'm'
 many   = 'm'
-factor = 2504.6963
+factor = 2500
 system = 'metric'
 
-# Imperial units by size
+[ km ]
+title  = 'Kilometers'
+one    = 'km'
+many   = 'km'
+factor = 2500000
+system = 'metric'
+
+# Imperial units
 [ in ]
 title  = 'Inches'
 one    = 'in'
 many   = 'in'
-factor = 63.6193
+factor = 63.5
 system = 'imperial'
 
 [ ft ]
 title  = 'Feet'
 one    = 'ft'
 many   = 'ft'
-factor = 763.4314
+factor = 762
 system = 'imperial'
 
 [ yd ]
 title  = 'Yard'
 one    = 'yd'
 many   = 'yd'
-factor = 2290.2943
+factor = 2286
+system = 'imperial'
+
+[ mi ]
+title  = 'Miles'
+one    = 'mi'
+many   = 'mi'
+factor = 4023360
 system = 'imperial'
