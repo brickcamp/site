@@ -2,8 +2,8 @@
 {{- $items := .items -}}
 {{- $class := .class -}}
 
-<li id="nav-{{ $id }}" class="nav-item dropdown {{ $class }}">
-  <a id="nav-label-{{ $id }}" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+<div id="nav-{{ $id }}" class="dropdown {{ $class }}">
+  <a id="nav-label-{{ $id }}" class="btn btn-outline dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
     <span>{{ index (index .items 0) "title" }}</span>
   </a>
   <ul class="dropdown-menu" aria-labelledby="nav-label-{{ $id }}">
@@ -24,4 +24,4 @@
     </li>
     {{- end }}
   </ul>
-</li>
+</div>
