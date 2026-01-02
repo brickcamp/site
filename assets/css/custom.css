@@ -34,6 +34,14 @@ body {
   }
 }
 
+#unit-converter th,
+#conversion-results td {
+  text-wrap: nowrap;
+  vertical-align: middle;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 #toTop {
   bottom: 20px; 
   right: 20px; 
