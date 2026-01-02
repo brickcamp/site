@@ -26,6 +26,14 @@ body {
   filter: grayscale(100%) !important;
 }
 
+@media (max-width: 575.98px) {
+  #entries .card {
+    --bs-card-cap-padding-x: 0.5rem;
+    --bs-card-cap-padding-y: 0.25rem;
+    font-size: 14px;
+  }
+}
+
 #toTop {
   bottom: 20px; 
   right: 20px; 
