@@ -35,6 +35,15 @@ function initFilterDropdowns() {
       if (e.key === "Enter") onFilterLinkClicked(e);
     });
   });
+  
+  // avoid clipping by horizontal scroll container
+  // see https://github.com/twbs/bootstrap/issues/35397#issuecomment-1325790968
+  const dropdowns = document.querySelectorAll('.dropdown-toggle')
+  const dropdown = [...dropdowns].map((dropdownToggleEl) => new bootstrap.Dropdown(dropdownToggleEl, {
+    popperConfig(defaultBsPopperConfig) {
+      return { ...defaultBsPopperConfig, strategy: 'fixed' };
+    }
+  }));
 }
 
 function changeQueryParams() {
@@ -62,7 +71,7 @@ function refresh() {
 }
 
 function refreshFilterDropdowns() {
-  const dropdowns = document.querySelectorAll("#filter-nav .nav-item.dropdown");
+  const dropdowns = document.querySelectorAll("#filter-nav .dropdown");
   const selected = {
     "nav-base": base,
     "nav-type": type,
