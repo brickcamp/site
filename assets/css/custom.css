@@ -6,6 +6,12 @@ body {
   min-width: 350px;
 }
 
+#filter-nav .dropdown-toggle {
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #6c757d;
+  --bs-btn-hover-border-color: #6c757d;
+}
+
 .dropdown-item .no-icon {
   display: inline-block;
   width: 25px;
