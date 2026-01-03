@@ -9,9 +9,17 @@
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  {{- $css := resources.Match "css/**.css" | resources.Concat "main.css" | css.PostCSS }} 
-  {{- $css = $css | minify | resources.PostProcess }}
-  <link rel="stylesheet" href="{{ $css.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $css.Data.Integrity }}"{{ end }} />
+  {{ $css := resources.Match "css/**.css" | resources.Concat "main.css" | css.PostCSS -}}
+  {{ with $css -}}
+    {{ if hugo.IsDevelopment -}}
+      {{ $version := md5 hugo.BuildDate -}}
+      <link rel="stylesheet" href="{{ .RelPermalink }}?v={{ $version }}">
+    {{ else -}}
+      {{ with . | minify | fingerprint | resources.PostProcess -}}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{- end }}
+    {{- end }}
+  {{- end }}
 
   {{- $js := resources.Get "js/_darkmode.js" | minify }}
   <script>
