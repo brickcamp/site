@@ -1,9 +1,0 @@
-0 untitled model
-0 Name: model.ldr
-0 Author: BrickCamp (by Tobias Buckdahn)
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
-1 14 60 0 0 1 0 0 0 1 0 -0 0 1 3022.dat
-1 14 60 -20 0 1 0 0 0 -1 0 0 0 -1 3022.dat
-1 4 60 -10 -4 -1 0 0 0 0 1 0 1 0 3069b.dat
-0
