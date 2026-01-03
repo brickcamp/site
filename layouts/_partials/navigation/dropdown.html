@@ -3,9 +3,13 @@
 {{- $class := .class -}}
 
 <div id="nav-{{ $id }}" class="dropdown {{ $class }}">
-  <a id="nav-label-{{ $id }}" class="btn dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-    <span>{{ index (index .items 0) "title" }}</span>
-  </a>
+  <a  id="nav-label-{{ $id }}" 
+      class="btn dropdown-toggle"
+      href="#"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"><span>
+    {{- index (index .items 0) "title" -}}
+  </span></a>
   <ul class="dropdown-menu" aria-labelledby="nav-label-{{ $id }}">
     {{- range $items }}
     <li>
