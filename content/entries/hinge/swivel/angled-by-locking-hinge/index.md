@@ -2,7 +2,9 @@
 title = 'Hinge 1 x 2 Locking between Hinges 1 x 4 Angle'
 date  = '2019-02-19'
 
+url     = '/entry/hinge-1x2-locking-between-hinge-1x4-angle'
 aliases = ['/tech/hinge-1x2-locking-between-hinge-1x4-angle']
+
 parts = ['30414', '44301', '44302', '73983']
 size  = ['8s', '5s', '5p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'angle-studturn-40',
   'partcount-total-8',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

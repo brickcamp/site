@@ -2,7 +2,9 @@
 title = 'Cubeoctahedronesque'
 date  = '2019-04-15'
 
+url     = '/entry/cubeoctahedronesque'
 aliases = ['/tech/cubeoctahedronesque']
+
 parts = ['75937', '59443', '48729', '57585']
 size  = ['11s', '11s', '11s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-62',
   'shape-polyhedron-6',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

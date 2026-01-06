@@ -2,7 +2,9 @@
 title = 'Hinge Tops on Binoculars Octagon'
 date  = '2015-08-27'
 
+url     = '/entry/hinge-tops-on-binoculars-octagon'
 aliases = ['/tech/hinge-tops-on-binoculars-octagon']
+
 parts = ['3938', '30162', '4733']
 size  = ['3s', '3s', '4s']
 tags  = [
@@ -14,14 +16,6 @@ tags  = [
   'partcount-total-18',
   'shape-polygon-8',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

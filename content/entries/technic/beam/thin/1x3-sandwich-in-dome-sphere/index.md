@@ -2,7 +2,9 @@
 title = 'Dome Sphere'
 date  = '2019-01-31'
 
+url     = '/tech/dome-on-technic-beam-sphere'
 aliases = ['/tech/dome-on-technic-beam-3x0.5-sphere']
+
 parts = ['86500', '3623', '6632']
 size  = ['4s', '4s', '4s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-6',
   'shape-sphere',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

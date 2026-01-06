@@ -2,7 +2,9 @@
 title = 'Quad Slope SNOT'
 date  = '2015-08-23'
 
+url     = '/entry/slope-inv-6x6x2-quad-snot'
 aliases = ['/tech/slope-inv-6x6x2-quad-snot']
+
 parts = ['30373']
 size  = ['9s', '9s', '4b']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'angle-studturn-45',
   'partcount-total-2',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

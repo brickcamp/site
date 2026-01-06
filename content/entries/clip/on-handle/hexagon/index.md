@@ -2,7 +2,9 @@
 title = 'Clip-Handle Hexagon'
 date  = '2015-08-26'
 
+url     = '/entry/clip-handle-hexagon'
 aliases = ['/tech/clip-handle-hexagon']
+
 parts = ['48336', '60470', '3022']
 size  = ['7s', '2s', '7s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-30',
   'shape-polygon-6',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

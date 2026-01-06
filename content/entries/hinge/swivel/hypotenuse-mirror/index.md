@@ -2,7 +2,9 @@
 title = 'Hinge Swivel Hypotenuse-Mirror'
 date  = '2015-12-06'
 
+url     = '/entry/hinge-swivel-hypotenuse-mirror'
 aliases = ['/tech/hinge-swivel-hypotenuse-mirror']
+
 parts = ['73983', '3623']
 size  = ['4s', '4s', '2p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-4',
   'warning-todo-angle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 | ×   | 2     | 3     | 4     | 5     | 6     | 7     | 8     | 9     | 10    | 11    | 12    | 13    | 14   | 15   | 16   |

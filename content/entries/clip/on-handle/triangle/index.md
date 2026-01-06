@@ -2,7 +2,9 @@
 title = 'Clip-Handle Triangle'
 date  = '2015-10-11'
 
+url     = '/entry/clip-handle-triangle'
 aliases = ['/tech/clip-handle-triangle']
+
 parts = ['60470', '48336']
 size  = ['3s', '2s', '7p']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'partcount-total-6',
   'shape-polygon-3',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

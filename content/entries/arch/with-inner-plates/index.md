@@ -2,7 +2,9 @@
 title = 'Plates in Arch'
 date  = '2015-08-29'
 
+url     = '/entry/arch-with-inner-plates'
 aliases = ['/tech/arch-with-inner-plates']
+
 parts = ['2339', '3024']
 size  = ['5s', '1s', '4b']
 tags  = [
@@ -13,14 +15,6 @@ tags  = [
   'angle-studtilt-45',
   'partcount-total-5',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

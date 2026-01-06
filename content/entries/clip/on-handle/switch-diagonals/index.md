@@ -2,7 +2,9 @@
 title = 'Clip-Handle Switch Diagonals'
 date  = '2019-04-16'
 
+url     = '/entry/clip-handle-switch-diagonals'
 aliases = ['/tech/clip-handle-switch-diagonals']
+
 parts = ['60478', '63868', '3023', '6019']
 size  = ['8s', '1s', '3p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-4',
   'warning-todo-angle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

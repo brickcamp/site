@@ -2,7 +2,9 @@
 title = 'Train Track Ring'
 date  = '2015-10-10'
 
+url     = '/entry/train-track-ring'
 aliases = ['/tech/train-track-ring']
+
 parts = ['53400']
 size  = ['88s', '88s', '1b']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-16',
   'shape-circle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

@@ -2,7 +2,9 @@
 title = 'Handle Ring in 8 x 8 Dishes'
 date  = '2015-09-28'
 
+url     = '/entry/handle-ring-in-8x8-dishes'
 aliases = ['/tech/plate-1x2-handle-ring-in-8x8-dishes']
+
 parts = ['2540', '3961', '3941', '3705']
 size  = ['23p', '23p', '5s']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'shape-polygon-44',
   'shape-circle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

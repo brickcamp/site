@@ -2,7 +2,9 @@
 title = 'Tile Grille Sandwich'
 date  = '2016-01-16'
 
+url     = '/entry/tile-grille-sandwich-offset'
 aliases = ['/tech/tile-grille-sandwich-offset']
+
 parts = ['2412']
 size  = ['2s', '2s', '2p']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'partcount-total-2',
   'warning-loosely',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

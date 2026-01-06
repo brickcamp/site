@@ -2,21 +2,15 @@
 title = 'Shift-Pinned Technic Bricks'
 date  = '2015-08-26'
 
+url     = '/entry/technic-bricks-pinned-shifted'
 aliases = ['/tech/technic-bricks-pinned-shifted']
+
 parts = ['6541', '32000', '3700', '3701', '2780']
 size  = ['2s', '2s', '1b']
 tags  = [
   'length-studshift-10',
   'partcount-total-3',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

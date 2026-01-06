@@ -2,7 +2,9 @@
 title = 'Brick 1 x 2 Ring with 1 x 1 Round Bricks'
 date  = '2015-09-14'
 
+url     = '/entry/brick-1x2-brick-1x1-round-ring'
 aliases = ['/tech/brick-1x2-brick-1x1-round-ring']
+
 parts = ['3062', '3004']
 size  = ['11s', '11s', '9p']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'shape-polygon-10',
   'shape-circle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

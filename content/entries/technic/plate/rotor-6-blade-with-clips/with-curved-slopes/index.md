@@ -2,7 +2,9 @@
 title = 'Hexagonal Plate with Curved Slopes'
 date  = '2015-08-29'
 
+url     = '/entry/hexagonal-plate-with-curved-slopes-3x1'
 aliases = ['/tech/plate-hexagonal-with-slopes-3x1-curved']
+
 parts = ['64566', '50950', '4070', '6541']
 size  = ['6s', '6s', '4p']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'shape-polygon-6',
   'shape-circle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

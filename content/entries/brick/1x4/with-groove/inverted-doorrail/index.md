@@ -2,7 +2,9 @@
 title = 'Slider SNOT'
 date  = '2015-08-23'
 
+url     = '/entry/brick-1x4-groove-inverted-doorrail'
 aliases = ['/tech/brick-1x4-groove-inverted-doorrail']
+
 parts = ['2653', '32028', '4510', '3710']
 size  = ['4s', '2s', '1b']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'length-studshift',
   'partcount-total-5',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

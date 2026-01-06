@@ -2,7 +2,9 @@
 title = 'Jumper Plate Wall'
 date  = '2019-07-06'
 
+url     = '/entry/jumper-2x2-plate-2x2-wall'
 aliases = ['/tech/jumper-2x2-plate-2x2-wall']
+
 parts = ['3022', '87580']
 size  = ['4s', '2s', '4p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-6',
   'repeat-planar',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

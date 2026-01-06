@@ -1,22 +1,16 @@
 +++
-title = 'Oppose-Pinned Technic Bricks'
+title = 'Inverted-Pinned Technic Bricks'
 date  = '2015-08-23'
 
+url     = '/entry/technic-bricks-pinned-inverted'
 aliases = ['/tech/technic-bricks-pinned-opposed']
+
 parts = ['3701', '2780']
 size  = ['4s', '2s', '4p']
 tags  = [
   'angle-studtilt-180',
   'partcount-total-4',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

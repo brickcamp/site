@@ -2,6 +2,9 @@
 title = 'Hinge Swivel Triangle (Small)'
 date  = '2025-12-28'
 
+url     = '/entry/small-hinge-swivel-triangle'
+aliases = []
+
 parts = ['73983', '3023']
 size  = ['4s', '4s', '1b']
 tags  = [
@@ -10,14 +13,6 @@ tags  = [
   'partcount-total-6',
   'shape-polygon-3',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

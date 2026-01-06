@@ -2,7 +2,9 @@
 title = 'Plate 2 x 2 Round Ring'
 date  = '2015-08-29'
 
+url     = '/entry/plate-2x2-round-ring'
 aliases = ['/tech/plate-2x2-round-ring']
+
 parts = ['4032']
 size  = ['9s', '9s', '3p']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'shape-polygon-9',
   'shape-circle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

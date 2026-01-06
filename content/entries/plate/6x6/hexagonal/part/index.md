@@ -2,7 +2,9 @@
 title = 'Plate 6 x 6 Hexagonal'
 date  = '2019-04-22'
 
+url     = '/entry/plate-6x6-hexagonal'
 aliases = ['/tech/plate-6x6-hexagonal']
+
 parts = ['27255']
 size  = ['6s', '6s', '1s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'angle-studturn-120',
   'partcount-total-1',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

@@ -2,7 +2,9 @@
 title = 'Clip-Handle Pentagon'
 date  = '2015-08-26'
 
+url     = '/entry/clip-handle-pentagon'
 aliases = ['/tech/clip-handle-pentagon']
+
 parts = ['48336', '60470', '3022']
 size  = ['6s', '2s', '6s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-20',
   'shape-polygon-5',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

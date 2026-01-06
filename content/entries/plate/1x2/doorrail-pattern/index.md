@@ -2,7 +2,9 @@
 title = 'Doorrail Pattern'
 date  = '2015-12-06'
 
+url     = '/entry/plate-doorrail-pattern'
 aliases = ['/tech/plate-doorrail-pattern']
+
 parts = ['32028', '3023', '3794']
 size  = ['20p', '2s', '3s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-segment-2',
   'repeat-linear',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

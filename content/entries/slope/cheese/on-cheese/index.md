@@ -2,7 +2,9 @@
 title = 'Cheese on Cheese'
 date  = '2019-01-30'
 
+url     = '/entry/cheese-on-cheese'
 aliases = ['/tech/cheese-on-cheese']
+
 parts = ['54200', '6541', '3666']
 size  = ['6s', '5p', '1b']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'partcount-segment-2',
   'repeat-linear',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

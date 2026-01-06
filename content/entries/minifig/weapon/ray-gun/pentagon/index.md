@@ -2,7 +2,9 @@
 title = 'Minifig Ray Gun Pentagon'
 date  = '2015-08-29'
 
+url     = '/entry/ray-gun-pentagon'
 aliases = ['/tech/minifig-ray-gun-pentagon']
+
 parts = ['13608']
 size  = ['6s', '6s', '1s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-5',
   'shape-polygon-5',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

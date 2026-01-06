@@ -2,7 +2,9 @@
 title = 'Boat Studs Ball via Flower Plates'
 date  = '2019-01-19'
 
+url     = '/entry/boat-studs-ball-with-flower-plates'
 aliases = ['/tech/boat-studs-ball-with-1x1-round-flower-plates']
+
 parts = ['2654', '33291', '4733']
 size  = ['7p', '7p', '7p']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'shape-polyhedron-6',
   'shape-sphere',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

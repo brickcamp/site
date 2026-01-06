@@ -2,7 +2,9 @@
 title = 'Mudguard Oval'
 date  = '2015-10-09'
 
+url     = '/entry/vehicle-mudguard-arch-oval'
 aliases = ['/tech/vehicle-mudguard-4x2.5x1.66-arch-oval']
+
 parts = ['50745', '3956', '3004', '3023', '3020']
 size  = ['5s', '4s', '8p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-7',
   'shape-ellipse',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

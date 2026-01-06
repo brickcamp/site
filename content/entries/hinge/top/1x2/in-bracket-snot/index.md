@@ -2,21 +2,15 @@
 title = 'Hinge in Bracket SNOT'
 date  = '2019-01-19'
 
+url     = '/entry/hinge-topbase-in-bracket-snot'
 aliases = ['/tech/hinge-topbase-in-bracket-snot']
+
 parts = ['99207', '3023', '3937', '3938', '3022']
 size  = ['2s', '2s', '4p']
 tags  = [
   'angle-studtilt-180',
   'partcount-total-5',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

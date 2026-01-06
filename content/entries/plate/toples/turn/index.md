@@ -2,24 +2,15 @@
 title = 'Pony-Ear Turn'
 date  = '2019-04-14'
 
+url     = '/entry/toples-turn'
 aliases = ['/tech/toples-turn']
+
 parts = ['3022', '3069']
 size  = ['2s', '2s', '5p']
 tags  = [
   'angle-studtilt-180',
   'partcount-total-3',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
-
-# TODO: related_pages:
-#   - /tech/toples
 +++
 
 {{< linkbox

@@ -2,7 +2,9 @@
 title = 'Brick 1 x 2 Ring'
 date  = '2018-05-27'
 
+url     = '/entry/brick-1x2-ring'
 aliases = ['/tech/brick-1x2-ring']
+
 parts = ['3004']
 size  = ['41s', '41s', '12p']
 tags  = [
@@ -12,14 +14,6 @@ tags  = [
   'shape-circle',
   'warning-stressing',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

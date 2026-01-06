@@ -2,21 +2,15 @@
 title = 'Clip-Handle SNOT Cube'
 date  = '2015-08-23'
 
+url     = '/entry/clip-handle-snot-cube'
 aliases = ['/tech/clip-handle-snot-cube']
+
 parts = ['4085', '2921', '3024', '3023']
 size  = ['2s', '2s', '1b']
 tags  = [
   'angle-studtilt-180',
   'partcount-total-6',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

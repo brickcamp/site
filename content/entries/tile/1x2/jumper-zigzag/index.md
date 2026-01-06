@@ -1,8 +1,10 @@
 +++
-title = 'Twisted 1 x 2 Tile Gaps'
+title = 'Zigzag 1 x 2 Tiles'
 date  = '2015-12-06'
 
+url     = '/entry/zigzag-1x2-tiles-on-jumpers'
 aliases = ['/tech/tile-1x2-twisted-gaps']
+
 parts = ['3794', '3070', '3069']
 size  = ['3s', '3s', '2p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-9',
   'repeat-planar',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

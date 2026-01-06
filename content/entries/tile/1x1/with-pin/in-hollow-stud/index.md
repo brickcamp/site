@@ -1,22 +1,16 @@
 +++
-title = 'Tile 1 x 1 with Pin in Jumper'
+title = 'Tile 1 x 1 with Pin in Hollow Stud'
 date  = '2019-01-19'
 
-aliases = ['/tech/tile-1x1-with-pin-in-jumper']
-parts = ['20482', '3794', '87580']
-size  = ['2s', '1s', '1b']
+url     = '/entry/tile-1x1-with-pin-in-hollow-stud'
+aliases = ['/tech/tile-1x1-with-pin-in-hollow-stud']
+
+parts = ['20482', '85861']
+size  = ['1s', '1s', '1b']
 tags  = [
   'angle-studtilt-180',
   'partcount-total-2',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

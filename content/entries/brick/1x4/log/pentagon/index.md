@@ -2,7 +2,9 @@
 title = 'Brick Log Pentagon'
 date  = '2015-08-27'
 
+url     = '/entry/brick-log-pentagon'
 aliases = ['/tech/brick-log-pentagon']
+
 parts = ['30137']
 size  = ['8s', '8s', '2b']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'partcount-total-10',
   'shape-polygon-5',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

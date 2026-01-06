@@ -2,7 +2,9 @@
 title = 'Camera Bracket SNOT'
 date  = '2019-01-29'
 
+url     = '/entry/brick-camera-bracket-snot'
 aliases = ['/tech/brick-cameras-in-brackets-1x2-1x2']
+
 parts = ['99781', '4595']
 size  = ['3s', '2s', '1s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'angle-studtilt-180',
   'partcount-total-4',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

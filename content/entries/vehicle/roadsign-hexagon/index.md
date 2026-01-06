@@ -2,7 +2,9 @@
 title = 'Roadsign on Pneumatic Connectors Hexagon'
 date  = '2019-01-31'
 
+url     = '/entry/roadsign-on-pneumatic-connectors-hexagon'
 aliases = ['/tech/roadsign-on-pneumatic-connectors-hexagon']
+
 parts = ['57585', '30259', '99021']
 size  = ['12p', '11p', '5p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-10',
   'shape-polygon-6',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

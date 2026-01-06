@@ -2,7 +2,9 @@
 title = 'Switch Diagonals'
 date  = '2015-12-06'
 
+url     = '/entry/plate-switch-diagonals'
 aliases = ['/tech/plate-switch-diagonals']
+
 parts = ['6141', '3021', '3865']
 size  = ['3s', '3s', '3p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-4',
   'warning-todo-angle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

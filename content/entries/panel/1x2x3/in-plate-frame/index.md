@@ -2,7 +2,9 @@
 title = 'Panels in Plate Frame'
 date  = '2015-10-09'
 
+url     = '/entry/panels-in-plate-frame'
 aliases = ['/tech/panels-in-plate-frame']
+
 parts = ['2362', '3710', '3005', '3023', '3069']
 size  = ['4s', '2s', '3b']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'angle-studtilt-180',
   'partcount-total-8',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

@@ -2,7 +2,9 @@
 title = 'Tile SNIR Square'
 date  = '2015-12-06'
 
+url     = '/entry/tile-snir-square'
 aliases = ['/tech/tile-snir-square']
+
 parts = ['3005', '6636', '3070']
 size  = ['9s', '9s', '1b']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-41',
   'repeat-planar',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

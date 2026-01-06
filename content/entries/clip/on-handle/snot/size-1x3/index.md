@@ -2,21 +2,15 @@
 title = 'Clip Handle Flip'
 date  = '2016-01-01'
 
+url     = '/entry/brick-clip-handle-snot'
 aliases = ['/tech/brick-clip-handle-snot']
+
 parts = ['60475', '2921', '85861']
 size  = ['3s', '1s', '1b']
 tags  = [
   'angle-studtilt-180',
   'partcount-total-4',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

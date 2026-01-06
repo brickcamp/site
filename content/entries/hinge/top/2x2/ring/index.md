@@ -2,7 +2,9 @@
 title = 'Hinge Top Ring'
 date  = '2015-08-27'
 
+url     = '/tech/hinge-topbase-ring'
 aliases = ['/tech/hinge-topbase-ring']
+
 parts = ['3937', '6134']
 size  = ['5s', '2s', '5s']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'shape-polygon-10',
   'shape-circle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

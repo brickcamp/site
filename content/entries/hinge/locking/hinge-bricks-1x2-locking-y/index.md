@@ -2,7 +2,9 @@
 title = 'Hinge Brick Y'
 date  = '2015-08-23'
 
+url     = '/entry/hinge-bricks-1x2-locking-y'
 aliases = ['/tech/hinge-bricks-1x2-locking-y']
+
 parts = ['30364', '30540', '30565']
 size  = ['6s', '6s', '4p']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'angle-studtilt-180',
   'partcount-total-5',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

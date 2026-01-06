@@ -2,7 +2,9 @@
 title = 'Tile 1 x 1 with Clips Hexagonal'
 date  = '2019-01-28'
 
+url     = '/entry/tile-1x1-with-clips-hexagonal'
 aliases = ['/tech/tile-1x1-with-clips-hexagonal']
+
 parts = ['2555', '3070']
 size  = ['3s', '1s', '3s']
 tags  = [
@@ -13,14 +15,6 @@ tags  = [
   'partcount-total-7',
   'shape-polygon-6',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

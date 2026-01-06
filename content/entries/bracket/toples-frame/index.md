@@ -2,7 +2,9 @@
 title = 'Bracket ToPLES Frame'
 date  = '2015-08-23'
 
+url     = '/entry/bracket-toples-frame'
 aliases = ['/tech/bracket-toples-frame']
+
 parts = ['44728']
 size  = ['5s', '5s', '2s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'angle-studtilt-180',
   'partcount-total-8',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

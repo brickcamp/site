@@ -3,6 +3,9 @@ title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 date  = '{{ time.Now.UTC.Format "2006-01-02" }}'
 draft = true
 
+url     = ['/entry/{{ .File.ContentBaseName }}']
+aliases = ['/previous-urls-if-applicable']
+
 parts = ['3002', '3004']
 size = ['2s', '3p', '4b']
 uses = ['another-entry']
@@ -31,12 +34,6 @@ tags = [
 
   'warning-stress',
 ]
-
-[[resources]]
-src              = 'image.jpg'
-params.copyright = '{{ time.Now.Format "2006" }} BrickCamp'
-params.reference = 'https://brick.camp'
-
 +++
 
 {{< linkbox

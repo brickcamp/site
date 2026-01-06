@@ -2,7 +2,9 @@
 title = 'Lowell Sphere'
 date  = '2015-12-06'
 
+url     = '/entry/lowell-sphere'
 aliases = ['/tech/lowell-sphere']
+
 parts = ['3022', '2420', '3710', '3794', '4733']
 size  = ['16p', '16p', '16p']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'shape-polyhedron-6',
   'shape-sphere',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.mpd'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

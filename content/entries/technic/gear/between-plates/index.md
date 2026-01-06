@@ -2,21 +2,15 @@
 title = 'Gear between Plates'
 date  = '2015-08-23'
 
+url     = '/entry/gear-between-plates'
 aliases = ['/tech/gear-between-plates']
+
 parts = ['4019', '3648', '3031']
 size  = ['4s', '4s', '4p']
 tags  = [
   'angle-studtilt-180',
   'partcount-total-3',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

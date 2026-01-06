@@ -2,7 +2,9 @@
 title = 'Plate 2 x 2 Round on Door Rails'
 date  = '2019-05-10'
 
+url     = '/entry/plate-2x2-round-on-door-rails'
 aliases = ['/tech/plate-2x2-round-on-door-rails']
+
 parts = ['32028', '3023', '4032', '3031']
 size  = ['4s', '4s', '4p']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'length-studshift',
   'partcount-total-7',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

@@ -2,7 +2,9 @@
 title = 'Cone 1 x 1 Roof'
 date  = '2019-07-06'
 
+url     = '/entry/cone-1x1-roof'
 aliases = ['/tech/cone-1x1-roof']
+
 parts = ['59900', '6019', '4081', '30374']
 size  = ['14s', '2s', '14s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-85',
   'repeat-planar',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
