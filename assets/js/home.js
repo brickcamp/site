@@ -141,11 +141,24 @@ function appendEntry(entry) {
   const template = document.getElementById("entry-template");
   const clone = template.content.cloneNode(true);
 
-  clone.querySelector(".insert-link").href = entry[0];
-  clone.querySelector(".insert-link").title = entry[1];
-  clone.querySelector(".insert-image-src").src = entry[0] + "/__image-min.webp";
-  clone.querySelector(".insert-title").innerText = entry[1];
-  clone.querySelector(".insert-copyright").innerText = "© " + entry[2];
+  const elLink      = clone.querySelector(".insert-link");
+  const elImageSrc  = clone.querySelector(".insert-image-src");
+  const elTitle     = clone.querySelector(".insert-title");
+  const elCopyright = clone.querySelector(".insert-copyright");
+
+  if (elLink) {
+    elLink.href  = entry[0];
+    elLink.title = entry[1];    
+  }
+  if (elImageSrc) {
+    elImageSrc.src = entry[0] + "__image-min.webp";
+  }
+  if (elTitle) {
+    elTitle.innerText = entry[1];
+  }
+  if (elCopyright) {
+    elCopyright.innerText = "© " + entry[2];
+  }
 
   document.getElementById("entries").appendChild(clone);
 }
