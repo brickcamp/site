@@ -67,8 +67,10 @@
 {{- $entries = $entries | uniq -}}
 {{- range $entries -}}
   {{- $copyright := print (time.Now.Format "2006") " BrickCamp" -}}
-  {{- with (.Resources.GetMatch "image.*").Params.Copyright -}}
-    {{- $copyright = . -}}
+  {{- with .Resources.GetMatch "image.*" -}}
+    {{- with .Params.Copyright -}}
+      {{- $copyright = . -}}
+    {{- end -}}
   {{- end -}}
   {{- $line := print .RelPermalink ",'" .Title "','" $copyright "'" -}}
 {{ $line }}

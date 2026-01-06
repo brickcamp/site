@@ -9,20 +9,10 @@
         {{ with .Resources.GetMatch "image.*" -}}
         {{/* create minified image for entry lists */}}
         {{ $minify := .Process "fill 250x250 webp" -}}
-        {{ $naming := resources.Copy (print $.Path "/__image-min.webp") $minify -}}
+        {{ $naming := resources.Copy (print $.RelPermalink "__image-min.webp") $minify -}}
         {{ $triggerSaving := $naming.RelPermalink -}}
         {{/* ------------------------------------- */}}
         <img src="{{ .RelPermalink }}" class="card-img dark-filter" alt="image of the building technique">
-        <div class="card-img-overlay">
-          <small class="position-absolute bottom-0 end-0 px-1 bg-light-subtle" style="opacity: 0.75;">
-            {{ with .Params.Copyright }}
-              <span class="pr-1">©</span><span>{{ . }}</span>
-            {{ end }}
-            {{ with .Params.Reference }}
-              <span class="card-link"><a href="{{ . }}">Source</a></span>
-            {{ end }}
-          </small>
-        </div>
         {{ end }}
       </div>
     </div>
