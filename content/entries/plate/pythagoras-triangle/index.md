@@ -2,7 +2,9 @@
 title = "Pythagora's Twist"
 date  = '2015-12-06'
 
+url     = '/entry/pythagoras-twist'
 aliases = ['/tech/pythagoras-twist']
+
 parts = ['3024', '3666']
 size  = ['5s', '4s', '2p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'angle-studturn',
   'warning-todo-angle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

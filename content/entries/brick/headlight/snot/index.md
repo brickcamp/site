@@ -2,7 +2,9 @@
 title = 'Headlight SNOT'
 date  = '2019-04-14'
 
+url     = '/entry/headlight-snot'
 aliases = ['/tech/headlight-snot']
+
 parts = ['4070', '3024']
 size  = ['2s', '1s', '1b']
 tags  = [
@@ -12,14 +14,6 @@ tags  = [
   'partcount-total-3',
   'repeat-planar',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

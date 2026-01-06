@@ -2,7 +2,9 @@
 title = 'Hinge Cheese Donut'
 date  = '2015-10-09'
 
+url     = '/entry/hinge-topbase-cheese-donut'
 aliases = ['/tech/hinge-topbase-cheese-donut']
+
 parts = ['3937', '6134', '85984']
 size  = ['19p', '19p', '3s']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'shape-polygon-8',
   'shape-toroid',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

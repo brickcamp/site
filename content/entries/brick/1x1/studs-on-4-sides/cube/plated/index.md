@@ -2,7 +2,9 @@
 title = 'SNOT Cube'
 date  = '2015-09-27'
 
+url     = '/entry/snot-cube-plated'
 aliases = ['/tech/brick-1x1-4sidestuds-plate-cube']
+
 parts = ['4733', '3022']
 size  = ['7p', '7p', '7p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'angle-studtilt-180',
   'partcount-total-10',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

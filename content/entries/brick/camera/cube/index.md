@@ -2,7 +2,9 @@
 title = 'Camera Cube'
 date  = '2015-08-23'
 
+url     = '/entry/brick-camera-cube'
 aliases = ['/tech/brick-camera-cube']
+
 parts = ['4595', '3022']
 size  = ['7p', '7p', '3b']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'angle-studtilt-180',
   'partcount-total-10',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

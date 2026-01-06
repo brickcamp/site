@@ -2,7 +2,9 @@
 title = 'Headlight Tile Wave Pattern'
 date  = '2015-12-06'
 
+url     = '/entry/headlight-tile-wave-pattern'
 aliases = ['/tech/headlight-tile-wave-pattern']
+
 parts = ['4070', '3070', '3024']
 size  = ['2s', '2s', '7p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-12',
   'repeat-planar',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

@@ -2,21 +2,15 @@
 title = 'Technic Beam SNOT'
 date  = '2015-09-14'
 
+url     = '/entry/technic-beam-snot'
 aliases = ['/tech/technic-beam-snot']
+
 parts = ['43857', '32523', '18654']
 size  = ['1s', '1s', '1s']
 tags  = [
   'angle-studtilt-180',
   'partcount-total-1',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

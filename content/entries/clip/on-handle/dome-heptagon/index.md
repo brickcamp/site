@@ -2,7 +2,9 @@
 title = 'Clip-Handle Heptagon with Domes'
 date  = '2015-08-26'
 
+url     = '/entry/clip-handle-dome-heptagon'
 aliases = ['/tech/clip-handle-dome-heptagon']
+
 parts = ['48336', '60470', '3022', '30367']
 size  = ['8s', '2s', '8s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-35',
   'shape-polygon-7',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

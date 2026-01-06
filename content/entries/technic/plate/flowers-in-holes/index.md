@@ -1,8 +1,13 @@
 +++
-title = 'Flowers in Technic Brick Holes'
+title = 'Flowers in Technic Plate Holes'
 date  = '2015-09-14'
 
-aliases = ['/tech/technic-plate-with-flowers-in-holes', '/tech/flower-in-technic-plate-hole']
+url     = '/entry/flowers-in-technic-plate-holes'
+aliases = [
+  '/tech/technic-plate-with-flowers-in-holes', 
+  '/tech/flower-in-technic-plate-hole',
+]
+
 parts = ['33291', '3709']
 size  = ['2s', '4s', '2p']
 tags  = [
@@ -10,14 +15,6 @@ tags  = [
   'angle-studtilt-180',
   'length-studshift-10',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

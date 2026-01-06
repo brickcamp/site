@@ -2,7 +2,9 @@
 title = 'Clip-Handle Dodecagon'
 date  = '2015-08-26'
 
+url     = '/entry/clip-handle-dodecagon'
 aliases = ['/tech/clip-handle-dodecagon']
+
 parts = ['48336', '60470', '3022', '3003']
 size  = ['13s', '2s', '13s']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'shape-polygon-12',
   'shape-circle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

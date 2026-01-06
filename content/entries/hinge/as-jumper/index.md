@@ -2,21 +2,15 @@
 title = 'Hinges as Jumper'
 date  = '2015-08-26'
 
+url     = '/entry/hinge-as-jumper'
 aliases = ['/tech/hinge-as-jumper']
+
 parts = ['30389', '40902', '30364', '30365', '2452', '4276', '60471', '44567', '44301', '44302']
 size  = ['4s', '2s', '1p']
 tags  = [
   'length-studshift-10',
   'partcount-total-2',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

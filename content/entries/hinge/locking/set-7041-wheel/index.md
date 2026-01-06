@@ -2,7 +2,9 @@
 title = '7041er-Set Wheel'
 date  = '2015-11-08'
 
+url     = '/entry/set-7041-wheel'
 aliases = ['/tech/set-7041-wheel']
+
 parts = ['30386', '4032', '3941', '32073', '6222']
 size  = ['17s', '17s', '2s']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'shape-polygon-16',
   'shape-circle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

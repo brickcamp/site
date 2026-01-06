@@ -2,7 +2,9 @@
 title = 'Plate 1 x 1 with Clip Light'
 date  = '2019-04-15'
 
+url     = '/entry/plate-1x1-with-clip-light'
 aliases = ['/tech/plate-1x1-with-clip-light']
+
 parts = ['4081']
 size  = ['2s', '1s', '2p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'angle-studtilt-180',
   'partcount-total-1',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

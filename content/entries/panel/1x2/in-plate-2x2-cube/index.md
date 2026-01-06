@@ -2,7 +2,9 @@
 title = 'Panel Plate Cube'
 date  = '2019-07-27'
 
+url     = '/entry/panel-1x2-plate-2x2-cube'
 aliases = ['/tech/panel-1x2-plate-2x2-cube']
+
 parts = ['3022', '4865']
 size  = ['7p', '7p', '7p']
 tags  = [
@@ -12,14 +14,6 @@ tags  = [
   'partcount-total-8',
   'shape-polyhedron-6',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

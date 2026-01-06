@@ -2,6 +2,9 @@
 title = 'Technic Escapement Wheel'
 date  = '2026-01-03'
 
+url     = '/entry/technic-escapement-wheel-v2'
+aliases = []
+
 parts = ['2712', '4273', '4274', '3705', '2825', '32062']
 size  = ['11s', '11s', '4s']
 tags  = [
@@ -10,14 +13,6 @@ tags  = [
   'shape-polygon-12',
   'shape-star-12',
 ]
-
-[[resources]]
-src              = 'v2-image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'v2-model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

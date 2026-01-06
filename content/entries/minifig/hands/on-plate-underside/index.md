@@ -2,7 +2,9 @@
 title = 'Minifig Hands on Plate'
 date  = '2019-04-17'
 
+url     = '/entry/minifig-hands-on-plate'
 aliases = ['/tech/minifig-hands-on-plate']
+
 parts = ['3820', '3031']
 size  = ['4s', '4s', '2p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-26',
   'repeat-planar',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

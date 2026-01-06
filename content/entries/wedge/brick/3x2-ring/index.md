@@ -2,7 +2,9 @@
 title = 'Wedge Ring'
 date  = '2015-08-29'
 
+url     = '/entry/wedge-ring'
 aliases = ['/tech/wedge-ring']
+
 parts = ['6565', '6564']
 size  = ['13s', '13s', '3b']
 tags  = [
@@ -12,14 +14,6 @@ tags  = [
   'shape-circle',
   'warning-loosely',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

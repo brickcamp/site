@@ -2,7 +2,9 @@
 title = 'Technic Beam Triangle'
 date  = '2015-11-08'
 
+url     = '/entry/technic-beam-triangle-with-tightened-corners'
 aliases = ['/tech/technic-beam-triangle-with-tightened-corners']
+
 parts = ['32316', '41677', '6632', '32062']
 size  = ['6s', '6s', '2s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-27',
   'shape-polygon-3',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

@@ -2,21 +2,18 @@
 title = 'Mudguard in Plate'
 date  = '2019-01-30'
 
-aliases = ['/tech/vehicle-mudguard-in-plate', '/tech/mudguard-in-plate']
+url     = '/entry/mudguard-in-plate'
+aliases = [
+  '/tech/vehicle-mudguard-in-plate',
+  '/tech/mudguard-in-plate',
+]
+
 parts = ['50745', '3666']
 size  = ['6s', '3s', '2b']
 tags  = [
   'partcount-total-2',
   'angle-studtilt-180',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

@@ -2,7 +2,9 @@
 title = 'Double/Inverted Slopes Square'
 date  = '2016-01-03'
 
+url     = '/entry/slope-2x1-double-inv-square'
 aliases = ['/tech/slope-2x1-double-inv-square']
+
 parts = ['3049']
 size  = ['3s', '3s', '1b']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-4',
   'repeat-planar',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

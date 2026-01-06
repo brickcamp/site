@@ -2,7 +2,9 @@
 title = 'Headlights in Hinge Square'
 date  = '2019-01-19'
 
+url     = '/entry/headlights-in-hinge-square'
 aliases = ['/tech/headlights-in-hinge-square']
+
 parts = ['30386', '4070']
 size  = ['4s', '4s', '3p']
 tags  = [
@@ -12,14 +14,6 @@ tags  = [
   'partcount-total-6',
   'shape-polygon-4',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

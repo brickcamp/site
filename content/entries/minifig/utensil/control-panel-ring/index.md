@@ -2,7 +2,9 @@
 title = 'Control Panel Ring'
 date  = '2015-08-29'
 
+url     = '/entry/control-panel-ring'
 aliases = ['/tech/control-panel-ring']
+
 parts = ['2342']
 size  = ['14s', '2s', '14s']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'shape-polygon-18',
   'shape-circle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

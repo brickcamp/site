@@ -2,7 +2,9 @@
 title = 'Tipper End Hexagon'
 date  = '2015-10-09'
 
+url     = '/entry/tipper-end-hexagon'
 aliases = ['/tech/vehicle-tipper-end-hexagon', '/tech/tipper-end-hexagon']
+
 parts = ['30022', '6061']
 size  = ['16s', '37p', '2s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-18',
   'shape-polygon-6',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

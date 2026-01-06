@@ -2,7 +2,9 @@
 title = 'Tile Jumper Roof'
 date  = '2015-12-06'
 
+url     = '/entry/tile-jumper-roof'
 aliases = ['/tech/tile-jumper-roof']
+
 parts = ['3794', '3022', '3023', '3666', '3069']
 size  = ['6s', '6s', '4p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-28',
   'repeat-planar',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

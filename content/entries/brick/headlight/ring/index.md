@@ -2,7 +2,9 @@
 title = 'Headlight Ring'
 date  = '2019-02-11'
 
+url     = '/entry/headlight-ring'
 aliases = ['/tech/headlight-ring']
+
 parts = ['4070']
 size  = ['13s', '13s', '1s']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'shape-polygon-40',
   'shape-circle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

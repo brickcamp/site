@@ -2,7 +2,9 @@
 title = 'Axle 3 with Stud in Technic Brick'
 date  = '2015-08-23'
 
+url     = '/entry/axle-3-stud-in-technic-brick'
 aliases = ['/tech/axle-3-stud-in-technic-brick']
+
 parts = ['6587', '32064']
 size  = ['4s', '2s', '1b']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'length-studshift-10',
   'partcount-total-2',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

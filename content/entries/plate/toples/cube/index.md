@@ -2,7 +2,9 @@
 title = 'ToPLES Cube'
 date  = '2015-08-23'
 
+url     = '/entry/toples-cube'
 aliases = ['/tech/toples-cube']
+
 parts = ['4865', '3068', '3022', '3794']
 size  = ['7p', '7p', '7p']
 tags  = [
@@ -11,17 +13,6 @@ tags  = [
   'partcount-total-9',
   'shape-polyhedron-6',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
-
-# TODO: related_pages:
-#   - /tech/toples
 +++
 
 {{< linkbox

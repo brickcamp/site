@@ -2,7 +2,9 @@
 title = 'Steering Arms Pentagon'
 date  = '2015-08-29'
 
+url     = '/entry/technic-steering-arms-connector-pentagon'
 aliases = ['/tech/technic-steering-arms-connector-pentagon']
+
 parts = ['32068', '32069']
 size  = ['8s', '2s', '8s']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'shape-polygon-5',
   'shape-star-5',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

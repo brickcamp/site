@@ -2,21 +2,15 @@
 title = 'Bracket in Technic Brick'
 date  = '2019-02-24'
 
+url     = '/entry/bracket-in-technic-brick'
 aliases = ['/tech/bracket-in-technic-brick']
+
 parts = ['32000', '99781']
 size  = ['2s', '2s', '1b']
 tags  = [
   'angle-studtilt-180',
   'partcount-total-2',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

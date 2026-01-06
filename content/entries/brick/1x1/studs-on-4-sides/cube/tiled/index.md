@@ -2,7 +2,9 @@
 title = 'Brick 1 x 1 with Studs on 4 Sides Cube'
 date  = '2019-04-17'
 
+url     = '/entry/snot-cube-tiled'
 aliases = ['/tech/brick-1x1-studs-on-four-sides-cude']
+
 parts = ['4733', '3068']
 size  = ['7p', '7p', '7p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-9',
   'shape-polyhedron-6',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

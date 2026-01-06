@@ -2,7 +2,9 @@
 title = 'Brick Octagonal Square'
 date  = '2015-11-08'
 
+url     = '/entry/brick-octagonal-square'
 aliases = ['/tech/brick-octagonal-square']
+
 parts = ['6042']
 size  = ['8s', '8s', '2s']
 tags  = [
@@ -13,14 +15,6 @@ tags  = [
   'shape-polygon-4',
   'warning-link_404',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

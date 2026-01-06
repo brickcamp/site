@@ -2,7 +2,9 @@
 title = 'Clip Gravel Road'
 date  = '2015-12-06'
 
+url     = '/entry/clip-gravel-road'
 aliases = ['/tech/clip-gravel-road']
+
 parts = ['2555']
 size  = ['2s', '2s', '1s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-4',
   'repeat-planar',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

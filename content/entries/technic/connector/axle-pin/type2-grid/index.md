@@ -2,7 +2,9 @@
 title = 'Technic Axle Pin Connector Type 2 Grid'
 date  = '2016-01-01'
 
+url     = '/entry/technic-axle-pin-connector-type2-grid'
 aliases = ['/tech/technic-axle-pin-connector-type2-grid']
+
 parts = ['32034', '4519']
 size  = ['5s', '5s', '1s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-8',
   'repeat-planar',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

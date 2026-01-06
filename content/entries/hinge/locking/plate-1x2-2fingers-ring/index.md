@@ -2,7 +2,9 @@
 title = 'Hinge Plate 1 x 2 Locking Dual Finger Ring'
 date  = '2015-11-08'
 
+url     = '/entry/hinge-plate-1x2-locking-2f-ring'
 aliases = ['/tech/hinge-plate-1x2-locking-2f-ring']
+
 parts = ['44302']
 size  = ['15s', '15s', '1s']
 tags  = [
@@ -11,14 +13,6 @@ tags  = [
   'shape-polygon-72',
   'shape-circle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

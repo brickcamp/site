@@ -2,7 +2,9 @@
 title = 'Plate 1 x 2 with Pinhole on Top Ring'
 date  = '2019-02-26'
 
+url     = '/entry/plate-1x2-with-pinhole-on-top-ring'
 aliases = ['/tech/plate-1x2-with-pinhole-on-top-ring']
+
 parts = ['11458']
 size  = ['13s', '13s', '6p']
 tags  = [
@@ -12,14 +14,6 @@ tags  = [
   'shape-polygon-34',
   'shape-circle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

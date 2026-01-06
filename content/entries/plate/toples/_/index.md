@@ -2,7 +2,9 @@
 title = 'Pony-Ear Technique'
 date  = '2015-08-23'
 
+url     = '/entry/toples'
 aliases = ['/tech/toples']
+
 parts = ['3021', '3023', '3069']
 size  = ['2s', '2s', '4p']
 tags  = [
@@ -10,17 +12,6 @@ tags  = [
   'length-studshift-10',
   'partcount-total-2',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
-
-# TODO: related_pages:
-#   - /tech/toples-turn
 +++
 
 ToPLES: Tiles or Plates Located between Enough Studs

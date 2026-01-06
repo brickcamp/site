@@ -2,7 +2,9 @@
 title = 'LDU Offset Steps'
 date  = '2015-08-26'
 
+url     = '/entry/offset-ldu-steps'
 aliases = ['/tech/offset-ldu-steps']
+
 parts = ['4070', '87087', '42446', '3024', '3023', '3794', '3005']
 size  = ['2s', '1s', '4p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-2',
   'length-studlift-1',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

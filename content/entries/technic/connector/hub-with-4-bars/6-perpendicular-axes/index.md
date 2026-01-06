@@ -2,6 +2,9 @@
 title = '6-sided Bar Hub'
 date  = '2025-12-28'
 
+url     = '/entry/six-sided-bar-hub-core'
+aliases = []
+
 parts = ['48723', '87994', '32002', '62462']
 size  = ['6s', '6s', '6s']
 tags  = [
@@ -10,14 +13,6 @@ tags  = [
   'shape-star-6',
   'warning-improvable',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

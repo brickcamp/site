@@ -2,20 +2,15 @@
 title = 'Connector Beam 3x3 SNOT'
 date  = '2025-12-28'
 
+url     = '/entry/connector-beam-3x3-snot'
+aliases = []
+
 parts = ['11212', '39793']
 size  = ['3s', '3s', '2s']
 tags  = [
   'angle-studtilt-180',
   'partcount-total-7',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

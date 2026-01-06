@@ -2,7 +2,9 @@
 title = 'A-Plate Octagon'
 date  = '2019-07-26'
 
+url     = '/entry/a-plate-octagon'
 aliases = ['/tech/plate-1x4-1x4-45degrees']
+
 parts = ['15706']
 size  = ['11s', '11s', '2p']
 tags  = [
@@ -12,15 +14,6 @@ tags  = [
   'shape-polygon-8',
   'shape-star-8',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
-
 +++
 
 {{< linkbox

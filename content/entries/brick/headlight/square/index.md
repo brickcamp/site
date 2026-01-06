@@ -2,7 +2,9 @@
 title = 'Headlight Square'
 date  = '2019-04-02'
 
+url     = '/entry/headlight-square'
 aliases = ['/tech/headlight-square']
+
 parts = ['4070']
 size  = ['2s', '2s', '1s']
 tags  = [
@@ -12,14 +14,6 @@ tags  = [
   'partcount-total-4',
   'repeat-planar',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

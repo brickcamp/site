@@ -2,7 +2,9 @@
 title = 'Bar 1.5L with Clip Chain'
 date  = '2019-04-02'
 
+url     = '/entry/bar-1.5L-with-clip-chain'
 aliases = ['/tech/bar-1.5L-with-clip-chain']
+
 parts = ['48729']
 size  = ['2s', '2s', '1s']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-segment-1',
   'repeat-linear',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

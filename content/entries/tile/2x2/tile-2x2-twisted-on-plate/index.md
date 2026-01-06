@@ -2,7 +2,9 @@
 title = '2 x 2 Tile Twisted on Plate'
 date  = '2019-04-17'
 
+url     = '/entry/tile-2x2-twisted-on-plate'
 aliases = ['/tech/tile-2x2-twisted-on-plate']
+
 parts = ['3068', '6141']
 size  = ['5s', '5s', '2p']
 tags  = [
@@ -10,14 +12,6 @@ tags  = [
   'partcount-total-4',
   'repeat-planar',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox

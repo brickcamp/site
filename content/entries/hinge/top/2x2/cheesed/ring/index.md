@@ -2,7 +2,9 @@
 title = 'Hinge Cheese Ring'
 date  = '2015-08-30'
 
+url     = '/entry/hinge-topbase-cheese-ring'
 aliases = ['/tech/hinge-topbase-cheese-ring']
+
 parts = ['3021', '3022', '3937', '6134', '85984']
 size  = ['6s', '6s', '2s']
 tags  = [
@@ -12,14 +14,6 @@ tags  = [
   'shape-polygon-12',
   'shape-circle',
 ]
-
-[[resources]]
-src              = 'image.png'
-params.copyright = '2025 BrickCamp'
-
-[[resources]]
-src              = 'model.ldr'
-params.copyright = '2025 BrickCamp'
 +++
 
 {{< linkbox
