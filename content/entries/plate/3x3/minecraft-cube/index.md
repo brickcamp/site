@@ -28,8 +28,8 @@ Since the Reddish Brown color of my minifig scale Minecraft block makes the indi
     date="2024-01-07"
     image="link_02.jpg"
     title="#2263 TECHNIQUES: 3×3 Cube by @the_legobuilder"
-    url="https://www.tipsandbricks.co.uk/post/2263-techniques-3x3-cube-by-the_legobuilder"
+    url="https://www.tipsandbricks.com/post/2263-techniques-3x3-cube-by-the_legobuilder"
 >}}
-Description or summary of the linked page. Should not be longer than a fex sentences.
+Frequently, LEGO designers sacrifice true scale in official sets for the sake of playability. A prime example of this is in the Minecraft theme, where the “block” is far too small to represent an in-game block when compared to a minifigure. @the_legobuilder fixes this problem, creating a perfect 3×3 cube that is significantly more true to scale.
 {{< /linkbox >}}
 
