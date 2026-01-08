@@ -28,8 +28,10 @@ The dangly loose ends of the LEGO mudguards have caught my attention for quite a
 
 {{< linkbox
     author="dag's bricks"
-    date="2014-06-30"
+    date="2014-07-02"
     image="link_01.jpg"
     title="Mudguards in a 1x6"
     url="https://www.flickr.com/photos/dagsbricks/14556995614/"
-/>}}
+>}}
+Very interesting little technique. See the write up at dagsbricks.com
+{{< /linkbox >}}
