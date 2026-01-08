@@ -18,7 +18,7 @@ tags  = [
 {{< linkbox
     author="umamen"
     date="2015-12-31"
-    image="link_01.png"
+    image="link_01.jpg"
     title="How to make ball"
     url="https://www.flickr.com/photos/umamen/23999220611/"
 >}}

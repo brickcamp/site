@@ -17,7 +17,7 @@ tags  = [
 {{< linkbox
     author="The Backward One"
     date="2012-04-08"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Grow a Spine!"
     url="https://www.flickr.com/photos/matt_the_backward_one/7059062471/"
 >}}

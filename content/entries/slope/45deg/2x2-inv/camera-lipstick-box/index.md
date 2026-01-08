@@ -19,7 +19,7 @@ tags  = [
 {{< linkbox
     author="Dag"
     date="2015-05-13"
-    image="link_01.png"
+    image="link_01.jpg"
     title="LEGO Techniques - Reverse Engineering Challenge "
     url="https://web.archive.org/web/20160520080154/http://www.dagsbricks.com/2015/05/lego-techniques-reverse-engineering.html"
 >}}

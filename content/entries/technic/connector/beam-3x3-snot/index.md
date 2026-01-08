@@ -15,7 +15,7 @@ tags  = [
 
 {{< linkbox
     author="Alex Johnson"
-    image="link_01.png"
+    image="link_01.jpg"
     title="#1916 TECHNIQUES: 9 Ways To Build Upside Down"
     date="2023-01-25"
     url="https://www.tipsandbricks.com/post/1916-techniques-9-ways-to-build-upside-down"

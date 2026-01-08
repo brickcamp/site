@@ -17,7 +17,7 @@ tags  = [
 {{< linkbox
     author="whateverly"
     date="2011-03-21"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Cubeoctahedronesque"
     url="https://www.flickr.com/photos/66864568@N00/5559516959"
 >}}

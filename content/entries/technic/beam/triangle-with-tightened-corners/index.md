@@ -17,7 +17,7 @@ tags  = [
 {{< linkbox
     author="Fernando Correia"
     date="2008-02-25"
-    image="link_01.png"
+    image="link_01.jpg"
     title="TBs TechTips 011 - Triangle and Hexagon TECHNIC structures"
     url="https://web.archive.org/web/20140727223730/http://www.technicbricks.com/2008/02/tbs-techtips-010-triangle-and-hexagon.html"
 >}}

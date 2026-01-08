@@ -17,7 +17,7 @@ tags  = [
 {{< linkbox
     author="nobu_tary"
     date="2016-05-06"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Cube"
     url="https://www.flickr.com/photos/127525305@N02/26741448412/"
 >}}

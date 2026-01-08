@@ -16,7 +16,7 @@ tags  = [
 {{< linkbox
     author="Larry Lars"
     date="2010-09-19"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Reversed studs"
     url="https://www.flickr.com/photos/28192677@N06/5004593024/"
 >}}

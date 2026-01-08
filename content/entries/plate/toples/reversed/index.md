@@ -16,7 +16,7 @@ tags  = [
 {{< linkbox
     author="Linus Bohman"
     date="2016-04-16"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Reverse pony ear"
     url="https://swooshable.com/snot/reverse-pony-ear"
 />}}

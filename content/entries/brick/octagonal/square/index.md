@@ -20,7 +20,7 @@ tags  = [
 {{< linkbox
     author="Unique Brique Techniques"
     date="2006-08-18"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Various SNOT Techniques"
     url="https://web.archive.org/web/20120128191837/http://uniquebriquetechniques.blogspot.com/2006/08/various-snot-techniques.html"
 >}}

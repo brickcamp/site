@@ -19,7 +19,7 @@ tags  = [
 {{< linkbox
     author="Nathan Todd"
     date="2009-02-03"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Tips and Tricks"
     url="http://www.ntbricks.com/BuildersCorner/TipsandTricks.html"
 >}}

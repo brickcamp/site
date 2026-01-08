@@ -17,7 +17,7 @@ tags  = [
 {{< linkbox
     author="MTM"
     date="2015-08-12"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Bahnübergang"
     url="http://www.1000steine.de/de/gemeinschaft/forum/?entry=1&id=340717#id340717"
 >}}

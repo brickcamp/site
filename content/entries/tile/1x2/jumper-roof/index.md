@@ -17,7 +17,7 @@ tags  = [
 {{< linkbox
     author="Ted Andes"
     date="2012-07-09"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Shingle Technique"
     url="https://www.flickr.com/photos/ted_andes/7540229538"
 >}}

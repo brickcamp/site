@@ -15,7 +15,7 @@ tags  = [
 {{< linkbox
     author="Allan Bedford"
     date="2012-11-01"
-    image="link_01.png"
+    image="link_01.jpg"
     title="The Unofficial LEGO® Builder's Guide, 2nd Edition"
     url="https://nostarch.com/legobuilder2"
 >}}

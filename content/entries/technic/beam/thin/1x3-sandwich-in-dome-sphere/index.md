@@ -17,7 +17,7 @@ tags  = [
 {{< linkbox
     author="Moko"
     date="2012-06-27"
-    image="link_01.png"
+    image="link_01.jpg"
     title="000"
     url="https://web.archive.org/web/20130430071435/http://www.flickr.com/photos/legodoumoko"
 />}}

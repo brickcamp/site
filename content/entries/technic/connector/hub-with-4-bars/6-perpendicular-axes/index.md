@@ -17,7 +17,7 @@ tags  = [
 
 {{< linkbox
     author="the_legobuilder"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Breakdown of my working LEGO® Rubik’s Cube"
     date="2024-06-25"
     url="https://www.instagram.com/the_legobuilder/p/C8pTkLhIIMu/"

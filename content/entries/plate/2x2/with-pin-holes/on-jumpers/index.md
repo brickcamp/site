@@ -17,7 +17,7 @@ tags  = [
 {{< linkbox
     author="Linus Bohman"
     date="2015-09-19"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Plate with Holes"
     url="http://swooshable.com/snot/plate-with-holes"
 />}}
