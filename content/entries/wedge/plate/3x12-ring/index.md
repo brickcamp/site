@@ -19,7 +19,7 @@ tags  = [
 {{< linkbox
     author="Knightsbane"
     date="2025-05-06"
-    image="link_01.png"
+    image="link_01.jpg"
     title="City Fountain from BrickLink"
     url="http://www.bricklink.com/v3/designer-program/series-8/2733/City-Fountain"
 >}}
@@ -29,9 +29,19 @@ Every city needs a beautiful fountain. When I saw a fountain in a city in France
 {{< linkbox
     author="MAKs_Brick_House"
     date="2022-05-26"
-    image="link_02.png"
+    image="link_02.jpg"
     title="Danke an alle, die Tipps gegeben haben."
     url="https://www.reddit.com/r/lego/comments/uy8sm6/thanks_to_everyone_who_provided_tips_this_is_the/?tl=de"
 >}}
 Ich habe die rechten Keile angebracht. Ich habe sie mit 1x2 runden Platten verbunden. Dann habe ich die linken Keile oben angebracht, was durch das „Überkreuzen“ der Platten eine sehr starke Verbindung ergibt. 
+{{< /linkbox >}}
+
+{{< linkbox
+    author="Sheo"
+    date="2016-04-17"
+    image="link_03.jpg"
+    title="Circular base"
+    url="https://web.archive.org/web/20160417131259/http://swooshable.com/buildingschool/circular-base"
+>}}
+It's hard to build a circular base, but here's a way to construct one that fits on a 48x48 baseplate.
 {{< /linkbox >}}

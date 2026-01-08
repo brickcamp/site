@@ -18,7 +18,7 @@ tags  = [
 {{< linkbox
     author="Bruce Lowell"
     date="2003-05-29"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Lowell Sphere"
     url="http://www.brucelowell.com/lowell-sphere/"
 >}}
@@ -28,7 +28,7 @@ The Lowell Sphere is a SNOT (Studs Not On Top) LEGO sphere design that consists 
 {{< linkbox
     author="Bruce Lowell"
     date="2004-11-14"
-    image="link_02.png"
+    image="link_02.jpg"
     title="Original Design"
     url="https://web.archive.org/web/20041114052433/http://www.brickshelf.com/cgi-bin/gallery.cgi?f=44794"
 />}}
@@ -46,7 +46,7 @@ This is nothing new to most builders. A young Lego enthusiast came and saw my co
 {{< linkbox
     author="Bram Lambrecht"
     date="2005-11-24"
-    image="link_04.png"
+    image="link_04.jpg"
     title="Bram Sphere Generator"
     url="http://lego.bldesign.org/sphere/"
 />}}

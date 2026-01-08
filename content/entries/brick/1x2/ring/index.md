@@ -19,7 +19,7 @@ tags  = [
 {{< linkbox
     author="Jeff Sanders"
     date="2011-06-24"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Brick Bending"
     url="https://www.brickbending.com/"
 >}}

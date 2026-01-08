@@ -36,7 +36,7 @@ _Download as [tab-seperated CSV](table.csv) or [Spreadsheet](table.ods)_
 
 {{< linkbox
     author="Sir Bugges"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Hypo-technique 1: Lego rotation principles and basic hinged Hypo-tech"
     url="http://www.l3go.bugge.com/articles/technique/Hypotech1.shtml"
 >}}

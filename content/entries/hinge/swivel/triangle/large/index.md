@@ -18,7 +18,7 @@ tags  = [
 
 {{< linkbox
     author="Sir Bugges"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Hypo-technique 1"
     url="http://www.l3go.bugge.com/articles/technique/Hypotech1.shtml"
 >}}
@@ -26,7 +26,7 @@ Instead of relying on just one rotation-point, you can however, strengthen your 
 {{< /linkbox >}}
 
 {{< linkbox
-    image="link_02.png"
+    image="link_02.jpg"
     title="Calculate Angles"
     url="https://www.calculator.net/triangle-calculator.html"
 >}}

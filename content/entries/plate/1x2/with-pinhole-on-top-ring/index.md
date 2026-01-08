@@ -19,7 +19,7 @@ tags  = [
 {{< linkbox
     author="Nathan Masters"
     date="2019-02-26"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Nathan's Toolbox"
     url="https://sites.google.com/view/emporiumlug/creations/nathans-toolbox"
 >}}

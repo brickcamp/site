@@ -16,7 +16,7 @@ tags  = [
 {{< linkbox
     author="Richard"
     date="2016-04-07"
-    image="link_01.png"
+    image="link_01.jpg"
     title="It’s new to me: Round Tile 1 x 1 with Pin"
     url="https://ramblingbrick.com/2016/04/07/its-new-to-meround-tile-1-x-1-with-pin/"
 >}}

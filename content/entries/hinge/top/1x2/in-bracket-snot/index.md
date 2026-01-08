@@ -16,7 +16,7 @@ tags  = [
 {{< linkbox
     author="Linus Bohman"
     date="2017-09-03"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Compact inverted bracket brick"
     url="https://swooshable.com/snot/compact-inverted-bracket-brick"
 >}}

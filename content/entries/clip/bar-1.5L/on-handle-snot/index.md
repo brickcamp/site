@@ -16,7 +16,7 @@ tags  = [
 {{< linkbox
     author="FunBrix"
     date="2018-11-10"
-    image="link_01.png"
+    image="link_01.jpg"
     title="LEGO SNOT technique"
     url="https://www.flickr.com/photos/14099938@N00/45765670052/"
 >}}

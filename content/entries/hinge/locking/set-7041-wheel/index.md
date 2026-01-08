@@ -18,7 +18,7 @@ tags  = [
 {{< linkbox
     author="Li Li"
     date="2015-10-30"
-    image="link_01.png"
+    image="link_01.jpg"
     title="How to Cover Polygon Circles"
     url="https://web.archive.org/web/20151031210853/http://mocrecipes.com/2015/10/30/polygon-circles-part-2/"
 >}}

@@ -17,7 +17,7 @@ tags  = [
 {{< linkbox
     author="Tim Johnson"
     date="2017-01-12"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Combo NEXO Power shields"
     url="http://www.newelementary.com/2017/01/combo-nexo-power-shields.html"
 >}}

@@ -17,7 +17,7 @@ tags  = [
 {{< linkbox
     author="Gregory Brick"
     date="2014-09-14"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Technical Exercise 2b 003"
     url="https://www.flickr.com/photos/96307745@N02/15216911566"
 >}}

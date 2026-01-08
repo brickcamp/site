@@ -17,7 +17,7 @@ tags  = [
 {{< linkbox
     author="Teddy"
     date="2008-10-07"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Angled walls"
     url="http://www.eurobricks.com/forum/index.php?showtopic=21942"
 >}}

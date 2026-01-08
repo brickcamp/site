@@ -16,7 +16,7 @@ tags  = [
 {{< linkbox
     author="Dag"
     date="2014-01-15"
-    image="link_01.png"
+    image="link_01.jpg"
     title="LEGO Techniques - Cones"
     url="http://www.dagsbricks.com/2014/01/lego-techniques-cones.html"
 >}}

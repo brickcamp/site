@@ -18,7 +18,7 @@ tags  = [
 {{< linkbox
     author="MTM"
     date="2015-10-25"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Sch*** Straßen"
     url="http://www.1000steine.de/de/gemeinschaft/forum/?entry=1&id=345875#id345875"
 >}}

@@ -16,7 +16,7 @@ tags  = [
 {{< linkbox
     author="Linus Bohman"
     date="2025-09-19"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Donut and Jumper"
     url="http://swooshable.com/snot/donut-and-jumper"
 >}}

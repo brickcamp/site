@@ -17,7 +17,7 @@ tags  = [
 {{< linkbox
     author="Robert Turner"
     date="2015-06-28"
-    image="link_01.png"
+    image="link_01.jpg"
     title="IHS Gravtec Odyssey"
     url="https://www.youtube.com/watch?v=z8T2LR1GMOA"
 >}}

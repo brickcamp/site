@@ -16,7 +16,7 @@ tags  = [
 {{< linkbox
     author="Sean and Steph Mayo"
     date="2015-06-21"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Techniques: #2 Studs to Studs"
     url="https://www.flickr.com/photos/legocy/18383654893/"
 >}}

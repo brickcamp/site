@@ -17,7 +17,7 @@ tags  = [
 {{< linkbox
     author="whateverly"
     date="2011-03-07"
-    image="link_01.png"
+    image="link_01.jpg"
     title="Thought you might like to know"
     url="https://www.flickr.com/photos/66864568@N00/5507975002"
 >}}
