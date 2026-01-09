@@ -2,13 +2,13 @@
 <div class="bg-body-tertiary py-2">
   <div class="container">
     <div class="row g-1 g-sm-3">
-      <div class="col col-sm-8 col-md-7 col-lg-5 ms-auto">
+      <div class="col-12 col-sm-9 col-md-7 col-lg-5 ms-auto">
         <div class="input-group">
-          <input id="conversion-input" class="form-control" type="text">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <input id="conversion-number" class="form-control" type="number" placeholder="Enter length..." data-factor="0">
+          <button id="conversion-unit" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-factor="20">
             Studs
           </button>
-          <div id="conversion-unit-picker" class="dropdown-menu dropdown-menu-end py-0" style="--bs-dropdown-min-width:20rem">
+          <div id="conversion-units" class="dropdown-menu dropdown-menu-end py-0" style="--bs-dropdown-min-width:20rem">
             <div class="row g-0">
               {{ $i := 0 -}}
               {{ range .Params.layout -}}
@@ -16,8 +16,8 @@
                 {{ range . -}}
                 <div class="border border-1">
                   {{ range . -}}
-                  {{ with index site.Data.entries.units.lengths . }}
-                  <a class="dropdown-item" href="#" data-unit="{{ .one }}" data-factor="{{ .factor }}">
+                  {{ with index site.Data.entries.units.lengths . -}}
+                  <a class="dropdown-item" href="#" data-factor="{{ .factor }}">
                     {{ .title }}
                   </a>
                   {{- end }}
@@ -30,54 +30,24 @@
           </div>
         </div>
       </div>
-      <div class="col col-sm-4 col-md-3 col-lg-2 me-auto">
+      <div class="col-6 col-sm-3 col-md-3 col-lg-2 ms-auto ms-sm-0 me-sm-auto">
         <div class="input-group">
-          <input id="conversion-input" class="form-control" type="text" value="&times; 1">
-          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+          <input id="conversion-scale" class="form-control" type="text" value="&times; 1" data-factor="1">
+          <button id="conversion-scale-btn" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
             <span class="visually-hidden">Pick a scale</span>
           </button>
-          <div id="conversion-scale-picker" class="dropdown-menu dropdown-menu-end py-0" style="--bs-dropdown-min-width:20rem">
-            <table class="table table-sm table-bordered w-100 mb-0">
-              <tr>
-                <th><small>Life Size</small></th>
-                <td colspan="2"><a class="dropdown-item" href="#">&times; 1 <i>(no scaling)</i></a></td>
-              </tr>
-              <tr>
-                <th><small>Miniland</small></th>
-                <td><a class="dropdown-item" href="#">&times; 17</a></td>
-                <td><a class="dropdown-item" href="#">&divide; 17</a></td>
-              </tr>
-              <tr>
-                <th><small>Friends</small></th>
-                <td><a class="dropdown-item" href="#">&times; 38</a></td>
-                <td><a class="dropdown-item" href="#">&divide; 38</a></td>
-              </tr>
-              <tr>
-                <th><small>Minifig</small></th>
-                <td><a class="dropdown-item" href="#">&times; 42</a></td>
-                <td><a class="dropdown-item" href="#">&divide; 42</a></td>
-              </tr>
-              <tr>
-                <th><small>Microfig</small></th>
-                <td><a class="dropdown-item" href="#">&times; 80</a></td>
-                <td><a class="dropdown-item" href="#">&divide; 80</a></td>
-              </tr>
-              <tr>
-                <th><small>Minifig Baby</small></th>
-                <td><a class="dropdown-item" href="#">&times; 100</a></td>
-                <td><a class="dropdown-item" href="#">&divide; 100</a></td>
-              </tr>
-              <tr>
-                <th><small>Four-Plate-Fig</small></th>
-                <td><a class="dropdown-item" href="#">&times; 120</a></td>
-                <td><a class="dropdown-item" href="#">&divide; 120</a></td>
-              </tr>
-              <tr>
-                <th><small>Micropolis</small></th>
-                <td><a class="dropdown-item" href="#">&times; 288</a></td>
-                <td><a class="dropdown-item" href="#">&divide; 288</a></td>
-              </tr>
-            </table>
+          <div id="conversion-scales" class="dropdown-menu dropdown-menu-end py-0" style="--bs-dropdown-min-width:20rem">
+            <div class="row g-0">
+              <div class="col-6"><span class="dropdown-item text-bg-dark">Life Size</span></div>
+              <div class="col-6"><a class="dropdown-item" href="#" data-factor="1">&times; 1 <i>(no scaling)</i></a></div>
+            </div>
+            {{ range sort site.Data.entries.units.scales "factor" "asc" -}}
+            <div class="row g-0">
+              <div class="col-6"><span class="dropdown-item text-bg-dark">{{ .title }}</span></div>
+              <div class="col-3"><a class="dropdown-item" href="#" data-factor="{{ .factor }}">&times; {{ .factor }}</a></div>
+              <div class="col-3"><a class="dropdown-item" href="#" data-factor="{{ div 1.0 .factor }}">&divide; {{ .factor }}</a></div>
+            </div>
+            {{- end }}
           </div>
         </div>
       </div>
@@ -97,10 +67,8 @@
           {{ range . -}}
           {{ with index site.Data.entries.units.lengths . -}}
           <div class="input-group">
-            <span class="input-group-text w-50">{{ .title }}</span>
-            <input id="conversion-result-{{ .one }} w-50" class="form-control" type="text" data-factor="{{ .factor }}" readonly>
-            <button class="btn btn-outline-secondary w-auto" type="button" id="copy-result-{{ .one }}">&#x1F4CB;</button>
-            <button class="d-none btn btn-primary" type="button" id="pick-result-{{ .one }}">&#11180;</button>
+            <span class="input-group-text bg-secondary-subtle z-1">{{ .title }}</span>
+            <input id="conversion-result-{{ .one }}" class="form-control" type="text" data-factor="{{ .factor }}" readonly>
           </div>
           {{- end }}
           {{- end }}      

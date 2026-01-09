@@ -1,0 +1,27 @@
+[miniland]
+factor = 17
+title  = 'Miniland'
+
+[friends]
+factor = 38
+title  = 'Friends'
+
+[minifig]
+factor = 42
+title  = 'Friends'
+
+[microfig]
+factor = 80
+title  = 'Microfig'
+
+[minibaby]
+factor = 100
+title  = 'Minifig Baby'
+
+[fourfigs]
+factor = 120
+title  = 'Four-Plate-Figs'
+
+[micropolis]
+factor = 288
+title  = 'Micropolis'
