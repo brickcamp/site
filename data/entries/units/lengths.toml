@@ -31,7 +31,7 @@ system = 'parts'
 title  = 'Chain Links'
 one    = 'link'
 many   = 'links'
-factor = 17.333
+factor = 17.333333333333333
 system = 'parts'
 
 [ tl ]
