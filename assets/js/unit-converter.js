@@ -105,7 +105,7 @@ function calculate() {
     const conversion = Number(result.dataset.factor);
     result.value = Number((input / conversion).toFixed(3));
     if (result.value == 0) {
-      result.value = "≈ 0";
+      result.value = input == 0 ? "" : "≈ 0";
     }
   });
 }
