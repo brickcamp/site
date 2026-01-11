@@ -144,7 +144,6 @@ function appendEntry(entry) {
   const elLink      = clone.querySelector(".insert-link");
   const elImageSrc  = clone.querySelector(".insert-image-src");
   const elTitle     = clone.querySelector(".insert-title");
-  const elCopyright = clone.querySelector(".insert-copyright");
 
   if (elLink) {
     elLink.href  = entry[0];
@@ -155,9 +154,6 @@ function appendEntry(entry) {
   }
   if (elTitle) {
     elTitle.innerText = entry[1];
-  }
-  if (elCopyright) {
-    elCopyright.innerText = "© " + entry[2];
   }
 
   document.getElementById("entries").appendChild(clone);
