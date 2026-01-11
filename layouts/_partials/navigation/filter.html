@@ -23,7 +23,7 @@
 {{ end -}}
 
 <div class="bg-body-tertiary">
-  <div class="container">
+  <div class="container position-relative">
     <nav id="filter-nav" class="d-flex flex-row flex-nowrap overflow-x-auto w-100">
       {{- partial "navigation/dropdown.html" (dict "id" "base"  "items" ($dropdowns.Get "base")) -}}
       {{- partial "navigation/dropdown.html" (dict "id" "type"  "items" ($dropdowns.Get "type")) -}}
