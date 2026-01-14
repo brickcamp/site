@@ -1,0 +1,7 @@
+0 
+0 Name: New Model.ldr
+0 Author: BrickCamp (by Tobias Buckdahn)
+1 14 12 0 -8 1 0 0 0 0 1 0 -1 0 88072.dat
+1 25 8 0 12 0 1 0 0 0 1 1 0 0 88072.dat
+1 14 -12 0 8 -1 0 0 0 0 1 0 1 0 88072.dat
+1 25 -8 0 -12 0 -1 0 0 0 1 -1 0 0 88072.dat
