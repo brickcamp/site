@@ -2,7 +2,7 @@
 title = 'Stud in Tube'
 date  = '2015-08-26'
 
-url     = '/entry/plate-stud-in-tube'
+url     = '/entry/plate-stud-in-tube/'
 aliases = ['/tech/plate-stud-in-tube']
 
 parts = ['3020', '3623']

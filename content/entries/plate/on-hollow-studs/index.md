@@ -2,7 +2,7 @@
 title = 'Plate on Hollow Studs'
 date  = '2015-08-26'
 
-url     = '/entry/plate-1xn-on-hollow-studs'
+url     = '/entry/plate-1xn-on-hollow-studs/'
 aliases = ['/tech/plate-1xn-on-hollow-studs']
 
 parts = ['3700', '3623']

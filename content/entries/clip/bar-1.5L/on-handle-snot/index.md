@@ -2,7 +2,7 @@
 title = 'Bar 1.5L with Clip on Handle SNOT'
 date  = '2019-04-13'
 
-url     = '/entry/bar-1.5L-with-clip-on-handle-snot'
+url     = '/entry/bar-1.5L-with-clip-on-handle-snot/'
 aliases = ['/tech/bar-1.5L-with-clip-on-handle-snot']
 
 parts = ['48729', '4085', '3023', '48336']

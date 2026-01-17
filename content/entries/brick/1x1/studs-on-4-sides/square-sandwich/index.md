@@ -2,7 +2,7 @@
 title = '2 x 2 Studs Sandwich'
 date  = '2015-08-30'
 
-url     = '/entry/2x2-studs-sandwich'
+url     = '/entry/2x2-studs-sandwich/'
 aliases = ['/tech/brick-1x1-4sidestuds-plate-2x2-sandwich']
 
 parts = ['4733', '3022']

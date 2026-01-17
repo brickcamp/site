@@ -2,7 +2,7 @@
 title = 'Vertical Bar Square'
 date  = '2026-01-14'
 
-url   = '/entry/plate-1x2-with-vertical-bar-square'
+url   = '/entry/plate-1x2-with-vertical-bar-square/'
 
 parts = ['4623']
 size  = ['3s', '3s', '2s']

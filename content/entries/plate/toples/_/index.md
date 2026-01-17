@@ -2,7 +2,7 @@
 title = 'Pony-Ear Technique'
 date  = '2015-08-23'
 
-url     = '/entry/toples'
+url     = '/entry/toples/'
 aliases = ['/tech/toples']
 
 parts = ['3021', '3023', '3069']

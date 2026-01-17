@@ -2,7 +2,7 @@
 title = 'Connector Beam 3x3 SNOT'
 date  = '2025-12-28'
 
-url     = '/entry/connector-beam-3x3-snot'
+url     = '/entry/connector-beam-3x3-snot/'
 aliases = []
 
 parts = ['11212', '39793']

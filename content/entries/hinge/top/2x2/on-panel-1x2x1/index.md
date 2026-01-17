@@ -2,7 +2,7 @@
 title = 'Panel 1 x 2 x 1 enclosed by Hinge 2 x 2 Tops'
 date  = '2019-02-19'
 
-url     = '/entry/hinge-2x2-tops-on-panel-1x2x1'
+url     = '/entry/hinge-2x2-tops-on-panel-1x2x1/'
 aliases = ['/tech/hinge-2x2-tops-on-panel-1x2x1']
 
 parts = ['6134', '3937', '4865', '3004']

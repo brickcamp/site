@@ -2,7 +2,7 @@
 title = 'Camera Cube'
 date  = '2015-08-23'
 
-url     = '/entry/brick-camera-cube'
+url     = '/entry/brick-camera-cube/'
 aliases = ['/tech/brick-camera-cube']
 
 parts = ['4595', '3022']

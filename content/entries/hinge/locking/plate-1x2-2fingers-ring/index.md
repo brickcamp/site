@@ -2,7 +2,7 @@
 title = 'Hinge Plate 1 x 2 Locking Dual Finger Ring'
 date  = '2015-11-08'
 
-url     = '/entry/hinge-plate-1x2-locking-2f-ring'
+url     = '/entry/hinge-plate-1x2-locking-2f-ring/'
 aliases = ['/tech/hinge-plate-1x2-locking-2f-ring']
 
 parts = ['44302']

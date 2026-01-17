@@ -2,7 +2,7 @@
 title = 'Bar 1.5L with Clip Chain'
 date  = '2019-04-02'
 
-url     = '/entry/bar-1.5L-with-clip-chain'
+url     = '/entry/bar-1.5L-with-clip-chain/'
 aliases = ['/tech/bar-1.5L-with-clip-chain']
 
 parts = ['48729']

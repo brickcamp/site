@@ -2,7 +2,7 @@
 title = '6-sided Bar Hub'
 date  = '2025-12-28'
 
-url     = '/entry/six-sided-bar-hub-core'
+url     = '/entry/six-sided-bar-hub-core/'
 aliases = []
 
 parts = ['48723', '87994', '32002', '62462']

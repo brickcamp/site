@@ -2,7 +2,7 @@
 title = 'Plate 2 x 2 Round on Door Rails'
 date  = '2019-05-10'
 
-url     = '/entry/plate-2x2-round-on-door-rails'
+url     = '/entry/plate-2x2-round-on-door-rails/'
 aliases = ['/tech/plate-2x2-round-on-door-rails']
 
 parts = ['32028', '3023', '4032', '3031']

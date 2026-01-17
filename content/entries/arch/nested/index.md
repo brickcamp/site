@@ -2,7 +2,7 @@
 title = 'Nested Archs'
 date  = '2015-10-10'
 
-url     = '/entry/archs-nested'
+url     = '/entry/archs-nested/'
 aliases = ['/tech/archs-nested']
 
 parts = ['6091', '6005', '6060', '2339']

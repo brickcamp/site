@@ -2,7 +2,7 @@
 title = 'Flowers in Technic Plate Holes'
 date  = '2015-09-14'
 
-url     = '/entry/flowers-in-technic-plate-holes'
+url     = '/entry/flowers-in-technic-plate-holes/'
 aliases = [
   '/tech/technic-plate-with-flowers-in-holes', 
   '/tech/flower-in-technic-plate-hole',

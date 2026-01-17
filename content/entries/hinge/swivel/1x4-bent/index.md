@@ -2,7 +2,7 @@
 title = 'Hinge 1 x 4 Swivel (Bent)'
 date  = '2019-04-22'
 
-url     = '/entry/hinge-swivel-1x4-bent'
+url     = '/entry/hinge-swivel-1x4-bent/'
 aliases = ['/tech/hinge-swivel-1x4-bent']
 
 parts = ['73983', '3830', '3831']

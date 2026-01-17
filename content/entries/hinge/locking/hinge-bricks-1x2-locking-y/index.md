@@ -2,7 +2,7 @@
 title = 'Hinge Brick Y'
 date  = '2015-08-23'
 
-url     = '/entry/hinge-bricks-1x2-locking-y'
+url     = '/entry/hinge-bricks-1x2-locking-y/'
 aliases = ['/tech/hinge-bricks-1x2-locking-y']
 
 parts = ['30364', '30540', '30565']

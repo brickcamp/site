@@ -2,7 +2,7 @@
 title = 'Hinge Top Frame'
 date  = '2015-08-23'
 
-url     = '/entry/hinge-top-frame'
+url     = '/entry/hinge-top-frame/'
 aliases = ['/tech/hinge-top-frame']
 
 parts = ['3938']

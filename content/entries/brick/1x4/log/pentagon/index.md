@@ -2,7 +2,7 @@
 title = 'Brick Log Pentagon'
 date  = '2015-08-27'
 
-url     = '/entry/brick-log-pentagon'
+url     = '/entry/brick-log-pentagon/'
 aliases = ['/tech/brick-log-pentagon']
 
 parts = ['30137']

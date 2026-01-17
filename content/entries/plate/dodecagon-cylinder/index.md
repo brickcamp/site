@@ -2,7 +2,7 @@
 title = 'Plate Cylinder (Dodecagon)'
 date  = '2015-08-29'
 
-url     = '/entry/plate-dodecagon-cylinder'
+url     = '/entry/plate-dodecagon-cylinder/'
 aliases = ['/tech/plate-dodecagon-cylinder']
 
 parts = ['4733', '3024', '3023', '3460']

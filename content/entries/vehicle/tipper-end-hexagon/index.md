@@ -2,7 +2,7 @@
 title = 'Tipper End Hexagon'
 date  = '2015-10-09'
 
-url     = '/entry/tipper-end-hexagon'
+url     = '/entry/tipper-end-hexagon/'
 aliases = ['/tech/vehicle-tipper-end-hexagon', '/tech/tipper-end-hexagon']
 
 parts = ['30022', '6061']

@@ -2,7 +2,7 @@
 title = 'Jumper Plate Wall'
 date  = '2019-07-06'
 
-url     = '/entry/jumper-2x2-plate-2x2-wall'
+url     = '/entry/jumper-2x2-plate-2x2-wall/'
 aliases = ['/tech/jumper-2x2-plate-2x2-wall']
 
 parts = ['3022', '87580']

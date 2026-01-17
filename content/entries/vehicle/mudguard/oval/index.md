@@ -2,7 +2,7 @@
 title = 'Mudguard Oval'
 date  = '2015-10-09'
 
-url     = '/entry/vehicle-mudguard-arch-oval'
+url     = '/entry/vehicle-mudguard-arch-oval/'
 aliases = ['/tech/vehicle-mudguard-4x2.5x1.66-arch-oval']
 
 parts = ['50745', '3956', '3004', '3023', '3020']

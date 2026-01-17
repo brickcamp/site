@@ -2,7 +2,7 @@
 title = 'Plate Ring'
 date  = '2015-08-30'
 
-url     = '/entry/plate-ring'
+url     = '/entry/plate-ring/'
 aliases = ['/tech/plate-ring']
 
 parts = ['3666', '3710']

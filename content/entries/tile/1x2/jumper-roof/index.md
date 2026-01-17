@@ -2,7 +2,7 @@
 title = 'Tile Jumper Roof'
 date  = '2015-12-06'
 
-url     = '/entry/tile-jumper-roof'
+url     = '/entry/tile-jumper-roof/'
 aliases = ['/tech/tile-jumper-roof']
 
 parts = ['3794', '3022', '3023', '3666', '3069']

@@ -2,7 +2,7 @@
 title = 'GSNOT'
 date  = '2015-08-23'
 
-url     = '/entry/gsnot'
+url     = '/entry/gsnot/'
 aliases = ['/tech/gsnot']
 
 parts = ['30365', '30540', '3004']

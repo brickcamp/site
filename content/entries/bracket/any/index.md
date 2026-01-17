@@ -2,7 +2,7 @@
 title = 'Bracket'
 date  = '2015-08-23'
 
-url     = '/entry/bracket'
+url     = '/entry/bracket/'
 aliases = ['/tech/bracket']
 
 parts = ['42446', '3956', '93274', '2436', '44728', '99780', '99781', '99207', '98287', '2422']

@@ -2,7 +2,7 @@
 title = 'Technic Axle/Pin/Axle Connector Cube'
 date  = '2019-01-30'
 
-url     = '/entry/technic-axle-pin-axle-connector-3L-cube'
+url     = '/entry/technic-axle-pin-axle-connector-3L-cube/'
 aliases = ['/tech/technic-axle-pin-axle-connector-3L-cube']
 
 parts = ['32184', '4519']

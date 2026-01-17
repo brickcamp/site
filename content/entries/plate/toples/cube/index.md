@@ -2,7 +2,7 @@
 title = 'ToPLES Cube'
 date  = '2015-08-23'
 
-url     = '/entry/toples-cube'
+url     = '/entry/toples-cube/'
 aliases = ['/tech/toples-cube']
 
 parts = ['4865', '3068', '3022', '3794']

@@ -2,7 +2,7 @@
 title = 'Clip-Handle SNOT Cube'
 date  = '2015-08-23'
 
-url     = '/entry/clip-handle-snot-cube'
+url     = '/entry/clip-handle-snot-cube/'
 aliases = ['/tech/clip-handle-snot-cube']
 
 parts = ['4085', '2921', '3024', '3023']

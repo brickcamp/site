@@ -3,7 +3,7 @@ title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 date  = '{{ time.Now.UTC.Format "2006-01-02" }}'
 draft = true
 
-url     = '/entry/{{ .File.ContentBaseName }}'
+url     = '/entry/{{ replaceRE `([\/])` "-" .File.Dir }}/'
 aliases = ['/previous-urls-if-applicable']
 
 parts = ['3002', '3004']

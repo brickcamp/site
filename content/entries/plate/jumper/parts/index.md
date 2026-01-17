@@ -2,7 +2,7 @@
 title = 'Jumper'
 date  = '2019-01-19'
 
-url     = '/entry/jumper'
+url     = '/entry/jumper/'
 aliases = ['/tech/jumper']
 
 parts = ['3794', '87580']

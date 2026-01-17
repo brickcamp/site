@@ -2,7 +2,7 @@
 title = 'Minifig Hands on Dinner Plate'
 date  = '2019-02-24'
 
-url     = '/entry/minifig-hands-on-dinner-plate'
+url     = '/entry/minifig-hands-on-dinner-plate/'
 aliases = ['/tech/minifig-hands-on-dinner-plate']
 
 parts = ['6256', '3820']

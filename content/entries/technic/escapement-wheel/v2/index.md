@@ -2,7 +2,7 @@
 title = 'Technic Escapement Wheel'
 date  = '2026-01-03'
 
-url     = '/entry/technic-escapement-wheel-v2'
+url     = '/entry/technic-escapement-wheel-v2/'
 aliases = []
 
 parts = ['2712', '4273', '4274', '3705', '2825', '32062']

@@ -2,7 +2,7 @@
 title = 'Hinge Star Pentagon'
 date  = '2015-09-27'
 
-url     = '/entry/hinge-pentagon-star'
+url     = '/entry/hinge-pentagon-star/'
 aliases = ['/tech/hinge-pentagon-star']
 
 parts = ['30386', '3048', '3044', '54200']

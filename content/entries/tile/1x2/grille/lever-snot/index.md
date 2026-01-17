@@ -2,7 +2,7 @@
 title = 'Grilled Levers'
 date  = '2015-09-14'
 
-url     = '/entry/grilled-lever-snot'
+url     = '/entry/grilled-lever-snot/'
 aliases = ['/tech/tile-grille-lever-snot']
 
 parts = ['2412', '4593']

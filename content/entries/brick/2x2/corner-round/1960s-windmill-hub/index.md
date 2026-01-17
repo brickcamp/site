@@ -2,7 +2,7 @@
 title = '1960s Windmill Hub'
 date  = '2026-01-06'
 
-url     = '/entry/1960s-windmill-hub'
+url     = '/entry/1960s-windmill-hub/'
 aliases = []
 
 parts = ['3063', '3020']

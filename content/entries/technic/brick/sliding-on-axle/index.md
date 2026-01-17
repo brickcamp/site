@@ -2,7 +2,7 @@
 title = 'Sliding Technic Brick on Axle'
 date  = '2015-08-26'
 
-url     = '/entry/technic-brick-on-axle-sliding'
+url     = '/entry/technic-brick-on-axle-sliding/'
 aliases = ['/tech/technic-brick-on-axle-sliding']
 
 parts = ['6541', '3706', '32064']

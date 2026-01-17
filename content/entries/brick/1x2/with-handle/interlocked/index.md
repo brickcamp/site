@@ -2,7 +2,7 @@
 title = 'Brick 1 x 2 with Handle Interlocked'
 date  = '2019-04-17'
 
-url     = '/entry/brick-1x2-with-handle-interlocked'
+url     = '/entry/brick-1x2-with-handle-interlocked/'
 aliases = ['/tech/brick-1x2-with-handle-interlocked']
 
 parts = ['30236']

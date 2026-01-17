@@ -2,7 +2,7 @@
 title = 'Pneumatic T with Plate 1x4 Offset'
 date  = '2015-09-14'
 
-url     = '/entry/pneumatic-t-and-plate-1x4-offset-snot'
+url     = '/entry/pneumatic-t-and-plate-1x4-offset-snot/'
 aliases = ['/tech/pneumatic-t-and-plate-1x4-offset-snot']
 
 parts = ['4697', '4590', '3004']

@@ -2,7 +2,7 @@
 title = 'Brick Octagonal Square'
 date  = '2015-11-08'
 
-url     = '/entry/brick-octagonal-square'
+url     = '/entry/brick-octagonal-square/'
 aliases = ['/tech/brick-octagonal-square']
 
 parts = ['6042']

@@ -2,7 +2,7 @@
 title = 'Wedge Plates 4x2 with 1x2 Plate'
 date  = '2026-01-08'
 
-url     = '/entry/wedge-plates-4x2-connected-with-1x2-plate'
+url     = '/entry/wedge-plates-4x2-connected-with-1x2-plate/'
 aliases = []
 
 parts = ['41770', '41769', '3023']

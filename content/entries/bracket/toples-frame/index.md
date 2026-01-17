@@ -2,7 +2,7 @@
 title = 'Bracket ToPLES Frame'
 date  = '2015-08-23'
 
-url     = '/entry/bracket-toples-frame'
+url     = '/entry/bracket-toples-frame/'
 aliases = ['/tech/bracket-toples-frame']
 
 parts = ['44728']

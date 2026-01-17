@@ -2,7 +2,7 @@
 title = 'Control Panel Ring'
 date  = '2015-08-29'
 
-url     = '/entry/control-panel-ring'
+url     = '/entry/control-panel-ring/'
 aliases = ['/tech/control-panel-ring']
 
 parts = ['2342']

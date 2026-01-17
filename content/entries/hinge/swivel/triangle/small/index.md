@@ -2,7 +2,7 @@
 title = 'Hinge Swivel Triangle (Small)'
 date  = '2025-12-28'
 
-url     = '/entry/small-hinge-swivel-triangle'
+url     = '/entry/small-hinge-swivel-triangle/'
 aliases = []
 
 parts = ['73983', '3023']

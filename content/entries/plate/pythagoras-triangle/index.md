@@ -2,7 +2,7 @@
 title = "Pythagora's Twist"
 date  = '2015-12-06'
 
-url     = '/entry/pythagoras-twist'
+url     = '/entry/pythagoras-twist/'
 aliases = ['/tech/pythagoras-twist']
 
 parts = ['3024', '3666']

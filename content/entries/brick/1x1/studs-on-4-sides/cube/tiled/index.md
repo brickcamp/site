@@ -2,7 +2,7 @@
 title = 'Brick 1 x 1 with Studs on 4 Sides Cube'
 date  = '2019-04-17'
 
-url     = '/entry/snot-cube-tiled'
+url     = '/entry/snot-cube-tiled/'
 aliases = ['/tech/brick-1x1-studs-on-four-sides-cude']
 
 parts = ['4733', '3068']

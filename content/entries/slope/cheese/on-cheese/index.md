@@ -2,7 +2,7 @@
 title = 'Cheese on Cheese'
 date  = '2019-01-30'
 
-url     = '/entry/cheese-on-cheese'
+url     = '/entry/cheese-on-cheese/'
 aliases = ['/tech/cheese-on-cheese']
 
 parts = ['54200', '6541', '3666']

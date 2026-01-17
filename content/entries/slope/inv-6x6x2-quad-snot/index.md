@@ -2,7 +2,7 @@
 title = 'Quad Slope SNOT'
 date  = '2015-08-23'
 
-url     = '/entry/slope-inv-6x6x2-quad-snot'
+url     = '/entry/slope-inv-6x6x2-quad-snot/'
 aliases = ['/tech/slope-inv-6x6x2-quad-snot']
 
 parts = ['30373']

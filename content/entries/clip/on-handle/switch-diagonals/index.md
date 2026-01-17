@@ -2,7 +2,7 @@
 title = 'Clip-Handle Switch Diagonals'
 date  = '2019-04-16'
 
-url     = '/entry/clip-handle-switch-diagonals'
+url     = '/entry/clip-handle-switch-diagonals/'
 aliases = ['/tech/clip-handle-switch-diagonals']
 
 parts = ['60478', '63868', '3023', '6019']

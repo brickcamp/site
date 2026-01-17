@@ -2,7 +2,7 @@
 title = 'Blaster Ring'
 date  = '2015-08-29'
 
-url     = '/tech/minifig-blaster-ring'
+url     = '/tech/minifig-blaster-ring/'
 aliases = [
   '/tech/minifig-blaster-ring', 
   '/tech/blaster-ring',

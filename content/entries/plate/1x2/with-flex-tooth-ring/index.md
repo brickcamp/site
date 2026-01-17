@@ -2,7 +2,7 @@
 title = 'Plate 1 x 2 Flex Tooth Ring'
 date  = '2016-01-01'
 
-url     = '/entry/plate-1x2-flex-tooth-ring'
+url     = '/entry/plate-1x2-flex-tooth-ring/'
 aliases = ['/tech/plate-1x2-flex-tooth-ring']
 
 parts = ['61406', '73983']

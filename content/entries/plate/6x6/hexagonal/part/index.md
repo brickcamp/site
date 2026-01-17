@@ -2,7 +2,7 @@
 title = 'Plate 6 x 6 Hexagonal'
 date  = '2019-04-22'
 
-url     = '/entry/plate-6x6-hexagonal'
+url     = '/entry/plate-6x6-hexagonal/'
 aliases = ['/tech/plate-6x6-hexagonal']
 
 parts = ['27255']

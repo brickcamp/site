@@ -2,7 +2,7 @@
 title = 'Techbrick-Plate-Sidestud Offset'
 date  = '2016-01-16'
 
-url     = '/entry/technic-brick-plate-sidestud-offset'
+url     = '/entry/technic-brick-plate-sidestud-offset/'
 aliases = [
   '/tech/technic-brick-plate-sidestud-offset', 
   '/tech/sidestud-plate-technicbrick-offset',

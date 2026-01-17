@@ -2,7 +2,7 @@
 title = 'Headlight Cube'
 date  = '2015-08-23'
 
-url     = '/entry/headlight-cube'
+url     = '/entry/headlight-cube/'
 aliases = ['/tech/headlight-cube']
 
 parts = ['4070']

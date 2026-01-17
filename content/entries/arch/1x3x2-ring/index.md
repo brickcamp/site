@@ -2,7 +2,7 @@
 title = 'Arch 1 x 3 x 2 Ring'
 date  = '2015-09-27'
 
-url     = '/entry/arch-1x3x2-ring'
+url     = '/entry/arch-1x3x2-ring/'
 aliases = ['/tech/arch-1x3x2-ring']
 
 parts = ['88292']

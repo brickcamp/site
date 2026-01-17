@@ -2,7 +2,7 @@
 title = 'Palm Top in Bracket Square'
 date  = '2015-10-11'
 
-url     = '/entry/palm-top-in-bracket-square'
+url     = '/entry/palm-top-in-bracket-square/'
 aliases = ['/tech/palm-top-in-bracket-square']
 
 parts = ['2566', '44728']

@@ -2,7 +2,7 @@
 title = 'Technic Axle Pin Connector Cobblestone'
 date  = '2016-09-29'
 
-url     = '/entry/technic-axle-pin-connector-cobblestone'
+url     = '/entry/technic-axle-pin-connector-cobblestone/'
 aliases = ['/tech/technic-axle-pin-connector-cobblestone']
 
 parts = ['3651']

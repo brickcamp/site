@@ -2,7 +2,7 @@
 title = 'Connected Grille Slopes'
 date  = '2016-01-03'
 
-url     = '/entry/slope-grilles-connected'
+url     = '/entry/slope-grilles-connected/'
 aliases = ['/tech/slope-grilles-connected']
 
 parts = ['61409', '4085', '2921']

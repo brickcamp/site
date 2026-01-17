@@ -2,7 +2,7 @@
 title = 'Tile Round 2 x 2 and Tile 1 x 1 Twisted'
 date  = '2019-04-17'
 
-url     = '/entry/tile-2x2-round-tile-1x1-twisted-pattern'
+url     = '/entry/tile-2x2-round-tile-1x1-twisted-pattern/'
 aliases = ['/tech/tile-2x2-round-tile-1x1-twisted-pattern']
 
 parts = ['3070', '14769']

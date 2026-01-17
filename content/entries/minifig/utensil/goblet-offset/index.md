@@ -2,7 +2,7 @@
 title = 'Minifig Goblet Offset'
 date  = '2019-01-30'
 
-url     = '/entry/minifig-goblet-offset'
+url     = '/entry/minifig-goblet-offset/'
 aliases = ['/tech/minifig-goblet-offset']
 
 parts = ['2343', '6141']

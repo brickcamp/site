@@ -2,7 +2,7 @@
 title = 'Toothed Slopes'
 date  = '2016-01-03'
 
-url     = '/entry/slopes-toothed-pattern'
+url     = '/entry/slopes-toothed-pattern/'
 aliases = ['/tech/slopes-toothed-pattern']
 
 parts = ['4070', '87087', '3024', '3040', '3665', '4460', '2449']

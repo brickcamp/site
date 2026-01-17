@@ -2,7 +2,7 @@
 title = 'Minifig Chainsaw'
 date  = '2015-09-14'
 
-url     = '/entry/minifig-chainsaw'
+url     = '/entry/minifig-chainsaw/'
 aliases = ['/tech/minifig-chainsaw']
 
 parts = ['6117']

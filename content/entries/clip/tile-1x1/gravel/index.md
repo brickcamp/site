@@ -2,7 +2,7 @@
 title = 'Clip Gravel Road'
 date  = '2015-12-06'
 
-url     = '/entry/clip-gravel-road'
+url     = '/entry/clip-gravel-road/'
 aliases = ['/tech/clip-gravel-road']
 
 parts = ['2555']

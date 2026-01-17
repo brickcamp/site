@@ -2,7 +2,7 @@
 title = '3 x 3 x 3 Minecraft Cube'
 date  = '2026-01-06'
 
-url     = '/entry/3x3x3-minecraft-cube'
+url     = '/entry/3x3x3-minecraft-cube/'
 aliases = []
 
 parts = ['11212', '3021', '3623', '63864', '3069', '41682', '99781', '36841', '3386', '3024', '3005']
