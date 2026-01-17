@@ -78,9 +78,15 @@ function refreshFilterDropdowns() {
     "nav-value": value,
     "nav-sort": sort,
   }
+
+  // copySpanText relies on invalid items to be hidden, so refresh items first
+  const links = document.querySelectorAll("#filter-nav .dropdown-item");
+  links.forEach(link => {
+    link.hidden = link.dataset.base && link.dataset.base != base;
+  });
+
   dropdowns.forEach(dropdown => {
     copySpanText(dropdown.id + "-" + selected[dropdown.id], dropdown.id)
-    console.log(dropdown.id + "/" + base);
     switch(dropdown.id) {
       case "nav-type":
         dropdown.hidden = (basesWithoutTypes.includes(base));
@@ -89,11 +95,6 @@ function refreshFilterDropdowns() {
         dropdown.hidden = (basesWithoutValues.includes(base) || typesWithoutValues.includes(type));
         break;
     }
-  });
-
-  const links = document.querySelectorAll("#filter-nav .dropdown-item");
-  links.forEach(link => {
-    link.hidden = link.dataset.base && link.dataset.base != base;
   });
 }
 
