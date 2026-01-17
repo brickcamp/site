@@ -2,7 +2,7 @@
 title = 'Plate 1 x 4 Offset'
 date  = '2019-01-19'
 
-url     = '/entry/plate-1x4-offset'
+url     = '/entry/plate-1x4-offset/'
 aliases = ['/tech/plate-1x4-offset']
 
 parts = ['4590']

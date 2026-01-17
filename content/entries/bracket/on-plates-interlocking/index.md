@@ -2,7 +2,7 @@
 title = 'Interlocking Brackets and Plates'
 date  = '2026-01-07'
 
-url     = '/entry/brackets-interlocking-with-plates'
+url     = '/entry/brackets-interlocking-with-plates/'
 aliases = []
 
 parts = ['3020', '44728']

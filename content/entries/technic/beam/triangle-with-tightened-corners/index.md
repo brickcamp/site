@@ -2,7 +2,7 @@
 title = 'Technic Beam Triangle'
 date  = '2015-11-08'
 
-url     = '/entry/technic-beam-triangle-with-tightened-corners'
+url     = '/entry/technic-beam-triangle-with-tightened-corners/'
 aliases = ['/tech/technic-beam-triangle-with-tightened-corners']
 
 parts = ['32316', '41677', '6632', '32062']

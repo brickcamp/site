@@ -2,7 +2,7 @@
 title = 'Liftarms and Bars'
 date  = '2015-08-29'
 
-url     = '/entry/liftarm-1x2thin-bar-pattern'
+url     = '/entry/liftarm-1x2thin-bar-pattern/'
 aliases = ['/tech/liftarm-1x2thin-bar-pattern']
 
 parts = ['41677', '30374']

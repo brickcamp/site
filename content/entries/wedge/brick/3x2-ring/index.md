@@ -2,7 +2,7 @@
 title = 'Wedge Ring'
 date  = '2015-08-29'
 
-url     = '/entry/wedge-ring'
+url     = '/entry/wedge-ring/'
 aliases = ['/tech/wedge-ring']
 
 parts = ['6565', '6564']

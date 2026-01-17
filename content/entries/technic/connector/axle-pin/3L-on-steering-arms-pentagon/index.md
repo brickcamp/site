@@ -2,7 +2,7 @@
 title = 'Steering Arms Pentagon'
 date  = '2015-08-29'
 
-url     = '/entry/technic-steering-arms-connector-pentagon'
+url     = '/entry/technic-steering-arms-connector-pentagon/'
 aliases = ['/tech/technic-steering-arms-connector-pentagon']
 
 parts = ['32068', '32069']

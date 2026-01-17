@@ -2,7 +2,7 @@
 title = 'Brick 1 x 2 Ring'
 date  = '2018-05-27'
 
-url     = '/entry/brick-1x2-ring'
+url     = '/entry/brick-1x2-ring/'
 aliases = ['/tech/brick-1x2-ring']
 
 parts = ['3004']

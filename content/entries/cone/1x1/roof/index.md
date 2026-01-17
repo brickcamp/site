@@ -2,7 +2,7 @@
 title = 'Cone 1 x 1 Roof'
 date  = '2019-07-06'
 
-url     = '/entry/cone-1x1-roof'
+url     = '/entry/cone-1x1-roof/'
 aliases = ['/tech/cone-1x1-roof']
 
 parts = ['59900', '6019', '4081', '30374']

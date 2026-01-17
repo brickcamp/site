@@ -2,7 +2,7 @@
 title = 'Bar 1.5L with Clip Ring'
 date  = '2026-01-14'
 
-url   = '/entry/bar-1.5L-with-clip-ring'
+url   = '/entry/bar-1.5L-with-clip-ring/'
 
 parts = ['48729']
 size  = ['8s', '8s', '2s']

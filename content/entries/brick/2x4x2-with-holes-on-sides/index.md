@@ -2,7 +2,7 @@
 title = 'Brick 2 x 4 x 2 with Holes on Sides'
 date  = '2019-01-19'
 
-url     = '/entry/brick-2x4x2-with-holes-on-sides'
+url     = '/entry/brick-2x4x2-with-holes-on-sides/'
 aliases = ['/tech/brick-2x4x2-with-holes-on-sides']
 
 parts = ['6061']

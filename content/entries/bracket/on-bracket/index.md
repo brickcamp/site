@@ -2,7 +2,7 @@
 title = 'Double Bracket'
 date  = '2015-08-23'
 
-url     = '/entry/bracket-on-bracket'
+url     = '/entry/bracket-on-bracket/'
 aliases = ['/tech/bracket-bracket']
 
 parts = ['2436', '3023', '3710']

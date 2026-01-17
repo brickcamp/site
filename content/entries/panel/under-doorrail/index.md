@@ -2,7 +2,7 @@
 title = 'Panel under Doorrail'
 date  = '2015-08-23'
 
-url     = '/entry/panel-under-doorrail'
+url     = '/entry/panel-under-doorrail/'
 aliases = ['/tech/panel-under-doorrail']
 
 parts = ['4864', '32028', '3023', '3022']

@@ -2,7 +2,7 @@
 title = 'Minifig Ray Gun Pentagon'
 date  = '2015-08-29'
 
-url     = '/entry/ray-gun-pentagon'
+url     = '/entry/ray-gun-pentagon/'
 aliases = ['/tech/minifig-ray-gun-pentagon']
 
 parts = ['13608']

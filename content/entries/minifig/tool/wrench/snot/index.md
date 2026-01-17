@@ -2,7 +2,7 @@
 title = 'Wrench SNOT'
 date  = '2015-09-14'
 
-url     = '/entry/wrench-snot'
+url     = '/entry/wrench-snot/'
 aliases = ['/tech/wrench-snot']
 
 parts = ['55300']

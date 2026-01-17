@@ -2,7 +2,7 @@
 title = 'Gear between Plates'
 date  = '2015-08-23'
 
-url     = '/entry/gear-between-plates'
+url     = '/entry/gear-between-plates/'
 aliases = ['/tech/gear-between-plates']
 
 parts = ['4019', '3648', '3031']

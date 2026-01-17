@@ -2,7 +2,7 @@
 title = 'Technic Axle Pin Connector Plate Cuboid'
 date  = '2015-09-27'
 
-url     = '/entry/technic-axle-pin-connector-plate-cuboid'
+url     = '/entry/technic-axle-pin-connector-plate-cuboid/'
 aliases = ['/tech/technic-axle-pin-connector-plate-cuboid']
 
 parts = ['3651', '3020']

@@ -2,7 +2,7 @@
 title = 'Clip-Handle Triangle'
 date  = '2015-10-11'
 
-url     = '/entry/clip-handle-triangle'
+url     = '/entry/clip-handle-triangle/'
 aliases = ['/tech/clip-handle-triangle']
 
 parts = ['60470', '48336']

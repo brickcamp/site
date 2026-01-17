@@ -2,7 +2,7 @@
 title = 'Technic Plates on Axle'
 date  = '2019-01-29'
 
-url     = '/entry/technic-plates-with-axlehole-on-axle'
+url     = '/entry/technic-plates-with-axlehole-on-axle/'
 aliases = ['/tech/technic-plates-with-axlehole-plates-on-axle']
 
 parts = ['3709', '32062', '4032', '3022' ]

@@ -2,7 +2,7 @@
 title = 'Slope Curved 4 x 2 Ring'
 date  = '2015-08-26'
 
-url     = '/entry/slope-curved-4x2-ring'
+url     = '/entry/slope-curved-4x2-ring/'
 aliases = ['/tech/slope-curved-4x2-ring']
 
 parts = ['93606', '3794', '3023', '3023', '48336', '60470']

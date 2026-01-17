@@ -2,7 +2,7 @@
 title = 'Hinge Top Stripe with Cheese Slopes'
 date  = '2016-01-04'
 
-url     = '/entry/hinge-top-stripe-with-cheese-slopes'
+url     = '/entry/hinge-top-stripe-with-cheese-slopes/'
 aliases = ['/tech/hinge-top-stripe-with-cheese-slopes']
 
 parts = ['6134', '54200']

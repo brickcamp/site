@@ -2,7 +2,7 @@
 title = 'Cubeoctahedronesque'
 date  = '2019-04-15'
 
-url     = '/entry/cubeoctahedronesque'
+url     = '/entry/cubeoctahedronesque/'
 aliases = ['/tech/cubeoctahedronesque']
 
 parts = ['75937', '59443', '48729', '57585']

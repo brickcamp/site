@@ -2,7 +2,7 @@
 title = 'Hinge Swivel Triangle'
 date  = '2015-12-06'
 
-url     = '/entry/hinge-swivel-triangle'
+url     = '/entry/hinge-swivel-triangle/'
 aliases = ['/tech/hinge-swivel-triangle']
 
 parts = ['73983', '3710']

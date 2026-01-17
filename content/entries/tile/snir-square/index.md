@@ -2,7 +2,7 @@
 title = 'Tile SNIR Square'
 date  = '2015-12-06'
 
-url     = '/entry/tile-snir-square'
+url     = '/entry/tile-snir-square/'
 aliases = ['/tech/tile-snir-square']
 
 parts = ['3005', '6636', '3070']

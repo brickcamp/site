@@ -2,7 +2,7 @@
 title = 'Plates in Arch'
 date  = '2015-08-29'
 
-url     = '/entry/arch-with-inner-plates'
+url     = '/entry/arch-with-inner-plates/'
 aliases = ['/tech/arch-with-inner-plates']
 
 parts = ['2339', '3024']

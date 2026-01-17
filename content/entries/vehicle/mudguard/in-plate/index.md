@@ -2,7 +2,7 @@
 title = 'Mudguard in Plate'
 date  = '2019-01-30'
 
-url     = '/entry/mudguard-in-plate'
+url     = '/entry/mudguard-in-plate/'
 aliases = [
   '/tech/vehicle-mudguard-in-plate',
   '/tech/mudguard-in-plate',

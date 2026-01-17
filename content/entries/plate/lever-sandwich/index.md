@@ -2,7 +2,7 @@
 title = 'Plate Lever Sandwich'
 date  = '2015-08-23'
 
-url     = '/entry/plate-lever-sandwich'
+url     = '/entry/plate-lever-sandwich/'
 aliases = ['/tech/plate-lever-sandwich']
 
 parts = ['4593', '3031']

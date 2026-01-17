@@ -2,7 +2,7 @@
 title = 'Slope Inverted Camera Lipstick Box'
 date  = '2019-07-27'
 
-url     = '/entry/slope-inv-camera-lipstick-box'
+url     = '/entry/slope-inv-camera-lipstick-box/'
 aliases = ['/tech/slope-inverted-camera-lipstick-box']
 
 parts = ['3676', '3660', '4595', '93094']

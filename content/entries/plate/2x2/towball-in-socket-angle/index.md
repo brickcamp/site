@@ -2,7 +2,7 @@
 title = 'Towball in Socket Angle'
 date  = '2019-02-19'
 
-url     = '/entry/towball-in-socket-angle'
+url     = '/entry/towball-in-socket-angle/'
 aliases = ['/tech/plate-2x2-towball-in-socket-angle']
 
 parts = ['63082', '3731', '3022', '3020']

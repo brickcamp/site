@@ -2,7 +2,7 @@
 title = 'Lowell Sphere'
 date  = '2015-12-06'
 
-url     = '/entry/lowell-sphere'
+url     = '/entry/lowell-sphere/'
 aliases = ['/tech/lowell-sphere']
 
 parts = ['3022', '2420', '3710', '3794', '4733']

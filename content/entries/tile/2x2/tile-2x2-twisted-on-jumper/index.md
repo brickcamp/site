@@ -2,7 +2,7 @@
 title = '2 x 2 Tile Twisted on Jumper'
 date  = '2015-12-06'
 
-url     = '/entry/tile-2x2-twisted-on-jumper'
+url     = '/entry/tile-2x2-twisted-on-jumper/'
 aliases = [
   '/tech/tile-2x2-twisted-on-jumper', 
   '/tech/tile-2x2-twisted-gaps',

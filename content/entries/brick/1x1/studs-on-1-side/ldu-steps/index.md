@@ -2,7 +2,7 @@
 title = 'LDU Offset Steps'
 date  = '2015-08-26'
 
-url     = '/entry/offset-ldu-steps'
+url     = '/entry/offset-ldu-steps/'
 aliases = ['/tech/offset-ldu-steps']
 
 parts = ['4070', '87087', '42446', '3024', '3023', '3794', '3005']

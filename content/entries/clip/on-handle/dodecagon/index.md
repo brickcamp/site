@@ -2,7 +2,7 @@
 title = 'Clip-Handle Dodecagon'
 date  = '2015-08-26'
 
-url     = '/entry/clip-handle-dodecagon'
+url     = '/entry/clip-handle-dodecagon/'
 aliases = ['/tech/clip-handle-dodecagon']
 
 parts = ['48336', '60470', '3022', '3003']

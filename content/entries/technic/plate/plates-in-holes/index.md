@@ -2,7 +2,7 @@
 title = 'Technic Plate SNOT'
 date  = '2015-08-23'
 
-url     = '/entry/technic-plate-with-plates-in-holes'
+url     = '/entry/technic-plate-with-plates-in-holes/'
 aliases = ['/tech/technic-plate-with-plates-in-holes']
 
 parts = ['4263', '4262', '4442', '2719', '3020', '3023']

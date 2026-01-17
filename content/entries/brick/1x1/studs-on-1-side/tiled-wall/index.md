@@ -2,7 +2,7 @@
 title = 'Marakoeschtras Wall'
 date  = '2015-12-06'
 
-url     = '/entry/marakoeschtras-wall'
+url     = '/entry/marakoeschtras-wall/'
 aliases = ['/tech/marakoeschtras-wall']
 
 parts = ['87087', '3005', '3070', '3069']

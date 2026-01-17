@@ -2,7 +2,7 @@
 title = 'Technic Axle Pin Connector 3 x 120° Ring'
 date  = '2016-11-19'
 
-url     = '/entry/technic-axle-pin-connector-3x120-ring'
+url     = '/entry/technic-axle-pin-connector-3x120-ring/'
 aliases = ['/tech/technic-axle-pin-connector-3x120-ring']
 
 parts = ['10288', '32062']

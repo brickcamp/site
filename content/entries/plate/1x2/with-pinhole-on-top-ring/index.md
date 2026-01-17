@@ -2,7 +2,7 @@
 title = 'Plate 1 x 2 with Pinhole on Top Ring'
 date  = '2019-02-26'
 
-url     = '/entry/plate-1x2-with-pinhole-on-top-ring'
+url     = '/entry/plate-1x2-with-pinhole-on-top-ring/'
 aliases = ['/tech/plate-1x2-with-pinhole-on-top-ring']
 
 parts = ['11458']
