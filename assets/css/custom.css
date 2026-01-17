@@ -38,6 +38,11 @@ body {
   min-width: 9em;
 }
 
+#entry-metadata b {
+  display: inline-block;
+  min-width: 8em;
+}
+
 #toTop {
   bottom: 20px; 
   right: 20px; 
