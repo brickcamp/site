@@ -1,0 +1,236 @@
+{{ define "subnavigation" }}
+{{ with .Params -}}
+<script>
+  const min_segments = Number("{{ .min_segments }}");
+  const max_segments = Number("{{ .max_segments }}");
+  const min_layers = Number("{{ .min_layers }}");
+  const max_layers = Number("{{ .max_layers }}");
+</script>
+{{- end }}
+
+<div class="bg-body-tertiary py-2">
+  <div class="container">
+    <div class="row g-0 g-sm-3 justify-content-center align-items-center">
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="input-group">
+          <span id="segments-label" class="input-group-text">Parts</span>
+          <input id="segments-input" class="form-control" type="number" aria-describedby="segments-label" value="100" onload="this.min = min_segments; this.max = max_segments;">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="input-group">
+          <span id="layers-label" class="input-group-text">Layers</span>
+          <input id="layers-input" class="form-control" type="number" aria-describedby="layers-label" value="3" onload="this.min = min_layers; this.max = max_layers;">
+        </div>
+      </div>
+      <div class="col-4 col-sm-3 col-md-2">
+        <button id="download-button" class="btn btn-primary w-100">Download</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+{{ define "main" }}
+<canvas id="threejs">
+</canvas>
+
+{{ $ldraw := resources.Get "js/LDrawLoader.js" -}}
+{{ $3mod  := resources.Get "js/three.module.min.js" -}}
+{{ $3core := resources.Get "js/three.core.min.js" -}}
+<script type="importmap">
+  { 
+    "imports": {
+      "three": "{{ $3mod.RelPermalink }}",
+      "three/ldraw": "{{ $ldraw.RelPermalink }}"
+    }
+  }
+</script>
+<script src="{{ $3core.RelPermalink }}"></script>
+
+<script type="module">
+  import * as THREE from 'three';
+  import {LDrawLoader} from 'three/ldraw';
+
+  const scene     = new THREE.Scene();
+  const camera    = new THREE.PerspectiveCamera();
+  const renderer  = new THREE.WebGLRenderer({ alpha: true, antialias: true, canvas: document.getElementById("threejs") });
+  const loader    = new LDrawLoader();
+  const groupName = "model";
+
+  const elSegments = document.getElementById("segments-input");
+  const elLayers   = document.getElementById("layers-input");
+
+  initThree();
+  initEventListeners();
+  onInputChanged();
+
+  function initThree() {
+    scene.add(new THREE.AmbientLight(0xffffff, 0.6));
+
+    camera.fov    = 50;
+    camera.aspect = document.documentElement.clientWidth / document.documentElement.clientHeight;
+    camera.near   = 1;
+    camera.far    = 100000;
+    camera.updateProjectionMatrix();
+    camera.position.set(400, 300, 400);
+    camera.lookAt(0, 0, 0);
+
+    renderer.setClearColor(0x000000, 0);
+
+    const light = new THREE.DirectionalLight(0xffffff, 0.8);
+    light.position.set(200, 300, 100);
+    scene.add(light);
+
+    loader.setPartsLibraryPath("/ldraw/");
+    loader.smoothNormals = true;
+  }
+
+  function initEventListeners() {
+    window.addEventListener("resize", onWindowResized);
+    elLayers.addEventListener("input", onInputChanged);
+    elSegments.addEventListener("input", onInputChanged);
+    document.getElementById("download-button").addEventListener("click", onDownload);
+  }
+
+  var latestRefresh = 0;
+  function refresh() {
+    const thisRefresh = ++latestRefresh;
+
+    const file = getLDrawFile();
+    const blob = new Blob([file], { type: "text/plain" }); 
+    const url  = URL.createObjectURL(blob);
+
+    const oldGroup  = scene.getObjectByName(groupName);
+    scene.traverse((child) => {
+      if (child.name == groupName) scene.remove(child);
+    });
+
+    loader.load(url, (group) => {
+      URL.revokeObjectURL(url);
+      if (latestRefresh != thisRefresh) return;
+
+      const box = new THREE.Box3().setFromObject(group);
+      const center = new THREE.Vector3();
+      box.getCenter(center);
+
+      group.name       = groupName;
+      group.rotation.x = -Math.PI / 2;
+      group.position.sub(center);
+      scene.add(group);
+
+      resetViewOnGroup(group);
+    });
+  }
+
+  function resetViewOnGroup(group) {
+    const size = new THREE.Vector3();
+    new THREE.Box3().setFromObject(group).getSize(size);
+
+    const pixelRatio = window.devicePixelRatio;
+    const width  = Math.floor( document.documentElement.clientWidth  * pixelRatio );
+    const height = Math.floor( document.documentElement.clientHeight * pixelRatio );
+
+    camera.aspect   = width / height;
+    const fov       = camera.fov * (Math.PI / 180);
+    const distanceV = size.y / (2 * Math.tan(fov / 2));
+    const distanceH = size.x / (2 * Math.tan(fov / 2) * camera.aspect);
+    const distance  = Math.max(distanceV, distanceH);
+    camera.updateProjectionMatrix();
+    camera.position.set(distance, distance, distance);
+    camera.lookAt(0, 0, 0);
+
+    console.log(width + "/" + height + "/" + pixelRatio);
+    renderer.setSize(width, height, false);
+    renderer.render(scene, camera);
+  }
+
+  function getLDrawFile() {
+    const partNumber = "3004";
+    const partLength = 40; // in LDU
+    const partHeight = 24; // in LDU
+    const partRotate = Math.PI / 2;
+    const partColor  = 2;
+
+    const layers   = elLayers.valueAsNumber;
+    const segments = elSegments.valueAsNumber;
+    const segAngle = (2 * Math.PI) / segments;
+    const radius   = (partLength / 2.0) / Math.sin(Math.PI / segments);
+
+    let lines = [
+      "0 FILE circle.ldr",
+      "0 Author: Brick.Camp",
+      "0 Name: Brick Circle",
+      "0 !COLOUR Green CODE 2 VALUE #00852B EDGE #333333",
+    ];
+
+    if (segments < min_segments 
+     || segments > max_segments 
+     || layers   < min_layers 
+     || layers   > max_layers) return lines;
+
+    for (let layer = 0; layer < layers; layer++) {
+      const offset = (layer % 2 == 0) ? 0 : segAngle / 2.0;
+      for (let segment = 0; segment < segments; segment++) {
+        const angle = offset + segment * segAngle;
+        const x   = (Math.cos(angle) * radius).toFixed(2);
+        const y   = layer * partHeight;
+        const z   = (Math.sin(angle) * radius).toFixed(2);
+        const rot = angle + partRotate;
+        const cos = Math.cos(rot).toFixed(5);
+        const sin = Math.sin(rot).toFixed(5);
+        lines.push(`1 ${partColor} ${x} ${-y} ${z} ${cos} 0 ${-sin} 0 1 0 ${sin} 0 ${cos} ${partNumber}.dat`);
+      }  
+    }
+    return lines.join("\n");
+  }
+
+  var refreshTimeout;
+  function onInputChanged(e) {
+    if (enforcedNumberRanges()) return;
+    clearTimeout(refreshTimeout);
+    refreshTimeout = setTimeout(refresh, 100);
+  }
+
+  var resizeTimeout;
+  function onWindowResized() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      const group = scene.getObjectByName(groupName);
+      if (group) resetViewOnGroup(group);      
+    }, 100);
+  }
+
+  function onDownload() {
+    const file = getLDrawFile();
+    const blob = new Blob([file], { type: "text/plain" });
+    
+    const a = document.createElement("a");
+    a.href     = URL.createObjectURL(blob);
+    a.download = "brick-ring-" + elSegments.valueAsNumber + "x" + elLayers.valueAsNumber + ".ldr";
+    a.click();
+  }
+
+  function enforcedNumberRanges() {
+    var result = false;
+    if (elLayers.valueAsNumber < 1) {
+      elLayers.value = 1; 
+      result = true;
+    } 
+    if (elLayers.valueAsNumber > max_layers){
+      elLayers.value = max_layers; 
+      result = true;
+    } 
+    if (elSegments.valueAsNumber < 1){
+      elSegments.value = 1; 
+      result = true;
+    }
+    if (elSegments.valueAsNumber > max_segments){
+      elSegments.value = max_segments; 
+      result = true;
+    } 
+    return result;
+  }
+</script>
+
+{{ end }}

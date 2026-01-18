@@ -7,8 +7,16 @@
           <img src="/icon.svg" class="d-block mx-auto mb-1" width=40 height=40 aria-hidden="true">
         </a>
 
-        <div class="navbar">
-          <a class="nav-link" href="/tools/length-converter">Unit-Converter</a>
+        <div class="navbar me-auto">
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Tools
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/tools/length-converter">Convert Length Units</a></li>
+              <li><a class="dropdown-item" href="/tools/brick-ring-generator">Generate Brick Rings</a></li>
+            </ul>
+          </div>
         </div>
         
         <button id="darkmode-toggle" class="btn btn-outline-success border-0 shadow-none" title="Toggle Dark Mode" type="button">
