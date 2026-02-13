@@ -11,6 +11,7 @@ tags  = [
   'angle-studtilt-90',
   'angle-studturn',
   'partcount-total-9',
+  'shape-star-4',
 ]
 +++
 
