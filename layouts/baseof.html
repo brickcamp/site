@@ -5,8 +5,8 @@
 
 <header>
   {{ partial "navigation/main" . }}
-  {{ block "subnavigation" . }}{{ end }}
 </header>
+{{ block "subnavigation" . }}{{ end }}
 
 <main class="my-3">
   {{ block "main" . }}{{ end }}
