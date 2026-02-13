@@ -7,10 +7,6 @@ enableGitInfo = true
   [build.buildStats]
     enable = true
 
-[caches]
-  [caches.getresource]
-    dir = ':resourceDir/_req'
-
 [imaging]
   anchor = 'Center'
   bgColor = '#ffffff'
