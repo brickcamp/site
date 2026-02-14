@@ -12,6 +12,10 @@ body {
   --bs-btn-hover-border-color: #6c757d;
 }
 
+.dropdown-menu {
+  --bs-dropdown-zindex: 1021;
+}
+
 .dropdown-item .no-icon {
   display: inline-block;
   width: 25px;
