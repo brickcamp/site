@@ -7,6 +7,24 @@ enableGitInfo = true
   [build.buildStats]
     enable = true
 
+[[cascade]]
+  [cascade.sitemap]
+    disable = true
+  [cascade.target]
+    kind = '*'
+    path = '{/data,/data/**,/parts,/parts/**}'
+[[cascade]]
+  [cascade.build]
+    render = 'never'
+  [cascade.target]
+    kind = '{taxonomy,term}'
+    path = '{/parts,/size,/size/**,/tags,/tags/**,/uses,/uses/**}'
+[[cascade]]
+  outputs = ["csv"]
+  [cascade.target]
+    kind = "{term}"
+    path = '/parts/**'
+
 [imaging]
   anchor = 'Center'
   bgColor = '#ffffff'
