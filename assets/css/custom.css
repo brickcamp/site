@@ -30,6 +30,36 @@ body {
   filter: grayscale(100%) !important;
 }
 
+.link-preview .bg-image {
+  min-height: 150px;
+  max-width: 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-preview .bg-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--img-url);
+  background-size: cover;
+  background-position: center;
+  background-color: var(--img-main-color);
+  filter: blur(5px);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+.link-preview .bg-image > div {
+  position: absolute;
+  inset: 0;
+  background-image: var(--img-url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  z-index: 1;
+}
+
 @media (max-width: 575.98px) {
   #entries .card {
     --bs-card-cap-padding-x: 0.5rem;
