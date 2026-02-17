@@ -19,9 +19,7 @@ tags  = [
     title="45°の組み方(誤差ほぼ0)"
     url="https://x.com/taiyolego/status/1927322805026038122"
 >}}
-DeRaさんの委託で考えてみました(写真by DeRa)
-
-↓リプに計算過程あります
-
+DeRaさんの委託で考えてみました(写真by DeRa)  
+↓リプに計算過程あります  
 #LEGOTIPS #lego #レゴ
 {{< /linkbox >}}
