@@ -12,7 +12,7 @@
         {{ $naming := resources.Copy (print $.RelPermalink "__image-min.webp") $minify -}}
         {{ $triggerSaving := $naming.RelPermalink -}}
         {{/* ------------------------------------- */}}
-        <img src="{{ .RelPermalink }}" class="card-img dark-filter" alt="image of the building technique">
+        <img src="{{ .RelPermalink }}" class="card-img dark-filter ratio ratio-1x1" alt="image of the building technique">
         {{ end }}
       </div>
     </div>
@@ -81,7 +81,7 @@
             <div class="col">
               <a href="/" title="{{ .LinkTitle }}" data-bs-toggle="tooltip">
                 <img  alt="{{ .LinkTitle }}"
-                      class="card-img-top dark-filter" 
+                      class="card-img-top dark-filter ratio ratio-1x1" 
                       src="{{ with .Resources.GetMatch $imagePattern }}{{ .RelPermalink }}{{ end }}" 
                       title="{{ .LinkTitle }}">
               </a>
