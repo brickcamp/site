@@ -18,3 +18,10 @@ tags  = [
     title="studio上でこれちゃんとスナップするんだ！"
     url="https://x.com/taiyolego/status/2021800763320938562"
 />}}
+
+{{< linkbox
+    author="B Und"
+    image="/images/links/sliding-plate-and-towball-clipped.jpg"
+    title="Amazon.fr : Lego Technic Vaisseaux"
+    url="https://de.pinterest.com/pin/819303357189461600/"
+/>}}

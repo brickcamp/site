@@ -17,7 +17,7 @@ tags  = [
 
 {{< linkbox
     author="B Und"
-    image="link_01.jpg"
+    image="/images/links/sliding-plate-and-towball-clipped.jpg"
     title="Amazon.fr : Lego Technic Vaisseaux"
     url="https://de.pinterest.com/pin/819303357189461600/"
 />}}
