@@ -47,7 +47,7 @@
 
 {{/* set default values */}}
 {{ $title       = $title       | default "Untitled" -}}
-{{ $date        = $date        | default (dateFormat "2023-10-15" .Page.Lastmod) -}}
+{{ $date        = $date        | default "Undated" -}}
 {{ $author      = $author      | default "Unknown author" -}}
 {{ $publisher   = $publisher   | default (strings.TrimPrefix "www." $parsedURL.Hostname) -}}
 {{ $description = $description | strings.TrimSpace | .Page.RenderString -}}
