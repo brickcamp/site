@@ -18,12 +18,12 @@ enableGitInfo = true
     render = 'never'
   [cascade.target]
     kind = '{taxonomy,term}'
-    path = '{/parts,/size,/size/**,/tags,/tags/**,/uses,/uses/**}'
+    path = '{/size,/size/**,/tags,/tags/**,/uses,/uses/**}'
 [[cascade]]
   outputs = ["csv"]
   [cascade.target]
-    kind = "{term}"
-    path = '/parts/**'
+    kind = "{taxonomy,term}"
+    path = '{/parts,/parts/**}'
 
 [imaging]
   anchor = 'Center'
