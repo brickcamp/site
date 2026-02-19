@@ -5,11 +5,11 @@ date  = '2019-04-22'
 url     = '/entry/hinge-swivel-1x4-bent/'
 aliases = ['/tech/hinge-swivel-1x4-bent']
 
-parts = ['73983', '3830', '3831']
+parts = ['73983', '3023']
 size  = ['5s', '2s', '1p']
 tags  = [
   'angle-studturn-37',
-  'partcount-total-1',
+  'partcount-total-3',
 ]
 +++
 
