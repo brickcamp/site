@@ -25,10 +25,10 @@
 <div class="bg-body-tertiary sticky-top">
   <div class="container position-relative">
     <nav id="filter-nav" class="d-flex flex-row flex-nowrap overflow-x-auto w-100">
-      {{- partial "navigation/dropdown.html" (dict "id" "base"  "items" ($dropdowns.Get "base")) -}}
-      {{- partial "navigation/dropdown.html" (dict "id" "type"  "items" ($dropdowns.Get "type")) -}}
-      {{- partial "navigation/dropdown.html" (dict "id" "value" "items" ($dropdowns.Get "value")) -}}
-      {{- partial "navigation/dropdown.html" (dict "id" "sort"  "items" ($dropdowns.Get "sort") "class" "ms-auto" ) -}}
+      {{- partial "nav/dropdown.html" (dict "id" "base"  "items" ($dropdowns.Get "base")) -}}
+      {{- partial "nav/dropdown.html" (dict "id" "type"  "items" ($dropdowns.Get "type")) -}}
+      {{- partial "nav/dropdown.html" (dict "id" "value" "items" ($dropdowns.Get "value")) -}}
+      {{- partial "nav/dropdown.html" (dict "id" "sort"  "items" ($dropdowns.Get "sort") "class" "ms-auto" ) -}}
     </nav>
   </div>
 </div>

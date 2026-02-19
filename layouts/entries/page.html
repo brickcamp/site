@@ -96,7 +96,7 @@
         {{ range . -}}
         {{ if not (or (hasPrefix .Path "/tags/partcount-") (hasPrefix .Path "/tags/warning-" )) }}
         <div class="col">
-          {{ partial "card/tag.html" . }}
+          {{ partial "tags/card.html" . }}
         </div>
         {{ end }}
         {{- end }}

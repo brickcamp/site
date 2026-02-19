@@ -125,7 +125,7 @@ async function loadEntryFiltering() {
 }
 
 async function loadCSV(url) {
-  const response = await fetch("/data/" + url + "/index.csv");
+  const response = await fetch("/data" + url + "/index.csv");
   const text = await response.text();
   return text
     .trim()

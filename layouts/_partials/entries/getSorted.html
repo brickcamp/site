@@ -1,0 +1,23 @@
+{{/* Returns all entries sorted by a field. */}}
+{{- $field  := index . "field" -}}
+{{- $order  := index . "order" | default "asc" -}}
+{{- $result := slice -}}
+
+{{/* Calculated field */}}
+{{- if partial "entries/isCalculatedField" $field -}}
+  {{- $map := slice -}}
+  {{- range partial "entries/getAll" -}}
+    {{- $vals := partial "entries/getCalculatedFields" . -}}
+    {{- $map = $map | append (dict "key" . "val" (index $vals $field)) -}}
+  {{- end -}}
+  {{- range sort $map "val" $order -}}
+    {{- $result = $result | append .key -}}
+  {{- end -}}
+
+{{/* Regular field */}}
+{{- else -}}
+  {{- $entries := partial "entries/getAll" -}}
+  {{- $result = sort $entries $field $order -}}
+{{- end -}}
+
+{{- return $result -}}

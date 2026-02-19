@@ -1,0 +1,14 @@
+{{/* Converts the given length to LDraw units */}}
+{{- $units  := site.Data.entries.units.lengths -}}
+{{- $length := . -}}
+{{- $result := 0 -}}
+
+{{- $number := int   (index (findRE `^\d+`       $length 1) 0) -}}
+{{- $suffix := lower (index (findRE `[a-zA-Z]+$` $length 1) 0) -}}
+{{- $unit   := index $units $suffix -}}
+{{- if eq $unit nil -}}
+  {{- errorf "Invalid unit in '%s'" $length -}}
+{{- end -}}
+
+{{- $result = mul $unit.factor $number -}}
+{{- return $result -}}

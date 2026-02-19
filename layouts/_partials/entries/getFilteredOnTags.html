@@ -1,0 +1,47 @@
+{{/* Returns all entries with fitting tags. */}}
+{{- $hasBase   := index . "base"      | default false -}}
+{{- $hasType   := index . "type"      | default false -}}
+{{- $hasValue  := index . "value"     | default false -}}
+{{- $notTypes  := index . "notTypes"  | default false -}}
+{{- $notValues := index . "notValues" | default false -}}
+{{- $result    := slice -}}
+
+{{- range $rawTag, $weightedPages := site.Taxonomies.tags -}}
+  {{- $tag := partial "tags/getSegments" $rawTag -}}
+
+  {{- with $hasBase -}}
+    {{- if ne . $tag.base -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with $hasType -}}
+    {{- if ne . $tag.type -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with $hasValue -}}
+    {{- if ne . $tag.value -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with $notTypes -}}
+    {{- if in . $tag.type -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with $notValues -}}
+    {{- if in . $tag.value -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- range $weightedPages }}
+    {{- $result = $result | append .Page -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return uniq $result -}}

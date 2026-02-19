@@ -7,7 +7,7 @@
 {{ $unit  := false -}}
 {{ $badge := false -}}
 
-{{ $segments := partial "func/getTagSegments" .Path -}}
+{{ $segments := partial "tags/getSegments" .Path -}}
 {{ if eq $segments.base "partcount" -}}
   {{ $title = "Partcount" -}}
   {{ $value = $segments.value -}}

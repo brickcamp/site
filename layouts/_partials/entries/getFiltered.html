@@ -1,0 +1,13 @@
+{{/* Returns all entries fitting the provided filter */}}
+{{- $filter := . -}}
+{{- $result := slice -}}
+
+{{- if eq $filter.from "tags" -}}
+  {{- $result = partial "entries/getFilteredOnTags" $filter -}}
+{{- end -}}
+
+{{- if eq $filter.from "size" -}}
+  {{- $result = partial "entries/getFilteredOnSize" $filter -}}
+{{- end -}}
+
+{{- return $result -}}

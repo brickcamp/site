@@ -1,0 +1,13 @@
+{{/* Splits a tag into its three segments.
+     Sets default values on missing segments. 
+     Also accepts .Path of a term page as input */}}
+{{- $tag := strings.TrimPrefix "/tags/" . -}}
+
+{{- $split := split $tag "-" -}}
+{{- $base  := index $split 0 -}}
+{{- $type  := index $split 1 | default "else" -}}
+{{- $value := index $split 2 | default 0 -}}
+
+{{- return dict "base"  $base 
+                "type"  $type 
+                "value" $value -}}

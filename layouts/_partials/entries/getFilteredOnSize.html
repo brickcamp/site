@@ -1,0 +1,25 @@
+{{/* Returns all entries with the provided size types. */}}
+{{- $hasType  := index . "type"     | default false  -}}
+{{- $notTypes := index . "notTypes" | default false  -}}
+{{- $result   := slice -}}
+
+{{- range partial "entries/getAll" -}}
+  {{- $fields   := partial "entries/getCalculatedFields" . -}}
+  {{- $sizeType := index $fields "_sizeType" | default "" -}}
+
+  {{- with $hasType -}}
+    {{- if ne . $sizeType -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with $notTypes -}}
+    {{- if in . $sizeType -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $result = $result | append . -}}
+{{- end -}}
+
+{{- return $result -}}

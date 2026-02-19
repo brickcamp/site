@@ -1,0 +1,19 @@
+{{/* Returns the smallest size type fitting the given dimensions */}}
+{{- $types  := site.Data.entries.filters.size.types -}}
+{{- $sizeX  := index . 0 -}}
+{{- $sizeY  := index . 1 -}}
+{{- $sizeZ  := index . 2 -}}
+{{- $result := slice -}}
+
+{{- $lduX := partial "units/getLDUs" $sizeX -}}
+{{- $lduY := partial "units/getLDUs" $sizeY -}}
+{{- $lduZ := partial "units/getLDUs" $sizeZ -}}
+{{- $lduMax := math.Max $lduX $lduY $lduZ -}}
+
+{{- range $types | collections.Reverse -}}
+  {{- if ge .ldus $lduMax -}}
+    {{- $result = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $result -}}

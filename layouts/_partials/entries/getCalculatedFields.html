@@ -1,0 +1,57 @@
+{{/* Returns calculated values of an entry.
+     The results are cached for repeated use. */}}
+{{- $entry  := . -}}
+{{- $result := dict -}}
+
+{{/* Try reading from cache */}}
+{{- with $entry.Store.Get "_values" -}}
+  {{- $result = . -}}
+
+{{/* Else calculate: */}}
+{{- else -}}
+  {{/** size **/}}
+  {{- $sizeX    := 0 -}}
+  {{- $sizeY    := 0 -}}
+  {{- $sizeZ    := 0 -}}
+  {{- $sizeType := "" -}}
+  {{- with $entry.Param "size" -}}
+    {{- $sizeX    = partial "units/getLDUs" (index . 0) -}}
+    {{- $sizeY    = partial "units/getLDUs" (index . 1) -}}
+    {{- $sizeZ    = partial "units/getLDUs" (index . 2) -}}
+    {{- $sizeType = index (partial "tags/getSizeType" .) "slug" -}}
+  {{- end -}}
+  {{- $sizeAsc := sort (slice $sizeX $sizeY $sizeZ) "value" "asc" -}}
+  {{- $sizeMin := index $sizeAsc 0 -}}
+  {{- $sizeMed := index $sizeAsc 1 -}}
+  {{- $sizeMax := index $sizeAsc 2 -}}
+  {{- $sizeVol := mul $sizeX $sizeY $sizeZ -}}
+  {{- $sizeArea := mul $sizeMax $sizeMed -}}
+
+  {{/** partcounts **/}}
+  {{- $parts := slice -}}
+  {{- range $entry.Param "tags" -}}
+    {{- if hasPrefix . "partcount-total-" -}}
+      {{- $parts = $parts | append (index (split . "-") 2) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $partsMin := math.Min $parts -}}
+  {{- $partsMax := math.Max $parts -}}
+
+  {{/** save to cache **/}}
+  {{- $result = dict 
+      "_sizeX"    $sizeX
+      "_sizeY"    $sizeY
+      "_sizeZ"    $sizeZ
+      "_sizeMin"  $sizeMin
+      "_sizeMed"  $sizeMed
+      "_sizeMax"  $sizeMax
+      "_sizeVol"  $sizeVol
+      "_sizeArea" $sizeArea
+      "_sizeType" $sizeType
+      "_partsMin" $partsMin
+      "_partsMax" $partsMax
+  -}}
+  {{- $entry.Store.Set "_values" $result -}}
+{{- end -}}
+
+{{- return $result -}}
