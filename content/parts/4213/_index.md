@@ -1,5 +1,5 @@
 +++
-title   = 'Hinge Vehicle Roof 4 x 4'
+title   = 'Hinge Plate 4 x 4 [Vehicle Roof]'
 aliases = [
   '/parts/30001',
 ]
