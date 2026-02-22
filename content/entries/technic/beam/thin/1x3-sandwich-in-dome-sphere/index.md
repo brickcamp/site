@@ -2,7 +2,7 @@
 title = 'Dome Sphere'
 date  = '2019-01-31'
 
-url     = '/tech/dome-on-technic-beam-sphere/'
+url     = '/entry/dome-on-technic-beam-sphere/'
 aliases = ['/tech/dome-on-technic-beam-3x0.5-sphere']
 
 parts = ['86500', '3623', '6632']
