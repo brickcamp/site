@@ -1,0 +1,11 @@
+{{ $css := resources.Match "css/**.css" | resources.Concat "main.css" | css.PostCSS -}}
+{{ with $css -}}
+  {{ if hugo.IsDevelopment -}}
+    {{ $version := md5 hugo.BuildDate -}}
+    <link rel="stylesheet" href="{{ .RelPermalink }}?v={{ $version }}">
+  {{ else -}}
+    {{ with . | minify | fingerprint | resources.PostProcess -}}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}

@@ -4,9 +4,4 @@
   </button>
 </footer>
 
-{{ with resources.Get "js/bootstrap.bundle.min.js" -}}
-  <script src="{{ .RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ .Data.Integrity }}"{{ end }}></script>
-{{- end }}
-{{ with resources.Get "js/custom.js" -}}
-  <script src="{{ .RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ .Data.Integrity }}"{{ end }}></script>
-{{- end }}
+{{ partial "assets/renderFooterJS" }}

@@ -1,0 +1,13 @@
+{{ $entry := . }}
+
+<div class="card mb-3">
+  {{ with $entry.Resources.GetMatch "image.*" -}}
+    {{/* generate minified image for entry list */}}
+    {{ $minify := .Process "fill 250x250 webp" -}}
+    {{ $naming := resources.Copy (print $.RelPermalink "__image-min.webp") $minify -}}
+    {{ $triggerSaving := $naming.RelPermalink -}}
+
+    {{/* render original image for single entry */}}
+    <img src="{{ .RelPermalink }}" class="card-img dark-filter ratio ratio-1x1" alt="image of the building technique">
+  {{ end }}
+</div>

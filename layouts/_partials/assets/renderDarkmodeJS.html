@@ -1,0 +1,4 @@
+{{- $js := resources.Get "js/_darkmode.js" | minify }}
+<script>
+  {{- $js.Content | safe.JS -}}
+</script>

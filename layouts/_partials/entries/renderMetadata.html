@@ -1,0 +1,91 @@
+{{ $entry := . }}
+
+<div id="entry-metadata" class="card mb-2">
+  <ul class="list-group list-group-flush">
+
+    {{ with $entry.Date -}}
+    <li class="list-group-item d-flex">
+      <b>Added:</b>
+      <span>{{ .Format site.Params.dateFormat }}</span>
+    </li>
+    {{- end }}
+
+    {{- with $entry.GitInfo }}
+    <li class="list-group-item d-flex">
+      <b>Last Update:</b> 
+      <span>
+        {{ .CommitDate.Format site.Params.dateFormat }}
+        <small><a  href="https://github.com/brickcamp/site/commit/{{ .Hash }}" 
+          title="Open commit {{ .AbbreviatedHash }} on GitHub">
+          [{{- .AbbreviatedHash -}}]
+        </a></small>
+      </span>
+    </li>
+    {{- end }}
+
+    {{- with $entry.Resources.GetMatch "model.ldr" }}
+    <li class="list-group-item d-flex">
+      <b>LDraw File:</b>
+      <a  href="{{ .RelPermalink }}"
+          download="{{ path.BaseName $.Slug }}.ldr">
+        Download
+      </a>
+    </li>
+    {{- end }}
+
+    {{- with $entry.Params.size }}
+    <li class="list-group-item d-flex">
+      <b>Size:</b>
+      <span>{{ index . 0 }} &times; {{ index . 1 }} &times; {{ index . 2 }}</span>
+    </li>
+    {{- end }}
+
+    {{- with where ($entry.GetTerms "tags") "Path" "like" `^\/tags\/partcount\-.*` -}}
+    <li class="list-group-item d-flex">
+      <b>Parts:</b>
+      {{- range where . "Path" "like" `^\/tags\/partcount\-total-.*` -}}
+        <span>{{ index (findRE `\d+` .LinkTitle 1) 0 }}</span>
+      {{- end }}
+      {{- with where . "Path" "like" `^\/tags\/partcount\-segment-.*` }}
+        <span class="ps-1"> (
+        {{- range . -}}
+          {{ index (findRE `\d+` .LinkTitle 1) 0 }}
+        {{ end }}
+        per segment)
+        </span>
+      {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+
+  <div class="p-1">
+    <div class="row row-cols-4 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 g-1 justify-content-center">
+      {{ with .GetTerms "parts" -}}
+      {{ range . -}}
+      {{ $imagePattern := "image.*" -}}
+      <div class="col">
+        <a href="/" title="{{ .LinkTitle }}" data-bs-toggle="tooltip">
+          <img  alt="{{ .LinkTitle }}"
+                class="card-img-top dark-filter ratio ratio-1x1" 
+                src="{{ with .Resources.GetMatch $imagePattern }}{{ .RelPermalink }}{{ end }}" 
+                title="{{ .LinkTitle }}">
+        </a>
+      </div>
+      {{- end }}
+      {{- end }}
+    </div>                  
+  </div>
+
+</div>
+
+<div class="row row-cols-4 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 g-1 mb-2 justify-content-center">
+  {{ with $entry.GetTerms "tags" -}}
+  {{ range . -}}
+  {{ if not (or (hasPrefix .Path "/tags/partcount-") (hasPrefix .Path "/tags/warning-" )) }}
+  <div class="col">
+    {{ partial "tags/renderCard.html" . }}
+  </div>
+  {{ end }}
+  {{- end }}
+  {{- end }}
+</div> 

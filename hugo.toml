@@ -24,6 +24,11 @@ enableGitInfo = true
   [cascade.target]
     kind = "{taxonomy,term}"
     path = '{/parts,/parts/**}'
+[[cascade]]
+  [cascade.build]
+    render = 'never'
+  [cascade.target]
+    kind = "section"
 
 [imaging]
   anchor = 'Center'
