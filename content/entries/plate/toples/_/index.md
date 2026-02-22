@@ -20,6 +20,10 @@ ToPLES: Tiles or Plates Located between Enough Studs
     author="Didier Enjary"
     date="2007-02-11"
     image="/images/links/advanced-building-techniques-guide.png"
+    page="16"
     title="The Unofficial LEGO Advanced Building Techniques Guide"
     url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"
-/>}}
+>}}
+The original pony-ear technique consists in placing a 1x2 plate vertically between the studs of a 2x4 plates. 
+This building is used in classic official castle sets to represent ears of brick built horses.
+{{</ linkbox >}}

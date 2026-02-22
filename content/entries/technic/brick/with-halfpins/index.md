@@ -17,6 +17,10 @@ tags  = [
     author="Didier Enjary"
     date="2007-02-11"
     image="/images/links/advanced-building-techniques-guide.png"
+    page="7"
     title="The Unofficial LEGO Advanced Building Techniques Guide"
     url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"
-/>}}
+>}}
+Technic 1x1 brick and the half stud pin come rapidly to an equivalent (and unavailable) brick 1x1 with one stud on the side. 
+In fact, every Technic brick equipped with half pin is a potential SNOT part.
+{{</ linkbox >}}

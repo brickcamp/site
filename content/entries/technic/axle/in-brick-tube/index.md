@@ -17,6 +17,9 @@ tags  = [
     author="Didier Enjary"
     date="2007-02-11"
     image="/images/links/advanced-building-techniques-guide.png"
+    page="14"
     title="The Unofficial LEGO Advanced Building Techniques Guide"
     url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"
-/>}}
+>}}
+This building work only for bricks bigger than 1xn bricks.
+{{</ linkbox >}}

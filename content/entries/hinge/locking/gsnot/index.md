@@ -18,6 +18,9 @@ tags  = [
     author="Didier Enjary"
     date="2007-02-11"
     image="/images/links/advanced-building-techniques-guide.png"
+    page="17"
     title="The Unofficial LEGO Advanced Building Techniques Guide"
     url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"
-/>}}
+>}}
+The G in GSNOT is for Gary (McIntire), the inventor of this building. At least, click hinge bricks have finally find a use.
+{{</ linkbox >}}

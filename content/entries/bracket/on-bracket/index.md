@@ -19,6 +19,10 @@ tags  = [
     author="Didier Enjary"
     date="2007-02-11"
     image="/images/links/advanced-building-techniques-guide.png"
+    page="10"
     title="The Unofficial LEGO Advanced Building Techniques Guide"
     url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"
-/>}}
+>}}
+SNOT 180 is sometimes as simple as combining two SNOT: 
+Combining two stud-out SNOT: these examples are 24 LDU high (1 brick)
+{{</ linkbox >}}

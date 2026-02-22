@@ -17,6 +17,9 @@ tags  = [
     author="Didier Enjary"
     date="2007-02-11"
     image="/images/links/advanced-building-techniques-guide.png"
+    page="19"
     title="The Unofficial LEGO Advanced Building Techniques Guide"
     url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"
-/>}}
+>}}
+Stud-to-tube trick: Rather than stacking the underside tubes between the studs in a classical way, you stack them directly on the studs.
+{{</ linkbox >}}

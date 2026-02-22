@@ -19,6 +19,9 @@ tags  = [
     author="Didier Enjary"
     date="2007-02-11"
     image="/images/links/advanced-building-techniques-guide.png"
+    page="35"
     title="The Unofficial LEGO Advanced Building Techniques Guide"
     url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"
-/>}}
+>}}
+Thank to moulding tolerances, very big radius curved walls can be obtained by stressing a bit walls made of 1x2 parts.
+{{</ linkbox >}}

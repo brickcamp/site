@@ -5,6 +5,7 @@
 {{ $author      := .Get "author"      -}}
 {{ $publisher   := .Get "publisher"   -}}
 {{ $image       := .Get "image"       -}}
+{{ $page        := .Get "page"        -}}
 {{ $description := .Inner             -}}
 {{/* ******************************* */}}
 
@@ -51,6 +52,11 @@
 {{ $author      = $author      | default "Unknown author" -}}
 {{ $publisher   = $publisher   | default (strings.TrimPrefix "www." $parsedURL.Hostname) -}}
 {{ $description = $description | strings.TrimSpace | .Page.RenderString -}}
+
+{{/* on PDF links, add page anchor if given */}}
+{{ with $page -}}
+  {{ $url = print $url "#page=" $page -}}
+{{ end -}}
 
 {{/* render link preview */}}
 <div class="card mb-3 link-preview">

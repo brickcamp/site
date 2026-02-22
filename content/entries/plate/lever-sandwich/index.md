@@ -17,6 +17,9 @@ tags  = [
     author="Didier Enjary"
     date="2007-02-11"
     image="/images/links/advanced-building-techniques-guide.png"
+    page="15"
     title="The Unofficial LEGO Advanced Building Techniques Guide"
     url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"
-/>}}
+>}}
+Plate inversion with levers (control stick) is the thinnest SNOT 180 building with a 16 LDU height.
+{{</ linkbox >}}

@@ -17,6 +17,10 @@ tags  = [
     author="Didier Enjary"
     date="2007-02-11"
     image="/images/links/advanced-building-techniques-guide.png"
+    page="19"
     title="The Unofficial LEGO Advanced Building Techniques Guide"
     url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"
-/>}}
+>}}
+In most Technic bricks, axle holes are placed, on the side, between the studs.
+That's not the case in the two AZMEP Technic bricks where they are aligned, allowing AZMEP buildings.
+{{</ linkbox >}}

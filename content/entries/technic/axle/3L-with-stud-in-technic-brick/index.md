@@ -18,6 +18,10 @@ tags  = [
     author="Didier Enjary"
     date="2007-02-11"
     image="/images/links/advanced-building-techniques-guide.png"
+    page="7"
     title="The Unofficial LEGO Advanced Building Techniques Guide"
     url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"
-/>}}
+>}}
+Another part allow a similar building, which is the Technic axle 3 with stud 
+but you will notice a slight offset due to the axle lip.
+{{</ linkbox >}}

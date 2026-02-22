@@ -19,6 +19,10 @@ tags  = [
     author="Didier Enjary"
     date="2007-02-11"
     image="/images/links/advanced-building-techniques-guide.png"
+    page="8"
     title="The Unofficial LEGO Advanced Building Techniques Guide"
     url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"
-/>}}
+>}}
+1xn Technic bricks allow stud-in SNOT with a lateral 10 LDU (half-stud) offset but, due to overlapping effect, only with smaller parts. 
+The 1x1 Technic brick and 1x2 Technic brick with 2 holes (AZMEP Technic bricks) are noticeable exceptions.
+{{</ linkbox >}}

@@ -17,6 +17,10 @@ tags  = [
     author="Didier Enjary"
     date="2007-02-11"
     image="/images/links/advanced-building-techniques-guide.png"
+    page="17"
     title="The Unofficial LEGO Advanced Building Techniques Guide"
     url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"
-/>}}
+>}}
+DSNOT is based on the hinge top part.
+DSNOT term has been coined by Jon Palmer and stands for Didier SNOT.
+{{</ linkbox >}}
