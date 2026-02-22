@@ -13,7 +13,7 @@ tags  = [
 +++
 
 {{< linkbox
-    author="Tim Gould"
+    author="Timothy Gould"
     date="2007-05-23"
     image="link_01.jpg"
     title="legsnot.png"

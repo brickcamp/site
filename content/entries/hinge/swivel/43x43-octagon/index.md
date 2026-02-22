@@ -15,7 +15,7 @@ tags  = [
 +++
 
 {{< linkbox
-    author="Tim Gould"
+    author="Timothy Gould"
     date="2013-11-27"
     image="link_01.jpg"
     title="Because MATHS"
