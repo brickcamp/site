@@ -15,6 +15,14 @@ tags  = [
 +++
 
 {{< linkbox
+    author="ea-the-smile"
+    date="2004-07-31"
+    image="link_02.jpg"
+    title="misc04.jpg"
+    url="https://brickshelf.com/cgi-bin/gallery.php?i=851420"
+/>}}
+
+{{< linkbox
     author="Raymond Soh"
     date="2018-07-21"
     image="link_01.jpg"
