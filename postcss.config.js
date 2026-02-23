@@ -1,10 +1,15 @@
-import { purgeCSSPlugin } from "@fullhuman/postcss-purgecss";
+import purgeCSSPlugin from "@fullhuman/postcss-purgecss";
+import autoprefixer from "autoprefixer";
 
 const purgecss = purgeCSSPlugin({
   content: ["./hugo_stats.json"],
   defaultExtractor: (content) => {
     const els = JSON.parse(content).htmlElements;
-    return [...(els.tags || []), ...(els.classes || []), ...(els.ids || [])];
+    return [
+      ...(els.tags || []),
+      ...(els.classes || []),
+      ...(els.ids || [])
+    ];
   },
   safelist: {
     deep: [/dropdown-menu$/, /hidden/],
@@ -14,6 +19,7 @@ const purgecss = purgeCSSPlugin({
 
 export default {
   plugins: [
-    ...(process.env.HUGO_ENVIRONMENT === "production" ? [purgecss] : []),
+    autoprefixer,
+    process.env.HUGO_ENVIRONMENT === "production" ? purgecss : false,
   ],
 };
