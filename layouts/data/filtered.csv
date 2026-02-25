@@ -1,6 +1,8 @@
 {{- $entries := partial "entries/getFiltered" .Params.filter -}}
 
 {{- range sort $entries -}}
-  {{- $line := print .RelPermalink ",'" .Title "'" -}}
-{{ $line }}
-{{ end -}}
+  {{- $values   := partial "entries/getCalculatedFields" . -}}
+  {{- $sizeType := index $values "_sizeType" -}}
+  {{- $line := print .RelPermalink ",'" .Title "'," $sizeType -}}
+{{ printf "%s\n" $line }}
+{{- end -}}

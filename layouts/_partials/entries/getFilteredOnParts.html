@@ -1,0 +1,11 @@
+{{/* Returns all entries that have at least one associated part. */}}
+{{- $result := slice -}}
+
+{{- range $term, $weightedPages := site.Taxonomies.parts -}}
+  {{- range $weightedPages }}
+    {{- $result = $result | append .Page -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return uniq $result -}}
+
