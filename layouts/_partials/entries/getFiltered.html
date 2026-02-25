@@ -10,4 +10,8 @@
   {{- $result = partial "entries/getFilteredOnSize" $filter -}}
 {{- end -}}
 
+{{- if eq $filter.from "parts" -}}
+  {{- $result = partial "entries/getFilteredOnParts" $filter -}}
+{{- end -}}
+
 {{- return $result -}}

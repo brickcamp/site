@@ -1,10 +1,13 @@
-var base, type, value, sort;
+var base, type, value, size, sort, query;
+var cachedEntries = [];
 const basesWithoutTypes  = ["__any", "part"];
 const basesWithoutValues = ["__any", "part", "repeat", "size"];
 const typesWithoutValues = ["ellipse", "circle", "sphere", "toroid"];
 
 document.addEventListener("DOMContentLoaded", () => {
   initFilterDropdowns();
+  initScopeTabs();
+  initSearchInput();
   refresh();
 });
 
@@ -18,6 +21,8 @@ function initQueryParams() {
   type  = params.get("type")  || "__any";
   value = params.get("value") || "__any";
   sort  = params.get("sort")  || "date-desc";
+  size  = params.get("size")  || "__any";
+  query = params.get("q")     || "";
   cleanupQueryParams();
 }
 
@@ -46,6 +51,44 @@ function initFilterDropdowns() {
   }));
 }
 
+function initScopeTabs() {
+  const tabs = document.querySelectorAll("#scope-tabs [data-base]");
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const newBase = tab.dataset.base;
+      if (!newBase) return;
+      base  = newBase;
+      type  = "__any";
+      value = "__any";
+      changeQueryParams();
+    });
+
+    tab.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        tab.click();
+      }
+    });
+  });
+}
+
+function initSearchInput() {
+  const input = document.getElementById("search-input");
+  if (!input) {
+    return;
+  }
+  input.value = query || "";
+  input.addEventListener("input", (e) => {
+    query = e.target.value || "";
+    applySearchFilterAndRender();
+  });
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+    }
+  });
+}
+
 function changeQueryParams() {
   cleanupQueryParams();
 
@@ -56,6 +99,7 @@ function changeQueryParams() {
   type  == "__any"     ? params.delete("type")  : params.set("type", type);
   value == "__any"     ? params.delete("value") : params.set("value", value);
   sort  == "date-desc" ? params.delete("sort")  : params.set("sort", sort);
+  size  == "__any"     ? params.delete("size")  : params.set("size", size);
   const after = params.toString();
 
   if (before != after) {
@@ -67,15 +111,16 @@ function changeQueryParams() {
 function refresh() {
   initQueryParams();
   refreshFilterDropdowns();
+  refreshTabs();
   refreshEntries();
 }
 
 function refreshFilterDropdowns() {
   const dropdowns = document.querySelectorAll("#filter-nav .dropdown");
   const selected = {
-    "nav-base": base,
     "nav-type": type,
     "nav-value": value,
+    "nav-size": size,
     "nav-sort": sort,
   }
 
@@ -98,18 +143,53 @@ function refreshFilterDropdowns() {
   });
 }
 
+function refreshTabs() {
+  const tabs = document.querySelectorAll("#scope-tabs [data-base]");
+  tabs.forEach(tab => {
+    const tabBase = tab.dataset.base;
+    if (!tabBase) return;
+    const isActive = (tabBase === base) || (tabBase === "__any" && base === "__any");
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-current", isActive ? "page" : "false");
+  });
+}
+
 async function refreshEntries() {
   clearEntries();
   Promise.all([loadEntrySorting(), loadEntryFiltering()])
     .then(([listSort, listFilter]) => {
       const indexMap = new Map(listSort.map((item, index) => [item, index]));
-      listFilter
-        .map(line => line.split(","))
+      cachedEntries = listFilter
+        .map(line => line.split(",").map(part => part.trim()))
         .filter((entry) => indexMap.has(entry[0]))
-        .sort((a, b) => indexMap.get(a[0]) - indexMap.get(b[0]))
-        .forEach(appendEntry);
+        .filter((entry) => {
+          if (!size || size === "__any") return true;
+          const entrySize = (entry[2] || "").trim();
+          return entrySize === size;
+        })
+        .sort((a, b) => indexMap.get(a[0]) - indexMap.get(b[0]));
+
+      applySearchFilterAndRender();
     })
     .catch((err) => console.error("refreshEntries failed:", err));
+}
+
+function applySearchFilterAndRender() {
+  if (!Array.isArray(cachedEntries)) {
+    cachedEntries = [];
+  }
+
+  const normalizedQuery = (query || "").trim().toLowerCase();
+  let entries = cachedEntries;
+
+  if (normalizedQuery) {
+    entries = entries.filter((entry) => {
+      const title = (entry[1] || "").toLowerCase();
+      return title.includes(normalizedQuery);
+    });
+  }
+
+  renderEntries(entries);
 }
 
 async function loadEntrySorting() {
@@ -135,11 +215,17 @@ async function loadCSV(url) {
 }
 
 function clearEntries() {
-  document.getElementById("entries").textContent = "";
+  const container = document.getElementById("entries");
+  if (container) {
+    container.textContent = "";
+  }
 }
 
-function appendEntry(entry) {
+function createEntryNode(entry) {
   const template = document.getElementById("entry-template");
+  if (!template) {
+    return null;
+  }
   const clone = template.content.cloneNode(true);
 
   const elLink      = clone.querySelector(".insert-link");
@@ -157,7 +243,35 @@ function appendEntry(entry) {
     elTitle.innerText = entry[1];
   }
 
-  document.getElementById("entries").appendChild(clone);
+  return clone;
+}
+
+function renderEntries(entries) {
+  const container = document.getElementById("entries");
+  if (!container) {
+    return;
+  }
+
+  const fragment = document.createDocumentFragment();
+  entries.forEach((entry) => {
+    const node = createEntryNode(entry);
+    if (node) {
+      fragment.appendChild(node);
+    }
+  });
+
+  container.replaceChildren(fragment);
+}
+
+function appendEntry(entry) {
+  const container = document.getElementById("entries");
+  if (!container) {
+    return;
+  }
+  const node = createEntryNode(entry);
+  if (node) {
+    container.appendChild(node);
+  }
 }
 
 function onFilterLinkClicked(e) {
@@ -168,16 +282,14 @@ function onFilterLinkClicked(e) {
   }
 
   switch (segments[1]) {
-    case "base":
-      base  = segments[2];
-      type  = "__any";
-      value = "__any";
-      break;
     case "type":
       type = segments[2];
       break;
     case "value":
       value = segments[2];
+      break;
+    case "size":
+      size = segments[2];
       break;
     case "sort":
       sort = [segments[2], segments[3]].filter(Boolean).join("-");

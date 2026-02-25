@@ -1,33 +1,87 @@
-{{ $dropdowns := newScratch -}}
-{{ $dropdowns.Add "base"  slice -}}
-{{ $dropdowns.Add "type"  slice -}}
-{{ $dropdowns.Add "value" slice -}}
-{{ $dropdowns.Add "sort"  slice -}}
+{{- $dropdowns := newScratch -}}
+{{- $dropdowns.Add "type"  slice -}}
+{{- $dropdowns.Add "value" slice -}}
+{{- $dropdowns.Add "size"  slice -}}
+{{- $dropdowns.Add "sort"  slice -}}
 
-{{ $dropdowns.Add "base"  (dict "id" "__any" "title" "All Entries" ) -}}
-{{ $dropdowns.Add "type"  (dict "id" "__any" "title" "All Types" ) -}}
-{{ $dropdowns.Add "value" (dict "id" "__any" "title" "All Values" ) -}}
+{{- $dropdowns.Add "type"  (dict "id" "__any" "title" "All Types" ) -}}
+{{- $dropdowns.Add "value" (dict "id" "__any" "title" "All Values" ) -}}
+{{- $dropdowns.Add "size"  (dict "id" "__any" "title" "All Sizes" ) -}}
 
-{{ range $filter := (sort site.Data.entries.filters "sort" "asc") -}}
-  {{ $dropdowns.Add "base" (dict "id" $filter.slug "title" $filter.title "icon" true) -}}
-  {{ range .types -}}
-    {{ $dropdowns.Add "type" (dict "parent" $filter.slug "id" .slug "title" .title  "icon" true) -}}
-  {{ end -}}
-  {{ range .values -}}
-    {{ $dropdowns.Add "value" (dict "parent" $filter.slug "id" .slug "title" .title ) -}}
-  {{ end -}}
-{{ end -}}
-{{ $dropdowns.Add "value" (dict "id" "__else" "title" "..." ) -}}
-{{ range site.Data.entries.sortings.options -}}
-  {{ $dropdowns.Add "sort" (dict "id" .slug "title" .title ) -}}
-{{ end -}}
+{{- $filters := sort site.Data.entries.filters "sort" "asc" -}}
+
+{{- range $filter := $filters -}}
+  {{- if ne $filter.slug "size" -}}
+    {{- range .types -}}
+      {{- $dropdowns.Add "type" (dict "parent" $filter.slug "id" .slug "title" .title "icon" true) -}}
+    {{- end -}}
+    {{- range .values -}}
+      {{- $dropdowns.Add "value" (dict "parent" $filter.slug "id" .slug "title" .title ) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- with site.Data.entries.filters.size -}}
+  {{- range .types -}}
+    {{- $dropdowns.Add "size" (dict "id" .slug "title" .title ) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- range site.Data.entries.sortings.options -}}
+  {{- $dropdowns.Add "sort" (dict "id" .slug "title" .title ) -}}
+{{- end -}}
 
 <div class="bg-body-tertiary sticky-top">
-  <div class="container position-relative">
-    <nav id="filter-nav" class="d-flex flex-row flex-nowrap overflow-x-auto w-100">
-      {{- partial "nav/dropdown.html" (dict "id" "base"  "items" ($dropdowns.Get "base")) -}}
+  <div class="container position-relative py-2">
+    <div class="d-flex flex-wrap align-items-center gap-2">
+      <a href="/" title="Go to Homepage" class="flex-shrink-0">
+        <img src="/icon.svg" class="d-block" width="40" height="40" alt="Brick.Camp logo">
+      </a>
+      <form class="flex-grow-1" role="search">
+        <div class="input-group">
+          <span class="input-group-text" id="search-label" aria-hidden="true">🔍</span>
+          <input
+            id="search-input"
+            type="search"
+            class="form-control"
+            placeholder="Search techniques…"
+            aria-label="Search techniques"
+            aria-describedby="search-label">
+        </div>
+      </form>
+    </div>
+
+    <div class="mt-2 overflow-x-auto" style="overflow-y: hidden;">
+      <ul id="scope-tabs" class="nav nav-tabs flex-nowrap">
+        <li class="nav-item">
+          <button
+            id="scope-__any"
+            class="nav-link"
+            type="button"
+            data-base="__any">
+            All
+          </button>
+        </li>
+        {{- range $filter := $filters -}}
+          {{- if ne $filter.slug "size" -}}
+          <li class="nav-item">
+            <button
+              id="scope-{{ $filter.slug }}"
+              class="nav-link"
+              type="button"
+              data-base="{{ $filter.slug }}">
+              {{ $filter.title }}
+            </button>
+          </li>
+          {{- end -}}
+        {{- end -}}
+      </ul>
+    </div>
+
+    <nav id="filter-nav" class="d-flex flex-row flex-nowrap overflow-x-auto w-100 mt-2">
       {{- partial "nav/dropdown.html" (dict "id" "type"  "items" ($dropdowns.Get "type")) -}}
       {{- partial "nav/dropdown.html" (dict "id" "value" "items" ($dropdowns.Get "value")) -}}
+      {{- partial "nav/dropdown.html" (dict "id" "size"  "items" ($dropdowns.Get "size")) -}}
       {{- partial "nav/dropdown.html" (dict "id" "sort"  "items" ($dropdowns.Get "sort") "class" "ms-auto" ) -}}
     </nav>
   </div>
