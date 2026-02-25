@@ -5,6 +5,7 @@ const basesWithoutValues = ["__any", "part", "repeat", "size"];
 const typesWithoutValues = ["ellipse", "circle", "sphere", "toroid"];
 
 document.addEventListener("DOMContentLoaded", () => {
+  initQueryParams();
   initFilterDropdowns();
   initScopeTabs();
   initSearchInput();
@@ -77,7 +78,7 @@ function initSearchInput() {
   if (!input) {
     return;
   }
-  input.value = query || "";
+  syncSearchInput(input);
   input.addEventListener("input", (e) => {
     query = e.target.value || "";
     applySearchFilterAndRender();
@@ -87,6 +88,14 @@ function initSearchInput() {
       e.preventDefault();
     }
   });
+}
+
+function syncSearchInput(input) {
+  const el = input || document.getElementById("search-input");
+  if (!el) {
+    return;
+  }
+  el.value = query || "";
 }
 
 function changeQueryParams() {
@@ -110,6 +119,7 @@ function changeQueryParams() {
 
 function refresh() {
   initQueryParams();
+  syncSearchInput();
   refreshFilterDropdowns();
   refreshTabs();
   refreshEntries();
