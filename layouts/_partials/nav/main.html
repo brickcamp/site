@@ -1,24 +1,38 @@
-<div class="text-bg-warning text-center py-1">This preview of the new <a href="https://brick.camp">Brick.Camp</a>&nbsp;<br class="d-md-none">website is still under construction.</div>
-<nav class="bg-body-secondary border-bottom">
-  <div id="main-nav" class="container">
-    <div class="d-flex flex-wrap justify-content-between">
-      <div class="nav col-12 my-2 justify-content-between">
-        <a href="/" title="Go to Homepage" class="nav-link link-body-emphasis">
-          <img src="/icon.svg" class="d-block mx-auto mb-1" width=40 height=40 aria-hidden="true">
-        </a>
+<div class="text-bg-warning text-center py-1">
+  This preview of the new <a href="https://brick.camp">Brick.Camp</a>&nbsp;<br class="d-md-none">
+  website is still under construction.
+</div>
 
-        <div class="navbar me-auto">
-          <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+<div class="bg-body-tertiary">
+  <div class="container position-relative py-2">
+    <div class="d-flex align-items-center gap-2 justify-content-between">
+      <form class="flex-grow-1 me-2" role="search">
+        <div class="input-group">
+          <a href="/" title="Go to Homepage" class="input-group-text p-0">
+            <img src="/icon.svg" class="d-block" width="48" height="48" alt="Brick.Camp logo">
+          </a>
+          <input
+            id="search-input"
+            type="search"
+            class="form-control"
+            placeholder="Search entries..."
+            aria-label="Search entries">
+        </div>
+      </form>
+
+      <div class="d-flex align-items-center gap-2 flex-shrink-0">
+        <div class="p-0">
+          <div class="dropdown">
+            <a id="nav-tools" class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Tools
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-tools">
               <li><a class="dropdown-item" href="/tools/length-converter">Convert Length Units</a></li>
               <li><a class="dropdown-item" href="/tools/brick-ring-generator">Generate Brick Rings</a></li>
             </ul>
           </div>
         </div>
-        
+
         <button id="darkmode-toggle" class="btn btn-outline-success border-0 shadow-none" title="Toggle Dark Mode" type="button">
           <span class="dark-only">🌙</span>
           <span class="light-only">☀️</span>
@@ -26,4 +40,4 @@
       </div>
     </div>
   </div>
-</nav>
+</div>

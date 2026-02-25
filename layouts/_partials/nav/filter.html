@@ -31,54 +31,41 @@
   {{- $dropdowns.Add "sort" (dict "id" .slug "title" .title ) -}}
 {{- end -}}
 
-<div class="bg-body-tertiary sticky-top">
-  <div class="container position-relative py-2">
-    <div class="d-flex flex-wrap align-items-center gap-2">
-      <a href="/" title="Go to Homepage" class="flex-shrink-0">
-        <img src="/icon.svg" class="d-block" width="40" height="40" alt="Brick.Camp logo">
-      </a>
-      <form class="flex-grow-1" role="search">
-        <div class="input-group">
-          <span class="input-group-text" id="search-label" aria-hidden="true">🔍</span>
-          <input
-            id="search-input"
-            type="search"
-            class="form-control"
-            placeholder="Search techniques…"
-            aria-label="Search techniques"
-            aria-describedby="search-label">
-        </div>
-      </form>
-    </div>
 
-    <div class="mt-2 overflow-x-auto" style="overflow-y: hidden;">
-      <ul id="scope-tabs" class="nav nav-tabs flex-nowrap">
+<div class="bg-body-tertiary border-bottom">
+  <div class="container">
+    <div class="overflow-x-auto overflow-y-hidden" tabindex="-1">
+      <ul id="scope-tabs" class="nav nav-tabs flex-nowrap mt-1 mx-1 border-bottom-0">
         <li class="nav-item">
-          <button
+          <a
             id="scope-__any"
             class="nav-link"
-            type="button"
-            data-base="__any">
+            data-base="__any"
+            href="#">
             All
-          </button>
+          </a>
         </li>
         {{- range $filter := $filters -}}
           {{- if ne $filter.slug "size" -}}
           <li class="nav-item">
-            <button
+            <a
               id="scope-{{ $filter.slug }}"
               class="nav-link"
-              type="button"
-              data-base="{{ $filter.slug }}">
+              data-base="{{ $filter.slug }}"
+              href="#">
               {{ $filter.title }}
-            </button>
+            </a>
           </li>
           {{- end -}}
         {{- end -}}
       </ul>
     </div>
+  </div>
+</div>
 
-    <nav id="filter-nav" class="d-flex flex-row flex-nowrap overflow-x-auto w-100 mt-2">
+<div class="bg-body sticky-top">
+  <div class="container">
+    <nav id="filter-nav" class="d-flex flex-row flex-nowrap overflow-x-auto w-100 py-1">
       {{- partial "nav/dropdown.html" (dict "id" "type"  "items" ($dropdowns.Get "type")) -}}
       {{- partial "nav/dropdown.html" (dict "id" "value" "items" ($dropdowns.Get "value")) -}}
       {{- partial "nav/dropdown.html" (dict "id" "size"  "items" ($dropdowns.Get "size")) -}}
