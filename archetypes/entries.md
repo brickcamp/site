@@ -4,7 +4,7 @@ date  = '{{ time.Now.UTC.Format "2006-01-02" }}'
 draft = true
 
 url     = '/entry/{{ replaceRE `([\/])` "-" .File.Dir }}/'
-aliases = ['/previous-urls-if-applicable']
+aliases = ['/previous-url-if-applicable']
 
 parts = ['3002', '3004']
 size = ['2s', '3p', '4b']
@@ -43,5 +43,5 @@ tags = [
     title="[Title of the page]"
     url="[URL of the page]"
 >}}
-Description or summary of the linked page. Should not be longer than a fex sentences.
+Description or summary of the linked page. Should not be longer than a few sentences.
 {{< /linkbox >}}
