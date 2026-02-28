@@ -5,7 +5,7 @@ date  = '2015-08-26'
 url     = '/entry/wrench-clipped-offset/'
 aliases = ['/tech/wrench-clipped-offset']
 
-parts = ['55300', '2555', '3024']
+parts = ['55300', '4006', '2555', '3024']
 size  = ['3s', '1s', '2p']
 tags  = [
   'length-studlift-2',

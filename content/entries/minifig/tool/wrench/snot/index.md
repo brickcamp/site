@@ -5,7 +5,7 @@ date  = '2015-09-14'
 url     = '/entry/wrench-snot/'
 aliases = ['/tech/wrench-snot']
 
-parts = ['55300']
+parts = ['55300', '4006']
 size  = ['3s', '1s', '1p']
 tags  = [
   'angle-studtilt-180',
