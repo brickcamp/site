@@ -14,7 +14,7 @@ tags  = [
 +++
 
 {{< linkbox 
-    author="ea-the-smile"
+    author="Erik Amzallag"
     date="2007-03-11"
     image="link_02.jpg"
     title="spanner00_stud_in_snot180.jpg"

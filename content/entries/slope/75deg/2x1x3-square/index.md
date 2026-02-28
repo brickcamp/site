@@ -15,7 +15,7 @@ tags  = [
 +++
 
 {{< linkbox
-    author="ea-the-smile"
+    author="Erik Amzallag"
     date="2004-07-31"
     image="link_02.jpg"
     title="misc04.jpg"

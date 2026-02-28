@@ -24,3 +24,11 @@ tags  = [
 >}}
 Calculation on LEGO® parts placed at 45° angle and SNOT building technique leads to new SNIR and stud less application.
 {{< /linkbox >}}
+
+{{< linkbox
+    author="Erik Amzallag"
+    date="2004-09-16"
+    image="link_02.jpg"
+    title="A window made with SNIR and SNOT techniques"
+    url="https://brickshelf.com/cgi-bin/gallery.php?f=98760"
+/>}}
