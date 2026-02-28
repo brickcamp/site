@@ -105,6 +105,10 @@ body {
   min-width: 8em;
 }
 
+.border-bottom-on-sticky {
+  top: -1px;
+}
+
 #toTop {
   bottom: 20px; 
   right: 20px; 

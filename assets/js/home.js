@@ -9,12 +9,25 @@ document.addEventListener("DOMContentLoaded", () => {
   initFilterDropdowns();
   initScopeTabs();
   initSearchInput();
+  initStickyFilters();
   refresh();
 });
 
 window.addEventListener("popstate", (event) => {
   refresh();
 })
+
+function initStickyFilters() {
+  const sticky = document.querySelector('.border-bottom-on-sticky');
+  const observer = new IntersectionObserver(
+    ([e]) => {
+      sticky.classList.toggle('border-bottom', e.intersectionRatio < 1);
+    }, {
+      threshold: [1]
+    }
+  );
+  observer.observe(sticky);
+}
 
 function initQueryParams() {
   const params = new URLSearchParams(window.location.search);
