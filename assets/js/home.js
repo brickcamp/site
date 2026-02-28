@@ -44,6 +44,7 @@ function cleanupQueryParams() {
   if (basesWithoutTypes.includes(base))  type  = "__any";
   if (basesWithoutValues.includes(base)) value = "__any";
   if (typesWithoutValues.includes(type)) value = "__any";
+  query = query.trim().toLowerCase();
 }
 
 function initFilterDropdowns() {
@@ -88,27 +89,21 @@ function initScopeTabs() {
 
 function initSearchInput() {
   const input = document.getElementById("search-input");
-  if (!input) {
-    return;
-  }
-  syncSearchInput(input);
+  input.value = query;
+
+  // while typing, update list and state
   input.addEventListener("input", (e) => {
-    query = e.target.value || "";
+    query = input.value.trim().toLowerCase();
+    cleanupQueryParams();
     applySearchFilterAndRender();
   });
+  // on enter, update URL parameter
   input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
+      changeQueryParams();
     }
   });
-}
-
-function syncSearchInput(input) {
-  const el = input || document.getElementById("search-input");
-  if (!el) {
-    return;
-  }
-  el.value = query || "";
 }
 
 function changeQueryParams() {
@@ -122,6 +117,7 @@ function changeQueryParams() {
   value == "__any"     ? params.delete("value") : params.set("value", value);
   sort  == "date-desc" ? params.delete("sort")  : params.set("sort", sort);
   size  == "__any"     ? params.delete("size")  : params.set("size", size);
+  query == ""          ? params.delete("q")     : params.set("q", query);
   const after = params.toString();
 
   if (before != after) {
@@ -132,7 +128,6 @@ function changeQueryParams() {
 
 function refresh() {
   initQueryParams();
-  syncSearchInput();
   refreshFilterDropdowns();
   refreshTabs();
   refreshEntries();
@@ -202,13 +197,11 @@ function applySearchFilterAndRender() {
     cachedEntries = [];
   }
 
-  const normalizedQuery = (query || "").trim().toLowerCase();
   let entries = cachedEntries;
-
-  if (normalizedQuery) {
+  if (query) {
     entries = entries.filter((entry) => {
       const title = (entry[1] || "").toLowerCase();
-      return title.includes(normalizedQuery);
+      return title.includes(query);
     });
   }
 
