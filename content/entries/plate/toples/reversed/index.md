@@ -14,6 +14,14 @@ tags  = [
 +++
 
 {{< linkbox
+    author="Jerrec"
+    date="2006-10-14"
+    image="link_02.jpg"
+    title="inverted_studs.gif"
+    url="https://brickshelf.com/cgi-bin/gallery.php?i=2074166"
+/>}}
+
+{{< linkbox
     author="Linus Bohman"
     date="2016-04-16"
     image="link_01.jpg"
