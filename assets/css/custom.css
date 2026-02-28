@@ -6,6 +6,34 @@ body {
   min-width: 350px;
 }
 
+.tabs-border-bottom {
+  position: relative;
+}
+
+.tabs-border-bottom::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  z-index: 0;
+}
+
+.tabs-border-bottom > * {
+  position: relative;
+  z-index: 1;
+}
+
+.tabs-border-bottom .nav-tabs {
+  border-bottom: none;
+}
+
+.tabs-border-bottom .nav-link.active {
+  position: relative;
+  z-index: 2;
+}
+
 #filter-nav .dropdown-toggle {
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #6c757d;
