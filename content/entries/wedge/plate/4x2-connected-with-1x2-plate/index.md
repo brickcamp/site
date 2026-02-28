@@ -15,10 +15,10 @@ tags  = [
 +++
 
 {{< linkbox
-    date="2018-12-12"
+    date="2018-12-11"
     image="link_01.jpg"
     title="#528 TECHNIQUES: Creating angles with wedge plates"
-    url="https://www.tipsandbricks.co.uk/post/528-techniques-creating-angles-with-wedge-plates"
+    url="https://www.facebook.com/tipsandbricks/posts/528-techniques-creating-angles-with-wedge-platesfor-todays-technique-well-look-a/729191064115996/"
 >}}
 For today’s technique we’ll look at how you can use wedge plates to create various angles in your MOCs. This has a variety of applications, and has been used by ‘The Backward One on Flickr’ to create an awesome engine design.
 {{< /linkbox >}}
