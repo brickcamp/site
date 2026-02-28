@@ -14,6 +14,20 @@ tags  = [
 ]
 +++
 
+**Hint:** There are two variants of this part.  
+The thin/old one (4081a) has the witdh of a stud minus two plates.  
+The thick/new one (4081b) has the width of a plate - or a brick minus two plates.
+
+![width comparison of 4081a vs. 4081b](width-comparison.png "Width comparison")
+
+{{< linkbox 
+    author="rgeiger"
+    date="2005-06-01"
+    image="link_02.jpg"
+    title="Just some well known ideas for SNOT"
+    url="https://www.brickshelf.com/cgi-bin/gallery.php?f=131197"
+/>}}
+
 {{< linkbox
     author="Legozilla"
     date="2010-03-31"
