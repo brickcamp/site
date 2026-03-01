@@ -34,9 +34,12 @@
     {{- end }}
 
     {{- with $entry.Params.size }}
+    {{- $size := partial "units/getSizeDetails" . -}}
     <li class="list-group-item d-flex">
       <b>Size:</b>
-      <span>{{ index . 0 }} &times; {{ index . 1 }} &times; {{ index . 2 }}</span>
+      <abbr title="{{ $size.long }}">
+        {{ $size.short }}
+      </abbr>
     </li>
     {{- end }}
 
