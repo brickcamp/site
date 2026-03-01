@@ -5,6 +5,7 @@
 
 {{- $short := slice -}}
 {{- $long  := slice -}}
+{{- $nbsp  := "\u00A0" -}}
 {{- range $size -}}
   {{- $value := . | replaceRE `[^0-9]` "" -}}
   {{- $key   := . | replaceRE `[0-9]` "" -}}
@@ -12,9 +13,10 @@
   {{- $label := cond (eq $value "1") $unit.one $unit.many -}}
 
   {{- $short = $short | append (print $value $key) -}}
-  {{- $long  = $long  | append (printf "%s %s" $value $label) -}}
+  {{- $long  = $long  | append (print $value $nbsp $label) -}}
 {{- end -}}
 
-{{- $short = delimit $short " × " -}}
-{{- $long  = delimit $long  " × " -}}
+{{- $times := print " ×" $nbsp -}}
+{{- $short = delimit $short $times -}}
+{{- $long  = delimit $long  $times -}}
 {{- return dict "short" $short "long" $long -}}
