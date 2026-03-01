@@ -6,7 +6,7 @@ url     = '/entry/12-12-17-triangle-with-a-shaped-plates/'
 aliases = ['/entry/a-plate-triangle']
 
 parts = ['15706', '6112', '30503', '2465']
-size  = ['14s', '14s', '1b']
+size  = ['14s', '14s', '4p']
 tags  = [
   'angle-studturn-45',
   'partcount-segment-2',
