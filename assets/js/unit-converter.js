@@ -86,10 +86,6 @@ function onScaleInputChanged() {
   calculate();
 }
 
-function setActive(element, active) {
-  active ? element.classList.add("active") : element.classList.remove("active");
-}
-
 function calculate() {
   const number = Number(elNumber.dataset.factor);
   const unit   = Number(elUnit.dataset.factor);

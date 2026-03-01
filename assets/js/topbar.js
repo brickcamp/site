@@ -1,15 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const input = document.getElementById("search-input");
-  if (!input) return;
-
   if (window.location.pathname === "/") {
     return;
   }
 
-  input.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      redirectToHomeWithQuery(input.value || "");
+  const input = document.getElementById("search-input");
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      redirectToHomeWithQuery(input.value);
     }
   });
 });

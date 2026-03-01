@@ -4,6 +4,7 @@ title         = 'BrickCamp'
 enableGitInfo = true
 
 [build]
+  noJSConfigInAssets = true
   [build.buildStats]
     enable = true
 

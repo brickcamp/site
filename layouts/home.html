@@ -20,8 +20,13 @@
   </div>
 </template>
 
-{{- $js := resources.Get "js/home.js" }}
+{{- $opts := dict
+    "minify" (not hugo.IsDevelopment)
+    "sourceMap" (cond hugo.IsDevelopment "external" "")
+    "targetPath" "js/home.js" -}}
+{{- with resources.Get "js/home/app.js" | js.Build $opts }}
 <script>
-  {{ $js.Content | safe.JS }}
+  {{- .Content | safe.JS -}}
 </script>
+{{ end -}}
 {{ end }}
