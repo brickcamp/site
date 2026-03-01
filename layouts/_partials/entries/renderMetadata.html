@@ -37,7 +37,9 @@
     {{- $size := partial "units/getSizeDetails" . -}}
     <li class="list-group-item d-flex">
       <b>Size:</b>
-      <abbr title="{{ $size.long }}">
+      <abbr data-bs-toggle="tooltip"
+            style="text-decoration: underline dotted;"
+            title="{{ $size.long }}">
         {{ $size.short }}
       </abbr>
     </li>
