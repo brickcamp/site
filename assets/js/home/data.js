@@ -16,9 +16,7 @@ async function fetchCSV(url, mapFields = false) {
 
   if (!Array.isArray(data)) {
     data = [data];
-  }
-
-  if (mapFields) {
+  } else if (mapFields) {
     data = data
       .map(line => line.split(","))
       .map(mapFields);
@@ -37,15 +35,50 @@ export async function getSortedEntryLinks(state) {
 }
 
 export async function getFilteredEntries(state) {
-  const filter = [state.base, state.type, state.value].join("-");
-  return await fetchCSV("/data/filtered/" + filter + "/index.csv", mapFilterFields);
+  if (state.part == "__any") {
+    return await getTagEntries(state);
+  } else {
+    return await getPartEntries(state);
+  } 
 }
 
-function mapFilterFields(fields) {
+export async function getParts(state) {
+  if (state.base !== "part") {
+    return [];
+  }
+
+  const parts = await fetchCSV("/parts/index.csv", mapPartFields);
+  if (state.part == "__any") {
+    return parts;
+  } else {
+    const part = parts.find(part => part.id === state.part)
+    return part ? [part] : [];
+  }
+}
+
+async function getTagEntries(state) {
+  const filter = [state.base, state.type, state.value].join("-");
+  return await fetchCSV("/data/filtered/" + filter + "/index.csv", mapEntryFields);
+}
+
+async function getPartEntries(state) {
+  return await fetchCSV("/parts/" + state.part + "/index.csv", mapEntryFields);
+}
+
+function mapEntryFields(fields) {
   return {
     link: fields[0],
     image: fields[0] + "__image-min.webp",
     title: fields[1],
     size: fields[2],
+  };
+}
+
+function mapPartFields(fields) {
+  return {
+    id: fields[0],
+    link: "#",
+    image: "/parts/" + fields[0] + "/image.jpg",
+    title: fields[1],
   };
 }

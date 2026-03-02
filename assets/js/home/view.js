@@ -1,10 +1,14 @@
 import * as appEvents from "./events.js";
 
-const elEntryTemplate = document.getElementById("entry-template");
-const elEntriesWrapper = document.getElementById("entries");
-const elFilterItems = document.querySelectorAll("#filter-nav .dropdown-item");
-const elScopeTabs = document.querySelectorAll("#scope-tabs [data-base]");
 const elSearchInput = document.getElementById("search-input");
+const elScopeTabs = document.querySelectorAll("#scope-tabs [data-base]");
+const elFilterItems = document.querySelectorAll("#filter-nav .dropdown-item");
+
+const elPartList = document.getElementById("parts");
+const elPartTemplate = document.getElementById("part-template");
+
+const elEntryList = document.getElementById("entries");
+const elEntryTemplate = document.getElementById("entry-template");
 
 export function init() {
   initEventListeners();
@@ -65,7 +69,9 @@ export function renderFilterDropdowns(state) {
     copySpanText(dropdown.id + "-" + selected[dropdown.id], dropdown.id);
     dropdown.hidden =
       (dropdown.id === "nav-type" && !state.hasTypes) ||
-      (dropdown.id === "nav-value" && !state.hasValues);
+      (dropdown.id === "nav-value" && !state.hasValues) ||
+      (dropdown.id === "nav-size" && !state.hasSize) ||
+      (dropdown.id === "nav-sort" && !state.hasSort);
   });
 }
 
@@ -96,33 +102,47 @@ export function renderScopeTabs(state) {
   });
 }
 
-export function renderEntries(entries) {
-  const fragment = document.createDocumentFragment();
-
-  entries.forEach((entry) => {
-    const elEntry = newEntryNode(entry);
-    fragment.appendChild(elEntry);
-  });
-
-  elEntriesWrapper.replaceChildren(fragment);
+export function renderParts(parts) {
+  renderItems(elPartList, elPartTemplate, parts);
 }
 
-function newEntryNode(entry) {
-  const result = elEntryTemplate.content.cloneNode(true);
+export function renderEntries(entries) {
+  renderItems(elEntryList, elEntryTemplate, entries);
+}
+
+function renderItems(elItemList, elItemTemplate, items) {
+  const fragment = document.createDocumentFragment();
+
+  items.forEach((item) => {
+    const elItem = newItemFromTemplate(elItemTemplate, item);
+    fragment.appendChild(elItem);
+  });
+
+  elItemList.replaceChildren(fragment);
+}
+
+function newItemFromTemplate(template, item) {
+  const result = template.content.cloneNode(true);
 
   const elImage = result.querySelector(".insert-image-src");
-  const elLink = result.querySelector(".insert-link");
-  const elTitle = result.querySelector(".insert-title");
-
   if (elImage) {
-    elImage.src = entry.image;
+    elImage.src = item.image;
   }
+
+  const elLink = result.querySelector(".insert-link");
   if (elLink) {
-    elLink.href = entry.link;
-    elLink.title = entry.title;
+    elLink.href = item.link;
+    elLink.title = item.title;
+
+    if (elLink.classList.contains("insert-part-event")) {
+      elLink.dataset.part = item.id;
+      appEvents.listenToPart(elLink);
+    }
   }
+
+  const elTitle = result.querySelector(".insert-title");
   if (elTitle) {
-    elTitle.innerText = entry.title;
+    elTitle.innerText = item.title;
   }
 
   return result;

@@ -33,6 +33,10 @@ export function listenToSearch(search) {
   });  
 }
 
+export function listenToPart(part) {
+  part.addEventListener("click", onPartClicked);
+}
+
 async function onFilterClicked(e) {
   const segments = e.target.closest("[id]")?.id?.split("-");
   if (!segments || segments.length < 3 || segments[0] != "nav") {
@@ -50,14 +54,29 @@ async function onScopeTabClicked(e) {
   const newBase = e.target.closest("[data-base]")?.dataset?.base;
   if (!newBase) return;
 
-  await dispatch({
+  const patch = {
     base: newBase,
-    type: false,
-    value: false,
-  });
+    type: "__any",
+    value: "__any",
+    part: "__any",
+  }
+
+  if (newBase === "part") {
+    await dispatch({...patch, query: "", queryPending: false });    
+  } else {
+    await dispatch(patch);
+  }
+}
+
+async function onPartClicked(e) {
+  const part = e.target.dataset.part;
+  await dispatch({ part: part, query: "", queryPending: false });
+  
+  e.preventDefault();
+  return false;
 }
 
 async function onSearchInput(e) {
   const input = e.target.value;
-  await dispatch({ query: input });
+  await dispatch({ query: input, queryPending: e.key !== "Enter" });
 }

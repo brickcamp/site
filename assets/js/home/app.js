@@ -5,6 +5,7 @@ import * as _ from "./utils.js";
 
 let state;
 let scopedEntries;
+let scopedParts;
 
 document.addEventListener("DOMContentLoaded", async () => {
   state = appState.load();
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   await refreshAll();
 });
 
-document.addEventListener("popstate", async () => {
+window.addEventListener("popstate", async () => {
   state = appState.load();
   await refreshAll();
 });
@@ -20,10 +21,14 @@ document.addEventListener("popstate", async () => {
 export async function dispatch(patch) {
   state = appState.save({ ...state, ...patch });
 
-  if (_.hasAnyKeysIn(patch, ["base", "type", "value", "sort"])) {
+  if (_.hasAnyKeysIn(patch, ["base", "type", "value", "part", "sort"])) {
     await refreshScopedEntries();
   } else {
     refreshResults();
+  }
+
+  if (patch["queryPending"] === false) {
+    refreshSearchField();
   }
 }
 
@@ -37,19 +42,32 @@ function refreshSearchField() {
 }
 
 function refreshResults() {
-  const filtered = _.filterByFieldValue(scopedEntries, "size", state.size);
-  const searched = _.filterBySearch(filtered, state.query);
-  appView.renderEntries(searched);
+  if (state.base != "part" || state.part != "__any") {
+    const filteredEntries = _.filterByFieldValue(scopedEntries, "size", state.size);
+    const searchedEntries = _.filterBySearch(filteredEntries, state.query);  
+    appView.renderEntries(searchedEntries);
+    appView.renderParts(scopedParts);
+  } else {
+    const searchedParts = _.filterBySearch(scopedParts, state.query);  
+    appView.renderEntries([]);
+    appView.renderParts(searchedParts);
+  }
+
   appView.renderScopeTabs(state);
   appView.renderFilterDropdowns(state);
 }
 
 async function refreshScopedEntries() {
-  const [sortedLinks, filteredEntries] = await Promise.all([
-    appData.getSortedEntryLinks(state),
-    appData.getFilteredEntries(state),
-  ]);
-  
-  scopedEntries = _.sortByFieldValues(filteredEntries, "link", sortedLinks);
+  if (state.base == "part" && state.part == "_any") {
+    scopedEntries = [];
+  } else {
+    const [sortedLinks, filteredEntries] = await Promise.all([
+      appData.getSortedEntryLinks(state),
+      appData.getFilteredEntries(state),
+    ]);
+    scopedEntries = _.sortByFieldValues(filteredEntries, "link", sortedLinks);
+  }
+
+  scopedParts = await appData.getParts(state);
   refreshResults();
 }

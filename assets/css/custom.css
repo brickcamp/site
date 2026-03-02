@@ -58,6 +58,11 @@ body {
   filter: grayscale(100%) !important;
 }
 
+.part.col {
+  max-width: 75px;
+  max-height: 75px;
+}
+
 .link-preview .bg-image {
   min-height: 150px;
   max-width: 150px;

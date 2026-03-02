@@ -1,3 +1,6 @@
-{{ range .Pages }}
-{{- .RelPermalink }},'{{ .Title }}'
-{{ end }}
+{{- range .Pages -}}
+  {{- $values := partial "entries/getCalculatedFields" . -}}
+  {{- $sizeType := index $values "_sizeType" -}}
+  {{- $line := print .RelPermalink "," .Title "," $sizeType -}}
+{{ printf "%s\n" $line }}
+{{- end -}}

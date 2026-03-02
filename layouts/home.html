@@ -4,9 +4,27 @@
 
 {{ define "main" }}
 <div class="container">
-  <div id="entries" class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-2 g-md-3">
+  <div id="parts" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 g-2 g-md-3 mb-3 justify-content-center">
+  </div>
+  <div id="entries" class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-2 g-md-3 justify-content-center">
   </div>
 </div>
+
+<template id="part-template">
+  <div class="col">
+    <div class="card h-100">
+      <div class="row h-100 g-0">
+        <div class="part col d-flex align-items-center">
+          <img class="insert-image-src img-fluid dark-filter ratio ratio-1x1" alt="" loading="lazy" aria-hidden="true">         
+        </div>
+        <div class="col">
+          <a class="insert-title insert-part-event card-body h-100 d-flex align-items-center lh-sm insert-link stretched-link text-decoration-none z-1 py-1">
+          </a>          
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
 <template id="entry-template">
   <div class="col">

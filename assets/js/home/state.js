@@ -14,17 +14,24 @@ export const DEFAULTS = Object.freeze({
   base: TAGS.ANY,
   type: TAGS.ANY,
   value: TAGS.ANY,
-  part: TAGS.EMPTY,
+  part: TAGS.ANY,
   size: TAGS.ANY,
   sort: TAGS.SORT_DEFAULT,
   query: TAGS.EMPTY,
+  queryPending: false,
   hasTypes: true,
   hasValues: true,
+  hasSize: true,
+  hasSort: true,
 });
 
 export function save(rawState) {
   const state = normalize(rawState);
-  appUrl.replaceState(state, DEFAULTS);
+  if (rawState.queryPending) {
+    appUrl.replaceState(state, DEFAULTS);
+  } else {
+    appUrl.pushState(state, DEFAULTS);
+  }
   return state;
 }
 
@@ -42,16 +49,21 @@ export function normalize(input) {
   }
 
   result.hasTypes = !TAGS.BASES_WITHOUT_TYPES.includes(result.base);
-  result.hasValues = 
-    !TAGS.BASES_WITHOUT_VALUES.includes(result.base) &&
-    !TAGS.TYPES_WITHOUT_VALUES.includes(result.type);
-
   if (!result.type || !result.hasTypes) {
     result = { ...result, type: TAGS.ANY };
   }
 
+  result.hasValues = 
+    !TAGS.BASES_WITHOUT_VALUES.includes(result.base) &&
+    !TAGS.TYPES_WITHOUT_VALUES.includes(result.type);
   if (!result.value || !result.hasValues) {
     result = { ...result, value: TAGS.ANY };
+  }
+
+  result.hasSize = result.base !== "part" || result.part !== TAGS.ANY;
+  result.hasSort = result.hasSize;
+  if (!result.hasSize) {
+    result = { ...result, size: TAGS.ANY, sort: TAGS.SORT_DEFAULT };
   }
 
   return result;
