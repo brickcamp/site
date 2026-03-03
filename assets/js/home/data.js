@@ -1,4 +1,4 @@
-import * as _ from "./utils";
+import * as _ from "./utils.js";
 
 const cache = new Map();
 

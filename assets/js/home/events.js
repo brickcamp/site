@@ -1,4 +1,4 @@
-import { dispatch } from "./app";
+import { dispatch } from "./app.js";
 
 export function listenToFilterItems(items) {
   [...items].forEach((item) => {
