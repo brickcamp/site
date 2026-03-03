@@ -34,7 +34,7 @@
 <div class="card h-100 text-center">
   <div class="class-body ratio ratio-1x1 overflow-hidden bg-white">
     {{ with $icon -}}
-    <img src="{{ $icon }}">
+    <img alt="{{ $title }}: {{ title $segments.type }} {{ $badge }}" class="img-fluid" src="{{ $icon }}" width="200" height="200">
     {{ else -}}
     <div class="h-100 d-flex flex-column bg-white">
       <div class="flex-fill d-flex">

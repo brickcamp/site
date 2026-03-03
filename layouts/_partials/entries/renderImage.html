@@ -8,6 +8,9 @@
     {{ $triggerSaving := $naming.RelPermalink -}}
 
     {{/* render original image for single entry */}}
-    <img src="{{ .RelPermalink }}" class="card-img dark-filter ratio ratio-1x1" alt="image of the building technique">
+    <img alt="image of the building technique"
+         class="card-img img-fluid dark-filter" 
+         src="{{ .RelPermalink }}" 
+         width="{{ .Width }}" height="{{ .Height }}">
   {{ end }}
 </div>

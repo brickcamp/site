@@ -71,9 +71,12 @@
       <div class="col">
         <a href="/?base=part&part={{ path.BaseName .Path }}" title="{{ .LinkTitle }}" data-bs-toggle="tooltip">
           <img  alt="{{ .LinkTitle }}"
-                class="card-img-top dark-filter ratio ratio-1x1" 
-                src="{{ with .Resources.GetMatch $imagePattern }}{{ .RelPermalink }}{{ end }}" 
-                title="{{ .LinkTitle }}">
+                class="card-img-top img-fluid dark-filter"
+                title="{{ .LinkTitle }}"
+                {{ with .Resources.GetMatch $imagePattern -}}
+                src="{{ .RelPermalink }}" 
+                width="{{ .Width }}" height="{{ .Height }}"
+                {{- end }}>
         </a>
       </div>
       {{- end }}
