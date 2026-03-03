@@ -67,16 +67,14 @@
     <div class="row row-cols-4 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 g-1 justify-content-center">
       {{ with .GetTerms "parts" -}}
       {{ range . -}}
-      {{ $imagePattern := "image.*" -}}
+      {{ $imagePath := print .Path "/" "__image-min.webp" -}}
       <div class="col">
         <a href="/?base=part&part={{ path.BaseName .Path }}" title="{{ .LinkTitle }}" data-bs-toggle="tooltip">
           <img  alt="{{ .LinkTitle }}"
                 class="card-img-top img-fluid dark-filter"
                 title="{{ .LinkTitle }}"
-                {{ with .Resources.GetMatch $imagePattern -}}
-                src="{{ .RelPermalink }}" 
-                width="{{ .Width }}" height="{{ .Height }}"
-                {{- end }}>
+                src="{{ $imagePath }}" 
+                width="150" height="150">
         </a>
       </div>
       {{- end }}

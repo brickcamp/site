@@ -1,0 +1,10 @@
+{{/* generate minified image for part lists */}}
+{{- $part := . -}}
+{{- with $part.Page -}}
+  {{- with $part.Resources.GetMatch "image.*" -}}
+    {{- $minify := .Process "fill 150x150 webp" -}}
+    {{- $naming := print $part.Path "/" "__image-min.webp" -}}
+    {{- $saving := resources.Copy $naming $minify -}}
+    {{- $triggerSaving := $saving.RelPermalink -}}
+  {{- end -}}
+{{- end -}}

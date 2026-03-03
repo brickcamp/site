@@ -6,6 +6,10 @@ body {
   min-width: 350px;
 }
 
+.nav-tabs .active {
+  font-weight: bold;
+}
+
 .tabs-border-bottom {
   position: relative;
 }
@@ -56,6 +60,10 @@ body {
 
 .filter-grayscale {
   filter: grayscale(100%) !important;
+}
+
+#entries > .col {
+  max-width: 250px;
 }
 
 .part.col {

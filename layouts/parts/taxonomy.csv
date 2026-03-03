@@ -3,6 +3,9 @@
   {{- $entries = $entries | append .Page -}}
 {{- end -}}
 
-{{ range (sort $entries "Title") }}
-{{- path.BaseName .Page.Path }},{{ .Page.Title }}
-{{ end }}
+{{- range (sort $entries "Title") -}}
+  {{- partial "tags/saveMinifiedPartImage" . -}}
+  {{- $partNumber := path.BaseName .Page.Path -}}
+  {{- $line := print $partNumber "," .Page.Title -}}
+{{- printf "%s\n" $line -}}
+{{- end -}}

@@ -78,7 +78,7 @@ function mapPartFields(fields) {
   return {
     id: fields[0],
     link: "#",
-    image: "/parts/" + fields[0] + "/image.jpg",
+    image: "/parts/" + fields[0] + "/__image-min.webp",
     title: fields[1],
   };
 }

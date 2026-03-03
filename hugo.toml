@@ -34,9 +34,12 @@ enableGitInfo = true
 [imaging]
   anchor = 'Center'
   bgColor = '#ffffff'
-  hint = 'drawing'
-  quality = 95
+  compression = 'lossy'
+  quality = 90
   resampleFilter = 'Lanczos'
+  [imaging.webp]
+    method = 6
+    useSharpYuv = true
 
 [markup]
   [markup.goldmark]
