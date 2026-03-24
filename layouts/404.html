@@ -1,0 +1,158 @@
+{{ define "main" }}
+<script>
+(function () {
+
+  const mapBase = {
+    offsets: 'length',
+    part: 'part',
+    parts: 'part',
+    patterns: 'repeat',
+    rotations: 'angle',
+    shapes: 'shape',
+    using: 'part',
+  };
+
+  const mapSort = {
+    date: 'date-',
+    'header.taxonomy.partcount': 'parts-',
+    modified: 'date-',
+    'part-count': 'parts-',
+    random: 'random',
+    title: 'title-',
+    volume: 'volume-',
+  };
+  
+  const mapTaxonomy = {
+    axle_tilt: 'type=axletilt',
+    axle_tilt_angle: 'type=axletilt&value=',
+    offset_length: 'value=',
+    //pattern_segsize: '',
+    pattern_1d: 'type=linear',
+    pattern_1d_segsize: 'type=linear',
+    pattern_2d: 'type=planar',
+    pattern_2d_segsize: 'type=planar',
+    pattern_3d: 'type=spacial',
+    pattern_3d_segsize: 'type=spacial',
+    rotation_angle: 'value=',
+    shape_segments: 'value=',
+    //shape_segsize: '',
+    shape_2D_segments: 'type=polygon&value=',
+    shape_2D_segsize: 'type=polygon',
+    shape_3D_segments: 'type=polyhedron&value=',
+    shape_3D_segsize: 'type=polyhedron',
+    stud_lift_length: 'type=studlift&value=',
+    stud_tilt: 'type=studtilt',
+    stud_tilt_angle: 'type=studtilt&value=',
+    stud_twist: 'type=studturn',
+    stud_twist_angle: 'type=studturn&value=',
+    stud_shift_length: 'type=studshift&value=',
+  };
+
+  function legacyList(args) {
+    let params = [];
+    
+    if (args.base) {
+      let newBase = mapBase[args.base];
+      if (newBase) {
+        params.push(`base=${newBase}`);
+      }
+    }
+
+    if (args.tax) {
+      let oldTax = (args.tax === 'function') ? args.term : args.tax;
+      let newType = mapTaxonomy[oldTax];
+      let newValue = args.term ?? '__any';
+      if (newType) {
+        if (newType.endsWith('=')) {
+          params.push(newType + newValue);
+        } else {
+          params.push(newType);
+        }
+      }
+    }
+
+    if (args.by) {
+      let oldDir = (args.dir && args.dir === 'desc') ? 'desc' : 'asc';
+      let newSort = mapSort[args.by] ?? 'date-desc';
+      if (newSort) {
+        if (newSort.endsWith('-')) newSort += oldDir;
+        params.push(`sort=${newSort}`);
+      }
+    }
+
+    return params.join('&');
+  }
+
+  const rules = [
+    {
+      // search → homepage
+      match: /^\/search/,
+      apply: (m) => `/`
+    },
+    {
+      // about → homepage (TODO)
+      match: /^\/about/,
+      apply: (m) => `/`
+    },
+    {
+      // techs → homepage
+      match: /^\/techs$/,
+      apply: (m) => `/`
+    },
+    {
+      // privacy, ... → homepage (TODO)
+      match: /^\/legal/,
+      apply: (m) => `/`
+    },
+    {
+      // order-by-pages → sorted homepage
+      match: /^\/techs\/order-by\/(?<by>part-count|volume)\/(?<dir>asc|desc)/,
+      apply: (m) => `/?${legacyList(m.groups)}`
+    },
+    {
+      // old result lists (base/tax:term/sorting) → filtered homepage 
+      match: /^\/techs(?:\/(?<base>\w+))?(?:\/(?<tax>\w+):(?<term>\w+))?(?:\/orderby:(?<by>[\w.-]+)\/orderdir:(?<dir>asc|desc))?$/,
+      apply: (m) => `/?${legacyList(m.groups)}`
+    },
+    {
+      // old partlists → partlist on homepage 
+      match: /^\/parts.*/,
+      apply: (m) => `/?base=part`
+    },
+    {
+      // old part page → part search on homepage 
+      match: /^\/part\/(\d+)(\D.*)?/,
+      apply: (m) => `/?base=part&part=${m[1]}`
+    }
+  ];
+
+  function normalize(path) {
+    return path.replace(/\/+$/, '') || '/';
+  }
+
+  function removeLanguage(path) {
+    return path.replace(/^\/(de|en)(\/|$)/, '/');
+  }
+
+  function applyRules(path) {
+    for (const rule of rules) {
+      const match = path.match(rule.match);
+      if (match) return rule.apply(match);
+    }
+    return path;
+  }
+
+  const path = normalize(window.location.pathname);
+  const target = applyRules(removeLanguage(path));
+  if (target !== path) {
+    window.location.replace(target);
+  }
+})();
+</script>
+
+<div class="container text-center">
+  <img src="/404.png" alt="404" class="d-block mx-auto py-3">
+  <h1>Ooops!</h1>
+  <p>The page you are looking for was not found.</p>
+</div>
+{{ end }}
