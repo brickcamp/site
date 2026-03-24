@@ -52,7 +52,7 @@
     let params = [];
     
     if (args.base) {
-      let newBase = mapBase[args.base];
+      let newBase = mapBase[args.base.toLowerCase()];
       if (newBase) {
         params.push(`base=${newBase}`);
       }
@@ -60,9 +60,11 @@
 
     if (args.tax) {
       let oldTax = (args.tax === 'function') ? args.term : args.tax;
-      let newType = mapTaxonomy[oldTax];
+      let newType = mapTaxonomy[oldTax.toLowerCase()];
       let newValue = args.term ?? '__any';
-      if (newType) {
+      if (newValue === '_9up') {
+        params.push('type=circle');
+      } else if (newType) {
         if (newType.endsWith('=')) {
           params.push(newType + newValue);
         } else {
@@ -73,7 +75,7 @@
 
     if (args.by) {
       let oldDir = (args.dir && args.dir === 'desc') ? 'desc' : 'asc';
-      let newSort = mapSort[args.by] ?? 'date-desc';
+      let newSort = mapSort[args.by.toLowerCase()] ?? 'date-desc';
       if (newSort) {
         if (newSort.endsWith('-')) newSort += oldDir;
         params.push(`sort=${newSort}`);
