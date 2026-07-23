@@ -66,7 +66,10 @@ export function renderFilterDropdowns(state) {
     link.hidden = link.dataset.base && link.dataset.base != state.base;
   });
   document.querySelectorAll("#filter-nav .dropdown").forEach((dropdown) => {
-    copySpanText(dropdown.id + "-" + selected[dropdown.id], dropdown.id);
+    const value = selected[dropdown.id];
+    const fallback =
+      dropdown.id === "nav-value" ? formatUncuratedValue(state.base, value) : value;
+    copySpanText(dropdown.id + "-" + value, dropdown.id, fallback);
     dropdown.hidden =
       (dropdown.id === "nav-type" && !state.hasTypes) ||
       (dropdown.id === "nav-value" && !state.hasValues) ||
@@ -75,8 +78,13 @@ export function renderFilterDropdowns(state) {
   });
 }
 
-function copySpanText(from, to) {
-  const text = getSpanText(from);
+function formatUncuratedValue(base, value) {
+  const template = document.getElementById("scope-" + base)?.dataset.valueFormat;
+  return template ? template.replace("%s", value) : value;
+}
+
+function copySpanText(from, to, fallback) {
+  const text = getSpanText(from) ?? fallback;
   setSpanText(to, text);
 }
 

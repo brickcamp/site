@@ -2,6 +2,7 @@ title = 'Lengths'
 slug  = 'length'
 sort  = 20
 from  = 'tags'
+valueformat = '%s⁄20 Stud'
 
 [[types]]
 title = 'Stud Lift'

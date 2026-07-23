@@ -2,6 +2,7 @@ title = 'Angles'
 slug  = 'angle'
 sort  = 10
 from  = 'tags'
+valueformat = '%s°'
 
 [[types]]
 title = 'Stud Tilt'

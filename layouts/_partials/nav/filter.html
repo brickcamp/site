@@ -51,6 +51,7 @@
               id="scope-{{ $filter.slug }}"
               class="nav-link text-body"
               data-base="{{ $filter.slug }}"
+              {{ with $filter.valueformat }}data-value-format="{{ . }}"{{ end }}
               href="#">
               {{ $filter.title }}
             </a>

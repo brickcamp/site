@@ -2,6 +2,7 @@ title = 'Shapes'
 slug  = 'shape'
 sort  = 40
 from  = 'tags'
+valueformat = '%s Sides'
 
 [[types]]
 title = 'Circle'
