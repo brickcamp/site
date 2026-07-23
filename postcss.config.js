@@ -12,7 +12,7 @@ const purgecss = purgeCSSPlugin({
     ];
   },
   safelist: {
-    deep: [/dropdown-menu$/, /hidden/, /tooltip/],
+    deep: [/dropdown-menu$/, /hidden/, /tooltip/, /hdn/],
     greedy: [/data-bs-theme/],
   },
 });
