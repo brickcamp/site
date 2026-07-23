@@ -48,7 +48,7 @@ enableGitInfo = true
 
 [module]
   [module.hugoVersion]
-    extended = false
+    extended = true
     min      = "0.145.0"
   [[module.mounts]]
     source = "assets"
