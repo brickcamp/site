@@ -1,110 +1,42 @@
 {{ $any  := "__any" }}
 {{ $else := "__else" }}
 
-{{/* Collect all combinations per filter */}}
+{{/* Collect the type-scoped lookups per filter. Values are no longer part of
+     the path: every value is carried inside the CSV rows and filtered on the
+     client, so a fixed set of files covers any value (listed or not). */}}
 {{ $combinations := newScratch }}
 {{ range $f := $.Site.Data.entries.filters }}
-  {{/* Any Type + Any Value */}}
   {{ $basePath := print "filtered/" $f.slug }}
-  {{ $filterPath := print $basePath "-" $any "-" $any }}
-  {{ $combinations.Add $filterPath (dict 
+
+  {{/* Any Type */}}
+  {{ $combinations.Add (print $basePath "-" $any "-" $any) (dict
     "from" $f.from
     "base" $f.slug
   )}}
 
-  {{/* Any Type + Listed Value */}}
-  {{ $values := slice }}
-  {{ range $v := $f.values }}
-    {{ $valuePath := print $basePath "-" $any "-" $v.slug }}
-    {{ $combinations.Add $valuePath (dict
-      "from"  $f.from
-      "base"  $f.slug
-      "value" $v.slug
-    )}}
-    {{ $values = $values | append $v.slug }}
-  {{ end }}
-
-  {{/* Any Type + Unlisted Value */}}
-  {{ with $values }}
-    {{ $valuePath := print $basePath "-" $any "-" $else }}
-    {{ $combinations.Add $valuePath (dict
-      "from"      $f.from
-      "base"      $f.slug
-      "notValues" $values
-    )}}
-  {{ end }}
-
-  {{/* Listed Type + Any Value */}}
+  {{/* Listed Types */}}
   {{ $types := slice }}
   {{ range $t := $f.types }}
-    {{ $typePath := print $basePath "-" $t.slug "-" $any }}
-    {{ $combinations.Add $typePath (dict
-      "from"  $f.from
-      "base"  $f.slug
-      "type"  $t.slug
+    {{ $combinations.Add (print $basePath "-" $t.slug "-" $any) (dict
+      "from" $f.from
+      "base" $f.slug
+      "type" $t.slug
     )}}
     {{ $types = $types | append $t.slug }}
-
-    {{/* Listed Type + Listed Value */}}
-    {{ range $v := $f.values }}
-      {{ $valuePath := print $basePath "-" $t.slug "-" $v.slug }}
-      {{ $combinations.Add $valuePath (dict
-        "from"  $f.from
-        "base"  $f.slug
-        "type"  $t.slug
-        "value" $v.slug
-      )}}
-    {{ end }}
-
-    {{/* Listed Type + Unlisted Value */}}
-    {{ with $values }}
-      {{ $valuePath := print $basePath "-" $t.slug "-" $else }}
-      {{ $combinations.Add $valuePath (dict
-        "from"      $f.from
-        "base"      $f.slug
-        "type"      $t.slug
-        "notValues" $values
-      )}}
-    {{ end }}
   {{ end }}
 
-  {{/* Unlisted Type + Any Value */}}
+  {{/* Unlisted Type */}}
   {{ with $types }}
-    {{ $typePath := print $basePath "-" $else "-" $any }}
-    {{ $combinations.Add $typePath (dict
+    {{ $combinations.Add (print $basePath "-" $else "-" $any) (dict
       "from"     $f.from
       "base"     $f.slug
       "notTypes" $types
     )}}
-
-    {{/* Unlisted Type + Listed Value */}}
-    {{ range $v := $f.values }}
-      {{ $valuePath := print $basePath "-" $else "-" $v.slug }}
-      {{ $combinations.Add $valuePath (dict
-        "from"     $f.from
-        "base"     $f.slug
-        "notTypes" $types
-        "value"    $v.slug
-      )}}
-    {{ end }}
-
-    {{/* Unlisted Type + Unlisted Value */}}
-    {{ with $values }}
-      {{ $valuePath := print $basePath "-" $else "-" $else }}
-      {{ $combinations.Add $valuePath (dict
-        "from"      $f.from
-        "base"      $f.slug
-        "notTypes"  $types
-        "notValues" $values
-      )}}
-    {{ end }}
   {{ end }}
 {{ end }}
 
-{{/* Unfiltered + Any Type + Any Value */}}
-{{ $basePath := print "filtered/" $any }}
-{{ $filterPath := print $basePath "-" $any "-" $any }}
-{{ $combinations.Add $filterPath (dict "from" "tags" )}}
+{{/* Unfiltered + Any Type */}}
+{{ $combinations.Add (print "filtered/" $any "-" $any "-" $any) (dict "from" "tags" )}}
 
 {{/* Create lookup file for each combination */}}
 {{ range $path, $filter := $combinations.Values }}

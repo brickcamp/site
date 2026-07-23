@@ -8,6 +8,11 @@ async function fetchCSV(url, mapFields = false) {
   };
 
   const res = await fetch(url);
+  if (!res.ok) {
+    cache.set(url, []);
+    return [];
+  }
+
   const text = await res.text();
   let data = text
     .trim()
@@ -57,8 +62,12 @@ export async function getParts(state) {
 }
 
 async function getTagEntries(state) {
-  const filter = [state.base, state.type, state.value].join("-");
-  return await fetchCSV("/data/filtered/" + filter + "/index.csv", mapEntryFields);
+  const filter = [state.base, state.type, "__any"].join("-");
+  const entries = await fetchCSV("/data/filtered/" + filter + "/index.csv", mapEntryFields);
+  if (state.value === "__any") {
+    return entries;
+  }
+  return entries.filter(entry => entry.values.includes(state.value));
 }
 
 async function getPartEntries(state) {
@@ -71,6 +80,7 @@ function mapEntryFields(fields) {
     image: fields[0] + "__image-min.webp",
     title: fields[1],
     size: fields[2],
+    values: fields[3] ? fields[3].split("|") : [],
   };
 }
 
