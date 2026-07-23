@@ -1,6 +1,6 @@
-{{/* Splits a tag into its three segments.
-     Sets default values on missing segments. 
-     Also accepts .Path of a term page as input */}}
+{{/* Canonical tag grammar: tags are "base-type-value" (e.g. "angle-studturn-28").
+     Splits a tag into those three segments, defaulting a missing type to "else"
+     and a missing value to 0. Also accepts the .Path of a term page as input. */}}
 {{- $tag := strings.TrimPrefix "/tags/" . -}}
 
 {{- $split := split $tag "-" -}}
