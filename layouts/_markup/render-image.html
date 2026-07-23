@@ -1,12 +1,12 @@
-{{- if .IsBlock -}}
+{{- if and .Title .IsBlock -}}
   <figure class="card text-center">
-    <img src="{{ .Destination | safeURL }}" class="card-img-top"
+    <img src="{{ .Destination | safeURL }}" class="card-img-top dark-filter"
       {{- with .PlainText }} alt="{{ . }}"{{ end -}}
     >
     {{- with .Title }}<figcaption class="card-footer text-body-secondary">{{ . }}</figcaption>{{ end -}}
   </figure>
 {{- else -}}
-  <img src="{{ .Destination | safeURL }}" class="border"
+  <img src="{{ .Destination | safeURL }}" class="img-fluid border mx-auto d-block dark-filter mb-3"
     {{- with .PlainText }} alt="{{ . }}"{{ end -}}
     {{- with .Title }} title="{{ . }}"{{ end -}}
   >

@@ -61,6 +61,7 @@ enableGitInfo = true
 
 [params]
   dateFormat = 'Jan. 2, 2006'
+  description = 'A visual dictionary of LEGO® building techniques'
 
 [taxonomies]
   part = 'parts'

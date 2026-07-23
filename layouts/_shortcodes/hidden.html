@@ -1,0 +1,18 @@
+{{- $encoded := print (.Get 0) (.Get 1) (.Get 2) -}}
+{{- $decoded := $encoded | base64Decode -}}
+{{- $chars   := split "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!§$%&/()=?@" "" -}}
+
+{{- $obfuscated := `<span class="hdn">` -}}
+{{- range $right_letter := (strings.Split $decoded "") -}}
+  {{- if eq $right_letter " " -}}
+    {{- $right_letter = "&nbsp;" -}}
+  {{- else -}}
+    {{- $right_letter = $right_letter | htmlEscape -}}
+  {{- end -}}
+  {{- $wrong_letter := index $chars (math.Rand | mul ($chars | len) | math.Floor | int) | htmlEscape -}}
+  
+  {{- $obfuscated = print $obfuscated `<span class="no">`  $right_letter `</span>` -}}
+  {{- $obfuscated = print $obfuscated `<span class="yes">` $wrong_letter `</span>` -}}
+{{- end -}}
+{{- $obfuscated = print $obfuscated `</span>` }}
+<noscript>Activate javascript to deobfuscate scraping-protection:&nbsp;</noscript> {{ $obfuscated | safeHTML -}}

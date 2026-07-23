@@ -92,19 +92,19 @@
       apply: (m) => `/`
     },
     {
-      // about → homepage (TODO)
-      match: /^\/about/,
-      apply: (m) => `/`
-    },
-    {
       // techs → homepage
       match: /^\/techs$/,
       apply: (m) => `/`
     },
     {
-      // privacy, ... → homepage (TODO)
-      match: /^\/legal/,
-      apply: (m) => `/`
+      // legacy privacy paths → privacy policy (must precede the legal rule)
+      match: /^\/(?:legal\/)?(?:privacy|datenschutz)/,
+      apply: (m) => `/privacy/`
+    },
+    {
+      // remaining legal paths → legal notice
+      match: /^\/(?:legal|imprint|impressum)/,
+      apply: (m) => `/legal/`
     },
     {
       // order-by-pages → sorted homepage
