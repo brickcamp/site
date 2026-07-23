@@ -87,7 +87,12 @@
 <div class="row row-cols-4 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 g-1 mb-2 justify-content-center">
   {{ with $entry.GetTerms "tags" -}}
   {{ range . -}}
-  {{ if not (or (hasPrefix .Path "/tags/partcount-") (hasPrefix .Path "/tags/warning-" )) }}
+  {{/* skip tags shown above and those that don't fit the base-type-value grammar (yet) */}}
+  {{ if not (or
+      (hasPrefix .Path "/tags/partcount-")
+      (hasPrefix .Path "/tags/warning-")
+      (not (strings.Contains .Path "-"))
+  ) }}
   <div class="col">
     {{ partial "tags/renderCard.html" . }}
   </div>
