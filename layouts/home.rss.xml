@@ -1,0 +1,38 @@
+{{- /* Based on Hugo's embedded rss.xml, but restricted to the entries section */ -}}
+{{- $pages := where site.RegularPages "Section" "entries" }}
+{{- $limit := site.Config.Services.RSS.Limit }}
+{{- if ge $limit 1 }}
+  {{- $pages = $pages | first $limit }}
+{{- end }}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>Recent content on {{ site.Title }}</description>
+    <generator>Hugo</generator>
+    <language>{{ site.Language.LanguageCode }}</language>{{ with site.Copyright }}
+    <copyright>{{ . }}</copyright>{{ end }}{{ with $pages }}
+    <lastBuildDate>{{ (index .ByLastmod.Reverse 0).Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    {{- with .OutputFormats.Get "rss" }}
+    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{- end }}
+    {{- range $pages }}
+    {{- $image := .Resources.GetMatch "image.*" }}
+    {{- $description := .Summary }}
+    {{- with $image }}
+      {{- $description = printf "<p><img src=%q alt=%q width=%q height=%q></p>%s" .Permalink "image of the building technique" (string .Width) (string .Height) $description }}
+    {{- end }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <guid>{{ .Permalink }}</guid>
+      <description>{{ $description | transform.XMLEscape | safeHTML }}</description>
+      {{- with $image }}
+      {{ printf "<enclosure url=%q length=%q type=%q />" .Permalink (string (len .Content)) .MediaType.Type | safeHTML }}
+      {{- end }}
+    </item>
+    {{- end }}
+  </channel>
+</rss>
