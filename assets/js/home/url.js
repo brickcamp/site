@@ -13,7 +13,7 @@ export function getState(defaults) {
   const result = { ...defaults };
 
   for (let key in STATE_PARAMS) {
-    param = STATE_PARAMS[key];
+    let param = STATE_PARAMS[key];
     if (params.has(param)) {
       result[key] = params.get(param);
     }
