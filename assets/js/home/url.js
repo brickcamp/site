@@ -35,10 +35,10 @@ function applyState(state, defaults, opts) {
   const before = params.toString();
   
   for (let key in STATE_PARAMS) {
+    let param = STATE_PARAMS[key];
     if (state[key] === defaults[key]) {
-      params.delete(key);
+      params.delete(param);
     } else {
-      let param = STATE_PARAMS[key];
       params.set(param, state[key]);
     }
   }
