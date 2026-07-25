@@ -23,7 +23,7 @@ async function fetchCSV(url, mapFields = false) {
     data = [data];
   } else if (mapFields) {
     data = data
-      .map(line => line.split(","))
+      .map(line => line.split("\t"))
       .map(mapFields);
   }
     
@@ -74,21 +74,24 @@ async function getPartEntries(state) {
   return await fetchCSV("/parts/" + state.part + "/index.csv", mapEntryFields);
 }
 
-function mapEntryFields(fields) {
+// Entry rows are written by layouts/_partials/entries/getLookupRow.html,
+// so change columns there and here together.
+function mapEntryFields([link, title, size, values]) {
   return {
-    link: fields[0],
-    image: fields[0] + "__image-min.webp",
-    title: fields[1],
-    size: fields[2],
-    values: fields[3] ? fields[3].split("|") : [],
+    link: link,
+    image: link + "__image-min.webp",
+    title: title,
+    size: size,
+    values: values ? values.split("|") : [],
   };
 }
 
-function mapPartFields(fields) {
+// Part rows are written by layouts/parts/taxonomy.csv.
+function mapPartFields([id, title]) {
   return {
-    id: fields[0],
+    id: id,
     link: "#",
-    image: "/parts/" + fields[0] + "/__image-min.webp",
-    title: fields[1],
+    image: "/parts/" + id + "/__image-min.webp",
+    title: title,
   };
 }

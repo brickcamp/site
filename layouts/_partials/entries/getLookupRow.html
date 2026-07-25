@@ -1,0 +1,18 @@
+{{/* Returns one CSV row for an entry
+
+     Read back by mapEntryFields() in assets/js/home/data.js, which takes the
+     columns positionally — change the order here and there together.
+
+     Params: page (required), filter (optional). */}}
+{{- $page   := .page -}}
+{{- $filter := .filter | default false -}}
+
+{{- $size   := index (partial "entries/getCalculatedFields" $page) "_sizeType" -}}
+{{- $values := "" -}}
+{{- with $filter -}}
+  {{- if eq .from "tags" -}}
+    {{- $values = partial "entries/getScopedTagValues" (dict "page" $page "filter" .) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return partial "csv/getRow" (slice $page.RelPermalink $page.Title $size $values) -}}

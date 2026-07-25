@@ -2,12 +2,6 @@
 {{- $entries := partial "entries/getFiltered" $filter -}}
 
 {{- range sort $entries -}}
-  {{- $values   := partial "entries/getCalculatedFields" . -}}
-  {{- $sizeType := index $values "_sizeType" -}}
-  {{- $tagValues := "" -}}
-  {{- if eq $filter.from "tags" -}}
-    {{- $tagValues = partial "entries/getScopedTagValues" (dict "page" . "filter" $filter) -}}
-  {{- end -}}
-  {{- $line := print .RelPermalink "," .Title "," $sizeType "," $tagValues -}}
+  {{- $line := partial "entries/getLookupRow" (dict "page" . "filter" $filter) -}}
 {{ printf "%s\n" $line }}
 {{- end -}}

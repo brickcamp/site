@@ -1,0 +1,10 @@
+{{/* Returns one lookup row: the given fields, tab-separated.
+     Read back by fetchCSV() in assets/js/home/data.js, which splits on tab.
+
+     Params: the fields, as a slice. */}}
+{{- $fields := slice -}}
+{{- range . -}}
+  {{- $fields = $fields | append (replaceRE "[\t\r\n]+" " " (string .)) -}}
+{{- end -}}
+
+{{- return delimit $fields "\t" -}}

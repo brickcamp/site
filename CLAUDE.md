@@ -28,9 +28,9 @@ Pipeline — four stages, one core concept:
    CSV lookup page per filter scope under `/data/filtered/…` and `/data/sorted/…`.
 3. **Render** — `layouts/data/filtered.csv` (via `_partials/entries/getFiltered.html`,
    which dispatches on the filter's `from`) writes each row as
-   `relPermalink,title,sizeType,values`.
+   `relPermalink → title → sizeType → values`, tab-separated.
 4. **Fetch** — `data.js` requests `/data/filtered/<base>-<type>-__any/index.csv`, then
-   filters rows by value **on the client**.
+   filters rows by value on the client.
 
 Parts are separate: taxonomy *term* pages output CSV (`layouts/parts/term.csv`,
 enabled by the `outputs=["csv"]` cascade in `hugo.toml`), fetched at
