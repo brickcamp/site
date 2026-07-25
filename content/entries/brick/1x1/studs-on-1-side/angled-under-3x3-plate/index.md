@@ -6,8 +6,8 @@ url   = '/entry/brick-1x1-sidestuds-angled-45deg/'
 parts = ['47905', '87087', '3024', '11212']
 size  = ['3s', '3s', '1s']
 tags  = [
-  'angle-studtilt-45',
-  'angle-studturn-90',
+  'angle-studtilt-90',
+  'angle-studturn-45',
   'partcount-total-5',
 ]
 +++
