@@ -9,6 +9,8 @@ let elPartList;
 let elPartTemplate;
 let elEntryList;
 let elEntryTemplate;
+let searchesEntries;
+let searchesParts;
 
 // Takes the root to render into and the callback for user intents, so nothing
 // is read from the DOM before a caller asks for it — a fixture works as root.
@@ -21,6 +23,10 @@ export function mount(mountRoot, onIntent) {
   elPartTemplate = root.querySelector("#part-template");
   elEntryList = root.querySelector("#entries");
   elEntryTemplate = root.querySelector("#entry-template");
+
+  // The two things the one search box can search, both worded in the markup.
+  searchesEntries = elSearchInput.placeholder;
+  searchesParts = elSearchInput.dataset.placeholderParts ?? searchesEntries;
 
   appEvents.listenToIntents(root, onIntent);
   appEvents.listenToSearch(elSearchInput, onIntent);
@@ -56,8 +62,15 @@ function initStickyFilterFix() {
   observer.observe(sticky);
 }
 
-export function renderSearchField(state) {
+export function renderSearchQuery(state) {
   elSearchInput.value = state.query;
+}
+
+// The part list searches parts, every other scope searches entries — say which.
+export function renderSearchPlaceholder(state) {
+  const text = appScope.scopeFor(state).isPartList ? searchesParts : searchesEntries;
+  elSearchInput.placeholder = text;
+  elSearchInput.setAttribute("aria-label", text.replace(/\.+$/, ""));
 }
 
 export function renderFilterDropdowns(state) {

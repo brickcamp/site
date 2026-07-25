@@ -87,3 +87,10 @@ which appear in `angle.toml`. Therefore:
 - `size-*` and `part-*` files under `/data/filtered/` are generated but currently
   unused by the client (size is filtered client-side on the `size` column; parts use
   `/parts/…`).
+- **`js.Build --minify` reorders statements across an `await`.** esbuild merged
+  `const id = ++n;` (and even a function call) into the following `await`
+  declaration, so it ran *after* the await — a "am I still the newest?" check
+  passed always in `public/`, never in `hugo server`. Anything captured before an
+  await must travel as an **argument** to the awaited call, as `app.js`'s
+  `scopedItems(forState)` does. Check the built `public/index.html`, not the dev
+  server, when order matters.
