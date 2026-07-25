@@ -7,10 +7,12 @@ valueformat = '%s Sides'
 [[types]]
 title = 'Circle'
 slug  = 'circle'
+novalues = true
 
 [[types]]
 title = 'Ellipse'
 slug  = 'ellipse'
+novalues = true
 
 [[types]]
 title = 'Polygon'
@@ -27,10 +29,12 @@ slug  = 'polyhedron'
 [[types]]
 title = 'Sphere'
 slug  = 'sphere'
+novalues = true
 
 [[types]]
 title = 'Toroid'
 slug  = 'toroid'
+novalues = true
 
 [[values]]
 title = '3 Sides'

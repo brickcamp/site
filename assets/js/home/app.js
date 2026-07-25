@@ -1,6 +1,7 @@
 import * as appState from "./state.js";
 import * as appView from "./view.js";
 import * as appData from "./data.js";
+import * as appScope from "./scope.js";
 import * as _ from "./utils.js";
 
 let state;
@@ -8,6 +9,7 @@ let scopedEntries;
 let scopedParts;
 
 document.addEventListener("DOMContentLoaded", async () => {
+  await appScope.load();
   state = appState.load();
   appView.init();
   await refreshAll();
@@ -42,15 +44,15 @@ function refreshSearchField() {
 }
 
 function refreshResults() {
-  if (state.base != "part" || state.part != "__any") {
-    const filteredEntries = _.filterByFieldValue(scopedEntries, "size", state.size);
-    const searchedEntries = _.filterBySearch(filteredEntries, state.query);  
-    appView.renderEntries(searchedEntries);
-    appView.renderParts(scopedParts);
-  } else {
-    const searchedParts = _.filterBySearch(scopedParts, state.query);  
+  if (appScope.scopeFor(state).isPartList) {
+    const searchedParts = _.filterBySearch(scopedParts, state.query);
     appView.renderEntries([]);
     appView.renderParts(searchedParts);
+  } else {
+    const filteredEntries = _.filterByFieldValue(scopedEntries, "size", state.size);
+    const searchedEntries = _.filterBySearch(filteredEntries, state.query);
+    appView.renderEntries(searchedEntries);
+    appView.renderParts(scopedParts);
   }
 
   appView.renderScopeTabs(state);
@@ -58,7 +60,7 @@ function refreshResults() {
 }
 
 async function refreshScopedEntries() {
-  if (state.base == "part" && state.part == "_any") {
+  if (appScope.scopeFor(state).isPartList) {
     scopedEntries = [];
   } else {
     const [sortedLinks, filteredEntries] = await Promise.all([

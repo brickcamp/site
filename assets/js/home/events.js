@@ -1,4 +1,5 @@
 import { dispatch } from "./app.js";
+import { ANY, scopeFor } from "./scope.js";
 
 export function listenToFilterItems(items) {
   [...items].forEach((item) => {
@@ -56,13 +57,14 @@ async function onScopeTabClicked(e) {
 
   const patch = {
     base: newBase,
-    type: "__any",
-    value: "__any",
-    part: "__any",
+    type: ANY,
+    value: ANY,
+    part: ANY,
   }
 
-  if (newBase === "part") {
-    await dispatch({...patch, query: "", queryPending: false });    
+  // The part list has its own search; entering it drops the entry query.
+  if (scopeFor(patch).isPartList) {
+    await dispatch({...patch, query: "", queryPending: false });
   } else {
     await dispatch(patch);
   }

@@ -1,69 +1,55 @@
 import * as appUrl from "./url.js";
+import * as appScope from "./scope.js";
 
-const TAGS = {
-  ANY: "__any",
-  EMPTY: "",
-  SORT_DEFAULT: "date-desc",
-
-  BASES_WITHOUT_TYPES: ["__any", "part"],
-  BASES_WITHOUT_VALUES: ["__any", "part", "repeat", "size"],
-  TYPES_WITHOUT_VALUES: ["ellipse", "circle", "sphere", "toroid"],
-};
-
-export const DEFAULTS = Object.freeze({
-  base: TAGS.ANY,
-  type: TAGS.ANY,
-  value: TAGS.ANY,
-  part: TAGS.ANY,
-  size: TAGS.ANY,
-  sort: TAGS.SORT_DEFAULT,
-  query: TAGS.EMPTY,
-  queryPending: false,
-  hasTypes: true,
-  hasValues: true,
-  hasSize: true,
-  hasSort: true,
-});
+function defaults() {
+  return {
+    base: appScope.ANY,
+    type: appScope.ANY,
+    value: appScope.ANY,
+    part: appScope.ANY,
+    size: appScope.ANY,
+    sort: appScope.sortDefault(),
+    query: "",
+    queryPending: false,
+  };
+}
 
 export function save(rawState) {
   const state = normalize(rawState);
   if (rawState.queryPending) {
-    appUrl.replaceState(state, DEFAULTS);
+    appUrl.replaceState(state, defaults());
   } else {
-    appUrl.pushState(state, DEFAULTS);
+    appUrl.pushState(state, defaults());
   }
   return state;
 }
 
 export function load() {
-  const rawState = appUrl.getState(DEFAULTS)
-  return normalize(rawState, DEFAULTS);
+  return normalize(appUrl.getState(defaults()));
 }
 
+// Resets the dimensions the scope does not support, so switching scope — or
+// hand-editing the URL — cannot leave a filter behind that nothing can clear.
+// Each step re-asks the catalog because the previous one may have changed the
+// answer: clearing the type can bring the value dropdown back.
 export function normalize(input) {
-  let result = { ...DEFAULTS, ...input };
+  let result = { ...defaults(), ...input };
 
-  const normalizedQuery = result.query.trim().toLowerCase().replace(/\s+/g,' ');
-  if (normalizedQuery !== result.query) {
-    result = { ...result, query: normalizedQuery };
+  const query = result.query.trim().toLowerCase().replace(/\s+/g, " ");
+  if (query !== result.query) {
+    result = { ...result, query: query };
   }
 
-  result.hasTypes = !TAGS.BASES_WITHOUT_TYPES.includes(result.base);
-  if (!result.type || !result.hasTypes) {
-    result = { ...result, type: TAGS.ANY };
+  if (!result.type || !appScope.scopeFor(result).hasTypes) {
+    result = { ...result, type: appScope.ANY };
   }
 
-  result.hasValues = 
-    !TAGS.BASES_WITHOUT_VALUES.includes(result.base) &&
-    !TAGS.TYPES_WITHOUT_VALUES.includes(result.type);
-  if (!result.value || !result.hasValues) {
-    result = { ...result, value: TAGS.ANY };
+  if (!result.value || !appScope.scopeFor(result).hasValues) {
+    result = { ...result, value: appScope.ANY };
   }
 
-  result.hasSize = result.base !== "part" || result.part !== TAGS.ANY;
-  result.hasSort = result.hasSize;
-  if (!result.hasSize) {
-    result = { ...result, size: TAGS.ANY, sort: TAGS.SORT_DEFAULT };
+  if (!appScope.scopeFor(result).hasSize) {
+    result = { ...result, size: appScope.ANY, sort: defaults().sort };
   }
 
   return result;

@@ -1,4 +1,5 @@
 import * as appEvents from "./events.js";
+import * as appScope from "./scope.js";
 
 const elSearchInput = document.getElementById("search-input");
 const elScopeTabs = document.querySelectorAll("#scope-tabs [data-base]");
@@ -54,44 +55,25 @@ export function renderSearchField(state) {
 }
 
 export function renderFilterDropdowns(state) {
-  const selected = {
-    "nav-type": state.type,
-    "nav-value": state.value,
-    "nav-size": state.size,
-    "nav-sort": state.sort,
+  const scope = appScope.scopeFor(state);
+  const dropdowns = {
+    "nav-type": { dimension: "type", value: state.type, shown: scope.hasTypes },
+    "nav-value": { dimension: "value", value: state.value, shown: scope.hasValues },
+    "nav-size": { dimension: "size", value: state.size, shown: scope.hasSize },
+    "nav-sort": { dimension: "sort", value: state.sort, shown: scope.hasSort },
   };
 
-  // copySpanText relies on invalid items to be hidden, so refresh items first
   document.querySelectorAll("#filter-nav .dropdown-item").forEach((link) => {
     link.hidden = link.dataset.base && link.dataset.base != state.base;
   });
   document.querySelectorAll("#filter-nav .dropdown").forEach((dropdown) => {
-    const value = selected[dropdown.id];
-    const fallback =
-      dropdown.id === "nav-value" ? formatUncuratedValue(state.base, value) : value;
-    copySpanText(dropdown.id + "-" + value, dropdown.id, fallback);
-    dropdown.hidden =
-      (dropdown.id === "nav-type" && !state.hasTypes) ||
-      (dropdown.id === "nav-value" && !state.hasValues) ||
-      (dropdown.id === "nav-size" && !state.hasSize) ||
-      (dropdown.id === "nav-sort" && !state.hasSort);
+    const selected = dropdowns[dropdown.id];
+    if (!selected) {
+      return;
+    }
+    setSpanText(dropdown.id, scope.labelFor(selected.dimension, selected.value));
+    dropdown.hidden = !selected.shown;
   });
-}
-
-function formatUncuratedValue(base, value) {
-  const template = document.getElementById("scope-" + base)?.dataset.valueFormat;
-  return template ? template.replace("%s", value) : value;
-}
-
-function copySpanText(from, to, fallback) {
-  const text = getSpanText(from) ?? fallback;
-  setSpanText(to, text);
-}
-
-function getSpanText(id) {
-  return document
-    .querySelector("#" + id + ":not([hidden])")
-    ?.querySelector("span")?.innerText;
 }
 
 function setSpanText(id, text) {

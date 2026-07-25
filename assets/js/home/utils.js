@@ -1,3 +1,4 @@
+import { ANY } from "./scope.js";
 
 export function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -15,7 +16,7 @@ export function sortByFieldValues(objects, field, sortedValues) {
 }
 
 export function filterByFieldValue(objects, field, value) {
-  if (!value || value === "__any") {
+  if (!value || value === ANY) {
     return objects;
   } else {
     return objects.filter((entry) => entry[field] === value);
@@ -31,7 +32,7 @@ export function filterBySearch(objects, search) {
 }
 
 export function orAny(value) {
-  return value || "__any";
+  return value || ANY;
 }
 
 export function hasAnyKeysIn(object, keys) {

@@ -52,6 +52,16 @@
   {{ $.AddPage $page }}
 {{ end }}
 
+{{/* Publish the scope catalog for the client (see _partials/scopes/getCatalog) */}}
+{{ $.AddPage (dict
+  "title"   "scopes"
+  "kind"    "page"
+  "path"    "scopes"
+  "outputs" (slice "json")
+  "layout"  "scopes"
+  "sitemap" (dict "disable" true)
+)}}
+
 {{/* Create lookup file for each sort order */}}
 {{ range $sorting := $.Site.Data.entries.sortings.options }}
   {{ $page := dict

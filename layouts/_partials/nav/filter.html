@@ -1,63 +1,49 @@
-{{- $dropdowns := newScratch -}}
-{{- $dropdowns.Add "type"  slice -}}
-{{- $dropdowns.Add "value" slice -}}
-{{- $dropdowns.Add "size"  slice -}}
-{{- $dropdowns.Add "sort"  slice -}}
+{{/* Scope tabs and filter dropdowns, rendered from the scope catalog */}}
+{{- $catalog := partial "scopes/getCatalog" . -}}
+{{- $scopes  := $catalog.scopes -}}
+{{- $dims    := $catalog.dimensions -}}
+{{- $any     := "__any" -}}
 
-{{- $dropdowns.Add "type"  (dict "id" "__any" "title" "All Types" ) -}}
-{{- $dropdowns.Add "value" (dict "id" "__any" "title" "All Values" ) -}}
-{{- $dropdowns.Add "size"  (dict "id" "__any" "title" "All Sizes" ) -}}
-
-{{- $filters := sort site.Data.entries.filters "sort" "asc" -}}
-
-{{- range $filter := $filters -}}
-  {{- if ne $filter.slug "size" -}}
-    {{- range .types -}}
-      {{- $dropdowns.Add "type" (dict "parent" $filter.slug "id" .slug "title" .title "icon" true) -}}
-    {{- end -}}
-    {{- range .values -}}
-      {{- $dropdowns.Add "value" (dict "parent" $filter.slug "id" .slug "title" .title ) -}}
-    {{- end -}}
+{{- $types  := slice (dict "id" $any "title" $dims.type.anyTitle) -}}
+{{- $values := slice (dict "id" $any "title" $dims.value.anyTitle) -}}
+{{- range $scope := $scopes -}}
+  {{- range $scope.types -}}
+    {{- $types = $types | append (dict
+        "parent" $scope.slug "id" .slug "title" .title "icon" true
+    ) -}}
+  {{- end -}}
+  {{- range $scope.values -}}
+    {{- $values = $values | append (dict
+        "parent" $scope.slug "id" .slug "title" .title
+    ) -}}
   {{- end -}}
 {{- end -}}
 
-{{- with site.Data.entries.filters.size -}}
-  {{- range .types -}}
-    {{- $dropdowns.Add "size" (dict "id" .slug "title" .title ) -}}
-  {{- end -}}
+{{- $sizes := slice (dict "id" $any "title" $dims.size.anyTitle) -}}
+{{- range $dims.size.options -}}
+  {{- $sizes = $sizes | append (dict "id" .slug "title" .title) -}}
 {{- end -}}
 
-{{- range site.Data.entries.sortings.options -}}
-  {{- $dropdowns.Add "sort" (dict "id" .slug "title" .title ) -}}
+{{- $sorts := slice -}}
+{{- range $dims.sort.options -}}
+  {{- $sorts = $sorts | append (dict "id" .slug "title" .title) -}}
 {{- end -}}
 
 <div class="bg-body-tertiary tabs-border-bottom">
   <div class="container">
     <div class="overflow-x-auto overflow-y-hidden" tabindex="-1">
       <ul id="scope-tabs" class="nav nav-tabs flex-nowrap mt-1 mx-1 border-bottom-0">
+        {{- range $scope := $scopes }}
         <li class="nav-item">
           <a
-            id="scope-__any"
-            class="nav-link text-body active"
-            data-base="__any"
+            id="scope-{{ $scope.slug }}"
+            class="nav-link text-body{{ if eq $scope.slug $any }} active{{ end }}"
+            data-base="{{ $scope.slug }}"
             href="#">
-            All
+            {{ $scope.title }}
           </a>
         </li>
-        {{- range $filter := $filters -}}
-          {{- if ne $filter.slug "size" -}}
-          <li class="nav-item">
-            <a
-              id="scope-{{ $filter.slug }}"
-              class="nav-link text-body"
-              data-base="{{ $filter.slug }}"
-              {{ with $filter.valueformat }}data-value-format="{{ . }}"{{ end }}
-              href="#">
-              {{ $filter.title }}
-            </a>
-          </li>
-          {{- end -}}
-        {{- end -}}
+        {{- end }}
       </ul>
     </div>
   </div>
@@ -66,10 +52,10 @@
 <div class="bg-body sticky-top border-bottom-on-sticky">
   <div class="container">
     <nav id="filter-nav" class="d-flex flex-row flex-nowrap overflow-x-auto w-100 py-1">
-      {{- partial "nav/dropdown.html" (dict "id" "type"  "items" ($dropdowns.Get "type")) -}}
-      {{- partial "nav/dropdown.html" (dict "id" "value" "items" ($dropdowns.Get "value")) -}}
-      {{- partial "nav/dropdown.html" (dict "id" "size"  "items" ($dropdowns.Get "size")) -}}
-      {{- partial "nav/dropdown.html" (dict "id" "sort"  "items" ($dropdowns.Get "sort") "class" "ms-auto" ) -}}
+      {{- partial "nav/dropdown.html" (dict "id" "type"  "items" $types) -}}
+      {{- partial "nav/dropdown.html" (dict "id" "value" "items" $values) -}}
+      {{- partial "nav/dropdown.html" (dict "id" "size"  "items" $sizes) -}}
+      {{- partial "nav/dropdown.html" (dict "id" "sort"  "items" $sorts "class" "ms-auto" ) -}}
     </nav>
   </div>
 </div>

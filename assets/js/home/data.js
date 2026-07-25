@@ -1,4 +1,5 @@
 import * as _ from "./utils.js";
+import { ANY, scopeFor } from "./scope.js";
 
 const cache = new Map();
 
@@ -40,20 +41,20 @@ export async function getSortedEntryLinks(state) {
 }
 
 export async function getFilteredEntries(state) {
-  if (state.part == "__any") {
+  if (state.part == ANY) {
     return await getTagEntries(state);
   } else {
     return await getPartEntries(state);
-  } 
+  }
 }
 
 export async function getParts(state) {
-  if (state.base !== "part") {
+  if (!scopeFor(state).hasParts) {
     return [];
   }
 
   const parts = await fetchCSV("/parts/index.csv", mapPartFields);
-  if (state.part == "__any") {
+  if (state.part == ANY) {
     return parts;
   } else {
     const part = parts.find(part => part.id === state.part)
@@ -62,9 +63,9 @@ export async function getParts(state) {
 }
 
 async function getTagEntries(state) {
-  const filter = [state.base, state.type, "__any"].join("-");
+  const filter = [state.base, state.type, ANY].join("-");
   const entries = await fetchCSV("/data/filtered/" + filter + "/index.csv", mapEntryFields);
-  if (state.value === "__any") {
+  if (state.value === ANY) {
     return entries;
   }
   return entries.filter(entry => entry.values.includes(state.value));

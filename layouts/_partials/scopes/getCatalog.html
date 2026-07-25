@@ -1,0 +1,65 @@
+{{/* Returns the scope catalog: which dimensions each search scope supports and
+     what its dropdown entries are called, derived from the filters in
+     data/entries/filters/*.toml and data/entries/sortings.toml. */}}
+{{- $filters  := sort site.Data.entries.filters "sort" "asc" -}}
+{{- $sortings := site.Data.entries.sortings -}}
+
+{{- $scopes := slice (dict
+    "slug"        "__any"
+    "title"       "All"
+    "from"        ""
+    "valueFormat" ""
+    "types"       slice
+    "values"      slice
+) -}}
+
+{{- range $filter := $filters -}}
+  {{- if eq $filter.slug "size" -}}
+    {{- continue -}}
+  {{- end -}}
+
+  {{- $types := slice -}}
+  {{- range $filter.types -}}
+    {{- $types = $types | append (dict
+        "slug"      .slug 
+        "title"     .title 
+        "hasValues" (not .novalues)
+    ) -}}
+  {{- end -}}
+
+  {{- $values := slice -}}
+  {{- range $filter.values -}}
+    {{- $values = $values | append (dict "slug" .slug "title" .title) -}}
+  {{- end -}}
+
+  {{- $scopes = $scopes | append (dict
+      "slug"        $filter.slug
+      "title"       $filter.title
+      "from"        $filter.from
+      "valueFormat" ($filter.valueformat | default "")
+      "types"       $types
+      "values"      $values
+  ) -}}
+{{- end -}}
+
+{{- $sizes := slice -}}
+{{- range site.Data.entries.filters.size.types -}}
+  {{- $sizes = $sizes | append (dict "slug" .slug "title" .title) -}}
+{{- end -}}
+
+{{- $sorts := slice -}}
+{{- range $sortings.options -}}
+  {{- $sorts = $sorts | append (dict "slug" .slug "title" .title) -}}
+{{- end -}}
+
+{{- return dict
+    "dimensions" (dict
+      "type"  (dict "anyTitle" "All Types")
+      "value" (dict "anyTitle" "All Values")
+      "size"  (dict "anyTitle" "All Sizes" 
+                    "options"  $sizes)
+      "sort"  (dict "default" $sortings.default 
+                    "options" $sorts)
+    )
+    "scopes" $scopes
+-}}

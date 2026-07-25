@@ -36,6 +36,15 @@ Parts are separate: taxonomy *term* pages output CSV (`layouts/parts/term.csv`,
 enabled by the `outputs=["csv"]` cascade in `hugo.toml`), fetched at
 `/parts/<id>/index.csv`.
 
+### The scope catalog
+
+A filter is configured in `data/entries/filters/*.toml`.
+`_partials/scopes/getCatalog.html` turns those files into one catalog
+and two consumers read it: 
+`_partials/nav/filter.html` renders the tabs and dropdowns from it;
+ `layouts/data/scopes.json` publishes the json for the client.
+`assets/js/home/scope.js` fetches the json.
+
 ### Tag grammar
 
 Entry tags are **`base-type-value`**, e.g. `angle-studturn-28`, `shape-polygon-6`.
