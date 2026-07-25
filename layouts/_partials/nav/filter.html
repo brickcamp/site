@@ -38,7 +38,8 @@
           <a
             id="scope-{{ $scope.slug }}"
             class="nav-link text-body{{ if eq $scope.slug $any }} active{{ end }}"
-            data-base="{{ $scope.slug }}"
+            data-dim="base"
+            data-value="{{ $scope.slug }}"
             href="#">
             {{ $scope.title }}
           </a>

@@ -14,6 +14,25 @@ function defaults() {
   };
 }
 
+// Applies a patch, plus the rules that span across dimensions.
+// Kept here rather than in the controls, so every caller gets them.
+export function next(previous, patch) {
+  let result = { ...previous, ...patch };
+
+  // Reset base-specific state on switching base
+  if ("base" in patch) {
+    result = { ...result, type: appScope.ANY, value: appScope.ANY, part: appScope.ANY };
+  }
+
+  // Reset search when it switches between parts and entries
+  const opensPartList = "base" in patch && appScope.scopeFor(result).isPartList;
+  if ("part" in patch || opensPartList) {
+    result = { ...result, query: "", queryPending: false };
+  }
+
+  return result;
+}
+
 export function save(rawState) {
   const state = normalize(rawState);
   if (rawState.queryPending) {

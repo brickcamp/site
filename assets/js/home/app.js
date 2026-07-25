@@ -9,28 +9,26 @@ let renderCount = 0;
 document.addEventListener("DOMContentLoaded", async () => {
   await appScope.load();
   state = appState.load();
-  appView.init();
-  appView.renderSearchField(state);
-  await render();
+  appView.mount(document, dispatch);
+  await renderAll();
 });
 
 window.addEventListener("popstate", async () => {
   state = appState.load();
-  appView.renderSearchField(state);
-  await render();
+  await renderAll();
 });
 
-export async function dispatch(patch) {
-  state = appState.save({ ...state, ...patch });
+async function dispatch(patch) {
+  state = appState.save(appState.next(state, patch));
+  await renderAll();
+}
 
-  if (patch["queryPending"] === false) {
+async function renderAll() {
+  // While a query is pending the user is still typing in the field, so leave it be.
+  if (!state.queryPending) {
     appView.renderSearchField(state);
   }
 
-  await render();
-}
-
-async function render() {
   const renderId = ++renderCount;
   const [entries, parts] = await Promise.all([
     appLookup.scopedEntries(state),

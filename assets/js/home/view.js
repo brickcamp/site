@@ -1,32 +1,38 @@
 import * as appEvents from "./events.js";
 import * as appScope from "./scope.js";
 
-const elSearchInput = document.getElementById("search-input");
-const elScopeTabs = document.querySelectorAll("#scope-tabs [data-base]");
-const elFilterItems = document.querySelectorAll("#filter-nav .dropdown-item");
+let root;
+let doc;
+let elSearchInput;
+let elScopeTabs;
+let elPartList;
+let elPartTemplate;
+let elEntryList;
+let elEntryTemplate;
 
-const elPartList = document.getElementById("parts");
-const elPartTemplate = document.getElementById("part-template");
+// Takes the root to render into and the callback for user intents, so nothing
+// is read from the DOM before a caller asks for it — a fixture works as root.
+export function mount(mountRoot, onIntent) {
+  root = mountRoot;
+  doc = root.ownerDocument ?? root;
+  elSearchInput = root.querySelector("#search-input");
+  elScopeTabs = root.querySelectorAll("#scope-tabs [data-dim]");
+  elPartList = root.querySelector("#parts");
+  elPartTemplate = root.querySelector("#part-template");
+  elEntryList = root.querySelector("#entries");
+  elEntryTemplate = root.querySelector("#entry-template");
 
-const elEntryList = document.getElementById("entries");
-const elEntryTemplate = document.getElementById("entry-template");
+  appEvents.listenToIntents(root, onIntent);
+  appEvents.listenToSearch(elSearchInput, onIntent);
 
-export function init() {
-  initEventListeners();
   initDropdownFix();
   initStickyFilterFix();
-}
-
-function initEventListeners() {
-  appEvents.listenToFilterItems(elFilterItems);
-  appEvents.listenToScopeTabs(elScopeTabs);
-  appEvents.listenToSearch(elSearchInput);
 }
 
 function initDropdownFix() {
   // avoid hidden dropdowns because of horizontal scroll container
   // see https://github.com/twbs/bootstrap/issues/35397#issuecomment-1325790968
-  const toggles = document.querySelectorAll(".dropdown-toggle");
+  const toggles = root.querySelectorAll(".dropdown-toggle");
   const fixes = [...toggles].map(
     (toggle) =>
       new bootstrap.Dropdown(toggle, {
@@ -41,7 +47,7 @@ function initStickyFilterFix() {
   const addBorderIfSticky = ([e]) =>
     sticky.classList.toggle("border-bottom", e.intersectionRatio < 1);
 
-  const sticky = document.querySelector(".border-bottom-on-sticky");
+  const sticky = root.querySelector(".border-bottom-on-sticky");
   const observer = new IntersectionObserver(addBorderIfSticky, {
     threshold: [1],
   });
@@ -56,28 +62,26 @@ export function renderSearchField(state) {
 
 export function renderFilterDropdowns(state) {
   const scope = appScope.scopeFor(state);
-  const dropdowns = {
-    "nav-type": { dimension: "type", value: state.type, shown: scope.hasTypes },
-    "nav-value": { dimension: "value", value: state.value, shown: scope.hasValues },
-    "nav-size": { dimension: "size", value: state.size, shown: scope.hasSize },
-    "nav-sort": { dimension: "sort", value: state.sort, shown: scope.hasSort },
+  const shown = {
+    type: scope.hasTypes,
+    value: scope.hasValues,
+    size: scope.hasSize,
+    sort: scope.hasSort,
   };
 
-  document.querySelectorAll("#filter-nav .dropdown-item").forEach((link) => {
-    link.hidden = link.dataset.base && link.dataset.base != state.base;
+  root.querySelectorAll("#filter-nav .dropdown-item").forEach((item) => {
+    item.hidden = item.dataset.scope && item.dataset.scope != state.base;
   });
-  document.querySelectorAll("#filter-nav .dropdown").forEach((dropdown) => {
-    const selected = dropdowns[dropdown.id];
-    if (!selected) {
-      return;
-    }
-    setSpanText(dropdown.id, scope.labelFor(selected.dimension, selected.value));
-    dropdown.hidden = !selected.shown;
+
+  root.querySelectorAll("#filter-nav .dropdown[data-dim]").forEach((dropdown) => {
+    const dimension = dropdown.dataset.dim;
+    setLabel(dropdown, scope.labelFor(dimension, state[dimension]));
+    dropdown.hidden = !shown[dimension];
   });
 }
 
-function setSpanText(id, text) {
-  const span = document.getElementById(id)?.querySelector("span");
+function setLabel(dropdown, text) {
+  const span = dropdown.querySelector(".dropdown-toggle span");
   if (span) {
     span.innerText = text;
   }
@@ -85,8 +89,7 @@ function setSpanText(id, text) {
 
 export function renderScopeTabs(state) {
   elScopeTabs.forEach((tab) => {
-    const tabBase = tab.dataset.base;
-    const isActive = tabBase && tabBase === state.base;
+    const isActive = tab.dataset.value === state.base;
     tab.classList.toggle("active", isActive);
     tab.setAttribute("aria-current", isActive ? "page" : "false");
   });
@@ -101,7 +104,7 @@ export function renderEntries(entries) {
 }
 
 function renderItems(elItemList, elItemTemplate, items) {
-  const fragment = document.createDocumentFragment();
+  const fragment = doc.createDocumentFragment();
 
   items.forEach((item) => {
     const elItem = newItemFromTemplate(elItemTemplate, item);
@@ -123,16 +126,17 @@ function newItemFromTemplate(template, item) {
   if (elLink) {
     elLink.href = item.link;
     elLink.title = item.title;
-
-    if (elLink.classList.contains("insert-part-event")) {
-      elLink.dataset.part = item.id;
-      appEvents.listenToPart(elLink);
-    }
   }
 
   const elTitle = result.querySelector(".insert-title");
   if (elTitle) {
     elTitle.innerText = item.title;
+  }
+
+  // A card that declares a dimension is a control: the item's id is its value.
+  const elIntent = result.querySelector("[data-dim]");
+  if (elIntent) {
+    elIntent.dataset.value = item.id;
   }
 
   return result;

@@ -1,84 +1,39 @@
-import { dispatch } from "./app.js";
-import { ANY, scopeFor } from "./scope.js";
+// Turns DOM events into state patches and hands them to the given callback.
+// Controls declare what they mean with data-dim / data-value, so nothing 
+// here knows what a dimension is or what any value stands for.
 
-export function listenToFilterItems(items) {
-  [...items].forEach((item) => {
-    item.addEventListener("click", onFilterClicked);
-    item.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        onFilterClicked(e);
-      }
-    });
-  });  
+export function listenToIntents(root, onIntent) {
+  root.addEventListener("click", (e) => activate(e, onIntent));
+  root.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      activate(e, onIntent);
+    }
+  });
 }
 
-export function listenToScopeTabs(tabs) {
-  [...tabs].forEach((tab) => {
-    tab.addEventListener("click", onScopeTabClicked);
-    tab.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        onScopeTabClicked(e);
-      }
-    });
-  });  
-}
-
-export function listenToSearch(search) {
-  search.addEventListener("input", onSearchInput);
-  search.addEventListener("keydown", (e) => {
+export function listenToSearch(input, onIntent) {
+  input.addEventListener("input", (e) => search(e, onIntent));
+  input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      onSearchInput(e);
+      search(e, onIntent);
     }
-  });  
+  });
 }
 
-export function listenToPart(part) {
-  part.addEventListener("click", onPartClicked);
-}
-
-async function onFilterClicked(e) {
-  const segments = e.target.closest("[id]")?.id?.split("-");
-  if (!segments || segments.length < 3 || segments[0] != "nav") {
+async function activate(e, onIntent) {
+  const el = e.target?.closest?.("[data-dim][data-value]");
+  if (!el) {
+    // handling is left to the browser
     return;
   }
 
-  if (segments[1] == "sort") {
-    await dispatch({ sort: [segments[2], segments[3]].filter(Boolean).join("-") });
-  } else {
-    await dispatch({ [segments[1]]: segments[2] });
-  }
-}
-
-async function onScopeTabClicked(e) {
-  const newBase = e.target.closest("[data-base]")?.dataset?.base;
-  if (!newBase) return;
-
-  const patch = {
-    base: newBase,
-    type: ANY,
-    value: ANY,
-    part: ANY,
-  }
-
-  // The part list has its own search; entering it drops the entry query.
-  if (scopeFor(patch).isPartList) {
-    await dispatch({...patch, query: "", queryPending: false });
-  } else {
-    await dispatch(patch);
-  }
-}
-
-async function onPartClicked(e) {
-  const part = e.target.dataset.part;
-  await dispatch({ part: part, query: "", queryPending: false });
-  
   e.preventDefault();
-  return false;
+  await onIntent({ [el.dataset.dim]: el.dataset.value });
 }
 
-async function onSearchInput(e) {
-  const input = e.target.value;
-  await dispatch({ query: input, queryPending: e.key !== "Enter" });
+// Typing keeps the query pending, so the URL and the search field are only
+// rewritten once the user is done.
+async function search(e, onIntent) {
+  await onIntent({ query: e.target.value, queryPending: e.key !== "Enter" });
 }

@@ -45,6 +45,16 @@ and two consumers read it:
  `layouts/data/scopes.json` publishes the json for the client.
 `assets/js/home/scope.js` fetches the json.
 
+### How a click becomes state
+
+Controls declare their intent in markup: 
+`data-dim` (a state dimension — `base`, `type`, `value`, `size`, `sort`, `part`) 
+and `data-value`. `events.js` reads that pair off `closest("[data-dim][data-value]")`
+and emits `{[dim]: value}`. Dropdown items also carry `data-scope`, which `view.js` 
+uses to hide the other scopes' items.
+
+Wiring is one-directional — `events → app → view → DOM`.
+
 ### Tag grammar
 
 Entry tags are **`base-type-value`**, e.g. `angle-studturn-28`, `shape-polygon-6`.
