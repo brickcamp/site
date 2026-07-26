@@ -9,8 +9,8 @@
        size.volume  x × y × z in LDUs cubed — sorting only
        size.short   "4s × 4s × 1b"
        size.long    "4 studs × 4 studs × 1 brick"
-       parts.min    lowest  partcount-total- tag value
-       parts.max    highest partcount-total- tag value
+       parts.total    partcount-total- tag value
+       parts.segment  partcount-segment- tag value, 0 when the entry has none
 
      Params: the entry page. */}}
 {{- $entry := . -}}
@@ -62,13 +62,20 @@
   {{- $times := print " ×" $nbsp -}}
 
   {{/** partcounts **/}}
-  {{- $counts := slice -}}
+  {{- $parts := dict "total" 0 "segment" 0 -}}
   {{- range $entry.Param "tags" -}}
-    {{- if hasPrefix . "partcount-total-" -}}
-      {{- $counts = $counts | append (index (split . "-") 2) -}}
+    {{- $seg := partial "tags/getSegments" . -}}
+    {{- if eq $seg.base "partcount" -}}
+      {{- $seen := index $parts $seg.type -}}
+      {{- if eq $seen nil -}}
+        {{- errorf "entry %q: unknown partcount tag %q" $entry.Path . -}}
+      {{- else if gt $seen 0 -}}
+        {{- errorf "entry %q: more than one partcount-%s- tag" $entry.Path $seg.type -}}
+      {{- end -}}
+      {{- $parts = merge $parts (dict $seg.type $seg.value) -}}
     {{- end -}}
   {{- end -}}
-  {{- if not $counts -}}
+  {{- if not $parts.total -}}
     {{- errorf "entry %q: no partcount-total- tag" $entry.Path -}}
   {{- end -}}
 
@@ -80,10 +87,7 @@
         "short"  (delimit $short $times)
         "long"   (delimit $long  $times)
       )
-      "parts" (dict
-        "min" (math.Min $counts)
-        "max" (math.Max $counts)
-      )
+      "parts" $parts
   -}}
   {{- $entry.Store.Set "facts" $facts -}}
 {{- end -}}

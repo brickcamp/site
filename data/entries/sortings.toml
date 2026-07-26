@@ -27,14 +27,14 @@ order = 'desc'
 [[options]]
 title = 'Least Parts'
 slug  = 'parts-asc'
-field = 'parts.max'  # assume worst case
+field = 'parts.total'
 from  = 'facts'
 order = 'asc'
 
 [[options]]
 title = 'Most Parts'
 slug  = 'parts-desc'
-field = 'parts.min'  # assume worst case
+field = 'parts.total'
 from  = 'facts'
 order = 'desc'
 

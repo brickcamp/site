@@ -53,22 +53,16 @@
     </li>
     {{- end }}
 
-    {{- with where ($entry.GetTerms "tags") "Path" "like" `^\/tags\/partcount\-.*` -}}
+    {{- $parts := (partial "entries/facts" $entry).parts }}
     <li class="list-group-item d-flex">
       <b>Parts:</b>
-      {{- range where . "Path" "like" `^\/tags\/partcount\-total-.*` -}}
-        <span>{{ index (findRE `\d+` .LinkTitle 1) 0 }}</span>
-      {{- end }}
-      {{- with where . "Path" "like" `^\/tags\/partcount\-segment-.*` }}
-        <span class="ps-1"> (
-        {{- range . -}}
-          {{ index (findRE `\d+` .LinkTitle 1) 0 }}
-        {{ end }}
-        per segment)
-        </span>
-      {{ end }}
+      <span>
+        {{- $parts.total }}
+        {{- with $parts.segment }}
+          <small> ({{ . }} per segment)</small>
+        {{- end }}
+      </span>
     </li>
-    {{ end }}
   </ul>
 
   <div class="p-1">
