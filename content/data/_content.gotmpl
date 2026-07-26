@@ -6,6 +6,16 @@
      client, so a fixed set of files covers any value (listed or not). */}}
 {{ $combinations := newScratch }}
 {{ range $f := $.Site.Data.entries.filters }}
+  {{/* "parts" also reaches the client through the scope catalog, where it marks
+       the part-list scope — see _partials/scopes/getCatalog and assets/js/home/scope.js. */}}
+  {{ if not (in (slice "tags" "size" "parts") $f.from) }}
+    {{ errorf "filter %q: unknown from %q" $f.slug $f.from }}
+  {{ end }}
+
+  {{/* Only tag filters are served from /data/filtered/: size is filtered on the
+       client against the size column, and parts come from /parts/<id>/. */}}
+  {{ if ne $f.from "tags" }}{{ continue }}{{ end }}
+
   {{ $basePath := print "filtered/" $f.slug }}
 
   {{/* Any Type */}}

@@ -1,17 +1,48 @@
-{{/* Returns all entries fitting the provided filter */}}
-{{- $filter := . -}}
-{{- $result := slice -}}
+{{/* Returns all entries whose tags fit the provided filter.
+     Walks the tag taxonomy once and keeps the pages of every tag that passes. */}}
+{{- $hasBase   := index . "base"      | default false -}}
+{{- $hasType   := index . "type"      | default false -}}
+{{- $hasValue  := index . "value"     | default false -}}
+{{- $notTypes  := index . "notTypes"  | default false -}}
+{{- $notValues := index . "notValues" | default false -}}
+{{- $result    := slice -}}
 
-{{- if eq $filter.from "tags" -}}
-  {{- $result = partial "entries/getFilteredOnTags" $filter -}}
+{{- range $rawTag, $weightedPages := site.Taxonomies.tags -}}
+  {{- $tag := partial "tags/getSegments" $rawTag -}}
+
+  {{- with $hasBase -}}
+    {{- if ne . $tag.base -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with $hasType -}}
+    {{- if ne . $tag.type -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with $hasValue -}}
+    {{- if ne . $tag.value -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with $notTypes -}}
+    {{- if in . $tag.type -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with $notValues -}}
+    {{- if in . $tag.value -}}
+      {{- continue -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- range $weightedPages }}
+    {{- $result = $result | append .Page -}}
+  {{- end -}}
 {{- end -}}
 
-{{- if eq $filter.from "size" -}}
-  {{- $result = partial "entries/getFilteredOnSize" $filter -}}
-{{- end -}}
-
-{{- if eq $filter.from "parts" -}}
-  {{- $result = partial "entries/getFilteredOnParts" $filter -}}
-{{- end -}}
-
-{{- return $result -}}
+{{- return uniq $result -}}
