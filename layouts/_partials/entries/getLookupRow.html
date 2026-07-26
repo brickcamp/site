@@ -5,7 +5,7 @@
 {{- $page   := .page -}}
 {{- $filter := .filter | default false -}}
 
-{{- $size   := index (partial "entries/getCalculatedFields" $page) "_sizeType" -}}
+{{- $size   := (partial "entries/facts" $page).size.type -}}
 {{/* No filter (parts/term.csv) or an empty one (the unfiltered lookup) means no
      base to scope the values to, so the column stays empty. */}}
 {{- $values := "" -}}

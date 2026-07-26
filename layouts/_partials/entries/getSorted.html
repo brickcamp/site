@@ -1,20 +1,31 @@
-{{/* Returns all entries sorted by a field. */}}
+{{/* Returns all entries sorted by a field.
+
+     `from` says where the field lives: "page" (the default) is a field on the
+     page itself, "facts" a dotted path into _partials/entries/facts.
+
+     Params: one option from data/entries/sortings.toml. */}}
 {{- $field  := index . "field" -}}
 {{- $order  := index . "order" | default "asc" -}}
+{{- $from   := index . "from"  | default "page" -}}
+{{- $slug   := index . "slug" -}}
 {{- $result := slice -}}
 
-{{/* Calculated field */}}
-{{- if partial "entries/isCalculatedField" $field -}}
+{{- if eq $from "facts" -}}
   {{- $map := slice -}}
   {{- range partial "entries/getAll" -}}
-    {{- $vals := partial "entries/getCalculatedFields" . -}}
-    {{- $map = $map | append (dict "key" . "val" (index $vals $field)) -}}
+    {{- $value := partial "entries/facts" . -}}
+    {{- range split $field "." -}}
+      {{- $value = index $value . -}}
+    {{- end -}}
+    {{- if eq $value nil -}}
+      {{- errorf "sorting %q: no fact %q" $slug $field -}}
+    {{- end -}}
+    {{- $map = $map | append (dict "key" . "val" $value) -}}
   {{- end -}}
   {{- range sort $map "val" $order -}}
     {{- $result = $result | append .key -}}
   {{- end -}}
 
-{{/* Regular field */}}
 {{- else -}}
   {{- $entries := partial "entries/getAll" -}}
   {{- $result = sort $entries $field $order -}}

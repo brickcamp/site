@@ -1,0 +1,91 @@
+{{/* Returns everything derived about an entry, cached per entry.
+
+     The size params ("4s", "1b", …) are parsed once here and drive all of it:
+     the LDU lengths, the size band, and the display text. Add a derived value
+     to this partial rather than recomputing it at a call site.
+
+     Returns:
+       size.type    slug of the smallest size band it fits (data/entries/filters/size.toml)
+       size.volume  x × y × z in LDUs cubed — sorting only
+       size.short   "4s × 4s × 1b"
+       size.long    "4 studs × 4 studs × 1 brick"
+       parts.min    lowest  partcount-total- tag value
+       parts.max    highest partcount-total- tag value
+
+     Params: the entry page. */}}
+{{- $entry := . -}}
+{{- $facts := dict -}}
+
+{{/* Try reading from cache */}}
+{{- with $entry.Store.Get "facts" -}}
+  {{- $facts = . -}}
+
+{{/* Else calculate: */}}
+{{- else -}}
+  {{- $units := site.Data.entries.units.lengths -}}
+  {{/* Escaped, not a literal — a non-breaking space is invisible in a diff. */}}
+  {{- $nbsp  := "\u00A0" -}}
+
+  {{/** size **/}}
+  {{- $size := $entry.Param "size" -}}
+  {{- if not $size -}}
+    {{- errorf "entry %q: no size param" $entry.Path -}}
+  {{- end -}}
+
+  {{- $ldus  := slice -}}
+  {{- $short := slice -}}
+  {{- $long  := slice -}}
+  {{- range $size -}}
+    {{/* One parse per token. The count stays a string: the singular/plural
+         choice below compares it as one. */}}
+    {{- $count  := . | replaceRE `[^0-9]` "" -}}
+    {{- $symbol := . | replaceRE `[0-9]`  "" -}}
+    {{- $unit   := index $units $symbol -}}
+    {{- if eq $unit nil -}}
+      {{- errorf "entry %q: invalid unit in size %q" $entry.Path . -}}
+    {{- end -}}
+
+    {{- $ldus  = $ldus  | append (mul $unit.factor (int $count)) -}}
+    {{- $short = $short | append (print $count $symbol) -}}
+    {{- $long  = $long  | append (print $count $nbsp (cond (eq $count "1") $unit.one $unit.many)) -}}
+  {{- end -}}
+
+  {{/* The smallest band that still fits the entry's longest edge. */}}
+  {{- $lduMax   := math.Max $ldus -}}
+  {{- $sizeType := "" -}}
+  {{- range site.Data.entries.filters.size.types | collections.Reverse -}}
+    {{- if ge .ldus $lduMax -}}
+      {{- $sizeType = .slug -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $times := print " ×" $nbsp -}}
+
+  {{/** partcounts **/}}
+  {{- $counts := slice -}}
+  {{- range $entry.Param "tags" -}}
+    {{- if hasPrefix . "partcount-total-" -}}
+      {{- $counts = $counts | append (index (split . "-") 2) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $counts -}}
+    {{- errorf "entry %q: no partcount-total- tag" $entry.Path -}}
+  {{- end -}}
+
+  {{/** save to cache **/}}
+  {{- $facts = dict
+      "size" (dict
+        "type"   $sizeType
+        "volume" (mul (index $ldus 0) (index $ldus 1) (index $ldus 2))
+        "short"  (delimit $short $times)
+        "long"   (delimit $long  $times)
+      )
+      "parts" (dict
+        "min" (math.Min $counts)
+        "max" (math.Max $counts)
+      )
+  -}}
+  {{- $entry.Store.Set "facts" $facts -}}
+{{- end -}}
+
+{{- return $facts -}}

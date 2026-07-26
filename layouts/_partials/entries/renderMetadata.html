@@ -34,7 +34,7 @@
     {{- end }}
 
     {{- with $entry.Params.size }}
-    {{- $size := partial "units/getSizeDetails" . -}}
+    {{- $size := (partial "entries/facts" $entry).size -}}
     <li class="list-group-item d-flex">
       <b>Size:</b>
       <abbr data-bs-toggle="tooltip"

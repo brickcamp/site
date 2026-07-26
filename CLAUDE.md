@@ -37,6 +37,19 @@ Parts are separate: taxonomy *term* pages output CSV (`layouts/parts/term.csv`,
 enabled by the `outputs=["csv"]` cascade in `hugo.toml`), fetched at
 `/parts/<id>/index.csv`.
 
+### Entry facts
+
+Everything derived about an entry lives in `_partials/entries/facts.html`, cached per
+entry in its `Store`: `size.type` / `size.volume` / `size.short` / `size.long` and
+`parts.min` / `parts.max`. It parses the `size` params (`"4s"`, `"1b"`, …) **once** and
+derives the LDU lengths, the size band and the display text from that one parse — add a
+derived value here rather than recomputing it at a call site. A missing `size`, an unknown
+unit, or a missing `partcount-total-` tag fails the build naming the entry.
+
+Sortings name facts by dotted path: `data/entries/sortings.toml` sets
+`field = 'size.volume'` with `from = 'facts'` (`from = 'page'` is the default and means a
+field on the page itself).
+
 ### The scope catalog
 
 A filter is configured in `data/entries/filters/*.toml`.

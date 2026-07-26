@@ -27,25 +27,29 @@ order = 'desc'
 [[options]]
 title = 'Least Parts'
 slug  = 'parts-asc'
-field = '_partsMax'  # assume worst case
+field = 'parts.max'  # assume worst case
+from  = 'facts'
 order = 'asc'
 
 [[options]]
 title = 'Most Parts'
 slug  = 'parts-desc'
-field = '_partsMin'  # assume worst case
+field = 'parts.min'  # assume worst case
+from  = 'facts'
 order = 'desc'
 
 [[options]]
 title = 'Smallest'
 slug  = 'volume-asc'
-field = '_sizeVol'
+field = 'size.volume'
+from  = 'facts'
 order = 'asc'
 
 [[options]]
 title = 'Largest'
 slug  = 'volume-desc'
-field = '_sizeVol'
+field = 'size.volume'
+from  = 'facts'
 order = 'desc'
 
 [[options]]
