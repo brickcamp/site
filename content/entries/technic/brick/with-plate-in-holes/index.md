@@ -3,7 +3,11 @@ title = 'Technic Brick with Plate in Holes'
 date  = '2019-01-19'
 
 url     = '/entry/technic-brick-with-plate-in-holes/'
-aliases = ['/tech/technic-brick-with-plate-in-holes']
+aliases = [
+  '/tech/technic-brick-with-plate-in-holes',
+  '/en/tech/technic-brick-with-plate-in-holes',
+  '/de/tech/technic-brick-with-plate-in-holes',
+]
 
 parts = ['3701', '32000', '3623', '3023']
 size  = ['2s', '1s', '1b']

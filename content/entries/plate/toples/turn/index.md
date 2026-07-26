@@ -3,7 +3,11 @@ title = 'Pony-Ear Turn'
 date  = '2019-04-14'
 
 url     = '/entry/toples-turn/'
-aliases = ['/tech/toples-turn']
+aliases = [
+  '/tech/toples-turn',
+  '/en/tech/toples-turn',
+  '/de/tech/toples-turn',
+]
 
 parts = ['3022', '3069']
 size  = ['2s', '2s', '5p']

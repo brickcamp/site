@@ -3,7 +3,11 @@ title = 'Wrench Clipped Offset'
 date  = '2015-08-26'
 
 url     = '/entry/wrench-clipped-offset/'
-aliases = ['/tech/wrench-clipped-offset']
+aliases = [
+  '/tech/wrench-clipped-offset',
+  '/en/tech/wrench-clipped-offset',
+  '/de/tech/wrench-clipped-offset',
+]
 
 parts = ['55300', '4006', '2555', '3024']
 size  = ['3s', '1s', '2p']

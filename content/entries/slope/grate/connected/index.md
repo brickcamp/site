@@ -3,7 +3,11 @@ title = 'Connected Grille Slopes'
 date  = '2016-01-03'
 
 url     = '/entry/slope-grilles-connected/'
-aliases = ['/tech/slope-grilles-connected']
+aliases = [
+  '/tech/slope-grilles-connected',
+  '/en/tech/slope-grilles-connected',
+  '/de/tech/slope-grilles-connected',
+]
 
 parts = ['61409', '4085', '2921']
 size  = ['4s', '3b', '1s']

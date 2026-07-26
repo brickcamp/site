@@ -3,7 +3,11 @@ title = 'Plate 2 x 2 Round Ring'
 date  = '2015-08-29'
 
 url     = '/entry/plate-2x2-round-ring/'
-aliases = ['/tech/plate-2x2-round-ring']
+aliases = [
+  '/tech/plate-2x2-round-ring',
+  '/en/tech/plate-2x2-round-ring',
+  '/de/tech/plate-2x2-round-ring',
+]
 
 parts = ['4032']
 size  = ['9s', '9s', '3p']

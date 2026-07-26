@@ -3,7 +3,11 @@ title = 'Train Track Ring'
 date  = '2015-10-10'
 
 url     = '/entry/train-track-ring/'
-aliases = ['/tech/train-track-ring']
+aliases = [
+  '/tech/train-track-ring',
+  '/en/tech/train-track-ring',
+  '/de/tech/train-track-ring',
+]
 
 parts = ['53400']
 size  = ['88s', '88s', '1b']

@@ -3,7 +3,11 @@ title = 'Hinge Top Ring'
 date  = '2015-08-27'
 
 url     = '/entry/hinge-topbase-ring/'
-aliases = ['/tech/hinge-topbase-ring']
+aliases = [
+  '/tech/hinge-topbase-ring',
+  '/en/tech/hinge-topbase-ring',
+  '/de/tech/hinge-topbase-ring',
+]
 
 parts = ['3937', '6134']
 size  = ['5s', '2s', '5s']

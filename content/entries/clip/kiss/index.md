@@ -3,7 +3,11 @@ title = 'Kissing Clips'
 date  = '2015-10-10'
 
 url     = '/entry/clip-kiss/'
-aliases = ['/tech/clip-kiss']
+aliases = [
+  '/tech/clip-kiss',
+  '/en/tech/clip-kiss',
+  '/de/tech/clip-kiss',
+]
 
 parts = ['2555']
 size  = ['1s', '1s', '3p']

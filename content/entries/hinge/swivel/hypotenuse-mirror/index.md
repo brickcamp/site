@@ -3,7 +3,11 @@ title = 'Hinge Swivel Hypotenuse-Mirror'
 date  = '2015-12-06'
 
 url     = '/entry/hinge-swivel-hypotenuse-mirror/'
-aliases = ['/tech/hinge-swivel-hypotenuse-mirror']
+aliases = [
+  '/tech/hinge-swivel-hypotenuse-mirror',
+  '/en/tech/hinge-swivel-hypotenuse-mirror',
+  '/de/tech/hinge-swivel-hypotenuse-mirror',
+]
 
 parts = ['73983', '3623']
 size  = ['4s', '4s', '2p']

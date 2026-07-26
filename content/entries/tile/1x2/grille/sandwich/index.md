@@ -3,7 +3,11 @@ title = 'Tile Grille Sandwich'
 date  = '2016-01-16'
 
 url     = '/entry/tile-grille-sandwich-offset/'
-aliases = ['/tech/tile-grille-sandwich-offset']
+aliases = [
+  '/tech/tile-grille-sandwich-offset',
+  '/en/tech/tile-grille-sandwich-offset',
+  '/de/tech/tile-grille-sandwich-offset',
+]
 
 parts = ['2412']
 size  = ['2s', '2s', '2p']

@@ -3,7 +3,11 @@ title = 'Jumper in Donut'
 date  = '2015-09-14'
 
 url     = '/entry/jumper-in-donut-tile/'
-aliases = ['/tech/jumper-in-donut-tile']
+aliases = [
+  '/tech/jumper-in-donut-tile',
+  '/en/tech/jumper-in-donut-tile',
+  '/de/tech/jumper-in-donut-tile',
+]
 
 parts = ['15535', '87580']
 size  = ['2s', '2s', '2p']

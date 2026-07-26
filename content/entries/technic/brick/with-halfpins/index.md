@@ -3,7 +3,11 @@ title = 'Technic Brick with Halfpins'
 date  = '2015-08-22'
 
 url     = '/entry/technic-brick-with-halfpins/'
-aliases = ['/tech/technic-brick-with-halfpins']
+aliases = [
+  '/tech/technic-brick-with-halfpins',
+  '/en/tech/technic-brick-with-halfpins',
+  '/de/tech/technic-brick-with-halfpins',
+]
 
 parts = ['4274', '6541', '32000', '3701']
 size  = ['1s', '1s', '1b']

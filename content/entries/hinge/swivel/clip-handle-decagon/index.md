@@ -3,7 +3,11 @@ title = 'Clip-Handle-Swivel Decagon'
 date  = '2019-04-28'
 
 url     = '/entry/clip-handle-swivel-decagon/'
-aliases = ['/tech/clip-handle-swivel-decagon']
+aliases = [
+  '/tech/clip-handle-swivel-decagon',
+  '/en/tech/clip-handle-swivel-decagon',
+  '/de/tech/clip-handle-swivel-decagon',
+]
 
 parts = ['99780', '73983', '26047', '6019']
 size  = ['10s', '11s', '1b']

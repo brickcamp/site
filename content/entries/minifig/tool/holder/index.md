@@ -3,7 +3,11 @@ title = 'Minifig Tool Holder'
 date  = '2015-09-14'
 
 url     = '/entry/minifig-tool-holder/'
-aliases = ['/tech/minifig-tool-holder']
+aliases = [
+  '/tech/minifig-tool-holder',
+  '/en/tech/minifig-tool-holder',
+  '/de/tech/minifig-tool-holder',
+]
 
 parts = ['2516', '3062']
 size  = ['2s', '4s', '2s']

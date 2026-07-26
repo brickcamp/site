@@ -3,7 +3,11 @@ title = 'Cone 1 x 1 Roof'
 date  = '2019-07-06'
 
 url     = '/entry/cone-1x1-roof/'
-aliases = ['/tech/cone-1x1-roof']
+aliases = [
+  '/tech/cone-1x1-roof',
+  '/en/tech/cone-1x1-roof',
+  '/de/tech/cone-1x1-roof',
+]
 
 parts = ['59900', '6019', '4081', '30374']
 size  = ['14s', '2s', '14s']

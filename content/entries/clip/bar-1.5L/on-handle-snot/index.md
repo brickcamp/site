@@ -3,7 +3,14 @@ title = 'Bar 1.5L with Clip on Handle SNOT'
 date  = '2019-04-13'
 
 url     = '/entry/bar-1.5L-with-clip-on-handle-snot/'
-aliases = ['/tech/bar-1.5L-with-clip-on-handle-snot']
+aliases = [
+  '/tech/bar-1.5L-with-clip-on-handle-snot',
+  '/en/tech/bar-1.5L-with-clip-on-handle-snot',
+  '/de/tech/bar-1.5L-with-clip-on-handle-snot',
+  '/tech/bar-1.5l-with-clip-on-handle-snot',
+  '/en/tech/bar-1.5l-with-clip-on-handle-snot',
+  '/de/tech/bar-1.5l-with-clip-on-handle-snot',
+]
 
 parts = ['48729', '4085', '3023', '48336']
 size  = ['2s', '2s', '4p']

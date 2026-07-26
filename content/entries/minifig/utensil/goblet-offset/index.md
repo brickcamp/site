@@ -3,7 +3,11 @@ title = 'Minifig Goblet Offset'
 date  = '2019-01-30'
 
 url     = '/entry/minifig-goblet-offset/'
-aliases = ['/tech/minifig-goblet-offset']
+aliases = [
+  '/tech/minifig-goblet-offset',
+  '/en/tech/minifig-goblet-offset',
+  '/de/tech/minifig-goblet-offset',
+]
 
 parts = ['2343', '6141']
 size  = ['1s', '1s', '2b']

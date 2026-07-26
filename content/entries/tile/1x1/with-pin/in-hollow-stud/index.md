@@ -3,7 +3,11 @@ title = 'Tile 1 x 1 with Pin in Hollow Stud'
 date  = '2019-01-19'
 
 url     = '/entry/tile-1x1-with-pin-in-hollow-stud/'
-aliases = ['/tech/tile-1x1-with-pin-in-hollow-stud']
+aliases = [
+  '/tech/tile-1x1-with-pin-in-hollow-stud',
+  '/en/tech/tile-1x1-with-pin-in-hollow-stud',
+  '/de/tech/tile-1x1-with-pin-in-hollow-stud',
+]
 
 parts = ['20482', '85861']
 size  = ['1s', '1s', '1b']

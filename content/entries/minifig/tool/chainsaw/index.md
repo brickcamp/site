@@ -3,7 +3,11 @@ title = 'Minifig Chainsaw'
 date  = '2015-09-14'
 
 url     = '/entry/minifig-chainsaw/'
-aliases = ['/tech/minifig-chainsaw']
+aliases = [
+  '/tech/minifig-chainsaw',
+  '/en/tech/minifig-chainsaw',
+  '/de/tech/minifig-chainsaw',
+]
 
 parts = ['6117']
 size  = ['4s', '2s', '2p']

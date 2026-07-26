@@ -3,7 +3,11 @@ title = '7041er-Set Wheel'
 date  = '2015-11-08'
 
 url     = '/entry/set-7041-wheel/'
-aliases = ['/tech/set-7041-wheel']
+aliases = [
+  '/tech/set-7041-wheel',
+  '/en/tech/set-7041-wheel',
+  '/de/tech/set-7041-wheel',
+]
 
 parts = ['30386', '4032', '3941', '32073', '6222']
 size  = ['17s', '17s', '2s']

@@ -3,7 +3,11 @@ title = 'Technic Beam SNOT'
 date  = '2015-09-14'
 
 url     = '/entry/technic-beam-snot/'
-aliases = ['/tech/technic-beam-snot']
+aliases = [
+  '/tech/technic-beam-snot',
+  '/en/tech/technic-beam-snot',
+  '/de/tech/technic-beam-snot',
+]
 
 parts = ['43857', '32523', '18654']
 size  = ['1s', '1s', '1s']

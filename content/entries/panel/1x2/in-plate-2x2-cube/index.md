@@ -3,7 +3,11 @@ title = 'Panel Plate Cube'
 date  = '2019-07-27'
 
 url     = '/entry/panel-1x2-plate-2x2-cube/'
-aliases = ['/tech/panel-1x2-plate-2x2-cube']
+aliases = [
+  '/tech/panel-1x2-plate-2x2-cube',
+  '/en/tech/panel-1x2-plate-2x2-cube',
+  '/de/tech/panel-1x2-plate-2x2-cube',
+]
 
 parts = ['3022', '4865']
 size  = ['7p', '7p', '7p']

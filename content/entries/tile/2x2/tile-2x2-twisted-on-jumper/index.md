@@ -4,8 +4,12 @@ date  = '2015-12-06'
 
 url     = '/entry/tile-2x2-twisted-on-jumper/'
 aliases = [
-  '/tech/tile-2x2-twisted-on-jumper', 
+  '/tech/tile-2x2-twisted-on-jumper',
+  '/en/tech/tile-2x2-twisted-on-jumper',
+  '/de/tech/tile-2x2-twisted-on-jumper',
   '/tech/tile-2x2-twisted-gaps',
+  '/en/tech/tile-2x2-twisted-gaps',
+  '/de/tech/tile-2x2-twisted-gaps',
 ]
 
 parts = ['3068', '3794', '3070']

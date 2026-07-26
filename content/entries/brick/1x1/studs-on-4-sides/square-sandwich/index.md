@@ -3,7 +3,11 @@ title = '2 x 2 Studs Sandwich'
 date  = '2015-08-30'
 
 url     = '/entry/2x2-studs-sandwich/'
-aliases = ['/tech/brick-1x1-4sidestuds-plate-2x2-sandwich']
+aliases = [
+  '/tech/brick-1x1-4sidestuds-plate-2x2-sandwich',
+  '/en/tech/brick-1x1-4sidestuds-plate-2x2-sandwich',
+  '/de/tech/brick-1x1-4sidestuds-plate-2x2-sandwich',
+]
 
 parts = ['4733', '3022']
 size  = ['3s', '3s', '6p']

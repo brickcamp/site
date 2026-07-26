@@ -3,7 +3,11 @@ title = 'Hinge 1 x 6 Triangle'
 date  = '2015-10-11'
 
 url     = '/entry/hinge-1x6-triangle/'
-aliases = ['/tech/hinge-1x6-triangle']
+aliases = [
+  '/tech/hinge-1x6-triangle',
+  '/en/tech/hinge-1x6-triangle',
+  '/de/tech/hinge-1x6-triangle',
+]
 
 parts = ['4504']
 size  = ['8s', '1s', '18p']

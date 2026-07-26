@@ -3,7 +3,11 @@ title = 'Clip Gravel Road'
 date  = '2015-12-06'
 
 url     = '/entry/clip-gravel-road/'
-aliases = ['/tech/clip-gravel-road']
+aliases = [
+  '/tech/clip-gravel-road',
+  '/en/tech/clip-gravel-road',
+  '/de/tech/clip-gravel-road',
+]
 
 parts = ['2555']
 size  = ['2s', '2s', '1s']

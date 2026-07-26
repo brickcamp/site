@@ -3,7 +3,11 @@ title = 'Inverted-Pinned Technic Bricks'
 date  = '2015-08-23'
 
 url     = '/entry/technic-bricks-pinned-inverted/'
-aliases = ['/tech/technic-bricks-pinned-opposed']
+aliases = [
+  '/tech/technic-bricks-pinned-opposed',
+  '/en/tech/technic-bricks-pinned-opposed',
+  '/de/tech/technic-bricks-pinned-opposed',
+]
 
 parts = ['3701', '2780']
 size  = ['4s', '2s', '4p']

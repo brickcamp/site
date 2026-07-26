@@ -3,7 +3,11 @@ title = 'Circles on Plate 6 x 6 Hexagonal'
 date  = '2019-05-07'
 
 url     = '/entry/circles-on-plate-6x6-hexagonal/'
-aliases = ['/tech/plate-6x6-hexagonal-road-sign-2x2-round-tile-2x2-ring']
+aliases = [
+  '/tech/plate-6x6-hexagonal-road-sign-2x2-round-tile-2x2-ring',
+  '/en/tech/plate-6x6-hexagonal-road-sign-2x2-round-tile-2x2-ring',
+  '/de/tech/plate-6x6-hexagonal-road-sign-2x2-round-tile-2x2-ring',
+]
 
 parts = ['27255', '30261', '14769']
 size  = ['6s', '6s', '1s']

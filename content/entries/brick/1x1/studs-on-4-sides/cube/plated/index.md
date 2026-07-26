@@ -3,7 +3,11 @@ title = 'SNOT Cube'
 date  = '2015-09-27'
 
 url     = '/entry/snot-cube-plated/'
-aliases = ['/tech/brick-1x1-4sidestuds-plate-cube']
+aliases = [
+  '/tech/brick-1x1-4sidestuds-plate-cube',
+  '/en/tech/brick-1x1-4sidestuds-plate-cube',
+  '/de/tech/brick-1x1-4sidestuds-plate-cube',
+]
 
 parts = ['4733', '3022']
 size  = ['7p', '7p', '7p']

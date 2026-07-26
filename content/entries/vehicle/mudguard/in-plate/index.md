@@ -5,7 +5,11 @@ date  = '2019-01-30'
 url     = '/entry/mudguard-in-plate/'
 aliases = [
   '/tech/vehicle-mudguard-in-plate',
+  '/en/tech/vehicle-mudguard-in-plate',
+  '/de/tech/vehicle-mudguard-in-plate',
   '/tech/mudguard-in-plate',
+  '/en/tech/mudguard-in-plate',
+  '/de/tech/mudguard-in-plate',
 ]
 
 parts = ['50745', '3666']

@@ -3,7 +3,11 @@ title = 'Plate with Technic Holes and Jumpers'
 date  = '2015-09-14'
 
 url     = '/entry/plate-with-technic-holes-jumper-snot/'
-aliases = ['/tech/plate-with-technic-holes-jumper-snot']
+aliases = [
+  '/tech/plate-with-technic-holes-jumper-snot',
+  '/en/tech/plate-with-technic-holes-jumper-snot',
+  '/de/tech/plate-with-technic-holes-jumper-snot',
+]
 
 parts = ['2817', '3794']
 size  = ['2s', '1s', '7p']

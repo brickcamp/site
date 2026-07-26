@@ -3,7 +3,11 @@ title = 'Tile 1 x 1 with Clips Hexagonal'
 date  = '2019-01-28'
 
 url     = '/entry/tile-1x1-with-clips-hexagonal/'
-aliases = ['/tech/tile-1x1-with-clips-hexagonal']
+aliases = [
+  '/tech/tile-1x1-with-clips-hexagonal',
+  '/en/tech/tile-1x1-with-clips-hexagonal',
+  '/de/tech/tile-1x1-with-clips-hexagonal',
+]
 
 parts = ['2555', '3070']
 size  = ['3s', '1s', '3s']

@@ -3,7 +3,11 @@ title = 'Headlight SNOT'
 date  = '2019-04-14'
 
 url     = '/entry/headlight-snot/'
-aliases = ['/tech/headlight-snot']
+aliases = [
+  '/tech/headlight-snot',
+  '/en/tech/headlight-snot',
+  '/de/tech/headlight-snot',
+]
 
 parts = ['4070', '3024']
 size  = ['2s', '1s', '1b']

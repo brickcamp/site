@@ -3,7 +3,11 @@ title = 'Dish 8 x 8 Hinged Ring'
 date  = '2015-08-30'
 
 url     = '/entry/dish-8x8-hinged-ring/'
-aliases = ['/tech/dish-8x8-hinged-ring']
+aliases = [
+  '/tech/dish-8x8-hinged-ring',
+  '/en/tech/dish-8x8-hinged-ring',
+  '/de/tech/dish-8x8-hinged-ring',
+]
 
 parts = ['3961', '44301', '44302']
 size  = ['54p', '8s', '54p']

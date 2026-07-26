@@ -3,7 +3,11 @@ title = 'Hinge Tops on Binoculars Octagon'
 date  = '2015-08-27'
 
 url     = '/entry/hinge-tops-on-binoculars-octagon/'
-aliases = ['/tech/hinge-tops-on-binoculars-octagon']
+aliases = [
+  '/tech/hinge-tops-on-binoculars-octagon',
+  '/en/tech/hinge-tops-on-binoculars-octagon',
+  '/de/tech/hinge-tops-on-binoculars-octagon',
+]
 
 parts = ['3938', '30162', '4733']
 size  = ['3s', '3s', '4s']

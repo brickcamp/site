@@ -3,7 +3,11 @@ title = 'Clip Wave Line'
 date  = '2016-01-03'
 
 url     = '/entry/clip-wave-line/'
-aliases = ['/tech/clip-wave-line']
+aliases = [
+  '/tech/clip-wave-line',
+  '/en/tech/clip-wave-line',
+  '/de/tech/clip-wave-line',
+]
 
 parts = ['2555', '4085', '99780', '3023', '4070', '2431']
 size  = ['4s', '2s', '9p']

@@ -3,7 +3,11 @@ title = 'Dome Sphere'
 date  = '2019-01-31'
 
 url     = '/entry/dome-on-technic-beam-sphere/'
-aliases = ['/tech/dome-on-technic-beam-3x0.5-sphere']
+aliases = [
+  '/tech/dome-on-technic-beam-3x0.5-sphere',
+  '/en/tech/dome-on-technic-beam-3x0.5-sphere',
+  '/de/tech/dome-on-technic-beam-3x0.5-sphere',
+]
 
 parts = ['86500', '3623', '6632']
 size  = ['4s', '4s', '4s']

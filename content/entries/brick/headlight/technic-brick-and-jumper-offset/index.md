@@ -3,7 +3,11 @@ title = "Headlight-Techbrick-Jumper Offset"
 date  = "2021-05-16"
 
 url     = '/entry/headlight-techbrick-jumper-offset/'
-aliases = ['/tech/headlight-techbrick-jumper-offset']
+aliases = [
+  '/tech/headlight-techbrick-jumper-offset',
+  '/en/tech/headlight-techbrick-jumper-offset',
+  '/de/tech/headlight-techbrick-jumper-offset',
+]
 
 parts = ['4070', '3700', '3794']
 size  = ['2s', '2s', '4p']

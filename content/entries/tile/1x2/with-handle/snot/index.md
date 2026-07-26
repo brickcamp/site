@@ -3,7 +3,11 @@ title = 'Tile 1 x 2 Handles SNOT'
 date  = '2019-01-27'
 
 url     = '/entry/tile-1x2-handles-snot/'
-aliases = ['/tech/tile-1x2-handles-snot']
+aliases = [
+  '/tech/tile-1x2-handles-snot',
+  '/en/tech/tile-1x2-handles-snot',
+  '/de/tech/tile-1x2-handles-snot',
+]
 
 parts = ['2432','60470']
 size  = ['2s', '2s', '4p']

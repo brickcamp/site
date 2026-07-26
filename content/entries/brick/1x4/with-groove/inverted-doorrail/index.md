@@ -3,7 +3,11 @@ title = 'Slider SNOT'
 date  = '2015-08-23'
 
 url     = '/entry/brick-1x4-groove-inverted-doorrail/'
-aliases = ['/tech/brick-1x4-groove-inverted-doorrail']
+aliases = [
+  '/tech/brick-1x4-groove-inverted-doorrail',
+  '/en/tech/brick-1x4-groove-inverted-doorrail',
+  '/de/tech/brick-1x4-groove-inverted-doorrail',
+]
 
 parts = ['2653', '32028', '4510', '3710']
 size  = ['4s', '2s', '1b']

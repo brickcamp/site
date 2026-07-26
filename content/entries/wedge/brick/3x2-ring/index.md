@@ -3,7 +3,11 @@ title = 'Wedge Ring'
 date  = '2015-08-29'
 
 url     = '/entry/wedge-ring/'
-aliases = ['/tech/wedge-ring']
+aliases = [
+  '/tech/wedge-ring',
+  '/en/tech/wedge-ring',
+  '/de/tech/wedge-ring',
+]
 
 parts = ['6565', '6564']
 size  = ['13s', '13s', '3b']

@@ -3,7 +3,11 @@ title = 'Bracket Inline SNOT'
 date  = '2015-08-23'
 
 url     = '/entry/bracket-inline-snot/'
-aliases = ['/tech/bracket-inline-snot']
+aliases = [
+  '/tech/bracket-inline-snot',
+  '/en/tech/bracket-inline-snot',
+  '/de/tech/bracket-inline-snot',
+]
 
 parts = ['99781', '99780', '44728', '99207', '3710', '3020']
 size  = ['4s', '2s', '1s']

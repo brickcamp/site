@@ -3,7 +3,11 @@ title = 'Double/Inverted Slopes Square'
 date  = '2016-01-03'
 
 url     = '/entry/slope-2x1-double-inv-square/'
-aliases = ['/tech/slope-2x1-double-inv-square']
+aliases = [
+  '/tech/slope-2x1-double-inv-square',
+  '/en/tech/slope-2x1-double-inv-square',
+  '/de/tech/slope-2x1-double-inv-square',
+]
 
 parts = ['3049']
 size  = ['3s', '3s', '1b']

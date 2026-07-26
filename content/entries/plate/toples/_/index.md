@@ -3,7 +3,11 @@ title = 'Pony-Ear Technique'
 date  = '2015-08-23'
 
 url     = '/entry/toples/'
-aliases = ['/tech/toples']
+aliases = [
+  '/tech/toples',
+  '/en/tech/toples',
+  '/de/tech/toples',
+]
 
 parts = ['3021', '3023', '3069']
 size  = ['2s', '2s', '4p']

@@ -4,8 +4,12 @@ date  = '2015-08-29'
 
 url     = '/entry/minifig-blaster-ring/'
 aliases = [
-  '/tech/minifig-blaster-ring', 
+  '/tech/minifig-blaster-ring',
+  '/en/tech/minifig-blaster-ring',
+  '/de/tech/minifig-blaster-ring',
   '/tech/blaster-ring',
+  '/en/tech/blaster-ring',
+  '/de/tech/blaster-ring',
 ]
 
 parts = ['15071']

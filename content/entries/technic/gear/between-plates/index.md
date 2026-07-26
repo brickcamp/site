@@ -3,7 +3,11 @@ title = 'Gear between Plates'
 date  = '2015-08-23'
 
 url     = '/entry/gear-between-plates/'
-aliases = ['/tech/gear-between-plates']
+aliases = [
+  '/tech/gear-between-plates',
+  '/en/tech/gear-between-plates',
+  '/de/tech/gear-between-plates',
+]
 
 parts = ['4019', '3648', '3031']
 size  = ['4s', '4s', '4p']

@@ -3,7 +3,11 @@ title = 'GSNOT'
 date  = '2015-08-23'
 
 url     = '/entry/gsnot/'
-aliases = ['/tech/gsnot']
+aliases = [
+  '/tech/gsnot',
+  '/en/tech/gsnot',
+  '/de/tech/gsnot',
+]
 
 parts = ['30365', '30540', '3004']
 size  = ['4s', '2s', '1b']

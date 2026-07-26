@@ -3,7 +3,11 @@ title = 'Bracket in Technic Brick'
 date  = '2019-02-24'
 
 url     = '/entry/bracket-in-technic-brick/'
-aliases = ['/tech/bracket-in-technic-brick']
+aliases = [
+  '/tech/bracket-in-technic-brick',
+  '/en/tech/bracket-in-technic-brick',
+  '/de/tech/bracket-in-technic-brick',
+]
 
 parts = ['32000', '99781']
 size  = ['2s', '2s', '1b']

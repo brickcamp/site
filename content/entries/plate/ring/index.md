@@ -3,7 +3,11 @@ title = 'Plate Ring'
 date  = '2015-08-30'
 
 url     = '/entry/plate-ring/'
-aliases = ['/tech/plate-ring']
+aliases = [
+  '/tech/plate-ring',
+  '/en/tech/plate-ring',
+  '/de/tech/plate-ring',
+]
 
 parts = ['3666', '3710']
 size  = ['24s', '24s', '1s']

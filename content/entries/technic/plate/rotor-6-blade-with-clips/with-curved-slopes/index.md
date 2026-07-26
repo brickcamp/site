@@ -3,7 +3,11 @@ title = 'Hexagonal Plate with Curved Slopes'
 date  = '2015-08-29'
 
 url     = '/entry/hexagonal-plate-with-curved-slopes-3x1/'
-aliases = ['/tech/plate-hexagonal-with-slopes-3x1-curved']
+aliases = [
+  '/tech/plate-hexagonal-with-slopes-3x1-curved',
+  '/en/tech/plate-hexagonal-with-slopes-3x1-curved',
+  '/de/tech/plate-hexagonal-with-slopes-3x1-curved',
+]
 
 parts = ['64566', '50950', '4070', '6541']
 size  = ['6s', '6s', '4p']

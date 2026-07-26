@@ -3,7 +3,11 @@ title = 'Wing 3 x 12 Ring'
 date  = '2015-09-14'
 
 url     = '/entry/wing-3x12-ring/'
-aliases = ['/tech/wing-3x12-ring']
+aliases = [
+  '/tech/wing-3x12-ring',
+  '/en/tech/wing-3x12-ring',
+  '/de/tech/wing-3x12-ring',
+]
 
 parts = ['47398', '47397', '73983' ,'3020']
 size  = ['37s', '37s', '2p']

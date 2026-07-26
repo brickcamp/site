@@ -3,7 +3,11 @@ title = 'Hinge Cheese Donut'
 date  = '2015-10-09'
 
 url     = '/entry/hinge-topbase-cheese-donut/'
-aliases = ['/tech/hinge-topbase-cheese-donut']
+aliases = [
+  '/tech/hinge-topbase-cheese-donut',
+  '/en/tech/hinge-topbase-cheese-donut',
+  '/de/tech/hinge-topbase-cheese-donut',
+]
 
 parts = ['3937', '6134', '85984']
 size  = ['19p', '19p', '3s']

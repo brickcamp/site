@@ -3,7 +3,11 @@ title = 'Hinge Star Pentagon'
 date  = '2015-09-27'
 
 url     = '/entry/hinge-pentagon-star/'
-aliases = ['/tech/hinge-pentagon-star']
+aliases = [
+  '/tech/hinge-pentagon-star',
+  '/en/tech/hinge-pentagon-star',
+  '/de/tech/hinge-pentagon-star',
+]
 
 parts = ['30386', '3048', '3044', '54200']
 size  = ['16p', '1s', '16p']

@@ -3,7 +3,14 @@ title = 'Technic Axle/Pin/Axle Connector Cube'
 date  = '2019-01-30'
 
 url     = '/entry/technic-axle-pin-axle-connector-3L-cube/'
-aliases = ['/tech/technic-axle-pin-axle-connector-3L-cube']
+aliases = [
+  '/tech/technic-axle-pin-axle-connector-3L-cube',
+  '/en/tech/technic-axle-pin-axle-connector-3L-cube',
+  '/de/tech/technic-axle-pin-axle-connector-3L-cube',
+  '/tech/technic-axle-pin-axle-connector-3l-cube',
+  '/en/tech/technic-axle-pin-axle-connector-3l-cube',
+  '/de/tech/technic-axle-pin-axle-connector-3l-cube',
+]
 
 parts = ['32184', '4519']
 size  = ['3s', '3s', '3s']

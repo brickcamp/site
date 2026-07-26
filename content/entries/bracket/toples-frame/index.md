@@ -3,7 +3,11 @@ title = 'Bracket ToPLES Frame'
 date  = '2015-08-23'
 
 url     = '/entry/bracket-toples-frame/'
-aliases = ['/tech/bracket-toples-frame']
+aliases = [
+  '/tech/bracket-toples-frame',
+  '/en/tech/bracket-toples-frame',
+  '/de/tech/bracket-toples-frame',
+]
 
 parts = ['44728']
 size  = ['5s', '5s', '2s']

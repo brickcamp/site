@@ -3,7 +3,11 @@ title = "Pythagora's Twist"
 date  = '2015-12-06'
 
 url     = '/entry/pythagoras-twist/'
-aliases = ['/tech/pythagoras-twist']
+aliases = [
+  '/tech/pythagoras-twist',
+  '/en/tech/pythagoras-twist',
+  '/de/tech/pythagoras-twist',
+]
 
 parts = ['3024', '3666']
 size  = ['5s', '4s', '2p']

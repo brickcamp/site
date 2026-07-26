@@ -3,7 +3,11 @@ title = 'Stud in Tube'
 date  = '2015-08-26'
 
 url     = '/entry/plate-stud-in-tube/'
-aliases = ['/tech/plate-stud-in-tube']
+aliases = [
+  '/tech/plate-stud-in-tube',
+  '/en/tech/plate-stud-in-tube',
+  '/de/tech/plate-stud-in-tube',
+]
 
 parts = ['3020', '3623']
 size  = ['3s', '2s', '2p']

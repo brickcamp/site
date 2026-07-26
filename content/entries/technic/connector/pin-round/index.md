@@ -3,7 +3,11 @@ title = 'Technic Pin Connector Round'
 date  = '2019-01-19'
 
 url     = '/entry/technic-pin-connector-round/'
-aliases = ['/tech/technic-pin-connector-round']
+aliases = [
+  '/tech/technic-pin-connector-round',
+  '/en/tech/technic-pin-connector-round',
+  '/de/tech/technic-pin-connector-round',
+]
 
 parts = ['62462', '4274']
 size  = ['1s', '1s', '5p']

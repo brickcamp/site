@@ -3,7 +3,11 @@ title = 'Wrench SNOT'
 date  = '2015-09-14'
 
 url     = '/entry/wrench-snot/'
-aliases = ['/tech/wrench-snot']
+aliases = [
+  '/tech/wrench-snot',
+  '/en/tech/wrench-snot',
+  '/de/tech/wrench-snot',
+]
 
 parts = ['55300', '4006']
 size  = ['3s', '1s', '1p']

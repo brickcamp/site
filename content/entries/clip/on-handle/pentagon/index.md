@@ -3,7 +3,11 @@ title = 'Clip-Handle Pentagon'
 date  = '2015-08-26'
 
 url     = '/entry/clip-handle-pentagon/'
-aliases = ['/tech/clip-handle-pentagon']
+aliases = [
+  '/tech/clip-handle-pentagon',
+  '/en/tech/clip-handle-pentagon',
+  '/de/tech/clip-handle-pentagon',
+]
 
 parts = ['48336', '60470', '3022']
 size  = ['6s', '2s', '6s']

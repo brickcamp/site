@@ -3,7 +3,11 @@ title = 'Hinge Cheese Ring'
 date  = '2015-08-30'
 
 url     = '/entry/hinge-topbase-cheese-ring/'
-aliases = ['/tech/hinge-topbase-cheese-ring']
+aliases = [
+  '/tech/hinge-topbase-cheese-ring',
+  '/en/tech/hinge-topbase-cheese-ring',
+  '/de/tech/hinge-topbase-cheese-ring',
+]
 
 parts = ['3021', '3022', '3937', '6134', '85984']
 size  = ['6s', '6s', '2s']

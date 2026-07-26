@@ -3,7 +3,11 @@ title = 'Minifig Hands on Plate'
 date  = '2019-04-17'
 
 url     = '/entry/minifig-hands-on-plate/'
-aliases = ['/tech/minifig-hands-on-plate']
+aliases = [
+  '/tech/minifig-hands-on-plate',
+  '/en/tech/minifig-hands-on-plate',
+  '/de/tech/minifig-hands-on-plate',
+]
 
 parts = ['3820', '3031']
 size  = ['4s', '4s', '2p']

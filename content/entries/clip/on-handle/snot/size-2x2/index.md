@@ -3,7 +3,11 @@ title = 'Clip-Handle SNOT Cube'
 date  = '2015-08-23'
 
 url     = '/entry/clip-handle-snot-cube/'
-aliases = ['/tech/clip-handle-snot-cube']
+aliases = [
+  '/tech/clip-handle-snot-cube',
+  '/en/tech/clip-handle-snot-cube',
+  '/de/tech/clip-handle-snot-cube',
+]
 
 parts = ['4085', '2921', '3024', '3023']
 size  = ['2s', '2s', '1b']

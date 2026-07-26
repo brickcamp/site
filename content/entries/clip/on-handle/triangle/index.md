@@ -3,7 +3,11 @@ title = 'Clip-Handle Triangle'
 date  = '2015-10-11'
 
 url     = '/entry/clip-handle-triangle/'
-aliases = ['/tech/clip-handle-triangle']
+aliases = [
+  '/tech/clip-handle-triangle',
+  '/en/tech/clip-handle-triangle',
+  '/de/tech/clip-handle-triangle',
+]
 
 parts = ['60470', '48336']
 size  = ['3s', '2s', '7p']

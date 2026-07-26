@@ -3,7 +3,11 @@ title = 'Pony-Ear Reversed'
 date  = '2019-01-19'
 
 url     = '/entry/toples-reversed/'
-aliases = ['/tech/toples-reversed']
+aliases = [
+  '/tech/toples-reversed',
+  '/en/tech/toples-reversed',
+  '/de/tech/toples-reversed',
+]
 
 parts = ['3021', '3023', '3069']
 size  = ['4s', '1s', '2s']

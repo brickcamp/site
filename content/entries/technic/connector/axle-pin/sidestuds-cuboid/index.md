@@ -3,7 +3,11 @@ title = 'Technic Axle Pin Connector Plate Cuboid'
 date  = '2015-09-27'
 
 url     = '/entry/technic-axle-pin-connector-plate-cuboid/'
-aliases = ['/tech/technic-axle-pin-connector-plate-cuboid']
+aliases = [
+  '/tech/technic-axle-pin-connector-plate-cuboid',
+  '/en/tech/technic-axle-pin-connector-plate-cuboid',
+  '/de/tech/technic-axle-pin-connector-plate-cuboid',
+]
 
 parts = ['3651', '3020']
 size  = ['7p', '7p', '4s']

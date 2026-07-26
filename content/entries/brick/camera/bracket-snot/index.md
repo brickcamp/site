@@ -3,7 +3,11 @@ title = 'Camera Bracket SNOT'
 date  = '2019-01-29'
 
 url     = '/entry/brick-camera-bracket-snot/'
-aliases = ['/tech/brick-cameras-in-brackets-1x2-1x2']
+aliases = [
+  '/tech/brick-cameras-in-brackets-1x2-1x2',
+  '/en/tech/brick-cameras-in-brackets-1x2-1x2',
+  '/de/tech/brick-cameras-in-brackets-1x2-1x2',
+]
 
 parts = ['99781', '4595']
 size  = ['3s', '2s', '1s']

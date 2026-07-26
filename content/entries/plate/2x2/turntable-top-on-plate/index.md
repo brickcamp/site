@@ -3,7 +3,11 @@ title = 'Turntable Tops 2 x 2 on Plate'
 date  = '2019-01-27'
 
 url     = '/entry/turntable-2x2-plate-top-on-plate/'
-aliases = ['/tech/turntable-2x2-plate-top-on-plate']
+aliases = [
+  '/tech/turntable-2x2-plate-top-on-plate',
+  '/en/tech/turntable-2x2-plate-top-on-plate',
+  '/de/tech/turntable-2x2-plate-top-on-plate',
+]
 
 parts = ['3679','6141','3958']
 size  = ['3s', '3s', '2p']

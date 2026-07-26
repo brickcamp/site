@@ -3,7 +3,11 @@ title = 'Technic Axle Pin Connector Type 2 Grid'
 date  = '2016-01-01'
 
 url     = '/entry/technic-axle-pin-connector-type2-grid/'
-aliases = ['/tech/technic-axle-pin-connector-type2-grid']
+aliases = [
+  '/tech/technic-axle-pin-connector-type2-grid',
+  '/en/tech/technic-axle-pin-connector-type2-grid',
+  '/de/tech/technic-axle-pin-connector-type2-grid',
+]
 
 parts = ['32034', '4519']
 size  = ['5s', '5s', '1s']

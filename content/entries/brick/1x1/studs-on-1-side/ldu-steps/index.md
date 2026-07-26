@@ -3,7 +3,11 @@ title = 'LDU Offset Steps'
 date  = '2015-08-26'
 
 url     = '/entry/offset-ldu-steps/'
-aliases = ['/tech/offset-ldu-steps']
+aliases = [
+  '/tech/offset-ldu-steps',
+  '/en/tech/offset-ldu-steps',
+  '/de/tech/offset-ldu-steps',
+]
 
 parts = ['4070', '87087', '42446', '3024', '3023', '3794', '3005']
 size  = ['2s', '1s', '4p']

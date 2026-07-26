@@ -3,7 +3,11 @@ title = 'Plate 1 x 1 with Clip Light'
 date  = '2019-04-15'
 
 url     = '/entry/plate-1x1-with-clip-light/'
-aliases = ['/tech/plate-1x1-with-clip-light']
+aliases = [
+  '/tech/plate-1x1-with-clip-light',
+  '/en/tech/plate-1x1-with-clip-light',
+  '/de/tech/plate-1x1-with-clip-light',
+]
 
 parts = ['4081']
 size  = ['2s', '1s', '2p']

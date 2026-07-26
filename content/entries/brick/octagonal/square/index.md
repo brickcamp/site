@@ -3,7 +3,11 @@ title = 'Brick Octagonal Square'
 date  = '2015-11-08'
 
 url     = '/entry/brick-octagonal-square/'
-aliases = ['/tech/brick-octagonal-square']
+aliases = [
+  '/tech/brick-octagonal-square',
+  '/en/tech/brick-octagonal-square',
+  '/de/tech/brick-octagonal-square',
+]
 
 parts = ['6042']
 size  = ['8s', '8s', '2s']

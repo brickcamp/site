@@ -3,7 +3,11 @@ title = 'A-Plate Octagon'
 date  = '2019-07-26'
 
 url     = '/entry/a-plate-octagon/'
-aliases = ['/tech/plate-1x4-1x4-45degrees']
+aliases = [
+  '/tech/plate-1x4-1x4-45degrees',
+  '/en/tech/plate-1x4-1x4-45degrees',
+  '/de/tech/plate-1x4-1x4-45degrees',
+]
 
 parts = ['15706']
 size  = ['11s', '11s', '2p']

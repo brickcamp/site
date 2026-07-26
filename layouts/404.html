@@ -22,54 +22,91 @@
     volume: 'volume-',
   };
   
+  // Keys are lower case: they are looked up that way. A fragment ending in '='
+  // takes the term's own value. Each names its base too, so a filter still lands
+  // right when the path gave no collection to take it from (/techs/with/...).
   const mapTaxonomy = {
-    axle_tilt: 'type=axletilt',
-    axle_tilt_angle: 'type=axletilt&value=',
-    offset_length: 'value=',
-    //pattern_segsize: '',
-    pattern_1d: 'type=linear',
-    pattern_1d_segsize: 'type=linear',
-    pattern_2d: 'type=planar',
-    pattern_2d_segsize: 'type=planar',
-    pattern_3d: 'type=spacial',
-    pattern_3d_segsize: 'type=spacial',
-    rotation_angle: 'value=',
-    shape_segments: 'value=',
-    //shape_segsize: '',
-    shape_2D_segments: 'type=polygon&value=',
-    shape_2D_segsize: 'type=polygon',
-    shape_3D_segments: 'type=polyhedron&value=',
-    shape_3D_segsize: 'type=polyhedron',
-    stud_lift_length: 'type=studlift&value=',
-    stud_tilt: 'type=studtilt',
-    stud_tilt_angle: 'type=studtilt&value=',
-    stud_twist: 'type=studturn',
-    stud_twist_angle: 'type=studturn&value=',
-    stud_shift_length: 'type=studshift&value=',
+    axle_shift_length: 'base=length',
+    axle_tilt: 'base=angle',
+    axle_tilt_angle: 'base=angle&value=',
+    offset_length: 'base=length&value=',
+    part: 'base=part&part=',
+    pattern_1d: 'base=repeat&type=linear',
+    pattern_1d_segsize: 'base=repeat&type=linear',
+    pattern_2d: 'base=repeat&type=planar',
+    pattern_2d_segsize: 'base=repeat&type=planar',
+    pattern_3d: 'base=repeat&type=spacial',
+    pattern_3d_segsize: 'base=repeat&type=spacial',
+    pattern_segsize: 'base=repeat',
+    rotation_angle: 'base=angle&value=',
+    // A side count says nothing about the form: a 6 can be a polygon or a star.
+    shape_2d: 'base=shape',
+    shape_2d_segments: 'base=shape&value=',
+    shape_2d_segsize: 'base=shape',
+    shape_3d: 'base=shape',
+    shape_3d_segments: 'base=shape&value=',
+    shape_3d_segsize: 'base=shape',
+    shape_segments: 'base=shape&value=',
+    shape_segsize: 'base=shape',
+    stud_lift: 'base=length&type=studlift',
+    stud_lift_length: 'base=length&type=studlift&value=',
+    stud_shift: 'base=length&type=studshift',
+    stud_shift_length: 'base=length&type=studshift&value=',
+    stud_tilt: 'base=angle&type=studtilt',
+    stud_tilt_angle: 'base=angle&type=studtilt&value=',
+    stud_twist: 'base=angle&type=studturn',
+    stud_twist_angle: 'base=angle&type=studturn&value=',
   };
 
+  // Only a plain number can be a value here. The rest were terms Grav made up to
+  // group with (_0-45, _9up), its flexible-length marker, or a range (0to90).
+  const isValue = /^\d+(?:\.\d+)?$/;
+
+  // Rebrickable mould-variant suffixes, which this site's part ids drop.
+  const isVariant = /(?:pat\d+|[a-z])$/;
+
+  // Spreads one mapping over the params. Keyed by dimension, so a collection and
+  // the filter under it can both name a base without saying it twice.
+  function addMapping(params, mapping, term) {
+    for (const piece of mapping.split('&')) {
+      let [key, value] = piece.split('=');
+      if (value !== '') {
+        params.set(key, value);
+      } else if (isValue.test(term)) {
+        params.set(key, term);
+      }
+    }
+  }
+
   function legacyList(args) {
-    let params = [];
-    
+    let params = new Map();
+
     if (args.base) {
       let newBase = mapBase[args.base.toLowerCase()];
       if (newBase) {
-        params.push(`base=${newBase}`);
+        params.set('base', newBase);
       }
     }
 
-    if (args.tax) {
-      let oldTax = (args.tax === 'function') ? args.term : args.tax;
-      let newType = mapTaxonomy[oldTax.toLowerCase()];
-      let newValue = args.term ?? '__any';
-      if (newValue === '_9up') {
-        params.push('type=circle');
-      } else if (newType) {
-        if (newType.endsWith('=')) {
-          params.push(newType + newValue);
-        } else {
-          params.push(newType);
-        }
+    // Grav could narrow a collection by several taxonomies at once, and wrote
+    // each as its own path segment: /shape_2D_segments:6/shape_2D_segsize:3
+    for (const filter of (args.filters ?? '').split('/')) {
+      let cut = filter.indexOf(':');
+      if (cut < 0) continue;
+
+      let tax = filter.slice(0, cut).toLowerCase();
+      let term = filter.slice(cut + 1);
+      if (tax === 'part') term = term.replace(isVariant, '');
+
+      let oldTax = (tax === 'function') ? term.toLowerCase() : tax;
+      let newType = mapTaxonomy[oldTax];
+      if (!newType) continue;
+
+      // "Nine or more" on a side count was the old filter form's word for circle.
+      if (term === '_9up' && oldTax.endsWith('_segments')) {
+        params.set('type', 'circle');
+      } else {
+        addMapping(params, newType, term);
       }
     }
 
@@ -78,11 +115,16 @@
       let newSort = mapSort[args.by.toLowerCase()] ?? 'date-desc';
       if (newSort) {
         if (newSort.endsWith('-')) newSort += oldDir;
-        params.push(`sort=${newSort}`);
+        params.set('sort', newSort);
       }
     }
 
-    return params.join('&');
+    return [...params].map(([key, value]) => `${key}=${value}`).join('&');
+  }
+
+  function homepage(args) {
+    const params = legacyList(args);
+    return params ? `/?${params}` : `/`;
   }
 
   const rules = [
@@ -102,27 +144,28 @@
       apply: (m) => `/privacy/`
     },
     {
-      // remaining legal paths → legal notice
-      match: /^\/(?:legal|imprint|impressum)/,
+      // remaining legal and contact paths → legal notice, which carries the address
+      match: /^\/(?:legal|imprint|impressum|contact|kontakt)/,
       apply: (m) => `/legal/`
     },
     {
       // order-by-pages → sorted homepage
-      match: /^\/techs\/order-by\/(?<by>part-count|volume)\/(?<dir>asc|desc)/,
-      apply: (m) => `/?${legacyList(m.groups)}`
+      match: /^\/techs\/order-by\/(?<by>part-count|volume|date)\/(?<dir>asc|desc)/,
+      apply: (m) => homepage(m.groups)
     },
     {
-      // old result lists (base/tax:term/sorting) → filtered homepage 
-      match: /^\/techs(?:\/(?<base>\w+))?(?:\/(?<tax>\w+):(?<term>\w+))?(?:\/orderby:(?<by>[\w.-]+)\/orderdir:(?<dir>asc|desc))?$/,
-      apply: (m) => `/?${legacyList(m.groups)}`
+      // old result lists (collection/tax:term.../sorting) → filtered homepage.
+      // `filters` is lazy so the ordering, which looks like a filter, stays out.
+      match: /^\/techs(?:\/(?<base>[\w-]+))?(?<filters>(?:\/\w+:[^/]+)*?)(?:\/orderby:(?<by>[\w.-]+)\/orderdir:(?<dir>asc|desc))?$/,
+      apply: (m) => homepage(m.groups)
     },
     {
-      // old partlists → partlist on homepage 
+      // old partlists → partlist on homepage
       match: /^\/parts.*/,
       apply: (m) => `/?base=part`
     },
     {
-      // old part page → part search on homepage 
+      // old part page → part search on homepage
       match: /^\/part\/(\d+)(\D.*)?/,
       apply: (m) => `/?base=part&part=${m[1]}`
     }

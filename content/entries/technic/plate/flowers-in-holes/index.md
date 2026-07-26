@@ -4,8 +4,12 @@ date  = '2015-09-14'
 
 url     = '/entry/flowers-in-technic-plate-holes/'
 aliases = [
-  '/tech/technic-plate-with-flowers-in-holes', 
+  '/tech/technic-plate-with-flowers-in-holes',
+  '/en/tech/technic-plate-with-flowers-in-holes',
+  '/de/tech/technic-plate-with-flowers-in-holes',
   '/tech/flower-in-technic-plate-hole',
+  '/en/tech/flower-in-technic-plate-hole',
+  '/de/tech/flower-in-technic-plate-hole',
 ]
 
 parts = ['33291', '3709']

@@ -3,7 +3,11 @@ title = 'Cheese Corner Triangle'
 date  = '2015-12-06'
 
 url     = '/entry/cheese-corner-triangle/'
-aliases = ['/tech/cheese-corner-triangle']
+aliases = [
+  '/tech/cheese-corner-triangle',
+  '/en/tech/cheese-corner-triangle',
+  '/de/tech/cheese-corner-triangle',
+]
 
 parts = ['2420', '3622', '54200', '3024']
 size  = ['5s', '5s', '4p']

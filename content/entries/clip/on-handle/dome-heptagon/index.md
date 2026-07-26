@@ -3,7 +3,11 @@ title = 'Clip-Handle Heptagon with Domes'
 date  = '2015-08-26'
 
 url     = '/entry/clip-handle-dome-heptagon/'
-aliases = ['/tech/clip-handle-dome-heptagon']
+aliases = [
+  '/tech/clip-handle-dome-heptagon',
+  '/en/tech/clip-handle-dome-heptagon',
+  '/de/tech/clip-handle-dome-heptagon',
+]
 
 parts = ['48336', '60470', '3022', '30367']
 size  = ['8s', '2s', '8s']

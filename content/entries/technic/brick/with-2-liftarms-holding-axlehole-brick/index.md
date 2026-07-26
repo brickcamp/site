@@ -3,7 +3,11 @@ title = 'Technic Brick with 2 Liftarms'
 date  = '2016-01-16'
 
 url     = '/entry/technic-brick-with-2-liftarms-holding-axlehole-brick/'
-aliases = ['/tech/technic-brick-with-2-liftarms-holding-axlehole-brick']
+aliases = [
+  '/tech/technic-brick-with-2-liftarms-holding-axlehole-brick',
+  '/en/tech/technic-brick-with-2-liftarms-holding-axlehole-brick',
+  '/de/tech/technic-brick-with-2-liftarms-holding-axlehole-brick',
+]
 
 parts = ['85943', '32064', '32062']
 size  = ['3s', '2s', '2s']

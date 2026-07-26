@@ -3,7 +3,11 @@ title = 'Marakoeschtras Wall'
 date  = '2015-12-06'
 
 url     = '/entry/marakoeschtras-wall/'
-aliases = ['/tech/marakoeschtras-wall']
+aliases = [
+  '/tech/marakoeschtras-wall',
+  '/en/tech/marakoeschtras-wall',
+  '/de/tech/marakoeschtras-wall',
+]
 
 parts = ['87087', '3005', '3070', '3069']
 size  = ['10s', '2s', '6p']

@@ -3,7 +3,11 @@ title = 'Grilled Levers'
 date  = '2015-09-14'
 
 url     = '/entry/grilled-lever-snot/'
-aliases = ['/tech/tile-grille-lever-snot']
+aliases = [
+  '/tech/tile-grille-lever-snot',
+  '/en/tech/tile-grille-lever-snot',
+  '/de/tech/tile-grille-lever-snot',
+]
 
 parts = ['2412', '4593']
 size  = ['3s', '1s', '2p']

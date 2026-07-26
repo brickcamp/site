@@ -3,7 +3,11 @@ title = 'Camera Cube'
 date  = '2015-08-23'
 
 url     = '/entry/brick-camera-cube/'
-aliases = ['/tech/brick-camera-cube']
+aliases = [
+  '/tech/brick-camera-cube',
+  '/en/tech/brick-camera-cube',
+  '/de/tech/brick-camera-cube',
+]
 
 parts = ['4595', '3022']
 size  = ['7p', '7p', '3b']

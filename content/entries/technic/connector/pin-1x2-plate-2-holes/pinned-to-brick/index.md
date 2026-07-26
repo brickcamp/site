@@ -3,7 +3,11 @@ title = "Plate-Pin-Connector pinned to Brick"
 date  = "2021-05-16"
 
 url     = '/entry/technic-plate-pin-connector-pinned-to-brick'
-aliases = ['/tech/technic-tile-with-beam-pinned-to-brick']
+aliases = [
+  '/tech/technic-tile-with-beam-pinned-to-brick',
+  '/en/tech/technic-tile-with-beam-pinned-to-brick',
+  '/de/tech/technic-tile-with-beam-pinned-to-brick',
+]
 
 parts = ['2458', '32530']
 size  = ['2s', '2s', '2b']

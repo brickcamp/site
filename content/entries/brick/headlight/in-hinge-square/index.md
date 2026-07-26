@@ -3,7 +3,11 @@ title = 'Headlights in Hinge Square'
 date  = '2019-01-19'
 
 url     = '/entry/headlights-in-hinge-square/'
-aliases = ['/tech/headlights-in-hinge-square']
+aliases = [
+  '/tech/headlights-in-hinge-square',
+  '/en/tech/headlights-in-hinge-square',
+  '/de/tech/headlights-in-hinge-square',
+]
 
 parts = ['30386', '4070']
 size  = ['4s', '4s', '3p']

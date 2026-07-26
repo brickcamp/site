@@ -3,7 +3,11 @@ title = 'Clip Handle Flip'
 date  = '2016-01-01'
 
 url     = '/entry/brick-clip-handle-snot/'
-aliases = ['/tech/brick-clip-handle-snot']
+aliases = [
+  '/tech/brick-clip-handle-snot',
+  '/en/tech/brick-clip-handle-snot',
+  '/de/tech/brick-clip-handle-snot',
+]
 
 parts = ['60475', '2921', '85861']
 size  = ['3s', '1s', '1b']

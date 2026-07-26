@@ -3,7 +3,14 @@ title = 'Tipper End Hexagon'
 date  = '2015-10-09'
 
 url     = '/entry/tipper-end-hexagon/'
-aliases = ['/tech/vehicle-tipper-end-hexagon', '/tech/tipper-end-hexagon']
+aliases = [
+  '/tech/vehicle-tipper-end-hexagon',
+  '/en/tech/vehicle-tipper-end-hexagon',
+  '/de/tech/vehicle-tipper-end-hexagon',
+  '/tech/tipper-end-hexagon',
+  '/en/tech/tipper-end-hexagon',
+  '/de/tech/tipper-end-hexagon',
+]
 
 parts = ['30022', '6061']
 size  = ['16s', '37p', '2s']

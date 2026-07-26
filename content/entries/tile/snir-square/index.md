@@ -3,7 +3,11 @@ title = 'Tile SNIR Square'
 date  = '2015-12-06'
 
 url     = '/entry/tile-snir-square/'
-aliases = ['/tech/tile-snir-square']
+aliases = [
+  '/tech/tile-snir-square',
+  '/en/tech/tile-snir-square',
+  '/de/tech/tile-snir-square',
+]
 
 parts = ['3005', '6636', '3070']
 size  = ['9s', '9s', '1b']
