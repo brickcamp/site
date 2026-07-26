@@ -1,0 +1,56 @@
+{{/* Renders one tag as a pill button linking into the search.
+
+     Params: the segments dict from tags/getSegments. */}}
+{{- $seg := . -}}
+
+{{/* renderMetadata gates on hasScope, which reads the same filters the catalog
+     does — so a base that has a scope but no scope entry is a broken build.
+     errorf does not halt Hugo, so the empty scope keeps the rest running on
+     raw slugs rather than piling a nil dereference on top of the message. */}}
+{{- $scope := dict "types" slice "values" slice "valueFormat" "" -}}
+{{- $found := false -}}
+{{- range (partialCached "scopes/getCatalog" .).scopes -}}
+  {{- if eq .slug $seg.base -}}
+    {{- $scope = . -}}
+    {{- $found = true -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $found -}}
+  {{- errorf "tag base %q has a search scope but no scope catalog entry" $seg.base -}}
+{{- end -}}
+
+{{- $typeTitle := $seg.type -}}
+{{- with where $scope.types "slug" $seg.type -}}
+  {{- $typeTitle = (index . 0).title -}}
+{{- end -}}
+
+{{- $valueTitle := "" -}}
+{{- with $seg.value -}}
+  {{- $slug  := string . -}}
+  {{- $match := where $scope.values "slug" $slug -}}
+  {{- if $match -}}
+    {{- $valueTitle = (index $match 0).title -}}
+  {{- else if $scope.valueFormat -}}
+    {{- $valueTitle = printf $scope.valueFormat $slug -}}
+  {{- else -}}
+    {{- $valueTitle = $slug -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* The label has one colon slot. The value takes it where there is one;
+     otherwise the base does, since a bare "Circle" or "Linear" says too
+     little on its own. The hover text spells all three out either way. */}}
+{{- $baseTitle := title $seg.base -}}
+{{- $label := printf "%s: %s" $baseTitle $typeTitle -}}
+{{- $hover := printf "%s of type %s" $baseTitle $typeTitle -}}
+{{- with $valueTitle -}}
+  {{- $label = printf "%s: %s" $typeTitle . -}}
+  {{- $hover = printf "%s: %s" $hover . -}}
+{{- end -}}
+
+{{- $link := printf "/?base=%s&type=%s" $seg.base $seg.type -}}
+{{- with $seg.value -}}
+  {{- $link = printf "%s&value=%d" $link . -}}
+{{- end -}}
+
+<a href="{{ $link }}" class="btn btn-sm btn-secondary" title="{{ $hover }}">{{ $label }}</a>

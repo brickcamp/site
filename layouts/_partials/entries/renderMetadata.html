@@ -79,22 +79,19 @@
       </div>
       {{- end }}
       {{- end }}
-    </div>                  
+    </div> 
   </div>
 
+  <div class="p-1 border-top">
+    <div class="d-flex flex-wrap gap-2 justify-content-center">
+      {{- range $entry.GetTerms "tags" -}}
+        {{/* Only tags whose base has a search scope render a button — the rest
+            (partcount-, warning-, font) have no scope and nothing to link to. */}}
+        {{- $seg := partial "tags/getSegments" .Path -}}
+        {{- if $seg.hasScope -}}
+          {{ partial "tags/renderButton" $seg }}
+        {{- end -}}
+      {{- end }}
+    </div>    
+  </div>
 </div>
-
-<div class="row row-cols-4 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 g-1 mb-2 justify-content-center">
-  {{ with $entry.GetTerms "tags" -}}
-  {{ range . -}}
-  {{/* Only tags whose base has a search scope render a card — the rest
-       (partcount-, warning-, font) have no icon and nothing to link to. */}}
-  {{ $seg := partial "tags/getSegments" .Path -}}
-  {{ if $seg.hasScope }}
-  <div class="col">
-    {{ partial "tags/renderCard.html" $seg }}
-  </div>
-  {{ end }}
-  {{- end }}
-  {{- end }}
-</div> 

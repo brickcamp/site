@@ -17,9 +17,11 @@ Nothing joins these ends but a string convention, so grep won't find them.
 - **Lookup files.** `content/data/_content.gotmpl` emits the CSV pages that
   `lookup.js` fetches at `/data/filtered/<base>-<type>-__any/index.csv`. Parts
   live at `/parts/<id>/index.csv`.
-- **Scope catalog.** `_partials/scopes/getCatalog.html` feeds both
-  `_partials/nav/filter.html` (tabs, dropdowns) and `layouts/data/scopes.json`,
-  which `assets/js/home/scope.js` fetches.
+- **Scope catalog.** `_partials/scopes/getCatalog.html` feeds
+  `_partials/nav/filter.html` (tabs, dropdowns), `layouts/data/scopes.json`,
+  which `assets/js/home/scope.js` fetches, and `_partials/tags/renderButton.html`
+  — so a tag button and the dropdown entry it links to cannot drift apart. It is
+  keyed by a filter's `slug`, not its file name; `parts.toml` is `part`.
 - **A filter's `from`** does two unrelated jobs: build-side it decides which
   filters get lookup files (`tags` only), client-side `scope.js` uses it to spot
   the part scope (`parts`). Deliberately not a lookup page param.
