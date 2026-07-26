@@ -55,8 +55,8 @@
     <nav id="filter-nav" class="d-flex flex-row flex-nowrap overflow-x-auto w-100 py-1">
       {{- partial "nav/dropdown.html" (dict "id" "type"  "items" $types) -}}
       {{- partial "nav/dropdown.html" (dict "id" "value" "items" $values) -}}
-      {{- partial "nav/dropdown.html" (dict "id" "size"  "items" $sizes) -}}
-      {{- partial "nav/dropdown.html" (dict "id" "sort"  "items" $sorts "class" "ms-auto" ) -}}
+      {{- partial "nav/dropdown.html" (dict "id" "size"  "items" $sizes "class" "ms-auto") -}}
+      {{- partial "nav/dropdown.html" (dict "id" "sort"  "items" $sorts) -}}
     </nav>
   </div>
 </div>
