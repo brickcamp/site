@@ -92,7 +92,7 @@
   {{ $seg := partial "tags/getSegments" .Path -}}
   {{ if $seg.hasScope }}
   <div class="col">
-    {{ partial "tags/renderCard.html" . }}
+    {{ partial "tags/renderCard.html" $seg }}
   </div>
   {{ end }}
   {{- end }}
