@@ -88,13 +88,26 @@ export function renderFilterDropdowns(state) {
 
   root.querySelectorAll("#filter-nav .dropdown[data-dim]").forEach((dropdown) => {
     const dimension = dropdown.dataset.dim;
-    setLabel(dropdown, scope.labelFor(dimension, state[dimension]));
+    const value = state[dimension];
+    setLabel(dropdown, scope.labelFor(dimension, value), isNarrowing(dimension, value));
     dropdown.hidden = !shown[dimension];
   });
 }
 
-function setLabel(dropdown, text) {
-  const span = dropdown.querySelector(".dropdown-toggle span");
+// A dropdown left at its default narrows nothing — only the others are worth
+// spotting at a glance, so only those are bold.
+function isNarrowing(dimension, value) {
+  const untouched = dimension === "sort" ? appScope.sortDefault() : appScope.ANY;
+  return value !== untouched;
+}
+
+function setLabel(dropdown, text, isBold) {
+  const toggle = dropdown.querySelector(".dropdown-toggle");
+  if (toggle) {
+    toggle.classList.toggle("fw-bold", isBold);
+  }
+
+  const span = toggle?.querySelector("span");
   if (span) {
     span.innerText = text;
   }
