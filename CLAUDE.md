@@ -26,8 +26,9 @@ Pipeline — four stages, one core concept:
    shape, repeat, size, parts) and their `types` / `values`.
 2. **Generate** — `content/data/_content.gotmpl` (a Hugo *content adapter*) emits one
    CSV lookup page per filter scope under `/data/filtered/…` and `/data/sorted/…`.
+   Only `from = "tags"` filters get lookup pages; an unknown `from` fails the build.
 3. **Render** — `layouts/data/filtered.csv` (via `_partials/entries/getFiltered.html`,
-   which dispatches on the filter's `from`) writes each row as
+   which walks the tag taxonomy) writes each row as
    `relPermalink → title → sizeType → values`, tab-separated.
 4. **Fetch** — `lookup.js` requests `/data/filtered/<base>-<type>-__any/index.csv`,
    then filters rows by value on the client.
@@ -70,8 +71,8 @@ which appear in `angle.toml`. Therefore:
 - **Value filtering happens client-side** in `lookup.js`, against a `values` column
   (pipe-joined, e.g. `60|120|180`, because one entry can hold several values for the
   same base+type). Lookup files are keyed only by `base` and `type` — **never by
-  value**. This keeps the generated file count fixed (~25) no matter how many values
-  or entries exist, so the build stays linear.
+  value**, and `getFiltered` takes no `value` argument. This keeps the generated file
+  count fixed (18) no matter how many values or entries exist, so the build stays linear.
 - **Don't try to make the content adapter enumerate real values.** A Hugo content
   adapter **cannot access `Site.Taxonomies` / `Site.Pages`** (pages aren't built yet
   when it runs). That constraint is the whole reason value filtering lives on the
@@ -84,9 +85,11 @@ which appear in `angle.toml`. Therefore:
 - Hugo does **not** publish a CSV that renders empty, so a scope with zero matching
   entries (e.g. a type no entry uses) produces **no file**. `lookup.js`'s `loadRows`
   treats a missing file as an empty result set.
-- `size-*` and `part-*` files under `/data/filtered/` are generated but currently
-  unused by the client (size is filtered client-side on the `size` column; parts use
-  `/parts/…`).
+- A filter's `from` has **two unrelated jobs**. Build-side, `_content.gotmpl` uses it
+  to decide which filters get lookup files — only `from = "tags"`, because size is
+  filtered client-side on the `size` column and parts come from `/parts/…`. Client-side,
+  `getCatalog` publishes it so `scope.js` can recognise the part-list scope
+  (`from === "parts"`). It is deliberately *not* in the lookup page's params.
 - **`js.Build --minify` reorders statements across an `await`.** esbuild merged
   `const id = ++n;` (and even a function call) into the following `await`
   declaration, so it ran *after* the await — a "am I still the newest?" check

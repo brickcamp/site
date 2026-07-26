@@ -6,11 +6,11 @@
 {{- $filter := .filter | default false -}}
 
 {{- $size   := index (partial "entries/getCalculatedFields" $page) "_sizeType" -}}
+{{/* No filter (parts/term.csv) or an empty one (the unfiltered lookup) means no
+     base to scope the values to, so the column stays empty. */}}
 {{- $values := "" -}}
 {{- with $filter -}}
-  {{- if eq .from "tags" -}}
-    {{- $values = partial "entries/getScopedTagValues" (dict "page" $page "filter" .) -}}
-  {{- end -}}
+  {{- $values = partial "entries/getScopedTagValues" (dict "page" $page "filter" .) -}}
 {{- end -}}
 
 {{- return partial "csv/getRow" (slice $page.RelPermalink $page.Title $size $values) -}}

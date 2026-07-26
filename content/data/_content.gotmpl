@@ -20,7 +20,6 @@
 
   {{/* Any Type */}}
   {{ $combinations.Add (print $basePath "-" $any "-" $any) (dict
-    "from" $f.from
     "base" $f.slug
   )}}
 
@@ -38,15 +37,14 @@
   {{/* Unlisted Type */}}
   {{ with $types }}
     {{ $combinations.Add (print $basePath "-" $else "-" $any) (dict
-      "from"     $f.from
       "base"     $f.slug
       "notTypes" $types
     )}}
   {{ end }}
 {{ end }}
 
-{{/* Unfiltered + Any Type */}}
-{{ $combinations.Add (print "filtered/" $any "-" $any "-" $any) (dict "from" "tags" )}}
+{{/* Unfiltered + Any Type: no base, so every tag passes and no values column. */}}
+{{ $combinations.Add (print "filtered/" $any "-" $any "-" $any) dict }}
 
 {{/* Create lookup file for each combination */}}
 {{ range $path, $filter := $combinations.Values }}
