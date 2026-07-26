@@ -1,6 +1,17 @@
 {{/* Canonical tag grammar: tags are "base-type-value" (e.g. "angle-studturn-28").
      Splits a tag into those three segments, defaulting a missing type to "else"
-     and a missing value to 0. Also accepts the .Path of a term page as input. */}}
+     and a missing value to 0. Also accepts the .Path of a term page as input.
+
+     Returns:
+       base      first segment
+       type      second segment, "else" when absent
+       value     third segment, 0 when absent
+       hasScope  whether the base has a search scope — a filter in
+                 data/entries/filters/*.toml that reads from tags. Tags without
+                 one (partcount-, warning-, font) have no icon and nothing to
+                 link to, so nothing renders them as a card.
+
+     Params: a tag, or the .Path of a tag term page. */}}
 {{- $tag := strings.TrimPrefix "/tags/" . -}}
 
 {{- $split := split $tag "-" -}}
@@ -8,6 +19,19 @@
 {{- $type  := index $split 1 | default "else" -}}
 {{- $value := index $split 2 | default 0 -}}
 
-{{- return dict "base"  $base 
-                "type"  $type 
-                "value" $value -}}
+{{/* The bases a search scope exists for, resolved once per build. */}}
+{{- $scoped := site.Store.Get "scopedTagBases" -}}
+{{- if not $scoped -}}
+  {{- $scoped = slice -}}
+  {{- range site.Data.entries.filters -}}
+    {{- if eq .from "tags" -}}
+      {{- $scoped = $scoped | append .slug -}}
+    {{- end -}}
+  {{- end -}}
+  {{- site.Store.Set "scopedTagBases" $scoped -}}
+{{- end -}}
+
+{{- return dict "base"     $base
+                "type"     $type
+                "value"    $value
+                "hasScope" (in $scoped $base) -}}
