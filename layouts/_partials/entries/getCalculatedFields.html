@@ -20,12 +20,7 @@
     {{- $sizeZ    = partial "units/getLDUs" (index . 2) -}}
     {{- $sizeType = index (partial "tags/getSizeType" .) "slug" -}}
   {{- end -}}
-  {{- $sizeAsc := sort (slice $sizeX $sizeY $sizeZ) "value" "asc" -}}
-  {{- $sizeMin := index $sizeAsc 0 -}}
-  {{- $sizeMed := index $sizeAsc 1 -}}
-  {{- $sizeMax := index $sizeAsc 2 -}}
   {{- $sizeVol := mul $sizeX $sizeY $sizeZ -}}
-  {{- $sizeArea := mul $sizeMax $sizeMed -}}
 
   {{/** partcounts **/}}
   {{- $parts := slice -}}
@@ -37,16 +32,10 @@
   {{- $partsMin := math.Min $parts -}}
   {{- $partsMax := math.Max $parts -}}
 
-  {{/** save to cache **/}}
-  {{- $result = dict 
-      "_sizeX"    $sizeX
-      "_sizeY"    $sizeY
-      "_sizeZ"    $sizeZ
-      "_sizeMin"  $sizeMin
-      "_sizeMed"  $sizeMed
-      "_sizeMax"  $sizeMax
+  {{/** save to cache — only what a caller reads: sortings.toml names _sizeVol,
+        _partsMin and _partsMax; getLookupRow reads _sizeType **/}}
+  {{- $result = dict
       "_sizeVol"  $sizeVol
-      "_sizeArea" $sizeArea
       "_sizeType" $sizeType
       "_partsMin" $partsMin
       "_partsMax" $partsMax
