@@ -38,9 +38,29 @@ the images next to `index.md`, then drop `draft = true` when it's ready. Tags ar
 written `base-type-value` (`angle-studturn-28`, `shape-polygon-6`); malformed
 ones fail the build and tell you which tag was wrong.
 
+If the entry's image is not yours — a crop from instructions, say — set
+`imageCredit` in the front matter to name the rightsholder, and drop an
+`ATTRIBUTION.txt` beside the image. Hugo publishes that file next to the image
+itself, so the notice survives being downloaded. `content/entries/font/set-41839/`
+is the worked example.
+
 Adding new parts additionally needs a [Rebrickable API](https://rebrickable.com/api/)
 key. Copy `data/secrets.example.toml` to `data/secrets.toml` and fill it in — it's
 gitignored, so it won't be committed.
+
+## License
+
+The repository splits three ways:
+
+* **Code** — templates, JavaScript, stylesheets and icons — is [MIT](LICENSE).
+* **Content** — entry texts, LDraw models, the renders built from them and the
+  entry metadata — is [CC BY 4.0](LICENSE-CONTENT). Credit it as
+  `brick.camp — CC BY 4.0 — https://brick.camp/`.
+* **Everything else** is third-party material under its own terms: the bundled
+  libraries, the Rebrickable part images, the thumbnail beside each source link
+  and the LEGO® building-instruction crops in the font entry.
+  [THIRD-PARTY.md](THIRD-PARTY.md) lists what and whose — worth a look before
+  reusing any image, since some of it sits inside `content/entries/`.
 
 ## Notes for AI agents
 

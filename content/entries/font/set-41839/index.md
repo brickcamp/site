@@ -5,6 +5,9 @@ date  = '2026-01-06'
 url     = '/entry/set-41839-font/'
 aliases = []
 
+# Images here are LEGO's, not ours — see ATTRIBUTION.txt beside them.
+imageCredit = '© The LEGO Group — [details](https://github.com/brickcamp/site/blob/main/THIRD-PARTY.md)'
+
 parts = ['3036', '3070', '3069', '5091', '5092', '63864', '2431', '14719', '27925', '79393', '35787', '25269', '1748', '15535', '3794']
 size  = ['8s', '6s', '1b']
 tags  = [

@@ -50,9 +50,18 @@ means, you can study everything:
 * Really everything — you could even run a local copy: clone the repository and
   run `hugo server`.
 
-Furthermore, images and contents are
-[licensed as creative commons](https://creativecommons.org/licenses/by-sa/4.0/)
-(CC BY-SA 4.0).
+The entries themselves — the texts, the LDraw models, the renders built from
+them and the metadata behind the search — are
+[licensed CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Use them
+wherever you like, including commercially; just credit brick.camp. The code
+running the site is [MIT](https://github.com/brickcamp/site/blob/main/LICENSE).
+
+Some images here are not ours to give away, though: the part pictures come from
+[Rebrickable](https://rebrickable.com/), the thumbnail next to each source
+belongs to whoever made the thing it links to, and the font entry is built from
+official LEGO® building instructions. Each one is credited where it appears, and
+[THIRD-PARTY.md](https://github.com/brickcamp/site/blob/main/THIRD-PARTY.md)
+spells out which is which.
 
 ### Secure and Private
 

@@ -1,3 +1,8 @@
+/**
+ * @license
+ * Copyright 2010-2025 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
 import{BufferAttribute,BufferGeometry,Color,FileLoader,Group,LineBasicMaterial,LineSegments,Loader,Matrix4,Mesh,MeshStandardMaterial,ShaderMaterial,SRGBColorSpace,UniformsLib,UniformsUtils,Vector3,Ray}from'three';const FINISH_TYPE_DEFAULT=0;const FINISH_TYPE_CHROME=1;const FINISH_TYPE_PEARLESCENT=2;const FINISH_TYPE_RUBBER=3;const FINISH_TYPE_MATTE_METALLIC=4;const FINISH_TYPE_METAL=5;const FILE_LOCATION_TRY_PARTS=0;const FILE_LOCATION_TRY_P=1;const FILE_LOCATION_TRY_MODELS=2;const FILE_LOCATION_AS_IS=3;const FILE_LOCATION_TRY_RELATIVE=4;const FILE_LOCATION_TRY_ABSOLUTE=5;const FILE_LOCATION_NOT_FOUND=6;const MAIN_COLOUR_CODE='16';const MAIN_EDGE_COLOUR_CODE='24';const COLOR_SPACE_LDRAW=SRGBColorSpace;const _tempVec0=new Vector3();const _tempVec1=new Vector3();class LDrawConditionalLineMaterial extends ShaderMaterial{constructor(parameters){super({uniforms:UniformsUtils.merge([UniformsLib.fog,{diffuse:{value:new Color()},opacity:{value:1.0}}]),vertexShader:`
 				attribute vec3 control0;
 				attribute vec3 control1;

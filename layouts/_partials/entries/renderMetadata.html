@@ -33,6 +33,14 @@
     </li>
     {{- end }}
 
+    {{/* An entry with foreign image sets imageCredit naming the rightsholder. */}}
+    {{- with $entry.Params.imageCredit }}
+    <li class="list-group-item d-flex">
+      <b>Image:</b>
+      <span>{{ $entry.RenderString . }}</span>
+    </li>
+    {{- end }}
+
     {{- with $entry.Params.size }}
     {{- $size := (partial "entries/facts" $entry).size -}}
     <li class="list-group-item d-flex">

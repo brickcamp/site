@@ -1,0 +1,15 @@
+Copyright notice — the letter images in this folder
+===================================================
+
+Every .jpg here is a crop from official LEGO(R) publications for set
+41839 "Message Board", showing one letter of the alphabet that set
+builds. They are the artwork of the LEGO Group.
+
+They are NOT part of brick.camp's CC BY 4.0 content and may not be
+reused under brick.camp's license.
+
+LEGO(R) is a trademark of the LEGO Group, which does not sponsor,
+authorise or endorse brick.camp.
+
+See the ATTRIBUTION.txt one level up, and the full third-party listing:
+https://github.com/brickcamp/site/blob/main/THIRD-PARTY.md

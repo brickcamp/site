@@ -27,7 +27,9 @@ infringements, such links will be removed promptly.
 
 ## Copyright
 
-Content created by the operator of this site is subject to copyright.
+Content created by the operator of this site is published under the
+[Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+license; the source code of the site is available under the MIT license.
 Contributions by third parties are marked as such and remain the property of
 their respective authors.
 
