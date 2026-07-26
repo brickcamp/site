@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "BrickCamp",
+  "author": "brick.camp",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^8.0.0",
     "postcss": "^8.5.6",

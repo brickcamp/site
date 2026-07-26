@@ -8,7 +8,7 @@ See [legal notice](/legal/) for contact details.
 
 ## What this site collects
 
-BrickCamp is a static website. It sets no cookies, uses no analytics or tracking
+brick.camp is a static website. It sets no cookies, uses no analytics or tracking
 services, and has no user accounts, comments or contact forms. Nothing you type
 into the search box is transmitted anywhere — searching and filtering run
 entirely in your browser against files already downloaded with the page.

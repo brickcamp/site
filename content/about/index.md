@@ -1,10 +1,10 @@
 +++
-title = 'About BrickCamp'
+title = 'About brick.camp'
 +++
 
-![BrickCamp logo](brickcamp-logo.png)
+![brick.camp logo](brickcamp-logo.png)
 
-BrickCamp aims to be an **easy-to-use, open and secure** online tool to help
+brick.camp aims to be an **easy-to-use, open and secure** online tool to help
 LEGO® builders accomplish their goals. Currently, it is still under heavy
 development by [Tobias Buckdahn](https://www.brickup.de/).
 
@@ -14,7 +14,7 @@ development by [Tobias Buckdahn](https://www.brickup.de/).
 
 For beginners and newcomers, some community terms (like
 [SNOT, AZMEP, etc.](https://www.brothers-brick.com/lego-glossary/)) might be
-confusing. That's why BrickCamp structures its entries purely by (unabbreviated)
+confusing. That's why brick.camp structures its entries purely by (unabbreviated)
 purpose:
 
 * [Angles](/?base=angle) to change the orientation of a piece.
@@ -34,7 +34,7 @@ And there's more on the horizon — stay curious.
 
 ![A sun built from minifig hands clipped around a dinner plate](minifig-hands-on-dinner-plate.png)
 
-BrickCamp is [completely open source](https://github.com/brickcamp/site). This
+brick.camp is [completely open source](https://github.com/brickcamp/site). This
 means, you can study everything:
 
 * The [files for each and every technique](https://github.com/brickcamp/site/tree/main/content/entries)

@@ -1,7 +1,7 @@
 0 FILE lowell-sphere.ldr
 0 Lowell Sphere
 0 Name: lowell-sphere.ldr
-0 Author: BrickCamp (by Tobias Buckdahn)
+0 Author: brick.camp (by Tobias Buckdahn)
 0 Unofficial Model
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
@@ -23,7 +23,7 @@
 0 FILE Side.ldr
 0 One side of the sphere
 0 Name: Side.ldr
-0 Author: BrickCamp (by Tobias Buckdahn)
+0 Author: brick.camp (by Tobias Buckdahn)
 0 Unofficial Model
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
