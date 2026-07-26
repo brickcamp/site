@@ -10,6 +10,6 @@ size  = ['3s', '2s', '1p']
 tags  = [
   'length-studshift',
   'partcount-total-2',
-  'warning-todo-length',
+  'todo-length',
 ]
 +++

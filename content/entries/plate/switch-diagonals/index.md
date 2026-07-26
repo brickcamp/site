@@ -10,7 +10,7 @@ size  = ['3s', '3s', '3p']
 tags  = [
   'angle-studturn',
   'partcount-total-4',
-  'warning-todo-angle',
+  'todo-angle',
 ]
 +++
 

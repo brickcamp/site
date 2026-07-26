@@ -7,7 +7,7 @@ parts = ['22484', '60470']
 size  = ['3s', '2s', '2p']
 tags  = [
   'partcount-total-2',
-  'warning-todo-joint',
+  'todo-joint',
 ]
 +++
 

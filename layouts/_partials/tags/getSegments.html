@@ -1,15 +1,16 @@
-{{/* Canonical tag grammar: tags are "base-type-value" (e.g. "angle-studturn-28").
-     Splits a tag into those three segments, defaulting a missing type to "else"
-     and a missing value to 0. Also accepts the .Path of a term page as input.
+{{/* Canonical tag grammar: tags are "base-type-value" — the type and the value
+     are optional, and the value is always a number (e.g. "angle-studturn-28",
+     "shape-circle", "font"). A non-numeric value segment fails the build naming
+     the tag. Also accepts the .Path of a term page as input.
 
      Returns:
        base      first segment
        type      second segment, "else" when absent
-       value     third segment, 0 when absent
+       value     third segment as an int, 0 when absent
        hasScope  whether the base has a search scope — a filter in
                  data/entries/filters/*.toml that reads from tags. Tags without
-                 one (partcount-, warning-, font) have no icon and nothing to
-                 link to, so nothing renders them as a card.
+                 one (partcount-, warning-, todo-, font) have no icon and
+                 nothing to link to, so nothing renders them as a card.
 
      Params: a tag, or the .Path of a tag term page. */}}
 {{- $tag := strings.TrimPrefix "/tags/" . -}}
@@ -17,7 +18,16 @@
 {{- $split := split $tag "-" -}}
 {{- $base  := index $split 0 -}}
 {{- $type  := index $split 1 | default "else" -}}
-{{- $value := index $split 2 | default 0 -}}
+
+{{/* The value segment is a number or it is absent — nothing else. */}}
+{{- $value := 0 -}}
+{{- with index $split 2 -}}
+  {{- if findRE `^[0-9]+$` . -}}
+    {{- $value = int . -}}
+  {{- else -}}
+    {{- errorf "tag %q: value segment %q is not a number" $tag . -}}
+  {{- end -}}
+{{- end -}}
 
 {{/* The bases a search scope exists for, resolved once per build. */}}
 {{- $scoped := site.Store.Get "scopedTagBases" -}}

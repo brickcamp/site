@@ -72,8 +72,21 @@ Wiring is one-directional — `events → app → view → DOM`.
 ### Tag grammar
 
 Entry tags are **`base-type-value`**, e.g. `angle-studturn-28`, `shape-polygon-6`.
-Parsed by `_partials/tags/getSegments.html` (type defaults to `else`, value to `0`
-when a segment is absent). Taxonomies (`hugo.toml`): `tag`, `size`, `part`, `uses`.
+The type and the value are optional and **the value is always a number** — a
+non-numeric value segment fails the build naming the tag. Parsed by
+`_partials/tags/getSegments.html`, which returns `base` / `type` (defaults to
+`else`) / `value` (an int, `0` when absent) / `hasScope`.
+
+`hasScope` says whether the base has a search scope — a filter in
+`data/entries/filters/*.toml` with `from = "tags"`. It is what decides whether a
+tag renders a card: `partcount-`, `warning-`, `todo-` and `font` have no icon and
+nothing to link to, so `renderMetadata` skips them and `tags/renderCard` (which
+takes the segments dict, not the term page) has only one shape to render. Adding
+a base that should *not* be searchable needs no template edit.
+
+Taxonomies (`hugo.toml`): `tag`, `size`, `part`, `uses`. Tag term pages are
+`render = 'never'`, so a tag only reaches `public/` through a card or a lookup
+file — renaming an unscoped tag changes no output.
 
 ### The key invariant
 
