@@ -1,11 +1,16 @@
 {{/* Canonical tag grammar: tags are "base-type-value" — the type and the value
-     are optional, and the value is always a number (e.g. "angle-studturn-28",
-     "shape-circle", "font"). A non-numeric value segment fails the build naming
-     the tag. Also accepts the .Path of a term page as input.
+     are optional, the value is always a number, and a type is always one the
+     base's filter lists (e.g. "angle-studturn-28", "shape-circle", "shape",
+     "font"). A non-numeric value segment or an unlisted type fails the build
+     naming the tag. Also accepts the .Path of a term page as input.
+
+     The type vocabulary is closed and the value range is open, deliberately:
+     every type is a dropdown entry, while entries carry values no dropdown
+     lists (see the valueformat in data/entries/filters/*.toml).
 
      Returns:
        base      first segment
-       type      second segment, "else" when absent
+       type      second segment, empty when absent
        value     third segment as an int, 0 when absent
        hasScope  whether the base has a search scope — a filter in
                  data/entries/filters/*.toml that reads from tags. Tags without
@@ -17,7 +22,7 @@
 
 {{- $split := split $tag "-" -}}
 {{- $base  := index $split 0 -}}
-{{- $type  := index $split 1 | default "else" -}}
+{{- $type  := index $split 1 | default "" -}}
 
 {{/* The value segment is a number or it is absent — nothing else. */}}
 {{- $value := 0 -}}
@@ -29,19 +34,36 @@
   {{- end -}}
 {{- end -}}
 
-{{/* The bases a search scope exists for, resolved once per build. */}}
-{{- $scoped := site.Store.Get "scopedTagBases" -}}
+{{/* The filters a search scope exists for, keyed by base and resolved once per
+     build. The data key is the file name, which is not always the slug
+     (parts.toml is "part"), so it travels along for the error message. */}}
+{{- $scoped := site.Store.Get "scopedTagFilters" -}}
 {{- if not $scoped -}}
-  {{- $scoped = slice -}}
-  {{- range site.Data.entries.filters -}}
-    {{- if eq .from "tags" -}}
-      {{- $scoped = $scoped | append .slug -}}
+  {{- $scoped = dict -}}
+  {{- range $file, $filter := site.Data.entries.filters -}}
+    {{- if eq $filter.from "tags" -}}
+      {{- $types := slice -}}
+      {{- range $filter.types -}}
+        {{- $types = $types | append .slug -}}
+      {{- end -}}
+      {{- $scoped = merge $scoped (dict $filter.slug (dict "file" $file "types" $types)) -}}
     {{- end -}}
   {{- end -}}
-  {{- site.Store.Set "scopedTagBases" $scoped -}}
+  {{- site.Store.Set "scopedTagFilters" $scoped -}}
+{{- end -}}
+{{- $scope := index $scoped $base -}}
+
+{{/* A type segment names a dropdown entry, so it has to be one the filter
+     lists. Bases without a scope have no list to check against. */}}
+{{- with $type -}}
+  {{- with $scope -}}
+    {{- if not (in .types $type) -}}
+      {{- errorf "tag %q: no type %q in data/entries/filters/%s.toml" $tag $type .file -}}
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
 
 {{- return dict "base"     $base
                 "type"     $type
                 "value"    $value
-                "hasScope" (in $scoped $base) -}}
+                "hasScope" (ne $scope nil) -}}

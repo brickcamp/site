@@ -19,6 +19,8 @@
   {{- errorf "tag base %q has a search scope but no scope catalog entry" $seg.base -}}
 {{- end -}}
 
+{{/* Empty when the tag names no type, which is a base with nothing narrowing
+     it — the search opens on the whole scope. */}}
 {{- $typeTitle := $seg.type -}}
 {{- with where $scope.types "slug" $seg.type -}}
   {{- $typeTitle = (index . 0).title -}}
@@ -37,18 +39,27 @@
   {{- end -}}
 {{- end -}}
 
-{{/* The label has one colon slot. The value takes it where there is one;
-     otherwise the base does, since a bare "Circle" or "Linear" says too
-     little on its own. The hover text spells all three out either way. */}}
+{{/* The label has one colon slot, filled only when there is something to fill
+     it with. The value takes it where there is one; otherwise the type does,
+     since a bare "Circle" or "Linear" says too little on its own. A tag naming
+     no type has nothing to put in the slot at all. The hover text spells out
+     however many of the three the tag actually names. */}}
 {{- $baseTitle := title $seg.base -}}
-{{- $label := printf "%s: %s" $baseTitle $typeTitle -}}
-{{- $hover := printf "%s of type %s" $baseTitle $typeTitle -}}
+{{- $label := $baseTitle -}}
+{{- $hover := $baseTitle -}}
+{{- with $typeTitle -}}
+  {{- $label = printf "%s: %s" $baseTitle . -}}
+  {{- $hover = printf "%s of type %s" $baseTitle . -}}
+{{- end -}}
 {{- with $valueTitle -}}
-  {{- $label = printf "%s: %s" $typeTitle . -}}
+  {{- $label = printf "%s: %s" (or $typeTitle $baseTitle) . -}}
   {{- $hover = printf "%s: %s" $hover . -}}
 {{- end -}}
 
-{{- $link := printf "/?base=%s&type=%s" $seg.base $seg.type -}}
+{{- $link := printf "/?base=%s" $seg.base -}}
+{{- with $seg.type -}}
+  {{- $link = printf "%s&type=%s" $link . -}}
+{{- end -}}
 {{- with $seg.value -}}
   {{- $link = printf "%s&value=%d" $link . -}}
 {{- end -}}
