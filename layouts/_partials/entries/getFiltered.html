@@ -4,11 +4,10 @@
      Filters on base and type only — never on value. Entries carry values no
      dropdown lists, so value filtering happens in the client (see lookup.js).
 
-     Params: base, type, notTypes — each optional; an empty filter passes every tag. */}}
-{{- $hasBase  := index . "base"     | default false -}}
-{{- $hasType  := index . "type"     | default false -}}
-{{- $notTypes := index . "notTypes" | default false -}}
-{{- $result   := slice -}}
+     Params: base, type — each optional; an empty filter passes every tag. */}}
+{{- $hasBase := index . "base" | default false -}}
+{{- $hasType := index . "type" | default false -}}
+{{- $result  := slice -}}
 
 {{- range $rawTag, $weightedPages := site.Taxonomies.tags -}}
   {{- $tag := partial "tags/getSegments" $rawTag -}}
@@ -21,12 +20,6 @@
 
   {{- with $hasType -}}
     {{- if ne . $tag.type -}}
-      {{- continue -}}
-    {{- end -}}
-  {{- end -}}
-
-  {{- with $notTypes -}}
-    {{- if in . $tag.type -}}
       {{- continue -}}
     {{- end -}}
   {{- end -}}

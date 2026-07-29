@@ -1,5 +1,4 @@
-{{ $any  := "__any" }}
-{{ $else := "__else" }}
+{{ $any := "__any" }}
 
 {{/* Collect the type-scoped lookups per filter. Values are no longer part of
      the path: every value is carried inside the CSV rows and filtered on the
@@ -23,22 +22,13 @@
     "base" $f.slug
   )}}
 
-  {{/* Listed Types */}}
-  {{ $types := slice }}
+  {{/* Listed Types — the only ones there are: an unlisted type fails the
+       build in _partials/tags/getSegments. */}}
   {{ range $t := $f.types }}
     {{ $combinations.Add (print $basePath "-" $t.slug "-" $any) (dict
       "from" $f.from
       "base" $f.slug
       "type" $t.slug
-    )}}
-    {{ $types = $types | append $t.slug }}
-  {{ end }}
-
-  {{/* Unlisted Type */}}
-  {{ with $types }}
-    {{ $combinations.Add (print $basePath "-" $else "-" $any) (dict
-      "base"     $f.slug
-      "notTypes" $types
     )}}
   {{ end }}
 {{ end }}

@@ -1,13 +1,12 @@
 {{/* Returns an entry's tag values that fall within a filter's scope,
      joined with "|" (e.g. "28|45"). The scope mirrors the type dimension of
-     the filter: a listed type, the unlisted-type bucket, or any type.
+     the filter: a listed type, or any type.
      Empty for filters without a base (the unfiltered lookup). */}}
-{{- $page     := .page -}}
-{{- $filter   := .filter -}}
-{{- $base     := index $filter "base"     | default false -}}
-{{- $type     := index $filter "type"     | default false -}}
-{{- $notTypes := index $filter "notTypes" | default false -}}
-{{- $values   := slice -}}
+{{- $page   := .page -}}
+{{- $filter := .filter -}}
+{{- $base   := index $filter "base" | default false -}}
+{{- $type   := index $filter "type" | default false -}}
+{{- $values := slice -}}
 
 {{- with $base -}}
   {{- range $tag := ($page.Params.tags | default slice) -}}
@@ -17,11 +16,6 @@
     {{- end -}}
     {{- with $type -}}
       {{- if ne . $seg.type -}}
-        {{- continue -}}
-      {{- end -}}
-    {{- end -}}
-    {{- with $notTypes -}}
-      {{- if in . $seg.type -}}
         {{- continue -}}
       {{- end -}}
     {{- end -}}

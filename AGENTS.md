@@ -41,9 +41,10 @@ values exist. Don't try to move it back into the build.
   assume well-formed input.
 - Hugo **publishes no file for a CSV that renders empty**, so a scope no entry
   matches has no file at all. `lookup.js`'s `loadRows` treats that as no rows.
-- `__any` (any type/value) and `__else` (unlisted types) are path sentinels. Note
-  the asymmetry: JS uses `__any`, while `getSegments` defaults a *missing* type
-  to `else`.
+- `__any` (any type/value) is a path sentinel, written on both sides of the seam.
+  There is no sentinel for an unlisted type, because there is no unlisted type:
+  `getSegments` fails the build on one. A tag naming *no* type is legal and opens
+  the whole scope.
 - Tag term pages are `render = 'never'`, so a tag reaches `public/` only through a
   card or a lookup file — renaming an unscoped tag changes no output.
 - **`js.Build --minify` reorders statements across an `await`.** esbuild merged
