@@ -16,7 +16,7 @@
                 {{ range . -}}
                 <div class="border border-1">
                   {{ range . -}}
-                  {{ with index site.Data.entries.units.lengths . -}}
+                  {{ with index hugo.Data.entries.units.lengths . -}}
                   <a class="dropdown-item" href="#" data-factor="{{ .factor }}">
                     {{ .title }}
                   </a>
@@ -41,7 +41,7 @@
               <div class="col-6"><span class="dropdown-item text-bg-dark">Life Size</span></div>
               <div class="col-6"><a class="dropdown-item" href="#" data-factor="1">&times; 1 <i>(no scaling)</i></a></div>
             </div>
-            {{ range sort site.Data.entries.units.scales "factor" "asc" -}}
+            {{ range sort hugo.Data.entries.units.scales "factor" "asc" -}}
             <div class="row g-0">
               <div class="col-6"><span class="dropdown-item text-bg-dark">{{ .title }}</span></div>
               <div class="col-3"><a class="dropdown-item" href="#" data-factor="{{ .factor }}">&times; {{ .factor }}</a></div>
@@ -65,7 +65,7 @@
         {{ range . -}}
         <div class="col col-12 col-xxl-6 mb-3">
           {{ range . -}}
-          {{ with index site.Data.entries.units.lengths . -}}
+          {{ with index hugo.Data.entries.units.lengths . -}}
           <div class="input-group">
             <span class="input-group-text bg-secondary-subtle z-1">{{ .title }}</span>
             <input id="conversion-result-{{ .one }}" class="form-control" type="text" data-factor="{{ .factor }}" readonly>

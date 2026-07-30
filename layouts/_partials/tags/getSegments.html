@@ -40,7 +40,7 @@
 {{- $scoped := site.Store.Get "scopedTagFilters" -}}
 {{- if not $scoped -}}
   {{- $scoped = dict -}}
-  {{- range $file, $filter := site.Data.entries.filters -}}
+  {{- range $file, $filter := hugo.Data.entries.filters -}}
     {{- if eq $filter.from "tags" -}}
       {{- $types := slice -}}
       {{- range $filter.types -}}

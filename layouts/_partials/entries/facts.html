@@ -22,7 +22,7 @@
 
 {{/* Else calculate: */}}
 {{- else -}}
-  {{- $units := site.Data.entries.units.lengths -}}
+  {{- $units := hugo.Data.entries.units.lengths -}}
   {{/* Escaped, not a literal — a non-breaking space is invisible in a diff. */}}
   {{- $nbsp  := "\u00A0" -}}
 
@@ -53,7 +53,7 @@
   {{/* The smallest band that still fits the entry's longest edge. */}}
   {{- $lduMax   := math.Max $ldus -}}
   {{- $sizeType := "" -}}
-  {{- range site.Data.entries.filters.size.types | collections.Reverse -}}
+  {{- range hugo.Data.entries.filters.size.types | collections.Reverse -}}
     {{- if ge .ldus $lduMax -}}
       {{- $sizeType = .slug -}}
     {{- end -}}

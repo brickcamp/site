@@ -1,8 +1,8 @@
 {{/* Returns the scope catalog: which dimensions each search scope supports and
      what its dropdown entries are called, derived from the filters in
      data/entries/filters/*.toml and data/entries/sortings.toml. */}}
-{{- $filters  := sort site.Data.entries.filters "sort" "asc" -}}
-{{- $sortings := site.Data.entries.sortings -}}
+{{- $filters  := sort hugo.Data.entries.filters "sort" "asc" -}}
+{{- $sortings := hugo.Data.entries.sortings -}}
 
 {{- $scopes := slice (dict
     "slug"        "__any"
@@ -43,7 +43,7 @@
 {{- end -}}
 
 {{- $sizes := slice -}}
-{{- range site.Data.entries.filters.size.types -}}
+{{- range hugo.Data.entries.filters.size.types -}}
   {{- $sizes = $sizes | append (dict "slug" .slug "title" .title) -}}
 {{- end -}}
 

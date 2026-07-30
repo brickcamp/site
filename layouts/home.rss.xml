@@ -11,7 +11,7 @@
     <link>{{ .Permalink }}</link>
     <description>Recent content on {{ site.Title }}</description>
     <generator>Hugo</generator>
-    <language>{{ site.Language.LanguageCode }}</language>{{ with site.Copyright }}
+    <language>{{ site.Language.Locale }}</language>{{ with site.Copyright }}
     <copyright>{{ . }}</copyright>{{ end }}{{ with $pages }}
     <lastBuildDate>{{ (index .ByLastmod.Reverse 0).Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
     {{- with .OutputFormats.Get "rss" }}

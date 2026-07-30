@@ -4,7 +4,7 @@
      the path: every value is carried inside the CSV rows and filtered on the
      client, so a fixed set of files covers any value (listed or not). */}}
 {{ $combinations := newScratch }}
-{{ range $f := $.Site.Data.entries.filters }}
+{{ range $f := hugo.Data.entries.filters }}
   {{/* "parts" also reaches the client through the scope catalog, where it marks
        the part-list scope — see _partials/scopes/getCatalog and assets/js/home/scope.js. */}}
   {{ if not (in (slice "tags" "size" "parts") $f.from) }}
@@ -60,7 +60,7 @@
 )}}
 
 {{/* Create lookup file for each sort order */}}
-{{ range $sorting := $.Site.Data.entries.sortings.options }}
+{{ range $sorting := hugo.Data.entries.sortings.options }}
   {{ $page := dict
     "title"    $sorting.title
     "kind"     "page"
