@@ -26,7 +26,6 @@
        build in _partials/tags/getSegments. */}}
   {{ range $t := $f.types }}
     {{ $combinations.Add (print $basePath "-" $t.slug "-" $any) (dict
-      "from" $f.from
       "base" $f.slug
       "type" $t.slug
     )}}
