@@ -1,6 +1,7 @@
 import * as appState from "./state.js";
 import * as appView from "./view.js";
 import * as appLookup from "./lookup.js";
+import * as appQuirks from "./quirks.js";
 import * as appScope from "./scope.js";
 
 let state;
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   await appScope.load();
   state = appState.load();
   appView.mount(document, dispatch);
+  appQuirks.apply(document);
   await renderAll();
 });
 

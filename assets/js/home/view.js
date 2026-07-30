@@ -30,36 +30,6 @@ export function mount(mountRoot, onIntent) {
 
   appEvents.listenToIntents(root, onIntent);
   appEvents.listenToSearch(elSearchInput, onIntent);
-
-  initDropdownFix();
-  initStickyFilterFix();
-}
-
-function initDropdownFix() {
-  // avoid hidden dropdowns because of horizontal scroll container
-  // see https://github.com/twbs/bootstrap/issues/35397#issuecomment-1325790968
-  const toggles = root.querySelectorAll(".dropdown-toggle");
-  const fixes = [...toggles].map(
-    (toggle) =>
-      new bootstrap.Dropdown(toggle, {
-        popperConfig(defaultBsPopperConfig) {
-          return { ...defaultBsPopperConfig, strategy: "fixed" };
-        },
-      }),
-  );
-}
-
-function initStickyFilterFix() {
-  const addBorderIfSticky = ([e]) =>
-    sticky.classList.toggle("border-bottom", e.intersectionRatio < 1);
-
-  const sticky = root.querySelector(".border-bottom-on-sticky");
-  const observer = new IntersectionObserver(addBorderIfSticky, {
-    threshold: [1],
-  });
-
-  sticky.style.top = -1; // <- to make sticky state noticeable
-  observer.observe(sticky);
 }
 
 export function renderSearchQuery(state) {
