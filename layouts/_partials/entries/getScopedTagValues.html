@@ -1,13 +1,15 @@
 {{/* Returns an entry's tag values that fall within a filter's scope,
      joined with "|" (e.g. "28|45"). The scope mirrors the type dimension of
      the filter: a listed type, or any type.
-     Empty for filters without a base (the unfiltered lookup).
+     A filter with no base has no scope to collect values for, so the result is
+     empty — the unfiltered lookup, and parts/term.csv, which passes no filter
+     at all.
 
      The match rule lives in tags/matchesFilter.
 
-     Params: page, filter. */}}
+     Params: page, filter (a filter, or nothing for none). */}}
 {{- $page   := .page -}}
-{{- $filter := .filter -}}
+{{- $filter := .filter | default dict -}}
 {{- $values := slice -}}
 
 {{- with index $filter "base" | default false -}}

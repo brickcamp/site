@@ -2,15 +2,9 @@
      Read back by parseEntryRow() in assets/js/home/lookup.js
 
      Params: page (required), filter (optional). */}}
-{{- $page   := .page -}}
-{{- $filter := .filter | default false -}}
+{{- $page := .page -}}
 
 {{- $size   := (partial "entries/facts" $page).size.type -}}
-{{/* No filter (parts/term.csv) or an empty one (the unfiltered lookup) means no
-     base to scope the values to, so the column stays empty. */}}
-{{- $values := "" -}}
-{{- with $filter -}}
-  {{- $values = partial "entries/getScopedTagValues" (dict "page" $page "filter" .) -}}
-{{- end -}}
+{{- $values := partial "entries/getScopedTagValues" (dict "page" $page "filter" .filter) -}}
 
 {{- return partial "csv/getRow" (slice $page.RelPermalink $page.Title $size $values) -}}
