@@ -6,7 +6,7 @@
 {{ $aliases := slice -}}
 
 {{ $apiBase  := "https://rebrickable.com/api/v3/lego/parts/" -}}
-{{ $apiKey   := site.Data.secrets.rebrickable -}}
+{{ $apiKey   := hugo.Data.secrets.rebrickable -}}
 {{ $request  := print $apiBase $number "/?key=" $apiKey -}}
 {{ $response := resources.GetRemote $request -}}
 
