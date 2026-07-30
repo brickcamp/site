@@ -1,27 +1,17 @@
 {{/* Returns all entries whose tags fit the provided filter.
      Walks the tag taxonomy once and keeps the pages of every tag that passes.
 
-     Filters on base and type only — never on value. Entries carry values no
-     dropdown lists, so value filtering happens in the client (see lookup.js).
+     The filter's shape and the match rule live in tags/matchesFilter.
 
-     Params: base, type — each optional; an empty filter passes every tag. */}}
-{{- $hasBase := index . "base" | default false -}}
-{{- $hasType := index . "type" | default false -}}
-{{- $result  := slice -}}
+     Params: a filter. */}}
+{{- $filter := . -}}
+{{- $result := slice -}}
 
 {{- range $rawTag, $weightedPages := site.Taxonomies.tags -}}
-  {{- $tag := partial "tags/getSegments" $rawTag -}}
+  {{- $seg := partial "tags/getSegments" $rawTag -}}
 
-  {{- with $hasBase -}}
-    {{- if ne . $tag.base -}}
-      {{- continue -}}
-    {{- end -}}
-  {{- end -}}
-
-  {{- with $hasType -}}
-    {{- if ne . $tag.type -}}
-      {{- continue -}}
-    {{- end -}}
+  {{- if not (partial "tags/matchesFilter" (dict "filter" $filter "segments" $seg)) -}}
+    {{- continue -}}
   {{- end -}}
 
   {{- range $weightedPages }}

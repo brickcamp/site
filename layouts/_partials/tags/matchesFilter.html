@@ -1,0 +1,26 @@
+{{/* Whether a tag's segments fall within a filter's scope.
+
+     A filter has a base and a type, both optional; an empty filter passes
+     every tag. It never carries a value — entries carry values no dropdown
+     lists, so value filtering happens in the client (see lookup.js).
+
+     Reads the segment names tags/getSegments returns; the two travel together.
+
+     Params: filter, segments. */}}
+{{- $filter  := .filter -}}
+{{- $seg     := .segments -}}
+{{- $matches := true -}}
+
+{{- with index $filter "base" | default false -}}
+  {{- if ne . $seg.base -}}
+    {{- $matches = false -}}
+  {{- end -}}
+{{- end -}}
+
+{{- with index $filter "type" | default false -}}
+  {{- if ne . $seg.type -}}
+    {{- $matches = false -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $matches -}}
