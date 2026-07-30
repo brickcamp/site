@@ -1,18 +1,14 @@
 +++
-title = 'Super SNOT Square'
+title = 'Technic Bricks 1×1 Axle Hole SNOT'
 date  = '2026-07-30'
 
-url     = '/entry/super-snot-square/'
+url   = '/entry/technic-bricks-1x1-axle-hole-snot/'
 
-parts = ['67329']
-size  = ['4s', '4s', '1s']
+parts = ['73230', '32062']
+size  = ['1b', '2s', '1b']
 tags  = [
   'angle-studtilt-90',
-  'angle-studtilt-180',
-  'shape-polygon-4',
-  'partcount-segment-1',
-  'partcount-total-4',
-  'shape-polygon-4',
+  'partcount-total-3',
 ]
 +++
 
