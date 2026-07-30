@@ -10,8 +10,10 @@ export function apply(root) {
 
 // avoid hidden dropdowns because of horizontal scroll container
 // see https://github.com/twbs/bootstrap/issues/35397#issuecomment-1325790968
+// #filter-nav is the only scroll container holding dropdowns, so the navbar's
+// keeps Bootstrap's default positioning — as it does on every other page.
 function fixDropdowns(root) {
-  root.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+  root.querySelectorAll("#filter-nav .dropdown-toggle").forEach((toggle) => {
     new bootstrap.Dropdown(toggle, {
       popperConfig(defaultBsPopperConfig) {
         return { ...defaultBsPopperConfig, strategy: "fixed" };
