@@ -23,6 +23,15 @@ hugo --gc --minify     # production build into public/
 Pushing to `main` builds and publishes to GitHub Pages automatically, via
 [`.github/workflows/hugo.yaml`](.github/workflows/hugo.yaml).
 
+## Adding a part
+
+```sh
+hugo new content parts/[partnumber]/_index.md
+```
+
+Afterwards, open the generated markdown file. Download the image linked in the params under `rebrickableImage` and put it in the same folder with the name `image.jpg`.
+
+
 ## Adding an entry
 
 ```sh
