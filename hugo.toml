@@ -19,7 +19,7 @@ enableGitInfo = true
     render = 'never'
   [cascade.target]
     kind = '{taxonomy,term}'
-    path = '{/size,/size/**,/tags,/tags/**,/uses,/uses/**}'
+    path = '{/tags,/tags/**,/uses,/uses/**}'
 [[cascade]]
   outputs = ["csv"]
   [cascade.target]
@@ -65,7 +65,6 @@ enableGitInfo = true
 
 [taxonomies]
   part = 'parts'
-  size = 'size'
   uses = 'uses'
   tag  = 'tags'
 
