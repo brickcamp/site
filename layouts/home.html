@@ -37,7 +37,7 @@
 </template>
 
 {{- $opts := dict "minify" (not hugo.IsDevelopment) -}}
-{{- with resources.Get "js/home/_module.js" | js.Build $opts }}
+{{- with resources.Get "js/home/app.js" | js.Build $opts }}
 <script>
   {{- .Content | safe.JS -}}
 </script>

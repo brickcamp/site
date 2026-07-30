@@ -1,3 +1,5 @@
+// Entry point of the homepage bundle, built from layouts/home.html. The only
+// module here with side effects; the rest just declare.
 import * as appState from "./state.js";
 import * as appView from "./view.js";
 import * as appLookup from "./lookup.js";
