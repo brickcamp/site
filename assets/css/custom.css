@@ -6,6 +6,16 @@ body {
   min-width: 350px;
 }
 
+/* Flex line-breaking measures items by their flex base size, and `flex-grow-1`
+   leaves that at the form's content width: 48px logo plus the input's intrinsic
+   `size=20` width. On a narrow viewport that alone overflows the row and wraps
+   the toggler onto a second line. A zero basis keeps the form out of the
+   line-break decision; min-width lets it shrink into whatever space is left. */
+.navbar-search {
+  flex-basis: 0;
+  min-width: 0;
+}
+
 .nav-tabs .active {
   font-weight: bold;
 }
