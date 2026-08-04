@@ -1,12 +1,13 @@
-<!-- Budget: 3000 bytes. To add something, cut something. -->
+<!-- Budget: 3kB; to add something, cut something. -->
 
 # brick.camp
 
 A Hugo **extended** static site: a visual dictionary of LEGO building
 techniques with a client-side search over ~230 entries. Commands: README.
 
-**A fact about one file belongs in that file's docstring.** This file holds only
-what no single file can state. No test runner; verify JS against the built
+**A fact about one file belongs in its docstring** — purpose and usage,
+not mechanics. This file holds only what no single file can state. No test
+runner; verify JS against the built
 `public/`, never the dev server — see the esbuild note below.
 
 ## Invisible couplings
