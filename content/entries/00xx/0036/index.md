@@ -1,0 +1,20 @@
++++
+title = 'Clip slides on Handle'
+date  = '2015-08-26'
+
+url     = '/entry/clip-slides-on-handle/'
+aliases = [
+  '/e/36',
+  '/tech/clip-slides-on-handle',
+  '/en/tech/clip-slides-on-handle',
+  '/de/tech/clip-slides-on-handle',
+]
+
+parts = ['48336', '6019', '4081', '30374']
+size  = ['3s', '2s', '1p']
+tags  = [
+  'length-studshift',
+  'partcount-total-2',
+  'todo-length',
+]
++++

@@ -1,10 +1,10 @@
 +++
-title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+title = 'Replace Me'
 date  = '{{ time.Now.UTC.Format "2006-01-02" }}'
 draft = true
 
-url     = '/entry/{{ replaceRE `([\/])` "-" .File.Dir }}/'
-aliases = ['/previous-url-if-applicable']
+url     = '/entry/replace-me/'
+aliases = ['/e/{{ strings.TrimLeft "0" .File.ContentBaseName }}']
 
 parts = ['3002', '3004']
 size = ['2s', '3p', '4b']

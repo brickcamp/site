@@ -1,0 +1,39 @@
++++
+title = 'Tile SNIR Square'
+date  = '2015-12-06'
+
+url     = '/entry/tile-snir-square/'
+aliases = [
+  '/e/115',
+  '/tech/tile-snir-square',
+  '/en/tech/tile-snir-square',
+  '/de/tech/tile-snir-square',
+]
+
+parts = ['3005', '6636', '3070']
+size  = ['9s', '9s', '1b']
+tags  = [
+  'partcount-segment-10',
+  'partcount-total-41',
+  'repeat-planar',
+]
++++
+
+{{< linkbox
+    author="Erik Amzallag & Didier Enjary"
+    date="2004-09-02"
+    image="link_01.jpg"
+    page="4"
+    title="A new and innovative SNOT approach for decorative applications. Mathematical calculation on 45° LEGO® parts geometries for further SNIR application."
+    url="http://www.brickshelf.com/gallery/JoTaALM/JOTAALM-II/jotaalm5.pdf"
+>}}
+Calculation on LEGO® parts placed at 45° angle and SNOT building technique leads to new SNIR and stud less application.
+{{< /linkbox >}}
+
+{{< linkbox
+    author="Erik Amzallag"
+    date="2004-09-16"
+    image="link_02.jpg"
+    title="A window made with SNIR and SNOT techniques"
+    url="https://brickshelf.com/cgi-bin/gallery.php?f=98760"
+/>}}

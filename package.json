@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "new-part": "node scripts/new-part.js",
+    "new-entry": "node scripts/new-entry.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "brick.camp",

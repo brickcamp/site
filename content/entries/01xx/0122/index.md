@@ -1,0 +1,28 @@
++++
+title = 'Double/Inverted Slopes Square'
+date  = '2016-01-03'
+
+url     = '/entry/slope-2x1-double-inv-square/'
+aliases = [
+  '/e/122',
+  '/tech/slope-2x1-double-inv-square',
+  '/en/tech/slope-2x1-double-inv-square',
+  '/de/tech/slope-2x1-double-inv-square',
+]
+
+parts = ['3049']
+size  = ['3s', '3s', '1b']
+tags  = [
+  'partcount-segment-4',
+  'partcount-total-4',
+  'repeat-planar',
+]
++++
+
+{{< linkbox
+    author="David"
+    date="2015-01-24"
+    image="link_01.jpg"
+    title="so jeah..."
+    url="https://www.flickr.com/photos/oepilman/16329387596"
+/>}}

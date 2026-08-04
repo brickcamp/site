@@ -1,2 +1,4 @@
 {{/* Returns all pages in /content/entries */}}
-{{- return where site.RegularPages "Section" "entries" -}}
+{{- $entries := where site.RegularPages "Section" "entries" -}}
+{{- partialCached "entries/validateIds" $entries -}}
+{{- return $entries -}}

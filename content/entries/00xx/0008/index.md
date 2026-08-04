@@ -1,0 +1,19 @@
++++
+title = 'Bracket'
+date  = '2015-08-23'
+
+url     = '/entry/bracket/'
+aliases = [
+  '/e/8',
+  '/tech/bracket',
+  '/en/tech/bracket',
+  '/de/tech/bracket',
+]
+
+parts = ['42446', '3956', '93274', '2436', '44728', '99780', '99781', '99207', '98287', '2422']
+size  = ['1s', '3p', '1s']
+tags  = [
+  'angle-studtilt-90',
+  'partcount-total-1',
+]
++++

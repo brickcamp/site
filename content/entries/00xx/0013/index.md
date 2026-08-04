@@ -1,0 +1,31 @@
++++
+title = 'Clip-Handle SNOT Cube with Brackets'
+date  = '2015-08-23'
+
+url     = '/entry/clip-handle-snot-cube-with-brackets/'
+aliases = [
+  '/e/13',
+  '/tech/clip-handle-snot-cube-with-brackets',
+  '/en/tech/clip-handle-snot-cube-with-brackets',
+  '/de/tech/clip-handle-snot-cube-with-brackets',
+]
+
+parts = ['44728', '4085', '2921', '3024', '3023']
+size  = ['3s', '3s', '2s']
+uses  = ['/entry/clip-handle-snot-cube']
+tags  = [
+  'angle-studtilt-90',
+  'angle-studtilt-180',
+  'partcount-total-10',
+]
++++
+
+{{< linkbox
+    author="Bram"
+    date="2007-04-07"
+    image="link_01.jpg"
+    title="6 sides x 4 studs..."
+    url="https://www.flickr.com/photos/bram/449129578"
+>}}
+6 sides x 4 studs. A compact, square arrangement for studs in all directions. Not a real cube though.
+{{< /linkbox >}}

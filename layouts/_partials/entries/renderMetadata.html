@@ -1,7 +1,15 @@
 {{ $entry := . }}
+{{/* The ID is the entry's folder name (entries/validateIds enforces the
+     layout), shown unpadded. */}}
+{{ $id := strings.TrimLeft "0" $entry.File.ContentBaseName }}
 
 <div id="entry-metadata" class="card mb-2">
   <ul class="list-group list-group-flush">
+
+    <li class="list-group-item d-flex">
+      <b>ID:</b>
+      <span>#{{ $id }}</span>
+    </li>
 
     {{ with $entry.Date -}}
     <li class="list-group-item d-flex">
@@ -27,7 +35,7 @@
     <li class="list-group-item d-flex">
       <b>LDraw File:</b>
       <a  href="{{ .RelPermalink }}"
-          download="{{ path.BaseName $.Slug }}.ldr">
+          download="brickcamp-{{ $id }}.ldr">
         Download
       </a>
     </li>

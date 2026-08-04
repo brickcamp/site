@@ -1,0 +1,29 @@
++++
+title = 'Plate 6 x 6 Hexagonal Icosahedron'
+date  = '2019-01-27'
+
+url     = '/entry/plate-6x6-hexagonal-icosahedron/'
+aliases = [
+  '/e/155',
+  '/tech/plate-6x6-hexagonal-icosahedron',
+  '/en/tech/plate-6x6-hexagonal-icosahedron',
+  '/de/tech/plate-6x6-hexagonal-icosahedron',
+]
+
+parts = ['27255', '4085','3023']
+size  = ['16s', '16s', '16s']
+tags  = [
+  'partcount-segment-7',
+  'partcount-total-140',
+  'shape-polyhedron-20',
+  'shape-sphere',
+]
++++
+
+{{< linkbox
+    author="Legoman19892"
+    date="2017-03-12"
+    image="link_01.jpg"
+    title="Truncated Icosahedron"
+    url="https://www.flickr.com/photos/legoman19892/33250196252"
+/>}}

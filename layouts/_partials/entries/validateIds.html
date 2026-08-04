@@ -1,0 +1,45 @@
+{{/* Every entry lives at the path its ID dictates: the leaf folder is the
+     entry's 4-digit zero-padded ID, and each bucket level above it is that ID
+     with trailing digits masked — "0142" sits in "entries/01xx/0142/". IDs are
+     sequential, unique, and assigned once; a new entry takes max+1
+     (scripts/new-entry.js computes it). A misplaced folder, a duplicate ID, or
+     a missing '/e/<id>' short-URL alias fails the build naming the culprit.
+
+     $layers lists the trailing-x width of each bucket level, top to leaf.
+     Adding a hierarchy level later (thousands buckets "0xxx/") is a git mv
+     plus extending it to (slice 3 2) — keep the twin constant LAYERS in
+     scripts/new-entry.js in step.
+
+     Params: the entry pages. Returns nothing; call it via partialCached so it
+     runs once per build. */}}
+{{- $layers := slice 2 -}}
+{{- $width := 4 -}}
+
+{{- $seen := dict -}}
+{{- range $entry := . -}}
+  {{- $segments := split (strings.TrimSuffix "/" $entry.File.Dir) "/" -}}
+  {{- $buckets := first (sub (len $segments) 2) (after 1 $segments) -}}
+  {{- $padded := index $segments (sub (len $segments) 1) -}}
+
+  {{- if or (not (findRE (printf `^\d{%d}$` $width) $padded)) (ne (len $buckets) (len $layers)) -}}
+    {{- errorf "entry %q: not at an ID path — want entries/<bucket>/<%d-digit id>/index.md, e.g. entries/01xx/0142" $entry.File.Path $width -}}
+    {{- continue -}}
+  {{- end -}}
+
+  {{- range $i, $mask := $layers -}}
+    {{- $expected := printf "%s%s" (substr $padded 0 (sub $width $mask)) (strings.Repeat $mask "x") -}}
+    {{- if ne (index $buckets $i) $expected -}}
+      {{- errorf "entry %q: ID %s belongs in bucket %q, not %q" $entry.File.Path $padded $expected (index $buckets $i) -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with index $seen $padded -}}
+    {{- errorf "entries %q and %q share ID %s" . $entry.File.Path $padded -}}
+  {{- end -}}
+  {{- $seen = merge $seen (dict $padded $entry.File.Path) -}}
+
+  {{- $short := printf "/e/%s" (strings.TrimLeft "0" $padded) -}}
+  {{- if not (in $entry.Aliases $short) -}}
+    {{- errorf "entry %q: aliases must contain the short URL %q" $entry.File.Path $short -}}
+  {{- end -}}
+{{- end -}}

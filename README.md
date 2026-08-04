@@ -36,14 +36,18 @@ and downloads the part image next to it.
 ## Adding an entry
 
 ```sh
-hugo new content/entries/[descriptive-path]/index.md
+npm run new-entry -- [url-slug]
 ```
 
-The `[descriptive-path]` should be similar to existing paths.
+Entries live at `content/entries/[bucket]/[id]/` — a sequential 4-digit ID,
+bucketed by the hundred (`01xx/0142`), so there is never a placement decision;
+the script takes the next free ID and scaffolds the folder for you. The ID is
+shown on the entry page, and `/e/[id]` is a short URL to it. The slug becomes
+the page url (`/entry/[url-slug]/`) and a first-guess title.
 The scaffold comes from [`archetypes/entries.md`](archetypes/entries.md), 
 which lists every tag the site understands along with its allowed range.
 
-Fill in the title, the `size`, the `parts` it uses and whichever tags apply, put
+Fix up the title, fill in the `size`, the `parts` it uses and whichever tags apply, put
 the images next to `index.md`, then drop `draft = true` when it's ready. Tags are
 written `base-type-value` (`angle-studturn-28`, `shape-polygon-6`); malformed
 ones fail the build and tell you which tag was wrong.

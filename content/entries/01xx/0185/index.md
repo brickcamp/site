@@ -1,0 +1,20 @@
++++
+title = 'Brick 1 x 1 with Side Stud Offset'
+date  = '2019-04-17'
+
+url     = '/entry/brick-1x1-with-side-stud-offset/'
+aliases = [
+  '/e/185',
+  '/tech/brick-1x1-with-side-stud-offset',
+  '/en/tech/brick-1x1-with-side-stud-offset',
+  '/de/tech/brick-1x1-with-side-stud-offset',
+]
+
+parts = ['87087']
+size  = ['4s', '2s', '3p']
+tags  = [
+  'angle-studtilt-90',
+  'length-studshift-4',
+  'partcount-total-2',
+]
++++
