@@ -59,15 +59,15 @@
       <span>
         {{- $parts.total }}
         {{- with $parts.segment }}
-          <small> ({{ . }} per segment)</small>
+          <small> [{{ . }} per segment]</small>
         {{- end }}
       </span>
     </li>
   </ul>
 
-  <div class="p-1">
+  <div class="p-2">
+    {{ with .GetTerms "parts" -}}
     <div class="row row-cols-4 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 g-1 justify-content-center">
-      {{ with .GetTerms "parts" -}}
       {{ range . -}}
       {{ $imagePath := print .Path "/" "__image-min.webp" -}}
       <div class="col">
@@ -80,8 +80,9 @@
         </a>
       </div>
       {{- end }}
-      {{- end }}
     </div> 
+    <div class="text-end fst-italic text-secondary"><small>Images from <a href="https://rebrickable.com/api" class="text-reset" target="_blank" rel="noopener">Rebrickable API</a></small></div>
+    {{- end }}
   </div>
 
   <div class="p-1 border-top">
