@@ -26,10 +26,11 @@ Pushing to `main` builds and publishes to GitHub Pages automatically, via
 ## Adding a part
 
 ```sh
-hugo new content parts/[partnumber]/_index.md
+npm run new-part -- [partnumber]
 ```
 
-Afterwards, open the generated markdown file. Download the image linked in the params under `rebrickableImage` and put it in the same folder with the name `image.jpg`.
+This creates `content/parts/[partnumber]/_index.md` from the Rebrickable API
+and downloads the part image next to it.
 
 
 ## Adding an entry
@@ -54,8 +55,8 @@ itself, so the notice survives being downloaded. `content/entries/font/set-41839
 is the worked example.
 
 Adding new parts additionally needs a [Rebrickable API](https://rebrickable.com/api/)
-key. Copy `data/secrets.example.toml` to `data/secrets.toml` and fill it in — it's
-gitignored, so it won't be committed.
+key. Copy `.env.example` to `.env` and fill it in — it's gitignored, so it won't
+be committed.
 
 ## License
 
