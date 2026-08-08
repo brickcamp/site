@@ -28,3 +28,13 @@ tags  = [
 >}}
 The angle is a bit smaller than 45 degrees (so it's techniclly forced). It's very sturdy. You can also use 2x1 plates with clip and handle if you want.[Rendered in Bluerender.]
 {{< /linkbox >}}
+
+{{< linkbox
+    author="ZoulBrick"
+    date="2018-07-14"
+    image="link_02.jpg"
+    title="LEGO Technique 0367"
+    url="https://www.flickr.com/photos/156114156@N07/28536779937"
+>}}
+Here is a new set of LEGO ideas and techniques, made with LDD I'm sure you'll find a use to this idea I tried to make the explanation readable thanks to the colors as if we had a tutorial Do not forget to watch the album with all the right techniques on your right =&gt; Find all my creations on Flickr group « News LEGO Techniques ». This Flickr group includes: - Ideas for new LEGO pieces - Techniques for assembling bricks - Tutorials for making accessories, objects, etc.
+{{< /linkbox >}}

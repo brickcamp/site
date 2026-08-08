@@ -30,3 +30,13 @@ tags  = [
 >}}
 I didn't know about this relation, but like it. Seems like an efficient way to create a good looking angle.
 {{< /linkbox >}}
+
+{{< linkbox
+    author="ZoulBrick"
+    date="2018-07-26"
+    image="link_02.jpg"
+    title="LEGO Technique 0388"
+    url="https://www.flickr.com/photos/156114156@N07/42932951134"
+>}}
+Here is a new set of LEGO ideas and techniques, made with LDD I'm sure you'll find a use to this idea I tried to make the explanation readable thanks to the colors as if we had a tutorial Do not forget to watch the album with all the right techniques on your right =&gt; Find all my creations on Flickr group « News LEGO Techniques ». This Flickr group includes: - Ideas for new LEGO pieces - Techniques for assembling bricks - Tutorials for making accessories, objects, etc.
+{{< /linkbox >}}
