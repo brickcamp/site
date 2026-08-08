@@ -23,3 +23,13 @@ tags  = [
 >}}
     In the series so far, I’ve covered some of the most common SNOT elements and techniques for how to use them. But many new SNOT elements have been introduced to the LEGO system since then, so I think it’s time to make an update on some of the more interesting elements released during the last few years.
 {{</ linkbox >}}
+
+{{< linkbox
+    author="ZoulBrick"
+    date="2018-07-12"
+    image="link_01.jpg"
+    title="LEGO Technique 0361"
+    url="https://www.flickr.com/photos/156114156@N07/43317564352"
+>}}
+Here is a new set of LEGO ideas and techniques, made with LDD. I'm sure you'll find a use to this idea
+{{< /linkbox >}}
