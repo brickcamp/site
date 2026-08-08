@@ -28,3 +28,11 @@ tags  = [
 >}}
 Grill tiles and levers can be used to create a very small 180 degree inverted stud rotation. The technique isn't very sturdy, so it's best used for details.
 {{< /linkbox >}}
+
+{{< linkbox
+    author="umamen"
+    date="2016-01-25"
+    image="link_02.jpg"
+    title="Levers and Grilles"
+    url="https://www.flickr.com/photos/umamen/23977494293"
+/>}}
