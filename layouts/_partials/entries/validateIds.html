@@ -2,13 +2,13 @@
      entry's 4-digit zero-padded ID, and each bucket level above it is that ID
      with trailing digits masked — "0142" sits in "entries/01xx/0142/". IDs are
      sequential, unique, and assigned once; a new entry takes max+1
-     (scripts/new-entry.js computes it). A misplaced folder, a duplicate ID, or
+     (scripts/entry.js computes it). A misplaced folder, a duplicate ID, or
      a missing '/e/<id>' short-URL alias fails the build naming the culprit.
 
      $layers lists the trailing-x width of each bucket level, top to leaf.
      Adding a hierarchy level later (thousands buckets "0xxx/") is a git mv
      plus extending it to (slice 3 2) — keep the twin constant LAYERS in
-     scripts/new-entry.js in step.
+     scripts/entry.js in step.
 
      Params: the entry pages. Returns nothing; call it via partialCached so it
      runs once per build. */}}

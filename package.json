@@ -5,15 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "new-part": "node scripts/new-part.js",
-    "new-entry": "node scripts/new-entry.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "new": "node scripts/new.js"
   },
   "author": "brick.camp",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^8.0.0",
+    "autoprefixer": "^10.4.24",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
-    "autoprefixer": "^10.4.24"
+    "sharp": "^0.35.3"
   }
 }

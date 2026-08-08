@@ -1,28 +1,16 @@
-#!/usr/bin/env node
-// Creates content/parts/<number>/_index.md plus its image.
-//
-// Usage: npm run new-part -- <part-number> [<part-number> ...]
+// Creates content/parts/<number>/_index.md from the Rebrickable API and
+// downloads the part image next to it.
 
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+import { envKey, get, root } from './shared.js';
 
 // TOML literal strings cannot contain single quotes; fall back to a basic string.
 const toml = (value) =>
   value.includes("'")
     ? `"${value.replaceAll('\\', '\\\\').replaceAll('"', '\\"')}"`
     : `'${value}'`;
-
-async function apiKey() {
-  if (process.env.REBRICKABLE_API_KEY) return process.env.REBRICKABLE_API_KEY;
-  const env = await readFile(path.join(root, '.env'), 'utf8').catch(() => '');
-  const key = env.match(/^REBRICKABLE_API_KEY=(.+)$/m)?.[1]?.trim();
-  if (!key) throw new Error('REBRICKABLE_API_KEY not set; copy .env.example to .env and fill it in');
-  return key;
-}
 
 function frontMatter(part) {
   const aliases = [...new Set([...(part.molds ?? []), ...(part.alternates ?? [])])]
@@ -40,13 +28,16 @@ function frontMatter(part) {
   return out;
 }
 
-async function createPart(number, key) {
+export async function createPart(number) {
+  const key = envKey('REBRICKABLE_API_KEY');
+  if (!key) throw new Error('REBRICKABLE_API_KEY not set; copy .env.example to .env and fill it in');
+
   const dir = path.join(root, 'content', 'parts', number);
   if (existsSync(path.join(dir, '_index.md'))) {
     throw new Error(`content/parts/${number}/_index.md already exists`);
   }
 
-  const response = await fetch(
+  const response = await get(
     `https://rebrickable.com/api/v3/lego/parts/${encodeURIComponent(number)}/?key=${key}`
   );
   if (!response.ok) {
@@ -58,7 +49,7 @@ async function createPart(number, key) {
   await writeFile(path.join(dir, '_index.md'), frontMatter(part));
 
   if (part.part_img_url) {
-    const image = await fetch(part.part_img_url);
+    const image = await get(part.part_img_url);
     if (!image.ok) {
       throw new Error(`image download returned ${image.status} for part ${number}`);
     }
@@ -70,21 +61,3 @@ async function createPart(number, key) {
 
   console.log(`created content/parts/${number} (${part.name})`);
 }
-
-const numbers = process.argv.slice(2);
-if (numbers.length === 0) {
-  console.error('usage: npm run new-part -- <part-number> [<part-number> ...]');
-  process.exit(1);
-}
-
-const key = await apiKey();
-let failed = false;
-for (const number of numbers) {
-  try {
-    await createPart(number, key);
-  } catch (error) {
-    console.error(`error: ${error.message}`);
-    failed = true;
-  }
-}
-process.exit(failed ? 1 : 0);
