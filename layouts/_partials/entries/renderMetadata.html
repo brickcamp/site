@@ -31,11 +31,11 @@
     </li>
     {{- end }}
 
-    {{- with $entry.Resources.GetMatch "model.ldr" }}
+    {{- with $entry.Resources.GetMatch "model.*" }}
     <li class="list-group-item d-flex">
       <b>LDraw File:</b>
       <a  href="{{ .RelPermalink }}"
-          download="brickcamp-{{ $id }}.ldr">
+          download="brickcamp-{{ $id }}{{ path.Ext .RelPermalink }}">
         Download
       </a>
     </li>
