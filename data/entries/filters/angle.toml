@@ -12,6 +12,10 @@ slug  = 'studtilt'
 title = 'Stud Turn'
 slug  = 'studturn'
 
+[[types]]
+title = 'Axle Turn'
+slug  = 'axleturn'
+
 [[values]]
 title = '180°'
 slug  = '180'
