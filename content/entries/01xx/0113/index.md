@@ -1,10 +1,11 @@
 +++
-title = '2 x 2 Tile Twisted on Jumper'
+title = '45° Tile Grid with Gaps on Jumper Grid'
 date  = '2015-12-06'
 
-url     = '/entry/tile-2x2-twisted-on-jumper/'
+url     = '/entry/45deg-tile-grid-with-gaps-on-jumper-grid/'
 aliases = [
   '/e/113',
+  '/entry/tile-2x2-twisted-on-jumper/',
   '/tech/tile-2x2-twisted-on-jumper',
   '/en/tech/tile-2x2-twisted-on-jumper',
   '/de/tech/tile-2x2-twisted-on-jumper',
@@ -31,3 +32,11 @@ tags  = [
 >}}
 This is not my own technique, but Clonemaker829 asked how it was done and I couldn't find a photo that explained how to do it, so I thought I would upload this photo for him and others who don't know the technique.
 {{< /linkbox >}}
+
+{{< linkbox
+    author="Jakob Escher"
+    date="2026-08-05"
+    image="link_02.jpg"
+    title="Design for road surface 01"
+    url="https://www.flickr.com/photos/158484670@N07/55443128662"
+/>}}
