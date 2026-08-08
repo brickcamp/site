@@ -26,3 +26,23 @@ tags  = [
     title="Rigid Pentagon"
     url="https://www.flickr.com/photos/11181786@N02/2879599244"
 />}}
+
+{{< linkbox
+    author="Tyler Sky"
+    date="2016-06-23"
+    image="link_03.jpg"
+    title="Lego WIP - Circle technique"
+    url="https://www.flickr.com/photos/tylersky/27786663231"
+>}}
+For some reason, this makes me very happy. Can be used for so many different purposes! Columns, Tanks, Wheels, etc... ...and yes, also SpaceShips, Flowers, and modern airliners!
+{{< /linkbox >}}
+
+{{< linkbox
+    author="zachmoe"
+    date="2016-06-24"
+    image="link_02.jpg"
+    title="Tablescrap"
+    url="https://www.flickr.com/photos/zachmoe/27832014326"
+>}}
+Added for Tyler_Sky, while discussing the technique here
+{{< /linkbox >}}
