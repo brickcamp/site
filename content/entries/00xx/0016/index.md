@@ -22,7 +22,7 @@ tags  = [
 {{< linkbox
     author="Didier Enjary"
     date="2007-02-11"
-    image="/images/links/advanced-building-techniques-guide.png"
+    image="/images/links/advanced-building-techniques-guide.jpg"
     page="17"
     title="The Unofficial LEGO Advanced Building Techniques Guide"
     url="http://www.brickshelf.com/gallery/KimT/Mixed/Instructions/advbuilding.pdf"

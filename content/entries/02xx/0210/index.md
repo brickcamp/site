@@ -18,7 +18,7 @@ tags  = [
 {{< linkbox
     author="Leo Dorst"
     date="2000-01-21"
-    image="/images/links/technic-escapement-wheel.png"
+    image="/images/links/technic-escapement-wheel.jpg"
     title="Clock Escapement"
     url="https://staff.fnwi.uva.nl/l.dorst/lego/escapement.html"
 >}}

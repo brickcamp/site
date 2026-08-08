@@ -24,7 +24,7 @@ tags  = [
 {{< linkbox
     author="Tips&Bricks"
     date="2023-05-13"
-    image="link_01.png"
+    image="link_01.jpg"
     title="#2016 TECHNIQUES: The Jordan Corner by @ak_brickster"
     url="https://www.tipsandbricks.com/post/2016-techniques-the-jordan-corner-by-ak_brickster"
 >}}
