@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Hinge in Bracket SNOT
+0 Name: brickcamp-145.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 7 0 6 42 1 0 0 0 0 -1 0 1 0 99207.dat
 1 14 0 5.999 34 1 0 0 0 0 -1 0 1 0 3023.dat
 1 4 0 6 10 -1 0 0 0 0 1 0 1 0 3937.dat
@@ -14,4 +13,3 @@
 1 4 -44 -35 -69 -1 0 0 0 0 1 0 1 0 3937.dat
 1 0 -44 -45 -59 -1 0 0 0 1 0 0 0 -1 3938.dat
 1 25 -44 -69 -25 -1 0 0 0 1 0 0 0 -1 3022.dat
-0

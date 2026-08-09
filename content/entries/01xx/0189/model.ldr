@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Tile Round 2 x 2 and Tile 1 x 1 Twisted
+0 Name: brickcamp-189.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 117 10 56 10 1 0 0 0 1 0 0 0 1 4186.dat
 1 4 -60 48 80 0.939693 0 -0.34202 0 1 0 0.34202 0 0.939693 3070b.dat
 1 4 -80.408 48 40.583 0.939693 0 -0.34202 0 1 0 0.34202 0 0.939693 3070b.dat
@@ -37,4 +36,3 @@
 1 46 30 48 -90 1 0 0 0 1 0 0 0 1 14769.dat
 1 14 -70 48 10 1 0 0 0 1 0 0 0 1 14769.dat
 1 14 -30 48 90 1 0 0 0 1 0 0 0 1 14769.dat
-0

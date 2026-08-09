@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Double/Inverted Slopes Square
+0 Name: brickcamp-122.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 -30 0 30 1 0 0 0 1 0 -0 0 1 3049b.dat
 1 25 -40 0 60 0 0 1 0 1 0 -1 0 0 3049b.dat
 1 4 -10.000004 0 70 -1 0 0 0 1 0 0 0 -1 3049b.dat

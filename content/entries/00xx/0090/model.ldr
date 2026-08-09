@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Tipper End Hexagon
+0 Name: brickcamp-90.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 25 239.789886 -49.406647 -12.484985 0.5 -0.866025 0 0.866025 0.5 -0 -0 0 1 30022.dat
 1 14 229.789886 22.593353 -22.484985 -1 0 0 0 -0 1 0 1 0 6061.dat
 1 25 239.789871 -49.406647 7.515026 -0.5 -0.866025 0 -0.866025 0.5 -0 0 0 -0.999999 30022.dat

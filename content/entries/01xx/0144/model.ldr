@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Hinge Top Cube
+0 Name: brickcamp-144.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 25 45 -8 -11 0 0 -1 0 1 0 1 0 0 3938.dat
 1 25 75 2 -11 0 -1 0 0 0 -1 1 0 0 3938.dat
 1 25 65 32 -11 0 0 1 0 -1 0 1 0 0 3938.dat
@@ -14,4 +13,3 @@
 1 25 3 31 -90 0 0 1 0 -1 0 1 0 0 3938.dat
 1 25 -27 20.999 -90 0 1 0 0 0 1 1 0 0 3938.dat
 1 4 -7 1 -70 -1 0 0 0 0 1 0 1 0 6134.dat
-0

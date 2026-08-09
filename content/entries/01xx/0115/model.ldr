@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Tile SNIR Square
+0 Name: brickcamp-115.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 71 205 -48 -220 1 0 0 0 1 0 -0 0 1 3811.dat
 1 14 135 -72 -130 0.707106 0 0.707106 0 1 0 -0.707106 0 0.707106 3005.dat
 1 14 195 -72 -130 0.707106 0 -0.707106 0 1 0 0.707106 0 0.707106 3005.dat

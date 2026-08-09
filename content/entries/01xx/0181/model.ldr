@@ -1,9 +1,8 @@
-0 untitled model
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Pony-Ear Turn
+0 Name: brickcamp-181.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 60 0 0 1 0 0 0 1 0 -0 0 1 3022.dat
 1 14 60 -20 0 1 0 0 0 -1 0 0 0 -1 3022.dat
 1 4 60 -10 -4 -1 0 0 0 0 1 0 1 0 3069b.dat
-0

@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Miniland Figure
+0 Name: brickcamp-202.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 0 -5 116 75 0 0 -1 0 1 0 1 0 0 3023.dat
 1 0 -5 108 75 0 0 -1 0 1 0 1 0 0 3023.dat
 1 0 -5 -4 75 -1 0 0 0 1 0 0 0 -1 3023.dat
@@ -41,4 +40,3 @@
 1 14 -43 79.775 57.474 0 -1 0 0.5 0 0.866026 -0.866026 0 0.5 2430.dat
 1 14 33 80.705 57.566 0 1 0 -0.5 0 0.866026 0.866026 0 0.5 2429.dat
 1 25 33 80.705 57.566 0 1 0 -0.965926 0 0.258819 0.258819 0 0.965926 2430.dat
-0

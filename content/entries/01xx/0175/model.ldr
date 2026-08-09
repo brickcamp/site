@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Minifig Hands on Dinner Plate
+0 Name: brickcamp-175.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 25 0 13 36 1 0 0 0 1 0 0 0 1 6256.dat
 1 14 -3 5 74 0 1 0 -1 0 0 0 0 1 3820.dat
 1 14 11.722 5 72.108 0 0.913545 0.406737 -1 0 0 0 -0.406737 0.913545 3820.dat
@@ -20,4 +19,3 @@
 1 14 -29.139 5 59.681 0 0.669131 -0.743145 -1 0 0 0 0.743145 0.669131 3820.dat
 1 14 -17.833 5 69.686 0 0.913546 -0.406737 -1 0 0 0 0.406737 0.913546 3820.dat
 1 14 10.562 5 0.734 0 -0.978148 0.207912 -1 0 0 0 -0.207912 -0.978148 3820.dat
-0

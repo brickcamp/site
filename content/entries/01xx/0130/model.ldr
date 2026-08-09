@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Tile 1 x 1 Cobblestone
+0 Name: brickcamp-130.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 -20 -40 20 1 0 0 0 1 0 -0 0 1 3794b.dat
 1 71 -20 -40 40 1 0 0 0 1 0 -0 0 1 3023.dat
 1 14 -20 -40 -20 1 0 0 0 1 0 -0 0 1 3794b.dat

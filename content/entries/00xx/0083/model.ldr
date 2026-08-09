@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 1 x 4 Wheels Holder Ring
+0 Name: brickcamp-83.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 0 0 0 1 0 0 0 1 0 -0 0 1 2926.dat
 1 25 20.359629 -9.392856 0 0.996917 -0.078459 0 0.078459 0.996917 0 0 0 1 2926.dat
 1 14 41.529816 -17.65094 0 0.987688 -0.156434 0 0.156434 0.987688 0 0 0 1 2926.dat

@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 6538b Axle Connector Angle
+0 Name: brickcamp-235.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 0 -8 -16 0.707107 -0.707107 0 0.707107 0.707107 0 0 0 1 6538b.dat
 1 1 0 -8 4 1 0 0 0 0 -1 0 1 0 3709b.dat
 1 0 0 -8 14 0 0.707107 0.707107 0 0.707107 -0.707107 -1 0 0 4519.dat

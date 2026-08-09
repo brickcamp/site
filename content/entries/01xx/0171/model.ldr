@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Hinge 1 x 2 Locking between Hinges 1 x 4 Angle
+0 Name: brickcamp-171.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 -30.184 -4 84.679 0 0 -1 0 1 0 1 0 0 30414.dat
 1 7 -12.183 7 64.679 0 -1 0 0 0 1 -1 0 0 44301.dat
 1 25 -40.183 -12 44.679 0 0 1 0 1 0 -1 0 0 2429.dat
@@ -12,4 +11,3 @@
 1 7 -31.337 7 11.429 0.642789 -0.766044 0 0 0 -1 0.766044 0.642789 0 44302.dat
 1 25 -39.931 -12 44.748 -0.642789 0 0.766044 0 1 0 -0.766044 0 -0.642789 2430.dat
 1 25 -39.931 20 44.748 -0.642789 0 0.766044 0 1 0 -0.766044 0 -0.642789 2430.dat
-0

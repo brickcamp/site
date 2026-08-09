@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 A-Plate Octagon
+0 Name: brickcamp-201.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 72 17 0 -38 1 0 0 0 1 0 0 0 1 15706.dat
 1 0 31.819 -8 -23.335 0.707107 0 0.707107 0 1 0 -0.707107 0 0.707107 15706.dat
 1 72 52 0 -23 0 0 1 0 1 0 -1 0 0 15706.dat
@@ -12,4 +11,3 @@
 1 0 52.181 -8 -72.665 -0.707107 0 -0.707107 0 1 0 0.707107 0 -0.707107 15706.dat
 1 72 32 0 -73 0 0 -1 0 1 0 1 0 0 15706.dat
 1 0 17.335 -8 -58.181 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 15706.dat
-0

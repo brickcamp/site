@@ -1,6 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
+0 12-12-17 Triangle with A-Plates
+0 Name: brickcamp-226.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 15 70 -24 -90 1 0 0 0 1 0 0 0 1 6112.dat
 1 15 -60 -24 40 0 0 1 0 1 0 -1 0 0 6112.dat
 1 0 -30 -32 -60 0 0 -1 0 1 0 1 0 0 30503.dat

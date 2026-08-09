@@ -1,6 +1,8 @@
-0 
-0 Name: New Model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
+0 1960s Windmill Hub
+0 Name: brickcamp-211.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 47 28.4036 -95.9846 0.3556 1 0 0 0 1 -0 0 0 1 3002.dat
 1 47 -111.5963 -96.3015 0.3556 1 0 0 0 1 -0 0 0 1 3002.dat
 1 47 -41.5964 -96.3015 0.3556 1 0 0 0 1 -0 0 0 1 3001.dat

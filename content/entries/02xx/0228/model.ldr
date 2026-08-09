@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Technic Brick 1x2 Stacked Hexagonal
+0 Name: brickcamp-228.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 0.0491 -9.75 -9.0149 -1 0 0 0 0 1 0 1 0 3700.dat
 1 14 0.0491 -9.75 -33.0149 -1 0 0 0 0 1 0 1 0 3700.dat
 0 STEP

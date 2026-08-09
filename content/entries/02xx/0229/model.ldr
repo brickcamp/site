@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Hinge Brick Rings, 22.5° Offset
+0 Name: brickcamp-229.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 72 82 -10.4526 -0.5474 0 -1 0 -0 0 -1 1 0 -0 39893.dat
 1 72 -1 -10.4526 -82.5474 1 0 0 0 -0 -1 0 1 -0 39893.dat
 0 !LEOCAD PIECE PIVOT  -30 10 0 1 0 0 0 1 0 0 0 1

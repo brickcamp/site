@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Headlight Ring
+0 Name: brickcamp-170.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 0 -16 50 1 0 0 0 1 0 0 0 1 4070.dat
 1 25 0 -16.773 66.537 1 0 0 0 0.987688 -0.156434 0 0.156434 0.987688 4070.dat
 1 14 0 -20.491 82.739 1 0 0 0 0.951057 -0.309017 0 0.309017 0.951057 4070.dat
@@ -45,4 +44,3 @@
 1 14 0 -22.16 17.052 1 0 0 0 0.951057 0.309018 0 -0.309018 0.951057 4070.dat
 1 25 0 -17.784 33.017 1 0 0 0 0.987689 0.156435 0 -0.156435 0.987689 4070.dat
 1 14 3.031 -135.313 49.822 0.606268 -0.176694 0.775383 0.207183 0.976429 0.060513 -0.767799 0.123959 0.628586 4070.dat
-0

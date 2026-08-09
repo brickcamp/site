@@ -1,6 +1,8 @@
-0 Untitled
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Technic Escapement Wheel
+0 Name: brickcamp-200.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 7 0 0 0 -1 0 0 0 1 0 0 0 -1 4185.dat
 1 7 0 0 -10 -1 0 0 0 1 0 0 0 -1 4185.dat
 1 7 0 20 -15 0 0 1 0 1 0 -1 0 0 32002.dat
@@ -78,4 +80,3 @@
 1 0 12.99 -61.786 -26 0 -0.5 -0.866025 0 0.866025 -0.5 1 0 0 3673.dat
 1 4 40.311 -69.103 -36 0 -0.5 -0.866025 0 0.866025 -0.5 1 0 0 2825.dat
 1 0 0 0 -27 0 0 -1 0 1 0 1 0 0 3706.dat
-0

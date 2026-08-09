@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Bar 1.5L with Clip Chain
+0 Name: brickcamp-177.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 72 0 -2.828 -2.172 1 0 0 0 0.707107 0.707107 0 -0.707107 0.707107 48729b.dat
 1 72 0 -13.435 -12.779 1 0 0 0 0.707107 -0.707107 0 0.707107 0.707107 48729b.dat
 1 72 0 19.092 -2.879 1 0 0 0 0.707107 0.707107 0 -0.707107 0.707107 48729b.dat
@@ -36,4 +35,3 @@
 1 72 0 115.258 -14.193 1 0 0 0 0.707107 -0.707107 0 0.707107 0.707107 48729b.dat
 1 72 0 144.957 -1.465 1 0 0 0 0.707107 0.707107 0 -0.707107 0.707107 48729b.dat
 1 72 0 134.35 -12.072 1 0 0 0 0.707107 -0.707107 0 0.707107 0.707107 48729b.dat
-0

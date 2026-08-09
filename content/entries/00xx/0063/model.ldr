@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Dish 8 x 8 Hinged Ring
+0 Name: brickcamp-63.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 25 -159.211945 35.187378 -30.096664 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 3961.dat
 1 125 -152.140869 27.187408 -37.167717 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 44302.dat
 1 125 -166.283005 43.187408 -23.025604 -0.707107 0 0.707107 0 1 0 -0.707107 0 -0.707107 44301.dat

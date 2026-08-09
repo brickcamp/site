@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Hinge Plate 4x4/1x4 Cheese Angle
+0 Name: brickcamp-224.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 7 -0 0.4688 -31.2932 -1 0 0 0 0.512042 0.85896 0 0.85896 -0.512042 4315.dat
 1 0 -0 -13.4115 15.4 -1 0 0 0 1 0 0 0 -1 4213.dat
 1 19 -0 -5.4115 45.4243 1 0 0 0 1 0 0 0 1 30414.dat

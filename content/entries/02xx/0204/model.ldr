@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Slope Inverted Camera Lipstick Box
+0 Name: brickcamp-204.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 5 -25 -23 -10 1 0 0 0 0 -1 0 1 0 25866c01.dat
 1 0 -25 -13 -40 1 0 0 0 0 -1 0 1 0 4595.dat
 1 5 -25 -3 -30 0 -1 0 0 0 -1 1 0 0 25866c01.dat
@@ -100,4 +99,3 @@
 1 72 -130 110 -140 -1 0 0 0 -1 0 0 0 1 3676.dat
 1 72 -110 110 -140 0 0 -1 0 -1 0 -1 0 0 3676.dat
 1 72 -110 76 -86 0 0 -1 1 0 0 0 -1 0 3676.dat
-0

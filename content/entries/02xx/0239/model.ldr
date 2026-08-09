@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
+0 1x5 Plate Octagon
+0 Name: brickcamp-239.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 0 0.548 -16 -0 1 0 0 0 1 0 0 0 1 30033.dat
 0 STEP
 1 19 -89.452 -8 -0 1 0 0 0 1 0 0 0 1 78329.dat

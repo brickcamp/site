@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Hinge Plate 1 x 2 Locking Dual Finger Ring
+0 Name: brickcamp-100.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 25 0.6 0.2 0 1 0 0 0 1 0 -0 0 1 44302.dat
 1 14 0.05613 -9.395144 0 0.996195 0.087156 0 -0.087156 0.996195 0 0 0 1 44302.dat
 1 25 -0.64143 19.614054 0 0.984808 -0.173648 0 0.173648 0.984808 0 0 0 1 44302.dat

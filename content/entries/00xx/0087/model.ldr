@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Handle Ring in 8 x 8 Dishes
+0 Name: brickcamp-87.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 4 -20 -56 -20 0 0 1 0 1 0 -1 0 0 2540.dat
 1 25 -18.796795 -65.141098 -20 0 -0.142318 0.989821 0 0.989821 0.142318 -1 0 0 2540.dat
 1 4 -16.529974 -74.159698 -20 0 -0.281739 0.959491 0 0.959491 0.281739 -1 0 0 2540.dat

@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Blaster Ring
+0 Name: brickcamp-55.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 4 -40 -13 -79 1 0 0 0 1 0 -0 0 1 15071.dat
 1 25 -40 2 -51 1 0 0 -0 0.923879 -0.382683 0 0.382683 0.923879 15071.dat
 1 4 -40 5 -20 1 -0 0 -0 0.707107 -0.707107 0 0.707107 0.707107 15071.dat

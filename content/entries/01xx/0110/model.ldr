@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Doorrail Pattern
+0 Name: brickcamp-110.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 -152.636047 -41.514721 24.452293 0 -1 0 -1 0 0 0 0 -1 32028.dat
 1 25 -160.636047 -41.514729 24.452301 0 -1 0 -1 0 0 0 0 -1 3023.dat
 1 4 -168.636047 -51.514725 24.452286 0 -1 0 0 0 -0.999999 0.999999 0 0 3794b.dat

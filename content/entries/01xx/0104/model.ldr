@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Clip Gravel Road
+0 Name: brickcamp-104.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 25 -38.876587 -20.887489 -92.359779 0.992546 0.121869 0 0 0 1 0.121869 -0.992546 0 2555.dat
 1 25 -36.734436 -20.887493 -68.984093 0 -0.992546 0.121869 -1 0 0 0 -0.121869 -0.992546 2555.dat
 1 14 -11.252808 -20.887486 -63.938042 0.994522 0.104528 0 0 0 -1 -0.104528 0.994522 0 2555.dat

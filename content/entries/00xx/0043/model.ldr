@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Shift-Pinned Technic Bricks
+0 Name: brickcamp-43.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 4 0 0 20 1 0 0 0 1 0 -0 0 1 3701.dat
 1 25 -10 0 0 1 0 0 0 1 0 -0 0 1 32000.dat
 1 25 -90 0 -70 1 0 0 0 1 0 -0 0 1 6541.dat

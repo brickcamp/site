@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Bracket ToPLES Frame
+0 Name: brickcamp-7.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 44.557705 0 -15.636154 0 0 1 0 1 0 -1 0 0 44728.dat
 1 25 68.557709 -16 -15.636158 0 0 1 0 1 0 -1 0 0 44728.dat
 1 14 92.557701 -32 -15.636156 0 0 1 0 1 0 -1 0 0 44728.dat

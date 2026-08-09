@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Train Track Ring
+0 Name: brickcamp-94.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 72 0 0 0 1 0 0 0 1 0 -0 0 1 2867.dat
 1 72 306 0 -60 0.923879 0 0.382683 0 1 0 -0.382683 0 0.923879 2867.dat
 1 72 566.131592 0 -233.327271 0.707107 0 0.707107 0 1 0 -0.707107 0 0.707107 2867.dat

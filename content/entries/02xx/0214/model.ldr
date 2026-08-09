@@ -1,6 +1,8 @@
-0 
-0 Name: New Model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Interlocking Brackets and Plates
+0 Name: brickcamp-214.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 4 -15.5 -41.5 -19 0 0 -1 -1 0 0 0 1 0 3020.dat
 1 14 -5.5 -21.5 -27 0 0 -1 -1 0 0 0 1 0 44728.dat
 1 4 16.5 -41.5 13 0 -1 0 1 0 0 0 0 1 3020.dat

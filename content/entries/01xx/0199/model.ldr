@@ -1,6 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Wedge Plate 3 x 6 Torus
+0 Name: brickcamp-199.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 0 -10 0 10 1 0 0 0 1 0 0 0 1 2419.dat
 1 0 -8.205 -15.727 10 0.991445 -0.130526 0 0.130526 0.991445 0 0 0 1 2419.dat
 1 0 -10 0 70 -1 0 0 0 1 0 0 0 -1 2419.dat

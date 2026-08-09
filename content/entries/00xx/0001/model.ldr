@@ -1,5 +1,8 @@
-0 SNOT Technic Bricks
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Technic Brick with Halfpins
+0 Name: brickcamp-1.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 71 -49.999996185302734375 -14.0000019073486328125 -59.999996185302734375 0 0 1 0 0.999999940395355224609375 0 -1 0 0 4274.dat
 1 14 -50 -24.0000019073486328125 -49.99999237060546875 1 0 0 0 1 0 0 0 1 6541.dat
 1 25 -20.0000019073486328125 -24 -10 1 0 0 0 1 0 0 0 1 32000.dat

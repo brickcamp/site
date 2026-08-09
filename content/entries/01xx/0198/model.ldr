@@ -1,6 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Jumper Plate Wall
+0 Name: brickcamp-198.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 19 0 0 0 1 0 0 0 1 0 0 0 1 3022.dat
 1 19 0 8 0 1 0 0 0 1 0 0 0 1 87580.dat
 1 19 -20 -16 0 1 0 0 0 1 0 0 0 1 3022.dat
@@ -77,4 +79,3 @@
 1 19 -40 -24 0 1 0 0 0 1 0 0 0 1 87580.dat
 1 19 -60 -48 0 1 0 0 0 1 0 0 0 1 3022.dat
 1 19 -60 -40 0 1 0 0 0 1 0 0 0 1 87580.dat
-0

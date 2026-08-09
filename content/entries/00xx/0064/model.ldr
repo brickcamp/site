@@ -1,8 +1,8 @@
-0 untitled model
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Hinge Cheese Ring
+0 Name: brickcamp-64.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 134 48 -0 1 0 0 0 1 0 -0 0 1 3021.dat
 1 14 144 40 1e-006 1 0 0 0 1 0 -0 0 1 3022.dat
 1 4 114 48 0 -0 0 1 0 1 0 -1 0 -0 85984.dat
@@ -115,4 +115,3 @@
 1 4 3.01376 74.806 -151 0 0 -0.999999 0 -1 -0 -1 0 -0 85984.dat
 1 25 -16.9862 98.806 -151 0 0 -0.999999 0 -1 -0 -1 0 -0 3937.dat
 1 125 -11.9862 96.806 -151 -0 -0.5 0.866025 -0 -0.866025 -0.5 1 0 -0 6134.dat
-0

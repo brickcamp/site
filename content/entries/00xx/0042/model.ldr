@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Sliding Technic Brick on Axle
+0 Name: brickcamp-42.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 0 8 0 0 0 1 0 1 0 -1 0 0 3706.dat
 1 25 0 -2 50 -1 0 0 0 1 0 -0 0 -1 32064a.dat
 1 4 0 -2 10 -1 0 0 0 1 0 0 0 -1 6541.dat

@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Inverted-Pinned Technic Bricks
+0 Name: brickcamp-25.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 -1.116526 -8 -8.480852 -1 0 -0 0 1 0 0 0 -1 3701.dat
 1 25 18.883471 2 1.51915 0 0 -1 0 1 0 1 0 0 4459.dat
 1 25 -21.116522 2 1.519152 0 0 -1 0 1 0 1 0 0 4459.dat

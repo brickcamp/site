@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Clip Vent Pattern
+0 Name: brickcamp-236.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 71 -10 -34.5714 -2.4286 1 0 0 0 1 0 0 0 1 2555.dat
 1 71 -10 -16.5714 -20.4286 0 0 1 1 0 0 0 1 0 3023b.dat
 1 71 -10 -16.5714 15.5714 0 0 1 -1 0 0 0 -1 0 3023b.dat

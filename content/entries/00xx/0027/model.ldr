@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Tile Turned in Plate Frame
+0 Name: brickcamp-27.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 4 60 -192 0 1 0 0 0 1 0 -0 0 1 3020.dat
 1 4 60 -224 0 1 0 0 0 1 0 -0 0 1 3020.dat
 1 14 30 -216 0 0 0 1 0 1 0 -1 0 0 3004.dat

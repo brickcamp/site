@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Hinged Octagon 43 x 43
+0 Name: brickcamp-49.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 25 -41.147064 0 104.797806 1 0 0.000001 0 1 0 -0.000001 0 1 3830.dat
 1 14 238.900513 -8 114.88784 1 0 0.000001 0 1 0 -0.000001 0 1 3666.dat
 1 14 148.900558 -8 114.887909 1 0 0.000001 0 1 0 -0.000001 0 1 3623.dat

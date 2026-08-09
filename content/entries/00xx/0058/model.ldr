@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Minifig Ray Gun Pentagon
+0 Name: brickcamp-58.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 -75.62236 0 42.683754 0 0.809017 0.587785 -1 0 0 0 -0.587785 0.809017 87993.dat
 1 14 -114.656906 0 31.489836 -0 0.809017 -0.587785 -1 -0 -0 -0 0.587785 0.809017 87993.dat
 1 14 -77.999191 0 -22.872194 0 -1 -0 -1 0 0 0 0 -1 87993.dat

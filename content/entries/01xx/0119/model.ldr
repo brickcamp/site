@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Technic Axle Pin Connector Type 2 Grid
+0 Name: brickcamp-119.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 -40 0 70 1 0 0 0 1 0 -0 0 1 32034.dat
 1 71 -40 0 110 0 0 1 0 1 0 -1 0 0 4519.dat
 1 25 -80 0 70 0 0 1 0 1 0 -1 0 0 32034.dat

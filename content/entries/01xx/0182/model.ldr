@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Cubeoctahedronesque
+0 Name: brickcamp-182.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 0 MLCAD BTG Y2
 1 14 112.547 -115.859 -38.99 0.00231153 -0.579227 0.815162 -0.709406 0.573576 0.409576 -0.704795 -0.579227 -0.409582 59443.dat
 0 MLCAD BTG Y2
@@ -128,4 +127,3 @@
 0 MLCAD BTG 2nd half
 1 0 38.255 25.223 -75.829 0.707107 0 -0.707106 0 -0.999999 0 -0.707107 0 -0.707106 75937.dat
 0 GROUP 29 2nd half
-0

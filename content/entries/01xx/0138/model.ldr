@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Boat Studs Ball via Flower Plates
+0 Name: brickcamp-138.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 0 -7 111 1 0 0 0 0 1 0 -1 0 2654.dat
 1 25 0 -7 111 1 0 0 0 0 -1 0 1 0 33291.dat
 1 14 0 -8 149 -1 0 0 0 0 1 0 1 0 2654.dat
@@ -24,4 +23,3 @@
 1 14 -117 -18 61 0 -1 0 0 0 1 -1 0 0 2654.dat
 1 25 -93 -18 61 0 1 0 0 0 -1 -1 0 0 33291.dat
 1 7 -65 -28 62 1 0 0 0 1 0 0 0 1 4733.dat
-0

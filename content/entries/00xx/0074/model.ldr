@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Minifig Tool Holder
+0 Name: brickcamp-74.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 42.263451 0 37.322338 -0.999999 0 0 0 1 0 -0 0 -0.999999 2516.dat
 1 57 56.263443 8 47.322334 -0 0.999999 0 1 -0 0 -0 0 -0.999999 3062b.dat
 1 57 28.263464 8 47.32233 -0 -0.999999 0 -0.707107 0 -0.707107 0.707106 -0 -0.707106 3062b.dat

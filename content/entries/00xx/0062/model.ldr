@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 2 x 2 Studs Sandwich
+0 Name: brickcamp-62.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 25 -10.000004 -42.000004 21.999994 -1 0 0 0 0 -1 0 -1 0 4733.dat
 1 14 -43.999992 -42.000004 12 0 1 0 0 0 1 1 0 0 4733.dat
 1 25 -34 -42.000008 -22.000002 0.999999 0 0 0 0 -1 0 0.999999 0 4733.dat

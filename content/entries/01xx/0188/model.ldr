@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Brick 1 x 1 with Studs on 4 Sides Cube
+0 Name: brickcamp-188.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 0 10 0 75 1 0 0 0 1 0 0 0 1 4733.dat
 1 0 -10 0 55 1 0 0 0 1 0 0 0 1 4733.dat
 1 0 10 40 55 1 0 0 0 -1 0 0 0 -1 4733.dat
@@ -21,4 +20,3 @@
 1 14 -59 19 -22 1 0 0 0 0 -1 0 1 0 3068b.dat
 1 14 -31 19 6 0 -1 0 0 0 1 -1 0 0 3068b.dat
 1 14 -87 19 6 0 1 0 0 0 -1 -1 0 0 3068b.dat
-0

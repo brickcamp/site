@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Clip-Handle-Swivel Decagon
+0 Name: brickcamp-193.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 7 0 8 0 1 0 0 0 1 0 0 0 1 99780.dat
 1 7 42.06 8 13.97 0.809017 0 -0.587785 0 1 0 0.587785 0 0.809017 99780.dat
 1 25 -20 0 10 -1 0 0 0 1 0 0 0 -1 2429.dat
@@ -55,4 +54,3 @@
 1 4 -62.888 6 141.802 0 0.587786 0.809017 -1 0 0 0 -0.809017 0.587786 6019.dat
 1 14 -85.516 6 110.167 0 0.951057 -0.309017 1 0 0 0 -0.309017 -0.951057 26047.dat
 1 4 -91.697 6 91.145 0 0.951057 0.309017 -1 0 0 0 -0.309017 0.951057 6019.dat
-0

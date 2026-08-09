@@ -1,6 +1,8 @@
-0 
-0 Name: New Model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Wedge Plates 4x2 with 1x2 Plate
+0 Name: brickcamp-215.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 0 !LEOCAD PIECE PIVOT  20 0 40 1 0 0 0 1 0 0 0 1
 1 4 10.0122 -4.0041 -3.8835 -0.970296 0 0.241922 0 -1 0 0.241922 0 0.970296 41770.dat
 0 !LEOCAD PIECE PIVOT  -20 0 40 1 0 0 0 1 0 0 0 1

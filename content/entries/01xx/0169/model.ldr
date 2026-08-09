@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Roadsign Hexagon on Pneumatic Connectors
+0 Name: brickcamp-169.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 7 -14.719 0 8.85 0.866025 0 -0.5 0 1 0 0.5 0 0.866025 57585.dat
 1 8 -26.72 0 29.634 0.866025 0 -0.5 0 1 0 0.5 0 0.866025 99021.dat
 1 14 -12.863 -20 37.635 0.5 -0.866025 0 0 0 1 -0.866025 -0.5 0 30259.dat
@@ -14,4 +13,3 @@
 1 8 9.466 0 8.958 0 0 -1 0 1 0 1 0 0 99021.dat
 1 14 9.466 -20 24.958 1 0 0 0 0 1 0 -1 0 30259.dat
 1 14 9.467 -20 -7.043 -1 0 0 0 0 1 0 1 0 30259.dat
-0

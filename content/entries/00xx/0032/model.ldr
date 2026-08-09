@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Clip-Handle Heptagon with Domes
+0 Name: brickcamp-32.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 -121.78656 -0.000004 -174.272659 -0.707107 0 -0.707107 0 1 0 0.707107 0 -0.707107 60470.dat
 1 14 -135.928696 -0.000004 -188.414795 0.707107 0 0.707107 0 1 0 -0.707107 0 0.707107 48336.dat
 1 25 -128.85762 8 -181.343719 0.707107 0 0.707107 0 1 0 -0.707107 0 0.707107 3022.dat

@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Pythagora's Twist
+0 Name: brickcamp-112.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 -115 -80 -10 0.601815 0 0.798635 0 1 0 -0.798635 0 0.601815 3009.dat
 1 4 45 -56 -30 0.999999 0 -0 0 1 0 0 0 0.999999 3794b.dat
 1 4 25 -56 10 0.999999 0 -0 0 1 0 0 0 0.999999 3794b.dat

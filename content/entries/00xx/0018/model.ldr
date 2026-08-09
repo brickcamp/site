@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Hinge Brick Y
+0 Name: brickcamp-18.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 -6.627804 1 -15.688041 -0.707106 0 0.707106 0 1 0 -0.707106 0 -0.707106 30540.dat
 1 25 -17.827803 11 -66.888023 0 -1 -0 -0 0 -1 1 0 -0 30364.dat
 1 14 -76.985001 1 -15.671304 0.707106 0 0.707106 0 1 0 -0.707106 0 0.707106 30540.dat

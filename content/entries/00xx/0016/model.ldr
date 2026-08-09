@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 GSNOT
+0 Name: brickcamp-16.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 25 0 0 0 1 0 0 0 1 0 -0 0 1 30365.dat
 1 25 -80 0 -60 1 0 0 0 1 0 -0 0 1 30540.dat
 1 14 -36 9.999996 -60 -0 -1 0 -1 0 -0 0 -0 -1 3004.dat

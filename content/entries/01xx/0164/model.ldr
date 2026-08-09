@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Cheese on Cheese
+0 Name: brickcamp-164.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 46 4.825 34 27.319 0 0 1 1 0 0 0 1 0 54200.dat
 1 57 4.823 34 7.319 0 0 -1 1 0 0 0 -1 0 54200.dat
 1 46 24.823 34 27.32 0 0 1 1 0 0 0 1 0 54200.dat
@@ -15,4 +14,3 @@
 1 38 -55.176 24 17.318 -1 0 0 0 1 0 0 0 -1 6541.dat
 1 47 -5.176 34 7.319 -1 0 0 0 0 -1 0 -1 0 3666.dat
 1 47 -5.176 34 27.319 -1 0 0 0 0 1 0 1 0 3666.dat
-0

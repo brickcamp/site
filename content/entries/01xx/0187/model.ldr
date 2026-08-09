@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Minifig Hands on Plate
+0 Name: brickcamp-187.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 25 -60 13 87.048 1 0 0 0 -1 0 0 0 -1 3031.dat
 1 14 -30.001 -1.466 107.429 1 0 0 0 -0.965926 -0.258819 0 0.258819 -0.965926 3820.dat
 1 14 -49.999 -1.466 107.429 1 0 0 0 -0.965926 -0.258819 0 0.258819 -0.965926 3820.dat
@@ -30,4 +29,3 @@
 1 14 -50 -1.988 47.524 1 0 0 0 -0.965926 -0.258819 0 0.258819 -0.965926 3820.dat
 1 14 -70 -1.988 47.525 1 0 0 0 -0.965926 -0.258819 0 0.258819 -0.965926 3820.dat
 1 14 -90 -1.988 47.524 1 0 0 0 -0.965926 -0.258819 0 0.258819 -0.965926 3820.dat
-0

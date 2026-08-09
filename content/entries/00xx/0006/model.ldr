@@ -1,6 +1,8 @@
-0 SNOT Bracket 360
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Bracket Square
+0 Name: brickcamp-6.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 -100 -39.999981 -150 0 0 -1 -1 0 0 0 1 0 2436a.dat
 1 25 -48.000008 -40.00008 -108.000008 0 -1 0 -1 0 0 0 0 -1 2436a.dat
 1 14 -70.000008 -40.00008 -117.999992 0 0 -1 -1 0 0 0 1 0 2436a.dat

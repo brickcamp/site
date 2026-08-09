@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Tile Jumper Roof
+0 Name: brickcamp-114.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 0 0 20 1 0 0 0 1 0 -0 0 1 3666.dat
 1 14 0 8 -10 1 0 0 0 1 0 -0 0 1 3666.dat
 1 14 0 16 -40 1 0 0 0 1 0 -0 0 1 3666.dat

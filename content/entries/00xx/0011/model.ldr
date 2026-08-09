@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Brick Tilted in Brick Frame
+0 Name: brickcamp-11.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 25 -45 -13 -12 1 0 0 0 0 -1 0 1 0 3003.dat
 0 STEP
 1 25 -45 161 0 1 0 0 0 1 0 -0 0 1 3068b.dat

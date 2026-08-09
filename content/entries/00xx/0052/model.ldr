@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Hexagonal Plate with Curved Slopes
+0 Name: brickcamp-52.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 4 0 0 40 1 0 0 0 1 0 -0 0 1 64566.dat
 1 14 -1 -10 90 0.996195 0.087156 0 0 -0 1 0.087156 -0.996195 -0 4070.dat
 1 25 -22.299999 -10 104.199997 -0 0.087156 0.996195 -1 -0 -0 -0 -0.996195 0.087156 50950.dat

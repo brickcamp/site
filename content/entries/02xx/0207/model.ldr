@@ -1,7 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
+0 Connector Beam 3x3 SNOT
+0 Name: brickcamp-207.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 7 37.5 -8 37.5 0 0 -1 0 1 0 1 0 0 39793.dat
 1 1 37.5 -18 17.5 0 0 -1 -1 0 0 0 1 0 4274.dat
 1 1 37.5 -18 57.5 0 0 -1 -1 0 0 0 1 0 4274.dat

@@ -23,13 +23,15 @@ export function entryFile(id) {
   return { id: padded, dir: path.dirname(file), file, relative };
 }
 
-export function highestId() {
-  const ids = readdirSync(path.join(root, 'content', 'entries'), { recursive: true })
+export function entryIds() {
+  return readdirSync(path.join(root, 'content', 'entries'), { recursive: true })
     .map((p) => path.basename(p))
     .filter((name) => new RegExp(`^\\d{${WIDTH}}$`).test(name))
-    .map(Number);
-  return Math.max(...ids);
+    .map(Number)
+    .sort((a, b) => a - b);
 }
+
+export const highestId = () => Math.max(...entryIds());
 
 // The slug only fills the url (/entry/<slug>/) and a first-guess title;
 // the folder follows from the next free ID alone.

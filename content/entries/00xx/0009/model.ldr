@@ -1,6 +1,8 @@
-0 SNOT 180 Slider
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Slider SNOT
+0 Name: brickcamp-9.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 4 -29.999996 -7.999905 -10 1 0 0 0 1 0 0 0 1 32028.dat
 1 25 -9.999996 0.000095 -10 1 0 0 0 1 0 0 0 1 3710.dat
 1 4 9.999998 -7.999905 -10 1 0 0 0 1 0 0 0 1 32028.dat

@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Hinge Top Ring
+0 Name: brickcamp-46.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 9.999998 0 20.000002 0 0 1 0 1 0 -1 0 0 3937.dat
 1 25 3.999998 2 20.000002 -0 0.587785 -0.809017 -0 0.809017 0.587785 1 0 -0 6134.dat
 1 14 15.966213 25.940632 20.000002 0 -0.587785 0.809017 0 0.809017 0.587785 -1 0 0 3937.dat

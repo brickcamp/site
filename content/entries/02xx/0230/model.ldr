@@ -1,7 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
+0 Super SNOT Square
+0 Name: brickcamp-230.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 72 20 -10 40 1 0 0 0 0 1 0 -1 0 67329.dat
 1 71 40 -10 -20 0 -1 0 0 0 1 -1 0 0 67329.dat
 1 72 -20 -10 -40 -1 0 0 0 0 1 0 1 0 67329.dat

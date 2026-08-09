@@ -1,7 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
+0 Tile 1 x 2 Handle Angle
+0 Name: brickcamp-223.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 4 0 -8.2404 -2.5218 1 0 0 0 1 0 0 0 1 2432.dat
 1 14 0 5.7649 7.4782 1 0 0 0 0 -1 0 1 0 3023b.dat
 1 14 0 2.4755 -4.9564 1 0 0 0 -0.5 0.866025 0 -0.866025 -0.5 3023b.dat

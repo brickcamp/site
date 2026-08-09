@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Plates in Arch
+0 Name: brickcamp-50.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 4 -40.508034 -17 -39.491966 -0 0 1 0 1 0 -1 0 -0 2339.dat
 1 14 39.491966 0 -39.491966 -0 0.139173 0.990268 0 0.990268 -0.139173 -1 -0 -0 3024.dat
 1 25 18.491966 6 -39.491966 -0 0.390731 0.920505 0 0.920505 -0.390731 -1 -0 -0 3024.dat

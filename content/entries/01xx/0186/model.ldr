@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Brick 1 x 2 with Handle Interlocked
+0 Name: brickcamp-186.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 25 60 20 -77 0 -1 0 0 0 1 -1 0 0 30236.dat
 1 25 84 20 -77 0 -1 0 0 0 1 -1 0 0 30236.dat
 1 14 47.999 -17 -77 0 -1 0 0 0 -1 1 0 0 30236.dat
@@ -16,4 +15,3 @@
 1 47 35.999 20 -76.999 0 -1 0 0 0 1 -1 0 0 30236.dat
 1 47 0 -17 -77 0 -1 0 0 0 -1 1 0 0 30236.dat
 1 47 24 -16.999 -77 0 -1 0 0 0 -1 1 0 0 30236.dat
-0

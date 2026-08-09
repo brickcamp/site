@@ -1,9 +1,8 @@
-0 Untitled
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
-0 Unofficial Model
-0 ROTATION CENTER 0 0 0 1 "Custom" 
-0 ROTATION CONFIG 0 0
+0 Dome Sphere
+0 Name: brickcamp-168.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 15 2 -6 11 1 0 0 0 1 0 0 0 1 86500.dat
 1 15 2 -6 11 1 0 0 0 -1 0 0 0 -1 86500.dat
 1 14 2 -1 6 1 0 0 0 1 0 0 0 1 3623.dat
@@ -16,4 +15,3 @@
 1 14 -78 -11 -74 1 0 0 0 -1 0 0 0 -1 3623.dat
 1 25 -92.911 -6 -93.672 0.965926 0 -0.258819 0 1 0 0.258819 0 0.965926 6632.dat
 1 25 -63.088 -6 -93.672 0.965926 0 0.258819 0 1 0 -0.258819 0 0.965926 6632.dat
-0

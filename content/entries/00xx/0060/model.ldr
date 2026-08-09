@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Steering Arms Pentagon
+0 Name: brickcamp-60.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 58.082935 10.329824 31.284073 0 -0 -1 1 0 0 0 -1 0 32068.dat
 1 0 29.082912 0.329819 21.284077 0 0 -1 0 1 0 1 0 0 32069.dat
 1 14 35.416199 -48.813316 31.034325 0.951056 -0 -0.309017 0.309017 -0 0.951056 -0 -1 -0 32068.dat

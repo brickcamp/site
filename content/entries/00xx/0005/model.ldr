@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Double Bracket
+0 Name: brickcamp-5.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 0 -48 -20 1 0 0 0 1 0 0 0 1 2436a.dat
 1 14 0 -38 -50 1 0 0 0 0 -1 0 1 0 2436a.dat
 1 25 0 -38 -42 1 0 0 0 0 -1 0 1 0 3023.dat

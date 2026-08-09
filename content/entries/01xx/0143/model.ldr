@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Headlights in Hinge Square
+0 Name: brickcamp-143.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 25 0 0 0 1 0 0 0 -0 1 0 -1 -0 30386.dat
 1 14 40 0 -40 0 -0.999999 -0 -0 -0 0.999999 -1 -0 0 30386.dat
 1 25 0.34846 0 -80.023453 -1 -0 -0 -0 0 1 0 1 -0 30386.dat

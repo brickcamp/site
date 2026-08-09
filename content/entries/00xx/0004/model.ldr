@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Bracket Inline SNOT
+0 Name: brickcamp-4.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 106.368813 -92.414215 49.144966 0 -1 -0 1 0 0 0 -0 1 99780.dat
 1 25 98.368805 -132.414215 49.144966 -0 1 0 -1 -0 -0 0 -0 1 99781.dat
 1 47 108.368805 -112.414215 27.144966 -0 0 -1 -1 -0 -0 -0 1 0 3710.dat

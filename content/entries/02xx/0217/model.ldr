@@ -1,6 +1,8 @@
-0 
-0 Name: New Model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Vertical Bar Square
+0 Name: brickcamp-217.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 12 0 -8 1 0 0 0 0 1 0 -1 0 88072.dat
 1 25 8 0 12 0 1 0 0 0 1 1 0 0 88072.dat
 1 14 -12 0 8 -1 0 0 0 0 1 0 1 0 88072.dat

@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Boat Studs with Handles
+0 Name: brickcamp-3.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 25 -34 -23 2 0 0 -1 1 0 0 0 -1 0 2540.dat
 1 14 0 -3 0 -0.707107 0 0.707107 0 1 0 -0.707107 0 -0.707107 2654.dat
 1 25 2 -23 34 0 -1 0 1 0 0 0 -0 1 2540.dat

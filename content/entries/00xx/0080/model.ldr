@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Arch 1 x 3 x 2 Ring
+0 Name: brickcamp-80.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 -9.800001 -6.1 0 0 0 -1 0 1 0 1 0 0 88292.dat
 1 25 -18.779491 24.547441 0 0 -0.5 -0.866025 0 0.866025 -0.5 1 0 0 88292.dat
 1 14 -41.666443 46.904564 0 0 -0.866025 -0.5 0 0.5 -0.866025 1 0 0 88292.dat

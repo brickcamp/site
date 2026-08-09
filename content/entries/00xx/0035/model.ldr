@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Clip-Handle Tridecagon
+0 Name: brickcamp-35.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 7.246768 -11 15.646891 -0.707107 0 -0.707107 0 1 0 0.707107 0 -0.707107 60470.dat
 1 14 -6.895368 -11 1.504755 0.707107 0 0.707107 0 1 0 -0.707107 0 0.707107 48336.dat
 1 25 0.1757 -3 8.575824 0.707107 0 0.707107 0 1 0 -0.707107 0 0.707107 3022.dat

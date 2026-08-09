@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: 
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Technic Axle Pin Connector #5 Ring-ish
+0 Name: brickcamp-135.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 14 -154.006485 -0.450142 -94.143051 0 -1 0 1 0 0 0 0 1 32015.dat
 1 25 -99.006485 -0.450142 -72.143051 -0 -0.366501 0.930417 1 -0 0 0 0.930417 0.366501 32015.dat
 1 14 -58.006485 -0.450142 -115.143051 -0 0.731353 0.681998 1 0 0 0 0.681998 -0.731353 32015.dat

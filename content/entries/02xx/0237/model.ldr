@@ -1,6 +1,8 @@
-0 untitled model
-0 Name: model.ldr
-0 Author: brick.camp (by Tobias Buckdahn)
+0 Plate In Masonry Grooves
+0 Name: brickcamp-237.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
 1 72 34 -19.7778 0 0 -1 0 1 0 0 0 0 1 98283.dat
 1 0 0 -39.7778 0 1 0 0 0 1 0 0 0 1 4733.dat
 1 72 -34 -19.7778 0 0 1 0 -1 0 0 0 0 1 98283.dat
