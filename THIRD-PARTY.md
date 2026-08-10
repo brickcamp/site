@@ -41,7 +41,7 @@ work being linked to. Copyright stays with the respective owners, who are named
 in the `author` and `url` arguments of the `linkbox` shortcode next to each
 image.
 
-### LEGO building instructions — `content/entries/font/set-41839/`
+### LEGO building instructions — `content/entries/02xx/0213/`
 
 `image.png` and everything in `ascii/` are crops from official LEGO publications
 for set 41839, reproduced to document the alphabet that set builds. They are the 
