@@ -5,6 +5,7 @@ draft = true
 
 url     = '/entry/replace-me/'
 aliases = ['/e/{{ strings.TrimLeft "0" .File.ContentBaseName }}']
+render  = { lat = 30, lon = 45 }
 
 parts = ['3002', '3004']
 size = ['2s', '3p', '4b']

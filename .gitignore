@@ -3,6 +3,7 @@
 .gitmessage
 node_modules
 tmp
+.ldview
 
 .env
 

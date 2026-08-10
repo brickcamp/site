@@ -1,4 +1,5 @@
 {{ $entry := . }}
+{{ partial "entries/validateParts" $entry }}
 {{/* The ID is the entry's folder name (entries/validateIds enforces the
      layout), shown unpadded. */}}
 {{ $id := strings.TrimLeft "0" $entry.File.ContentBaseName }}

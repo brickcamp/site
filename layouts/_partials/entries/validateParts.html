@@ -1,0 +1,17 @@
+{{/* Every number an entry lists in `parts` must have a part page behind it —
+     content/parts/<number>/_index.md, which scripts/part.js writes from the
+     Rebrickable API. Hugo invents a term page for a number nobody declared,
+     so a typo does not fail: the thumbnail 404s and an empty term page
+     ships. An invented term has no .File, which is exactly the test.
+
+     Note that a draft entry never reaches this partial, because a draft is
+     excluded from .Pages entirely — build with `hugo -D` to check one.
+
+     Params: the entry page. Returns nothing. */}}
+{{- $entry := . -}}
+{{- range .GetTerms "parts" -}}
+  {{- with .File -}}{{- else -}}
+    {{- errorf "entry %q: part %q has no page — add content/parts/%s/_index.md with `npm run new`"
+        $entry.File.Path .LinkTitle (path.BaseName .Path) -}}
+  {{- end -}}
+{{- end -}}

@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "new": "node scripts/new.js",
+    "entry": "node scripts/stages.js",
     "ldraw-headers": "node scripts/ldraw-headers.js"
   },
   "author": "brick.camp",

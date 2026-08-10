@@ -1,28 +1,13 @@
 #!/usr/bin/env node
 // The one command behind npm run new: asks what to add — an entry, a link,
-// a link image or a part — and for the details, then does it.
+// a link image or a part — and for the details, then does it. A new entry
+// carries straight on into the stage runner that walks it to a commit.
 
-import { createInterface } from 'node:readline/promises';
 import { createEntry, highestId, isEntryId, isSlug } from './entry.js';
 import { addLink, addLinkImage } from './link.js';
 import { createPart } from './part.js';
-
-const rl = createInterface({ input: process.stdin, output: process.stdout });
-rl.on('SIGINT', () => process.exit(130));
-let asking = true;
-rl.on('close', () => {
-  if (asking) process.exit(1);
-});
-
-// Re-asks until the answer (or the default, on empty input) is valid.
-async function ask(prompt, fallback, valid, hint) {
-  for (;;) {
-    const suffix = fallback === undefined ? '' : ` [${fallback}]`;
-    const answer = (await rl.question(`${prompt}${suffix}: `)).trim() || fallback || '';
-    if (valid(answer)) return answer;
-    console.log(`  (${hint})`);
-  }
-}
+import { ask, closePrompt } from './prompt.js';
+import { runStages } from './stages.js';
 
 const KINDS = {
   e: 'entry', entry: 'entry',
@@ -31,9 +16,9 @@ const KINDS = {
   p: 'part', part: 'part',
 };
 const kind = KINDS[
-  (await ask('add entry, link, link image or part (e/l/i/p)', 
+  (await ask('add entry, link, link image or part (e/l/i/p)',
              'entry',
-             (answer) => answer.toLowerCase() in KINDS, 
+             (answer) => answer.toLowerCase() in KINDS,
              'answer entry, link, link image or part')
   ).toLowerCase()
 ];
@@ -41,7 +26,7 @@ const kind = KINDS[
 let run;
 if (kind === 'entry') {
   const slug = await ask('url slug', undefined, isSlug, 'lowercase, digits, dashes');
-  run = () => createEntry(slug);
+  run = () => runStages(createEntry(slug));
 } else if (kind === 'part') {
   const numbers = (
     await ask('part number(s)', undefined, (answer) => answer !== '', 'one or more, space-separated')
@@ -61,11 +46,11 @@ if (kind === 'entry') {
   run = () => (kind === 'link' ? addLink(id, url) : addLinkImage(id, url));
 }
 
-asking = false;
-rl.close();
 try {
   await run();
 } catch (error) {
   console.error(`error: ${error.message}`);
-  process.exit(1);
+  process.exitCode = 1;
+} finally {
+  closePrompt();
 }

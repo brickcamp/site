@@ -5,6 +5,7 @@
 import { execFileSync } from 'node:child_process';
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
+import { gitAuthor, stubModel } from './model.js';
 import { root } from './shared.js';
 
 // Trailing-x width of each bucket level above an entry, top to leaf.
@@ -34,11 +35,12 @@ export function entryIds() {
 export const highestId = () => Math.max(...entryIds());
 
 // The slug only fills the url (/entry/<slug>/) and a first-guess title;
-// the folder follows from the next free ID alone.
+// the folder follows from the next free ID alone. Returns the new ID.
 export function createEntry(slug) {
   const id = highestId() + 1;
-  const { file, relative } = entryFile(id);
-  execFileSync('hugo', ['new', relative], { cwd: root, stdio: 'inherit' });
+  const { dir, file, relative } = entryFile(id);
+  // stdin stays ours: the caller is usually mid-question on the terminal.
+  execFileSync('hugo', ['new', relative], { cwd: root, stdio: ['ignore', 'inherit', 'inherit'] });
 
   const title = slug.split('-').map((word) => word[0].toUpperCase() + word.slice(1)).join(' ');
   const text = readFileSync(file, 'utf8')
@@ -49,6 +51,8 @@ export function createEntry(slug) {
     throw new Error('archetype placeholders changed; update entry.js');
   }
   writeFileSync(file, text);
+  writeFileSync(path.join(dir, 'model.ldr'), stubModel(id, title, gitAuthor()));
 
   console.log(`created ${relative} — entry #${id}, /entry/${slug}/`);
+  return id;
 }

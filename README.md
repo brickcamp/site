@@ -1,68 +1,94 @@
 # brick.camp
 
-A visual dictionary of LEGO building techniques — around 230 entries, each
+A visual dictionary of LEGO building techniques — few hundred entries, each
 showing a technique with the parts it takes, the space it occupies, and a link to
 where it came from.
 
-[![](./assets/images/readme-preview.png "Preview of the brick.camp homepage")](https://new.brick.camp/)
+[![Preview of the brick.camp homepage](./assets/images/readme-preview.png "Click to open website")](https://new.brick.camp/)
 
 It's a [Hugo](https://gohugo.io/) static site with no backend. The search on the
 homepage runs entirely in the browser, against CSV lookup files generated at
 build time.
 
-## Running it
+## Local setup
 
-Requires **Hugo extended** 0.145 or newer; CI builds with 0.152.2.
+Requires **Hugo extended** 0.145 or newer ([how to install](https://gohugo.io/installation/)).  
+We currently use version `0.164.0` to publish our `main` branch via GitHub Pages, see
+[`.github/workflows/hugo.yaml`](.github/workflows/hugo.yaml).
 
 ```sh
-npm install            # PostCSS for the stylesheets, sharp for npm run new
-hugo server            # dev server at http://localhost:1313
+npm install            # for installing all dependencies
+hugo server            # runs a dev server at http://localhost:1313
+hugo server -D         # … includes entries marked with `draft = true`
 hugo --gc --minify     # production build into public/
 ```
 
-Pushing to `main` builds and publishes to GitHub Pages automatically, via
-[`.github/workflows/hugo.yaml`](.github/workflows/hugo.yaml).
+Copy `.env.example` to `.env` and fill in the values — it's gitignored, so your keys won't be committed.
+Otherwise, the scripts in the next section won't work properly.
+For modelling and rendering, the scripts will try to call [LeoCAD](https://www.leocad.org/)
+and [LDView](https://tcobbs.github.io/ldview/). So these should be installed.
 
 ## Adding content
+
+Run the following command to add content. It guides you through the options of the following sub-sections.
 
 ```sh
 npm run new
 ```
 
-Asks what to add — an entry, a link, a link image or a part — and for the
-details, then does it.
+### Entry
 
-**Entries** live at `content/entries/[bucket]/[id]/` — a sequential 4-digit ID,
-bucketed by the hundred (`01xx/0142`), so there is never a placement decision;
-the next free ID is taken and the folder scaffolded for you. The ID is
-shown on the entry page, and `/e/[id]` is a short URL to it. The slug you give
-becomes the page url (`/entry/[url-slug]/`) and a first-guess title.
-The scaffold comes from [`archetypes/entries.md`](archetypes/entries.md), 
-which lists every tag the site understands along with its allowed range.
+Creating a new entry happens in **stages**:
 
-**Links** append a `linkbox` shortcode to the entry's `index.md` and save the
-150×150 preview image next to it as `link_[xx].jpg`. Metadata comes from
-[Peekalink](https://www.peekalink.io/) (`PEEKALINK_API_KEY` in `.env`), 
-falling back to [Microlink](https://microlink.io/) and the then the page's
-own tags; Flickr metadata is read from the page itself, which knows best. 
-Review the result — anything the sources didn't know is left as an
-empty attribute. A **link image** is the preview-image treatment on its own, 
-in case the right image can't be determined automatically. It fetches the given 
-image URL and saves it as the entry's next free `link_[xx].jpg`.
+| Stage | Does |
+|---|---|
+| `scaffold` | Creates `index.md` and a header-only `model.ldr` in a new entry folder; based on [`archetypes/entries.md`](archetypes/entries.md) |
+| `model` | Opens the model stub in LeoCAD (and optionally LDView) and standardizes the header on every later pass |
+| `render` | Runs LDView with an image pipeline to generate the `image.png`. The `render = { lat, lon }` in `index.md` is the viewing angle. |
+| `parts` | Reads the parts from the model, resolves aliases and offers the id list to correct mistakes |
+| `sources` | Appends a `linkbox` per given source URL |
+| `verify` | Builds **with** drafts, drops `draft = true`, builds for real, then opens the entry in a browser to look at |
+| `commit` | Commits the entry folder and any part pages it needed |
 
-Fix up the title, fill in the `size`, the `parts` it uses and whichever tags apply, 
-put an 800×800 rendered `image.png` next to `index.md`, then drop `draft = true` 
-when it's ready. Tags are written `base-type-value` (`angle-studturn-28`, `shape-polygon-6`); 
+You can **resume the process** because this might take some time (especially the modelling).
+
+```sh
+npm run entry                # continue on the newest entry, with the first unfinished stage
+npm run entry 142            # continue a particular entry (by id)
+npm run entry 142 render     # run/re-run a specific stage on a particular entry
+npm run entry render         # …the same stage, but on the newest entry
+```
+
+The id is the folder name of the entry, without leading zeros. Folders under `content/entries/` are bucketed by the hundred to avoid overly long directory lists.
+
+An entry always gets two URLs: `/e/[id]` and `/entry/[your-human-readable-slug]/`.
+The `size` and `tags` (including `partcount-`) always need to be done manually. 
+Tags are always shaped like `base-type-value` (`angle-studturn-28`, `shape-polygon-6`); 
 malformed ones fail the build and tell you which tag was wrong.
 
-If the entry's image is not yours — a crop from instructions, say — set
-`imageCredit` in the front matter to name the rightsholder, and drop an
-`ATTRIBUTION.txt` beside the image. `content/entries/font/set-41839/` is an example.
+Hint: Changing LDView's preferences won't change a render.
+The settings are taken from [`ldview.conf`](ldview.conf).
+It's like a normal LDView setting file, but without volatile or install-specific keys like: 
+`ExtraSearchDirs\*`, `RecentFiles\*`, `Last*`, `Window*`, `Toolbar`, `UnofficialPartChecks\*`, `PovExporter\*` and `LDrawDir`.
+
+### Link / Link image
+
+Links append a `linkbox` shortcode to the entry's `index.md` and save the
+150×150 preview image next to it as `link_[xx].jpg`. 
+
+Metadata comes from [Peekalink](https://www.peekalink.io/), 
+falling back to [Microlink](https://microlink.io/) and then the page's meta tags.
+Flickr has a custom logic, as it is often referenced in this project.
+
+Review the result — anything the sources didn't know is left as an
+empty attribute. A **link image** is the preview-image treatment on its own, 
+in case the image is missing or needs to be swapped.
+
+### Parts
 
 **Parts** get `content/parts/[partnumber]/_index.md` from the Rebrickable API,
 with the part image downloaded next to it. 
-Adding new parts needs a [Rebrickable API](https://rebrickable.com/api/) key. 
-Copy `.env.example` to `.env` and fill it in — it's gitignored, so it won't be committed.
+Adding new parts needs a [Rebrickable API](https://rebrickable.com/api/) key in `.env`.
 
 ## License
 

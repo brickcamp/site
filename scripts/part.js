@@ -28,14 +28,11 @@ function frontMatter(part) {
   return out;
 }
 
-export async function createPart(number) {
+// What Rebrickable knows about a part, page or no page — the parts stage
+// reads molds/alternates from it to spot a number that is really an alias.
+export async function lookupPart(number) {
   const key = envKey('REBRICKABLE_API_KEY');
   if (!key) throw new Error('REBRICKABLE_API_KEY not set; copy .env.example to .env and fill it in');
-
-  const dir = path.join(root, 'content', 'parts', number);
-  if (existsSync(path.join(dir, '_index.md'))) {
-    throw new Error(`content/parts/${number}/_index.md already exists`);
-  }
 
   const response = await get(
     `https://rebrickable.com/api/v3/lego/parts/${encodeURIComponent(number)}/?key=${key}`
@@ -43,7 +40,16 @@ export async function createPart(number) {
   if (!response.ok) {
     throw new Error(`Rebrickable API returned ${response.status} for part ${number}`);
   }
-  const part = await response.json();
+  return response.json();
+}
+
+export async function createPart(number) {
+  const dir = path.join(root, 'content', 'parts', number);
+  if (existsSync(path.join(dir, '_index.md'))) {
+    throw new Error(`content/parts/${number}/_index.md already exists`);
+  }
+
+  const part = await lookupPart(number);
 
   await mkdir(dir, { recursive: true });
   await writeFile(path.join(dir, '_index.md'), frontMatter(part));
