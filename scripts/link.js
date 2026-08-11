@@ -2,10 +2,11 @@
 // link_xx.jpg preview images next to it — on its own via addLinkImage, for
 // linkboxes written by hand.
 
-import { readFile, writeFile, readdir } from 'node:fs/promises';
+import { readdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
+import { entryDoc } from './entry-doc.js';
 import { entryFile } from './entry.js';
 import { get } from './shared.js';
 import { collect, FIELDS } from './link-metadata.js';
@@ -47,10 +48,14 @@ function shortcode(info, imageName) {
 export async function addLink(entryId, url) {
   const { id, dir, file, relative } = entry(entryId);
 
-  let markdown = await readFile(file, 'utf8');
+  // Collect first, open the document after. collect() walks up to four
+  // sources with a 30s timeout each, and this is called from the sources
+  // stage in a loop — text read before it would be minutes stale by the
+  // time it was written back, silently dropping any edit made meanwhile.
   const info = await collect(url);
+  const doc = entryDoc(file);
   for (const linked of new Set([url, info.url])) {
-    if (markdown.includes(`url="${linked}"`)) {
+    if (doc.linksTo(linked)) {
       throw new Error(`entry ${id} already links ${linked}`);
     }
   }
@@ -66,8 +71,7 @@ export async function addLink(entryId, url) {
     }
   }
 
-  if (!markdown.endsWith('\n')) markdown += '\n';
-  await writeFile(file, `${markdown}\n${shortcode(info, imageName)}`);
+  doc.appendLinkbox(shortcode(info, imageName));
 
   const missing = FIELDS.filter((field) => !info[field] && field !== 'image');
   if (!imageName) missing.push('image');

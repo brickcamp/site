@@ -13,7 +13,7 @@
 // stage name to run just that one.
 
 import { execFileSync, spawn } from 'node:child_process';
-import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync } from 'node:fs';
 import { createServer } from 'node:net';
 import path from 'node:path';
 import { launch, open } from './apps.js';
@@ -28,7 +28,6 @@ import { ANGLE, renderImage } from './render.js';
 import { root } from './shared.js';
 
 const PLACEHOLDER_PARTS = ['3002', '3004'];
-const ANGLE_LINE = /^render\s*=\s*\{[^}]*\}$/m;
 
 const git = (...args) => execFileSync('git', args, { cwd: root, encoding: 'utf8' });
 // stdin is withheld from every child: readline owns the terminal, and a
@@ -48,16 +47,6 @@ function load(id) {
     model: existsSync(found.dir) ? modelFile(found.dir) : undefined,
     image: path.join(found.dir, 'image.png'),
   };
-}
-
-// Re-reads the file rather than writing back the copy the runner loaded: a
-// stage can sit for minutes on a build, a render or a question, and you may
-// well have been editing index.md the whole time. Only the one field a
-// stage owns may change under you. Returns the new text.
-function update(entry, transform) {
-  const text = transform(readFileSync(entry.file, 'utf8'));
-  writeFileSync(entry.file, text);
-  return text;
 }
 
 const relative = (file) => path.relative(root, file);
@@ -110,15 +99,6 @@ async function preview(url) {
 }
 
 /* -------------------------------------------------------------- stages -- */
-
-function writeAngle(entry, { lat, lon }) {
-  const line = `render  = { lat = ${lat}, lon = ${lon} }`;
-  update(entry, (text) =>
-    ANGLE_LINE.test(text)
-      ? text.replace(ANGLE_LINE, line)
-      : text.replace(/^(aliases\s*=\s*\[[\s\S]*?\]\n)/m, `$1${line}\n`)
-  );
-}
 
 // A ref with no part page may still be a Rebrickable alias of one we do
 // have — the "search the workspace to see if it's aliased" step, automated.
@@ -189,7 +169,7 @@ const STAGES = [
         ...angle,
         supersample: flags.supersample ?? 1,
       });
-      writeAngle(entry, angle);
+      entry.doc.setAngle(angle);
 
       console.log(`wrote ${relative(entry.image)} — ${(bytes / 1024).toFixed(1)} KB`);
       open(entry.image);
@@ -212,8 +192,7 @@ const STAGES = [
       const suggested = [...kept, ...derived].filter((n, i, all) => all.indexOf(n) === i);
 
       const chosen = (await question('parts', suggested.join(' '))).split(/\s+/).filter(Boolean);
-      const toml = chosen.map((number) => `'${number}'`).join(', ');
-      update(entry, (text) => text.replace(/^parts\s*=\s*\[[\s\S]*?\]/m, `parts = [${toml}]`));
+      entry.doc.setParts(chosen);
 
       for (const number of chosen.filter((n) => !index.has(n.toLowerCase()))) {
         if (await confirm(`part ${number} has no page — create it from Rebrickable?`)) {
@@ -254,7 +233,7 @@ const STAGES = [
       console.log('building with drafts — this is the one that checks the entry…');
       hugo('-D', '--gc');
 
-      update(entry, (current) => current.replace(/^draft\s*=\s*true\n/m, ''));
+      entry.doc.undraft();
       console.log('undrafted; building for real…');
       hugo('--gc', '--minify');
 
