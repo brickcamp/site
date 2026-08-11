@@ -5,7 +5,7 @@
 import { envKey, get } from './shared.js';
 import { siteFor } from './link-sites.js';
 
-export const FIELDS = ['author', 'date', 'title', 'description', 'image'];
+const FIELDS = ['author', 'date', 'title', 'description', 'image'];
 
 // Strips tags (also ones that entity-decoding uncovers), decodes entities,
 // collapses whitespace to one line.
@@ -167,5 +167,6 @@ export async function collect(url) {
     const trimmed = info.title.replace(new RegExp(`\\s*[-–—|·:]\\s*${escaped}$`, 'i'), '');
     if (trimmed) info.title = trimmed;
   }
-  return info;
+  // The image is the caller's to judge: it only counts once downloaded.
+  return { ...info, missing: FIELDS.filter((field) => field !== 'image' && !info[field]) };
 }

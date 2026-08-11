@@ -9,7 +9,7 @@ import sharp from 'sharp';
 import { entryDoc } from './entry-doc.js';
 import { entryFile } from './entry.js';
 import { get } from './shared.js';
-import { collect, FIELDS } from './link-metadata.js';
+import { collect } from './link-metadata.js';
 
 function entry(id) {
   const found = entryFile(id);
@@ -73,7 +73,7 @@ export async function addLink(entryId, url) {
 
   doc.appendLinkbox(shortcode(info, imageName));
 
-  const missing = FIELDS.filter((field) => !info[field] && field !== 'image');
+  const missing = [...info.missing];
   if (!imageName) missing.push('image');
   console.log(`appended linkbox to ${relative}${imageName ? ` (${imageName})` : ''}`);
   if (missing.length > 0) console.warn(`fill in by hand: ${missing.join(', ')}`);
