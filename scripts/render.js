@@ -25,7 +25,10 @@ const FILL = 0.92;
 const CONTENT = Math.round(SIZE * FILL);
 const WHITE = '#ffffff';
 
-export const ANGLE = { lat: 30, lon: -135 };
+// Used only by an entry with no render line of its own, so it has to agree
+// with what the archetype writes into a new one — otherwise the same model
+// comes out from opposite sides depending on which entry it sits in.
+export const ANGLE = { lat: 30, lon: 45 };
 
 const SCRATCH = path.join(root, '.ldview');
 
