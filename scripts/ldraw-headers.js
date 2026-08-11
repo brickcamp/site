@@ -7,8 +7,8 @@
 // title the header gets, and who the author is when the file never said.
 
 import { execFileSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
 import path from 'node:path';
+import { entryDoc } from './entry-doc.js';
 import { entryFile, entryIds } from './entry.js';
 import { gitAuthor, modelFile, modelName, normalizeModel } from './model.js';
 import { root } from './shared.js';
@@ -41,9 +41,9 @@ export function normalizeEntry(id) {
   const model = modelFile(dir);
   if (!model) return null;
 
-  const title = readFileSync(path.join(dir, 'index.md'), 'utf8')
-    .match(/^title\s*=\s*(['"])(.*?)\1/m)?.[2];
-  if (!title) throw new Error(`${path.relative(root, dir)}: no title in index.md`);
+  const doc = entryDoc(path.join(dir, 'index.md'));
+  if (!doc.exists) throw new Error(`${path.relative(root, dir)}: no index.md`);
+  const title = doc.title;
 
   addedBy ??= authorsByPath();
   fallbackAuthor ??= gitAuthor();

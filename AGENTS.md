@@ -24,6 +24,10 @@ Nothing joins these ends but a string convention; grep won't find them.
 - **A filter's `from`** does two unrelated jobs: build-side it decides which
   filters get lookup files (`tags` only), client-side `scope.js` uses it to spot
   the part scope (`parts`). Deliberately not a lookup page param.
+- **Entry fields.** `entry-doc.js`'s schema names the archetype's front-matter
+  keys, and the archetype is the only thing that puts them there. Rename one in
+  `archetypes/entries.md` and the schema must follow — a required field then
+  throws by name on every existing entry, an optional one goes quietly missing.
 - **JS-only CSS classes.** purgecss's allowlist is `hugo_stats.json`: only
   classes a *template* mentions. A class named solely by a `classList.toggle`
   must be safelisted in `postcss.config.js` or it ships with no rule.

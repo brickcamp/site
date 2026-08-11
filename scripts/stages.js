@@ -17,6 +17,7 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { createServer } from 'node:net';
 import path from 'node:path';
 import { launch, open } from './apps.js';
+import { entryDoc } from './entry-doc.js';
 import { createEntry, entryFile, highestId, isEntryId, isSlug } from './entry.js';
 import { normalizeEntry } from './ldraw-headers.js';
 import { addLink } from './link.js';
@@ -35,23 +36,15 @@ const git = (...args) => execFileSync('git', args, { cwd: root, encoding: 'utf8'
 const hugo = (...args) =>
   execFileSync('hugo', args, { cwd: root, stdio: ['ignore', 'inherit', 'inherit'] });
 
-const list = (text, name) =>
-  [...(text.match(new RegExp(`^${name}\\s*=\\s*(\\[[\\s\\S]*?\\])`, 'm'))?.[1] ?? '')
-    .matchAll(/'([^']*)'/g)].map(([, value]) => value);
-
-const value = (text, name) => text.match(new RegExp(`^${name}\\s*=\\s*'(.*)'`, 'm'))?.[1];
-
 // The archetype's example parts, still untouched.
 const isPlaceholder = (parts) => String(parts) === String(PLACEHOLDER_PARTS);
 
 function load(id) {
   const found = entryFile(id);
-  const text = existsSync(found.file) ? readFileSync(found.file, 'utf8') : '';
   return {
     ...found,
     number: Number(found.id),
-    text,
-    title: value(text, 'title'),
+    doc: entryDoc(found.file),
     model: existsSync(found.dir) ? modelFile(found.dir) : undefined,
     image: path.join(found.dir, 'image.png'),
   };
@@ -118,15 +111,6 @@ async function preview(url) {
 
 /* -------------------------------------------------------------- stages -- */
 
-const readAngle = (text) => {
-  const line = text.match(ANGLE_LINE)?.[0] ?? '';
-  const number = (key) => {
-    const found = line.match(new RegExp(`${key}\\s*=\\s*(-?[\\d.]+)`))?.[1];
-    return found && Number(found);
-  };
-  return { lat: number('lat'), lon: number('lon') };
-};
-
 function writeAngle(entry, { lat, lon }) {
   const line = `render  = { lat = ${lat}, lon = ${lon} }`;
   update(entry, (text) =>
@@ -166,7 +150,7 @@ async function derivedParts(entry, index) {
 const STAGES = [
   {
     name: 'scaffold',
-    done: (entry) => entry.text !== '',
+    done: (entry) => entry.doc.exists,
     async run() {
       const slug = await ask('url slug', undefined, isSlug, 'lowercase, digits, dashes');
       return createEntry(slug);
@@ -194,10 +178,10 @@ const STAGES = [
     async run(entry, flags) {
       // The angle a render used goes back into the front matter, so the
       // entry re-renders identically however long from now.
-      const stored = readAngle(entry.text);
+      const stored = entry.doc.angle;
       const angle = {
-        lat: flags.lat ?? stored.lat ?? ANGLE.lat,
-        lon: flags.lon ?? stored.lon ?? ANGLE.lon,
+        lat: flags.lat ?? stored?.lat ?? ANGLE.lat,
+        lon: flags.lon ?? stored?.lon ?? ANGLE.lon,
       };
 
       console.log(`rendering at lat ${angle.lat}, lon ${angle.lon}…`);
@@ -214,11 +198,11 @@ const STAGES = [
 
   {
     name: 'parts',
-    done: (entry) => !isPlaceholder(list(entry.text, 'parts')),
-    summary: (entry) => `${list(entry.text, 'parts').length} declared`,
+    done: (entry) => !isPlaceholder(entry.doc.parts),
+    summary: (entry) => `${entry.doc.parts.length} declared`,
     async run(entry) {
       const index = partIndex();
-      const declared = list(entry.text, 'parts');
+      const declared = entry.doc.parts;
       const kept = isPlaceholder(declared) ? [] : declared;
 
       console.log('reading the model…');
@@ -241,7 +225,7 @@ const STAGES = [
 
   {
     name: 'sources',
-    done: (entry) => entry.text.includes('{{< linkbox'),
+    done: (entry) => entry.doc.hasLinkbox,
     async run(entry) {
       for (;;) {
         const url = await ask(
@@ -259,19 +243,21 @@ const STAGES = [
   {
     name: 'verify',
     // Undrafting is the last thing verify does, so its absence is the mark.
-    done: (entry) => !/^draft\s*=\s*true$/m.test(entry.text),
+    done: (entry) => !entry.doc.isDraft,
     async run(entry) {
+      // Read before undrafting: the url is what tells us where the page
+      // should have landed, and undrafting rewrites the file underneath.
+      const url = entry.doc.url;
       // Drafts are excluded from .Pages, so none of the entry partials run
       // on one: the production build would report clean having checked
       // nothing about this entry. This is the build that fires its errorfs.
       console.log('building with drafts — this is the one that checks the entry…');
       hugo('-D', '--gc');
 
-      const text = update(entry, (current) => current.replace(/^draft\s*=\s*true\n/m, ''));
+      update(entry, (current) => current.replace(/^draft\s*=\s*true\n/m, ''));
       console.log('undrafted; building for real…');
       hugo('--gc', '--minify');
 
-      const url = value(text, 'url');
       const page = path.join(root, 'public', ...url.split('/').filter(Boolean), 'index.html');
       if (!existsSync(page)) {
         throw new Error(`${relative(page)} was not built — the entry is still being excluded`);
@@ -295,7 +281,7 @@ const STAGES = [
       if (!(await confirm('go ahead?'))) return;
 
       git('add', '--', ...paths);
-      git('commit', '-m', `Add entry "${entry.title}"`);
+      git('commit', '-m', `Add entry "${entry.doc.title}"`);
       console.log('committed');
     },
   },
@@ -305,7 +291,7 @@ const STAGES = [
 
 // Nothing is done before the folder exists — scaffold's own test is that
 // the entry has an index.md, so this covers every stage at once.
-const isDone = (stage, entry) => entry.text !== '' && stage.done(entry);
+const isDone = (stage, entry) => entry.doc.exists && stage.done(entry);
 
 // Yes takes the stage offered, no stops, and a stage name — or any
 // unambiguous start of one — goes there instead. Stages are re-runnable and
@@ -331,7 +317,8 @@ async function chooseStage(suggested) {
 }
 
 function report(entry) {
-  console.log(`\nentry ${entry.number} ${entry.title ? `"${entry.title}"` : '(not created yet)'}`);
+  const title = entry.doc.title;
+  console.log(`\nentry ${entry.number} ${title ? `"${title}"` : '(not created yet)'}`);
   const cells = STAGES.map((stage) => {
     const done = isDone(stage, entry);
     const note = done && stage.summary ? ` (${stage.summary(entry)})` : '';
