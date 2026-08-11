@@ -1,8 +1,9 @@
 // Collects linkbox metadata for a url. Sources, first non-empty value per
-// field wins: Peekalink (if key) -> Microlink -> Flickr oEmbed -> page
-// <meta> tags.
+// field wins: Peekalink (if key) -> Microlink -> page <meta> tags. A site
+// box (link-sites.js) may add a source of its own and outranks them all.
 
 import { envKey, get } from './shared.js';
+import { siteFor } from './link-sites.js';
 
 export const FIELDS = ['author', 'date', 'title', 'description', 'image'];
 
@@ -30,15 +31,13 @@ function isoDate(value) {
   return Number.isNaN(time) ? undefined : new Date(time).toISOString().slice(0, 10);
 }
 
-const isFlickr = (url) => /(^|\.)flickr\.com$/.test(new URL(url).hostname);
-
-// Drops tracking params and Flickr's /in/<context> suffix.
+// Drops tracking params, then whatever the site itself wants dropped.
 function canonical(url) {
   const parsed = new URL(url);
   for (const name of [...parsed.searchParams.keys()]) {
     if (/^(utm_|fbclid$|gclid$|igsh)/.test(name)) parsed.searchParams.delete(name);
   }
-  if (isFlickr(url)) parsed.pathname = parsed.pathname.replace(/\/in\/[^/]+\/?$/, '');
+  siteFor(url)?.canonical?.(parsed);
   if (parsed.pathname.length > 1) parsed.pathname = parsed.pathname.replace(/\/$/, '');
   return parsed.toString();
 }
@@ -85,19 +84,6 @@ async function fromMicrolink(url, key) {
   };
 }
 
-async function fromFlickrOembed(url) {
-  const response = await get(
-    `https://www.flickr.com/services/oembed?format=json&url=${encodeURIComponent(url)}`
-  );
-  if (!response.ok) throw new Error(`returned ${response.status}`);
-  const data = await response.json();
-  return {
-    title: data.title,
-    author: data.author_name,
-    image: data.type === 'photo' ? data.url : data.thumbnail_url,
-  };
-}
-
 async function fromMeta(url) {
   const response = await get(url);
   if (!response.ok) throw new Error(`returned ${response.status}`);
@@ -129,54 +115,42 @@ async function fromMeta(url) {
   }
   const ldAuthor = [ld.author].flat()[0];
 
-  // Flickr photo pages embed the upload date and owner name in page JSON.
-  const flickr = isFlickr(response.url);
-  const posted = flickr && html.match(/"datePosted":"?(\d{9,10})/)?.[1];
-  const owner = flickr && html.match(/"realname":"((?:[^"\\]|\\.)*)"/)?.[1];
-
-  // Description-less Flickr photos carry an "Explore ..." placeholder.
-  let description = meta('og:description', 'twitter:description', 'description');
-  if (flickr && /^Explore .* photos on Flickr!$/.test(description ?? '')) description = undefined;
-
-  return {
+  const found = {
     url: response.url,
     siteName: meta('og:site_name'),
     title: meta('og:title', 'twitter:title') ?? html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1],
-    description,
+    description: meta('og:description', 'twitter:description', 'description'),
     author:
-      (owner && JSON.parse(`"${owner}"`)) ||
-      (meta('author', 'article:author') ?? (typeof ldAuthor === 'object' ? ldAuthor?.name : ldAuthor)),
-    date: posted
-      ? isoDate(Number(posted) * 1000)
-      : isoDate(meta('article:published_time', 'datePublished', 'date') ?? ld.datePublished),
+      meta('author', 'article:author') ?? (typeof ldAuthor === 'object' ? ldAuthor?.name : ldAuthor),
+    date: isoDate(meta('article:published_time', 'datePublished', 'date') ?? ld.datePublished),
     image: meta('og:image', 'og:image:url', 'twitter:image'),
   };
+
+  // Resolved after the redirect: a shortened link lands on the real site.
+  const site = siteFor(response.url);
+  return site?.fromPage ? { ...found, ...site.fromPage(html, found) } : found;
 }
 
 export async function collect(url) {
+  const site = siteFor(url);
   const peekalinkKey = envKey('PEEKALINK_API_KEY');
-  const sources = [
-    ['Peekalink', () => fromPeekalink(url, peekalinkKey), Boolean(peekalinkKey)],
-    ['Microlink', () => fromMicrolink(url, envKey('MICROLINK_API_KEY')), true],
-    ['Flickr oEmbed', () => fromFlickrOembed(url), isFlickr(url)],
-    ['page metadata', () => fromMeta(url), true],
-  ];
-  // Flickr's raw page and oEmbed are ground truth (realname, datePosted, real
-  // og tags); the preview APIs fabricate dates and descriptions there.
-  if (isFlickr(url)) sources.unshift(...sources.splice(2, 2).reverse());
+  const apis = [
+    peekalinkKey && ['Peekalink', () => fromPeekalink(url, peekalinkKey), false],
+    ['Microlink', () => fromMicrolink(url, envKey('MICROLINK_API_KEY')), false],
+  ].filter(Boolean);
+  const page = ['page metadata', () => fromMeta(url), true];
+  const own = site?.source && [site.source.name, () => site.source.read(url), true];
+  // What a site knows about itself outranks what the preview APIs guess.
+  const sources = site ? [page, own, ...apis].filter(Boolean) : [...apis, page];
 
   const info = { url };
   let siteName;
-  for (const [name, source, enabled] of sources) {
-    if (!enabled) continue;
+  for (const [name, source, firstParty] of sources) {
     if (FIELDS.every((field) => info[field])) break;
     try {
       const found = await source();
-      if (isFlickr(url) && name !== 'Flickr oEmbed' && name !== 'page metadata') {
-        delete found.description;
-        delete found.date;
-      }
       for (const field of FIELDS) {
+        if (!firstParty && site?.firstParty?.includes(field)) continue;
         info[field] ||= field === 'image' ? found.image : clean(found[field]);
       }
       if (found.url) info.url = found.url;
