@@ -27,3 +27,13 @@ tags  = [
 >}}
 Very stable and versatile with connections in many directions. Useful mainly due to the even measurements resulted when reversing studs this way.
 {{< /linkbox >}}
+
+{{< linkbox
+    author="Timothy Gould"
+    date="2006-12-16"
+    image="link_02.jpg"
+    title="Brickshelf Gallery - small_inverter1.png"
+    url="https://brickshelf.com/cgi-bin/gallery.php?i=2187358"
+>}}
+small_inverter1.png
+{{< /linkbox >}}
