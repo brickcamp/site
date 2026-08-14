@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 export const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
-const UA = 'Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0';
+export const UA = 'Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0';
 
 export const get = (url, options = {}) =>
   fetch(url, {
