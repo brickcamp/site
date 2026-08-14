@@ -13,7 +13,7 @@
 // stage name to run just that one.
 
 import { execFileSync, spawn } from 'node:child_process';
-import { existsSync } from 'node:fs';
+import { existsSync, renameSync } from 'node:fs';
 import { createServer } from 'node:net';
 import path from 'node:path';
 import { launch, open } from './apps.js';
@@ -21,7 +21,7 @@ import { entryDoc } from './entry-doc.js';
 import { createEntry, entryFile, highestId, isEntryId, isSlug } from './entry.js';
 import { normalizeEntry } from './ldraw-headers.js';
 import { addLink } from './link.js';
-import { modelFile, partIndex, partRefs, resolveRef } from './model.js';
+import { RenameToMpd, modelFile, partIndex, partRefs, resolveRef } from './model.js';
 import { createPart, lookupPart } from './part.js';
 import { ask, closePrompt, confirm, isNo, isYes, question } from './prompt.js';
 import { ANGLE, renderImage } from './render.js';
@@ -309,7 +309,17 @@ function report(entry) {
 export async function runStages(id, flags = {}, only) {
   for (;;) {
     let entry = load(id);
-    if (entry.model) normalizeEntry(id);
+    if (entry.model) {
+      try {
+        normalizeEntry(id);
+      } catch (error) {
+        if (!(error instanceof RenameToMpd)) throw error;
+        if (!(await confirm(`${error.message} — rename now?`))) throw error;
+        renameSync(error.file, error.target);
+        normalizeEntry(id);
+      }
+      entry = load(id);
+    }
 
     report(entry);
     const stage = only

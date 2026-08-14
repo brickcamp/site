@@ -77,6 +77,17 @@ function parseHeader(lines, file) {
 const subDescription = (description, name) =>
   PLACEHOLDER.test(description ?? '') ? path.parse(name).name : description;
 
+// Thrown when a file holds 0 FILE blocks but isn't named .mpd — recoverable
+// by renaming to `target`, which callers may offer to do rather than abort.
+export class RenameToMpd extends Error {
+  constructor(file) {
+    const target = file.replace(/\.[^./]+$/, '.mpd');
+    super(`${file}: contains 0 FILE blocks — rename it to ${path.basename(target)}`);
+    this.file = file;
+    this.target = target;
+  }
+}
+
 function cleanBody(lines) {
   const kept = lines.filter((line) => !CRUFT.test(line));
   while (kept.length && !kept.at(-1).trim()) kept.pop();
@@ -92,7 +103,7 @@ export function normalizeModel(file, title, mainName, fallbackAuthor) {
   const isMpd = blocks[0].name !== null;
 
   if (isMpd && path.extname(file) !== '.mpd') {
-    throw new Error(`${file}: contains 0 FILE blocks — rename it to model.mpd`);
+    throw new RenameToMpd(file);
   }
   if (isMpd && !FILE_LINE.test(lines[0])) {
     throw new Error(`${file}: content before the first 0 FILE line`);
