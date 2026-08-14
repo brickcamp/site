@@ -1,0 +1,23 @@
+0 FILE brickcamp-243.ldr
+0 Hinged Locking-2-Fingers Pentagon
+0 Name: brickcamp-243.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
+1 16 -0.0033 0 29.6003 1 0 0 0 1 0 0 0 1 Segment.ldr
+1 16 28.0764 0 9.1344 0.309017 0 0.951057 0 1 0 -0.951057 0 0.309017 Segment.ldr
+1 16 17.3894 0 -23.9108 -0.809017 0 0.587785 0 1 0 -0.587785 0 -0.809017 Segment.ldr
+1 16 -17.3669 0 -23.923 -0.809017 0 -0.587785 0 1 0 0.587785 0 -0.809017 Segment.ldr
+1 16 -28.0955 0 9.099 0.309017 0 -0.951056 0 1 0 0.951056 0 0.309017 Segment.ldr
+0 NOFILE
+0 FILE Segment.ldr
+0 Segment
+0 Name: Segment.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
+1 7 0 -16 8 1 0 0 0 1 0 0 0 1 60471.dat
+1 14 -20 -8 -2 0 0 1 0 1 0 -1 0 0 2429.dat
+1 14 20 -8 -2 0 0 -1 0 1 0 1 0 0 2430.dat
+1 0 0 -16 28 1 0 0 0 1 0 0 0 1 3023b.dat
+0 NOFILE
