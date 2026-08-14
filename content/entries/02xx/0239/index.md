@@ -4,8 +4,9 @@ date  = '2026-08-08'
 
 url     = '/entry/1x5-plate-octagon/'
 aliases = ['/e/239']
+render  = { lat = 60, lon = 0 }
 
-parts = ['75937', '78329', '73983', '63868', '3023']
+parts = ['75937', '78329', '73983', '63868', '3023', '41539', '34103']
 size = ['14s', '14s', '1b']
 tags = [
   'angle-studturn-45',
@@ -24,3 +25,11 @@ tags = [
 >}}
 As a general rule, it's impossible to connect the sides of a regular polygon to its center in a legal way, since the apothem is always irrational (with the exception of the 4-sided polygon: a square). However, you can get pretty close sometimes, in fact close enough to work well.
 {{< /linkbox >}}
+
+{{< linkbox
+    author="-Brixe"
+    date="2025-03-12"
+    image="link_02.jpg"
+    title="Octagon 14 x 14"
+    url="https://www.flickr.com/photos/brixe/54382368904"
+/>}}
