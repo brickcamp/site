@@ -3,7 +3,7 @@ title = 'Cheese Clipped To Octagonal Bar Holder'
 date  = '2026-08-13'
 
 url     = '/entry/cheese-clipped-to-octagonal-bar-holder/'
-aliases = ['/e/242']
+aliases = ['/e/241']
 render  = { lat = 55, lon = 45 }
 
 parts = ['75937', '4085', '54200']
