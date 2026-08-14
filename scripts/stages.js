@@ -156,8 +156,9 @@ const STAGES = [
     name: 'render',
     done: (entry) => existsSync(entry.image),
     async run(entry, flags) {
-      // The angle a render used goes back into the front matter, so the
-      // entry re-renders identically however long from now.
+      // angle might have changed on a retry
+      entry.doc.refresh();
+
       const stored = entry.doc.angle;
       const angle = {
         lat: flags.lat ?? stored?.lat ?? ANGLE.lat,
@@ -169,6 +170,8 @@ const STAGES = [
         ...angle,
         supersample: flags.supersample ?? 1,
       });
+
+      // save angle so future re-renders look identical
       entry.doc.setAngle(angle);
 
       console.log(`wrote ${relative(entry.image)} — ${(bytes / 1024).toFixed(1)} KB`);

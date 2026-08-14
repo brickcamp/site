@@ -204,6 +204,7 @@ export function entryDoc(file) {
     },
 
     linksTo: (url) => (sec?.body ?? '').includes(`url="${url}"`),
+    refresh: reread,
 
     setTitle: (value) => write('title', value),
     setUrl: (value) => write('url', value),
