@@ -13,8 +13,11 @@ aliases = [
 parts = ['32015', '32062']
 size  = ['7s', '7s', '1s']
 tags  = [
+  'angle-axletilt-23',
+  'angle-axletilt-68',
   'partcount-segment-2',
   'partcount-total-10',
   'shape-polygon-5',
+  'warning-rounded',
 ]
 +++

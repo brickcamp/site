@@ -16,10 +16,27 @@ aliases = [
 parts = ['15071']
 size  = ['12s', '1s', '12s']
 tags  = [
+  'angle-studtilt-6',
+  'angle-studtilt-11',
+  'angle-studtilt-17',
+  'angle-studtilt-23',
+  'angle-studtilt-28',
+  'angle-studtilt-34',
+  'angle-studtilt-39',
+  'angle-studtilt-45',
+  'angle-studturn-6',
+  'angle-studturn-11',
+  'angle-studturn-17',
+  'angle-studturn-23',
+  'angle-studturn-28',
+  'angle-studturn-34',
+  'angle-studturn-39',
+  'angle-studturn-45',
   'partcount-segment-1',
   'partcount-total-16',
   'shape-polygon-16',
   'shape-circle',
+  'warning-rounded',
 ]
 +++
 

@@ -8,6 +8,7 @@ aliases = ['/e/238']
 parts = ['4185', '2780', '32529', '48336', '60470']
 size = ['7s', '6s', '2s']
 tags = [
+  'angle-studtilt-60',
   'partcount-segment-4',
   'partcount-total-26',
   'shape-polygon-6',

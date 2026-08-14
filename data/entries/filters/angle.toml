@@ -13,6 +13,10 @@ title = 'Stud Turn'
 slug  = 'studturn'
 
 [[types]]
+title = 'Axle Tilt'
+slug  = 'axletilt'
+
+[[types]]
 title = 'Axle Turn'
 slug  = 'axleturn'
 

@@ -16,6 +16,8 @@ aliases = [
 parts = ['30022', '6061']
 size  = ['16s', '37p', '2s']
 tags  = [
+  'angle-studtilt-180',
+  'angle-studturn-60',
   'partcount-segment-3',
   'partcount-total-18',
   'shape-polygon-6',
