@@ -18,3 +18,13 @@ tags  = [
   'repeat-linear',
 ]
 +++
+
+{{< linkbox
+    author="Dan"
+    date="2010-10-25"
+    image="link_01.jpg"
+    title="CornerTechnique"
+    url="https://www.flickr.com/photos/dp3/5112792147"
+>}}
+This technique is a great way of stretching rare colors. For various reasons, LEGO hasn't made many types of parts in dark tan, dark pink, sand blue, sand green, etc, but you can get the 1x2 slope in large quantities for reasonable prices in any of those colors (and many more - the colors shown here are what I had handy). Anything that lets you use a rare color cheaply is great in my book.
+{{< /linkbox >}}
