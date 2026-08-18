@@ -10,9 +10,12 @@
 {{- $slug   := index . "slug" -}}
 {{- $result := slice -}}
 
+{{- $entries := partial "entries/getAll" -}}
+{{- $entries = sort $entries "File.ContentBaseName" $order -}}
+
 {{- if eq $from "facts" -}}
   {{- $map := slice -}}
-  {{- range partial "entries/getAll" -}}
+  {{- range $entries -}}
     {{- $value := partial "entries/facts" . -}}
     {{- range split $field "." -}}
       {{- $value = index $value . -}}
@@ -27,7 +30,6 @@
   {{- end -}}
 
 {{- else -}}
-  {{- $entries := partial "entries/getAll" -}}
   {{- $result = sort $entries $field $order -}}
 {{- end -}}
 
