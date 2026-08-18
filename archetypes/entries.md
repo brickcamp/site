@@ -11,26 +11,26 @@ parts = ['3002', '3004']
 size = ['2s', '3p', '4b']
 uses = ['another-entry']
 tags = [
-  'angle-studtilt-[1-180]', 
+  'angle-studtilt-[1-180]',
   'angle-studturn-[1-180]',
-  
-  'length-studlift-[1-10]', 
+
+  'length-studlift-[1-10]',
   'length-studshift-[1-10]',
-  
-  'partcount-segment-[1-999]', 
+
+  'partcount-segment-[1-999]',
   'partcount-total-[1-999]',
-  
-  'repeat-linear', 
-  'repeat-planar', 
-  'repeat-spacial', 
+
+  'repeat-linear',
+  'repeat-planar',
+  'repeat-spacial',
   'repeat-circular',
 
-  'shape-circle', 
-  'shape-ellipse', 
-  'shape-polygon-[3-999]', 
-  'shape-polyhedron-[4-999]', 
-  'shape-sphere', 
-  'shape-star-[5-999]', 
+  'shape-circle',
+  'shape-ellipse',
+  'shape-polygon-[3-999]',
+  'shape-polyhedron-[4-999]',
+  'shape-sphere',
+  'shape-star-[5-999]',
   'shape-toroid',
 
   'warning-stress',
