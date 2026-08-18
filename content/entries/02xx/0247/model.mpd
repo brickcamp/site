@@ -1,0 +1,25 @@
+0 FILE brickcamp-247.ldr
+0 Clipped Cheese Triangle
+0 Name: brickcamp-247.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
+1 16 -30.7786 -10 12.5091 0.5 -0.866026 0 0 0 -1 0.866026 0.5 0 edge.ldr
+1 16 4.2216 -10 -33.4912 -1 -0 0 0 0 -1 0 -1 0 edge.ldr
+1 16 26.4839 -10 19.9642 0.5 0.866026 0 0 0 -1 -0.866026 0.5 0 edge.ldr
+1 0 0.0213 -10 0.509 0.000001 1 0 1 -0.000001 -0 -0 0 -1 54200.dat
+1 0 0.0517 -10 0.509 0 -1 -0 -1 0 0 0 0 -1 54200.dat
+0 NOFILE
+0 FILE edge.ldr
+0 edge
+0 Name: edge.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
+1 0 12 -8 0 1 0 0 0 1 0 0 0 1 60478.dat
+1 0 -28 -8 0 -1 0 0 0 1 0 0 0 -1 92280.dat
+0 !LEOCAD PIECE PIVOT  40.8509 539302.5625 43.8468 1 0 0 0 1 0 0 0 1
+1 71 -8 -16 0 1 0 0 0 1 0 0 0 1 3794b.dat
+1 71 22 -16 0 1 0 0 0 1 0 0 0 1 3070b.dat
+1 15 -0.2266 -24 0 1 0 0 0 1 0 0 0 1 3069b.dat
+0 NOFILE
