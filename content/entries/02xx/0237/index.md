@@ -9,7 +9,9 @@ parts = ['4733', '98283', '3023']
 size = ['3b', '3b', '2s']
 tags = [
   'angle-studtilt-45',
-  'angle-studturn-90',
+  'angle-studtilt-90',
+  'angle-studtilt-135',
+  'angle-studtilt-180',
   'partcount-segment-2',
   'partcount-total-9',
   'shape-polygon-8',
