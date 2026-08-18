@@ -12,7 +12,9 @@ size = ['2s', '3p', '4b']
 uses = ['another-entry']
 tags = [
   'angle-studtilt-[1-180]',
-  'angle-studturn-[1-180]',
+  'angle-studturn-[1-90]',
+  'angle-axletilt-[1-90]',
+  'angle-axleturn-[1-45]',
 
   'length-studlift-[1-10]',
   'length-studshift-[1-10]',
