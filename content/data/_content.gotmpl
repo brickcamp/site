@@ -5,8 +5,9 @@
      client, so a fixed set of files covers any value (listed or not). */}}
 {{ $combinations := newScratch }}
 {{ range $f := hugo.Data.entries.filters }}
-  {{/* "parts" also reaches the client through the scope catalog, where it marks
-       the part-list scope — see _partials/scopes/getCatalog and assets/js/home/scope.js. */}}
+  {{/* `from` is read on both sides of the seam: _partials/scopes/getCatalog
+       keeps "size" out of the scopes and lets "parts" through as the part-list
+       scope, which assets/js/home/scope.js then recognises by the same value. */}}
   {{ if not (in (slice "tags" "size" "parts") $f.from) }}
     {{ errorf "filter %q: unknown from %q" $f.slug $f.from }}
   {{ end }}

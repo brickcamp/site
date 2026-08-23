@@ -1,5 +1,10 @@
 // Entry point of the homepage bundle, built from layouts/home.html. The only
 // module here with side effects; the rest just declare.
+//
+// Wiring is one-directional — events -> app -> view -> DOM. A control says what
+// it means (events.js), this module decides how it affects the state (state.js) 
+// and what to show for it (lookup.js), and view.js paints it.
+// No step reaches back up.
 import * as appState from "./state.js";
 import * as appView from "./view.js";
 import * as appLookup from "./lookup.js";
@@ -71,8 +76,9 @@ async function renderAll() {
 }
 
 // Tags the items with the state they were fetched for: by the time the lookup
-// resolves, `state` may be a newer one. The tag travels as an argument rather
-// than a local, because the js minifier reorders declarations around an await.
+// resolves, `state` may be a newer one, and renderAll drops a result whose tag
+// no longer matches. Taking it as an argument is what keeps the tag and the
+// fetch it describes from ever coming apart.
 async function scopedItems(forState) {
   const [entries, parts] = await Promise.all([
     appLookup.scopedEntries(forState),

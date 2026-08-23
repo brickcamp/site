@@ -1,3 +1,5 @@
+# Prettier is editor-only here: there is no dependency and no npm script, so
+# this file exists to keep an editor's formatter off the Hugo templates.
 **/*.html
 **/*.csv
 **/*.md

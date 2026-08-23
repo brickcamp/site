@@ -13,8 +13,11 @@
     "values"      slice
 ) -}}
 
+{{- $sizeFilter := dict -}}
 {{- range $filter := $filters -}}
-  {{- if eq $filter.slug "size" -}}
+  {{/* Size is a dimension of every scope, not a scope of its own */}}
+  {{- if eq $filter.from "size" -}}
+    {{- $sizeFilter = $filter -}}
     {{- continue -}}
   {{- end -}}
 
@@ -43,7 +46,7 @@
 {{- end -}}
 
 {{- $sizes := slice -}}
-{{- range hugo.Data.entries.filters.size.types -}}
+{{- range $sizeFilter.types -}}
   {{- $sizes = $sizes | append (dict "slug" .slug "title" .title) -}}
 {{- end -}}
 
