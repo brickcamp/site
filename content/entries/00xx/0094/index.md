@@ -37,3 +37,13 @@ tags  = [
 >}}
 Joshua Hanlon from BrickPodcast.com talks with Robert Turner about his custom LEGO spaceship.
 {{< /linkbox >}}
+
+{{< linkbox
+    author="david-7"
+    date="2006-07-14"
+    image="link_02.jpg"
+    title="Brickshelf Gallery - curvedtrackattachmentpoints.png"
+    url="https://www.brickshelf.com/cgi-bin/gallery.php?i=1894558"
+>}}
+Attachment Points for curved track with 7/100th Tolerance. Green Dots: Stud on stud | Blue Dots: Offset by half stud, use jumper block | Red Dots: Single stud, or Swivel plate
+{{< /linkbox >}}

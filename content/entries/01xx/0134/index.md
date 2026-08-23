@@ -20,3 +20,13 @@ tags  = [
   'shape-polygon-8',
 ]
 +++
+
+{{< linkbox
+    author="AlienShadowMaster"
+    date="2015-09-16"
+    image="link_01.jpg"
+    title="#4 Connector 45 Pythagorasfds"
+    url="https://www.flickr.com/photos/92597180@N08/21288613069"
+>}}
+I also played around with the Pythagoras theorem and found the two practical values to use: 5 ( 6L in LEGO the first L is the 0 position ) and 7.071 { 5.sqrt(2) } rounded to 7 ( 8L in LEGO the first L is the 0 position ) 7 ( 8L in LEGO the first L is the 0 position ) and 9.899 { 7.sqrt(2) } rounded to 10 ( 11L in LEGO the first L is the 0 position )
+{{< /linkbox >}}

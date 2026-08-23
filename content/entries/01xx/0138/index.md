@@ -29,3 +29,11 @@ tags  = [
 >}}
 But not perfect
 {{< /linkbox >}}
+
+{{< linkbox
+    author="Brickset"
+    date="2013-02-07"
+    image="link_02.jpg"
+    title="Useful building technique"
+    url="https://www.flickr.com/photos/brickset/8452604819"
+/>}}
