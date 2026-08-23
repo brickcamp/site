@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "test": "node --test tests/*.test.js",
     "new": "node scripts/new.js",
     "entry": "node scripts/stages.js",
     "ldraw-headers": "node scripts/ldraw-headers.js"

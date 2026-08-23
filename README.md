@@ -1,27 +1,31 @@
 # brick.camp
 
-A visual dictionary of LEGO building techniques — few hundred entries, each
-showing a technique with the parts it takes, the space it occupies, and a link to
-where it came from.
+A visual dictionary of LEGO building techniques.
+Contains a few hundred entries, each showing a technique with the parts it takes, 
+the features it has, the space it occupies, and links to one or more sources.
 
 [![Preview of the brick.camp homepage](./assets/images/readme-preview.png "Click to open website")](https://brick.camp/)
 
-It's a [Hugo](https://gohugo.io/) static site with no backend. The search on the
-homepage runs entirely in the browser, against CSV lookup files generated at
-build time.
+It's a [Hugo](https://gohugo.io/) static site with no backend.
+Searching is done entirely in the browser, against CSV lookup files generated at build time.
 
 ## Local setup
 
-Requires **Hugo extended** 0.145 or newer ([how to install](https://gohugo.io/installation/)).  
-We currently use version `0.164.0` to publish our `main` branch via GitHub Pages, see
-[`.github/workflows/hugo.yaml`](.github/workflows/hugo.yaml).
+Requires **Hugo extended** ([how to install](https://gohugo.io/installation/)).  
+We currently use version `0.164.0` to publish our `main` branch via GitHub Pages, 
+see [`.github/workflows/hugo.yaml`](.github/workflows/hugo.yaml).
 
 ```sh
 npm install            # for installing all dependencies
 hugo server            # runs a dev server at http://localhost:1313
 hugo server -D         # … includes entries marked with `draft = true`
 hugo --gc --minify     # production build into public/
+npm test               # runs the homepage JS tests (see tests/)
 ```
+
+`npm test` needs no browser and no build. One file, [`tests/build.test.js`](tests/build.test.js),
+additionally runs the same modules against whatever is in `public/` and skips
+itself when there is nothing there — so build first if you want that check.
 
 Copy `.env.example` to `.env` and fill in the values — it's gitignored, so your keys won't be committed.
 Otherwise, the scripts in the next section won't work properly.

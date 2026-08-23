@@ -6,8 +6,9 @@ A Hugo **extended** static site: a visual dictionary of LEGO building
 techniques with a client-side search on ~250 entries. Commands: README.
 
 **A fact about one file belongs in its docstring** — purpose and usage, not
-mechanics; this file holds only what no single file can state. No test runner:
-verify JS against the built `public/`, never the dev server.
+mechanics; this file holds only what no single file can state. `npm test` runs
+the homepage JS on fixtures; `tests/build.test.js` re-runs it against the built
+`public/` and skips without one, so build before trusting a green run.
 
 ## Invisible couplings
 
