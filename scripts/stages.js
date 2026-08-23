@@ -144,10 +144,6 @@ const STAGES = [
     async run(entry) {
       launch('leocad', [entry.model]);
       console.log(`LeoCAD is building ${relative(entry.model)} — save as you go.`);
-      if (await confirm('open LDView alongside as a live preview?')) {
-        launch('ldview', [entry.model]);
-        console.log('  LDView repolls the file every 3s, so a save refreshes it.');
-      }
       console.log('preview the site with `hugo server -D` — a draft entry is invisible without it.');
     },
   },
@@ -280,7 +276,9 @@ const isDone = (stage, entry) => entry.doc.exists && stage.done(entry);
 // detect their own state, so jumping backwards to redo one is fair game and
 // jumping forwards only risks the stage finding nothing to do.
 // Nothing is suggested once every stage is done; the prompt then only takes
-// a name, so a finished entry can still be sent back through a stage.
+// a name, so a finished entry can still be sent back through a stage. That
+// only happens at the start of a run — a stage that finishes the entry ends
+// the run instead of asking.
 async function chooseStage(suggested) {
   const names = STAGES.map((stage) => stage.name);
   const prompt = suggested
@@ -339,6 +337,7 @@ export async function runStages(id, only) {
       console.log(`\n${stage.name} isn't finished — pick up with \`npm run entry ${entry.number}\`.`);
       return;
     }
+    if (STAGES.every((s) => isDone(s, entry))) return;
   }
 }
 

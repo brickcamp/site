@@ -47,7 +47,7 @@ Creating a new entry happens in **stages**:
 | Stage | Does |
 |---|---|
 | `scaffold` | Creates `index.md` and a header-only `model.ldr` in a new entry folder; based on [`archetypes/entries.md`](archetypes/entries.md) |
-| `model` | Opens the model stub in LeoCAD (and optionally LDView) and standardizes the header on every later pass |
+| `model` | Opens the model stub in LeoCAD and standardizes the header on every later pass |
 | `render` | Runs LDView with an image pipeline to generate the `image.png`. The `render = { lat, lon }` in `index.md` is the viewing angle. |
 | `parts` | Reads the parts from the model, resolves aliases and offers the id list to correct mistakes |
 | `sources` | Appends a `linkbox` per given source URL |
