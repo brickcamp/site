@@ -6,7 +6,15 @@
 <div class="container">
   <div id="parts" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 g-2 g-md-3 mb-3 justify-content-center">
   </div>
+  <div id="parts-pagination" class="text-center mb-3" hidden>
+    <p id="parts-pagination-status" class="text-secondary small mb-2" aria-live="polite"></p>
+    <button id="parts-load-more" type="button" class="btn btn-success">Load more</button>
+  </div>
   <div id="entries" class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-2 g-md-3 justify-content-center">
+  </div>
+  <div id="entries-pagination" class="text-center mt-3" hidden>
+    <p id="entries-pagination-status" class="text-secondary small mb-2" aria-live="polite"></p>
+    <button id="entries-load-more" type="button" class="btn btn-success">Load more</button>
   </div>
 </div>
 

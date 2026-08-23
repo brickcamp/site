@@ -7,11 +7,15 @@ import * as appQuirks from "./quirks.js";
 import * as appScope from "./scope.js";
 
 let state;
+let entries = [];
+let parts = [];
+let entriesShown = 0;
+let partsShown = 0;
 
 document.addEventListener("DOMContentLoaded", async () => {
   await appScope.load();
   state = appState.load();
-  appView.mount(document, dispatch);
+  appView.mount(document, dispatch, loadMore);
   appQuirks.apply(document);
   await renderAll();
 });
@@ -24,6 +28,20 @@ window.addEventListener("popstate", async () => {
 async function dispatch(patch) {
   state = appState.save(appState.next(state, patch));
   await renderAll();
+}
+
+// A page never re-fetches: the list is already in memory, so this only grows
+// how much of it is rendered and moves focus onto the newly revealed items.
+function loadMore(list) {
+  if (list === "parts") {
+    const previousShown = partsShown;
+    partsShown = Math.min(parts.length, partsShown + appView.pageSize("parts"));
+    appView.renderParts(parts, partsShown, previousShown);
+  } else {
+    const previousShown = entriesShown;
+    entriesShown = Math.min(entries.length, entriesShown + appView.pageSize("entries"));
+    appView.renderEntries(entries, entriesShown, previousShown);
+  }
 }
 
 async function renderAll() {
@@ -41,8 +59,13 @@ async function renderAll() {
     return;
   }
 
-  appView.renderEntries(shown.entries);
-  appView.renderParts(shown.parts);
+  entries = shown.entries;
+  parts = shown.parts;
+  entriesShown = Math.min(entries.length, appView.pageSize("entries"));
+  partsShown = Math.min(parts.length, appView.pageSize("parts"));
+
+  appView.renderEntries(entries, entriesShown);
+  appView.renderParts(parts, partsShown);
   appView.renderScopeTabs(state);
   appView.renderFilterDropdowns(state);
 }

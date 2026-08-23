@@ -25,8 +25,7 @@ function fixDropdowns(root) {
 // Bootstrap's .sticky-top sets top: 0, so a stuck element stays fully
 // intersecting and this observer would never fire. custom.css pulls it to
 // top: -1px, so one pixel leaves the viewport and the ratio drops below the
-// threshold. Both halves are load-bearing, and "border-bottom" only has a rule
-// behind it because postcss.config.js safelists it.
+// threshold.
 function fixStickyFilter(root) {
   const sticky = root.querySelector(".border-bottom-on-sticky");
   const addBorderIfSticky = ([e]) =>
