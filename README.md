@@ -4,7 +4,7 @@ A visual dictionary of LEGO building techniques — few hundred entries, each
 showing a technique with the parts it takes, the space it occupies, and a link to
 where it came from.
 
-[![Preview of the brick.camp homepage](./assets/images/readme-preview.png "Click to open website")](https://new.brick.camp/)
+[![Preview of the brick.camp homepage](./assets/images/readme-preview.png "Click to open website")](https://brick.camp/)
 
 It's a [Hugo](https://gohugo.io/) static site with no backend. The search on the
 homepage runs entirely in the browser, against CSV lookup files generated at
