@@ -16,6 +16,12 @@ export const get = (url, options = {}) =>
     headers: { 'user-agent': UA, ...options.headers },
   });
 
+// TOML literal strings cannot contain single quotes; fall back to a basic string.
+export const tomlQuote = (value) =>
+  value.includes("'")
+    ? `"${value.replaceAll('\\', '\\\\').replaceAll('"', '\\"')}"`
+    : `'${value}'`;
+
 let env;
 export function envKey(name) {
   if (process.env[name]) return process.env[name];

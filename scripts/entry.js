@@ -5,7 +5,7 @@
 import { execFileSync } from 'node:child_process';
 import { writeFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
-import { entryDoc } from './entry-doc.js';
+import { entryEditor } from './entry-editor.js';
 import { gitAuthor, stubModel } from './model.js';
 import { root } from './shared.js';
 
@@ -44,7 +44,7 @@ export function createEntry(slug) {
   execFileSync('hugo', ['new', relative], { cwd: root, stdio: ['ignore', 'inherit', 'inherit'] });
 
   const title = slug.split('-').map((word) => word[0].toUpperCase() + word.slice(1)).join(' ');
-  const doc = entryDoc(file);
+  const doc = entryEditor(file);
   doc.setTitle(title);
   doc.setUrl(`/entry/${slug}/`);
   doc.stripArchetypeLinkbox();

@@ -17,7 +17,7 @@ import { existsSync, renameSync } from 'node:fs';
 import { createServer } from 'node:net';
 import path from 'node:path';
 import { launch, open } from './apps.js';
-import { entryDoc } from './entry-doc.js';
+import { entryEditor } from './entry-editor.js';
 import { createEntry, entryFile, highestId, isEntryId, isSlug } from './entry.js';
 import { normalizeEntry } from './ldraw-headers.js';
 import { addLink } from './link.js';
@@ -43,7 +43,7 @@ function load(id) {
   return {
     ...found,
     number: Number(found.id),
-    doc: entryDoc(found.file),
+    doc: entryEditor(found.file),
     model: existsSync(found.dir) ? modelFile(found.dir) : undefined,
     image: path.join(found.dir, 'image.png'),
   };

@@ -8,7 +8,7 @@
 
 import { execFileSync } from 'node:child_process';
 import path from 'node:path';
-import { entryDoc } from './entry-doc.js';
+import { entryEditor } from './entry-editor.js';
 import { entryFile, entryIds } from './entry.js';
 import { gitAuthor, modelFile, modelName, normalizeModel } from './model.js';
 import { root } from './shared.js';
@@ -41,7 +41,7 @@ export function normalizeEntry(id) {
   const model = modelFile(dir);
   if (!model) return null;
 
-  const doc = entryDoc(path.join(dir, 'index.md'));
+  const doc = entryEditor(path.join(dir, 'index.md'));
   if (!doc.exists) throw new Error(`${path.relative(root, dir)}: no index.md`);
   const title = doc.title;
 

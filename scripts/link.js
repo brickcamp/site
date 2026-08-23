@@ -7,7 +7,7 @@ import { existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import sharp from 'sharp';
-import { entryDoc } from './entry-doc.js';
+import { entryEditor } from './entry-editor.js';
 import { entryFile } from './entry.js';
 import { UA } from './shared.js';
 import { collect } from './link-metadata.js';
@@ -74,7 +74,7 @@ export async function addLink(entryId, url) {
   // stage in a loop — text read before it would be minutes stale by the
   // time it was written back, silently dropping any edit made meanwhile.
   const info = await collect(url);
-  const doc = entryDoc(file);
+  const doc = entryEditor(file);
   for (const linked of new Set([url, info.url])) {
     if (doc.linksTo(linked)) {
       throw new Error(`entry ${id} already links ${linked}`);

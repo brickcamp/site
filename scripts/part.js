@@ -4,26 +4,20 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
-import { envKey, get, root } from './shared.js';
-
-// TOML literal strings cannot contain single quotes; fall back to a basic string.
-const toml = (value) =>
-  value.includes("'")
-    ? `"${value.replaceAll('\\', '\\\\').replaceAll('"', '\\"')}"`
-    : `'${value}'`;
+import { envKey, get, root, tomlQuote } from './shared.js';
 
 function frontMatter(part) {
   const aliases = [...new Set([...(part.molds ?? []), ...(part.alternates ?? [])])]
     .map((id) => `/parts/${id}`)
     .sort();
 
-  let out = `+++\ntitle   = ${toml(part.name)}\n`;
+  let out = `+++\ntitle   = ${tomlQuote(part.name)}\n`;
   if (aliases.length > 0) {
-    out += `aliases = [\n${aliases.map((a) => `  ${toml(a)},\n`).join('')}]\n`;
+    out += `aliases = [\n${aliases.map((a) => `  ${tomlQuote(a)},\n`).join('')}]\n`;
   }
   out += `\n[params]\n`;
-  out += `rebrickablePage  = ${toml(part.part_url ?? '')}\n`;
-  out += `rebrickableImage = ${toml(part.part_img_url ?? '')}\n`;
+  out += `rebrickablePage  = ${tomlQuote(part.part_url ?? '')}\n`;
+  out += `rebrickableImage = ${tomlQuote(part.part_img_url ?? '')}\n`;
   out += `+++\n`;
   return out;
 }

@@ -1,23 +1,16 @@
-// The entry document — one content/entries/**/index.md, TOML front matter
-// followed by a body of linkbox shortcodes. Every read and write of one
-// goes through here, so the quoting rules are decided once.
+// Reads and edits one content/entries/**/index.md in place — TOML front
+// matter followed by a body of linkbox shortcodes. Every read and write of
+// one goes through here.
 //
-// Values are replaced in place, never reserialized: the front matter is
-// hand-ordered and hand-aligned (title/date/draft line up their '=', as do
-// url/aliases/render), and a round trip through a TOML printer would reflow
-// all 240 entries. Only the text between '=' and the end of the value moves.
-//
-// Every write re-reads the file first. A stage can sit for minutes on a
-// build, a render or a question, and the file may well have been edited in
-// the meantime — only the one field being written may change under you.
+// Re-reads before writes to catch manual changes.
+// Keeps manual value order/alignment on writes.
 
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
-import { root } from './shared.js';
+import { root, tomlQuote } from './shared.js';
 
 // The fields the scripts read or write. Everything else in an entry's front
-// matter — date, aliases, size, uses, tags — is maintained by hand and is
-// deliberately not addressable here.
+// matter — date, aliases, size, uses, tags — is maintained by hand.
 const FIELDS = {
   title: { type: 'string', required: true },
   url: { type: 'string', required: true },
@@ -29,9 +22,7 @@ const FIELDS = {
 // A new render line is aligned against this one, and inserted after it.
 const ANGLE_ANCHOR = 'aliases';
 
-/* -------------------------------------------------------------- reading -- */
-
-// Splits '+++\n<front>\n+++<body>'. Returns null when the fences are absent,
+// Splits '+++\n <front> \n+++ <body>'. Returns null when the fences are absent,
 // which is how a file that is not an entry document is told apart.
 function sections(text) {
   if (!text.startsWith('+++\n')) return null;
@@ -117,25 +108,14 @@ function parse(raw, type) {
   return table;
 }
 
-/* -------------------------------------------------------------- writing -- */
-
-// TOML literal strings cannot contain single quotes; fall back to a basic
-// string. Same rule part.js uses for a part page.
-const quote = (value) =>
-  value.includes("'")
-    ? `"${value.replaceAll('\\', '\\\\').replaceAll('"', '\\"')}"`
-    : `'${value}'`;
-
 function format(value, type) {
-  if (type === 'string') return quote(value);
-  if (type === 'array') return `[${value.map(quote).join(', ')}]`;
+  if (type === 'string') return tomlQuote(value);
+  if (type === 'array') return `[${value.map(tomlQuote).join(', ')}]`;
   if (type === 'bool') return String(value);
   return `{ ${Object.entries(value).map(([key, n]) => `${key} = ${n}`).join(', ')} }`;
 }
 
-/* ------------------------------------------------------------- document -- */
-
-export function entryDoc(file) {
+export function entryEditor(file) {
   const relative = path.relative(root, file);
   let text = existsSync(file) ? readFileSync(file, 'utf8') : '';
   let sec = text === '' ? null : sections(text);
@@ -147,8 +127,8 @@ export function entryDoc(file) {
     return sec;
   };
 
-  // Absent on a document that does not exist yet is not an error — the
-  // scaffold stage's whole job is that state. Absent on one that does is.
+  // Absent on a document that does not exist yet is not an error
+  // It's expected during the scaffold stage.
   function read(name) {
     const field = FIELDS[name];
     if (!sec) return undefined;
@@ -164,7 +144,6 @@ export function entryDoc(file) {
     return value;
   }
 
-  // Re-reads, replaces just this field's value, writes back.
   function write(name, value) {
     const front = reread().front;
     const at = locate(front, name);
@@ -210,9 +189,7 @@ export function entryDoc(file) {
     setUrl: (value) => write('url', value),
     setParts: (value) => write('parts', value),
 
-    // The only field that may not be there yet: 239 of 240 entries predate
-    // it. A new line is aligned against aliases and inserted after it, which
-    // is where the archetype puts it.
+    // Many entries predate automatic rendering, so add if missing
     setAngle(value) {
       const front = reread().front;
       if (locate(front, 'render')) return write('render', value);
@@ -243,7 +220,7 @@ export function entryDoc(file) {
       sec = sections(text);
     },
 
-    // The archetype ships an example linkbox; a fresh entry is not a source.
+    // The archetype ships an example linkbox; remove it for new entries.
     stripArchetypeLinkbox() {
       reread();
       const body = sec.body.replace(
