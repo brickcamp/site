@@ -5,8 +5,7 @@
 // width, not a model unit — a render twice as large draws the same 1px
 // outline around a twice-as-large model, so downscaling would halve the
 // weight of every line. Instead the snapshot is taken at the final content
-// size and only padded out. --supersample is the escape hatch, and it works
-// solely because it scales EdgeThickness by the same factor as the canvas.
+// size and only padded out.
 //
 // The throwaway ini exists because LDView writes its preferences back on
 // exit: it absorbs that, leaving both ldview.conf and the interactive
@@ -34,14 +33,13 @@ const SCRATCH = path.join(root, '.ldview');
 
 // Everything else — seams, edges, lighting, curve quality — is inherited
 // from ldview.conf verbatim. That is the point of committing it.
-const overrides = (canvas, supersample) => ({
+const overrides = (canvas) => ({
   SaveWidth: canvas,
   SaveHeight: canvas,
   SaveActualSize: 0,
   SaveZoomToFit: 1,
   SaveAlpha: 0,
   BackgroundColor3: 16777215,
-  ...(supersample > 1 && { EdgeThickness: supersample }),
 });
 
 function writeIni(file, values) {
@@ -60,11 +58,11 @@ function writeIni(file, values) {
   writeFileSync(file, [...lines, ...[...pending].map(([k, v]) => `${k}=${v}`), ''].join('\n'));
 }
 
-function snapshot(model, { lat, lon, supersample }) {
+function snapshot(model, { lat, lon }) {
   mkdirSync(SCRATCH, { recursive: true });
   const ini = path.join(SCRATCH, 'render.ini');
   const out = path.join(SCRATCH, 'snapshot.png');
-  writeIni(ini, overrides(CONTENT * supersample, supersample));
+  writeIni(ini, overrides(CONTENT));
 
   const { command, args } = resolveApp('ldview');
   execFileSync(
@@ -111,12 +109,8 @@ async function compress(png) {
 }
 
 // Renders model into target as an 800x800 PNG. Returns its size in bytes.
-export async function renderImage(
-  model,
-  target,
-  { lat = ANGLE.lat, lon = ANGLE.lon, supersample = 1 } = {}
-) {
-  const { data, info } = await sharp(snapshot(model, { lat, lon, supersample }))
+export async function renderImage(model, target, { lat = ANGLE.lat, lon = ANGLE.lon } = {}) {
+  const { data, info } = await sharp(snapshot(model, { lat, lon }))
     .flatten({ background: WHITE })
     .trim({ threshold: 10 })
     .png()
@@ -125,21 +119,21 @@ export async function renderImage(
   // Zoom-to-fit is meant to touch the border on the long axis, so only a
   // model touching on both is suspect: a clipped render, or a background
   // the trim could not tell from the model.
-  const canvas = CONTENT * supersample;
-  if (info.width === canvas && info.height === canvas) {
+  if (info.width === CONTENT && info.height === CONTENT) {
     console.warn('warning: no white margin on either axis — clipped render or non-white background?');
   }
 
-  const width = Math.round(info.width / supersample);
-  const height = Math.round(info.height / supersample);
-  const left = Math.round((SIZE - width) / 2);
-  const top = Math.round((SIZE - height) / 2);
+  const left = Math.round((SIZE - info.width) / 2);
+  const top = Math.round((SIZE - info.height) / 2);
 
-  let content = sharp(data);
-  if (supersample > 1) content = content.resize(width, height);
-
-  const png = await content
-    .extend({ top, left, bottom: SIZE - height - top, right: SIZE - width - left, background: WHITE })
+  const png = await sharp(data)
+    .extend({
+      top,
+      left,
+      bottom: SIZE - info.height - top,
+      right: SIZE - info.width - left,
+      background: WHITE,
+    })
     .png()
     .toBuffer();
 

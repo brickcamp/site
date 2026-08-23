@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // npm run entry — the resumable stage runner behind a new entry.
 //
-//   npm run entry [id] [stage] [-- --lat n --lon n --supersample n]
+//   npm run entry [id] [stage]
 //
 // Both positionals are optional and either order works: a pure number is the
 // id (the newest entry without one), a word is the stage.
@@ -155,27 +155,27 @@ const STAGES = [
   {
     name: 'render',
     done: (entry) => existsSync(entry.image),
-    async run(entry, flags) {
+    async run(entry) {
       // angle might have changed on a retry
       entry.doc.refresh();
 
-      const stored = entry.doc.angle;
-      const angle = {
-        lat: flags.lat ?? stored?.lat ?? ANGLE.lat,
-        lon: flags.lon ?? stored?.lon ?? ANGLE.lon,
-      };
+      let angle = entry.doc.angle ?? ANGLE;
+      for (;;) {
+        console.log(`rendering at lat ${angle.lat}, lon ${angle.lon}…`);
+        const bytes = await renderImage(entry.model, entry.image, angle);
 
-      console.log(`rendering at lat ${angle.lat}, lon ${angle.lon}…`);
-      const bytes = await renderImage(entry.model, entry.image, {
-        ...angle,
-        supersample: flags.supersample ?? 1,
-      });
+        // save angle so future re-renders look identical
+        entry.doc.setAngle(angle);
 
-      // save angle so future re-renders look identical
-      entry.doc.setAngle(angle);
+        console.log(`wrote ${relative(entry.image)} — ${(bytes / 1024).toFixed(1)} KB`);
+        open(entry.image);
 
-      console.log(`wrote ${relative(entry.image)} — ${(bytes / 1024).toFixed(1)} KB`);
-      open(entry.image);
+        if (!(await confirm('change angle?', false))) return;
+        angle = {
+          lat: Number(await ask('lat', String(angle.lat), (a) => Number.isFinite(Number(a)), 'a number')),
+          lon: Number(await ask('lon', String(angle.lon), (a) => Number.isFinite(Number(a)), 'a number')),
+        };
+      }
     },
   },
 
@@ -309,7 +309,7 @@ function report(entry) {
   console.log(`  ${cells.join('   ')}`);
 }
 
-export async function runStages(id, flags = {}, only) {
+export async function runStages(id, only) {
   for (;;) {
     let entry = load(id);
     if (entry.model) {
@@ -331,7 +331,7 @@ export async function runStages(id, flags = {}, only) {
     if (!stage) return;
 
     console.log('');
-    id = (await stage.run(entry, flags)) ?? id;
+    id = (await stage.run(entry)) ?? id;
     if (only) return;
 
     entry = load(id);
@@ -343,14 +343,7 @@ export async function runStages(id, flags = {}, only) {
 }
 
 if (process.argv[1] === import.meta.filename) {
-  const argv = process.argv.slice(2);
-  const flags = {};
-  const args = [];
-  for (let i = 0; i < argv.length; i += 1) {
-    const flag = argv[i].match(/^--([a-z]+)(?:=(.*))?$/);
-    if (flag) flags[flag[1]] = Number(flag[2] ?? argv[(i += 1)]);
-    else args.push(argv[i]);
-  }
+  const args = process.argv.slice(2);
 
   // The two positionals are told apart by shape rather than by place — a
   // pure number is the id, anything else the stage — so either may stand
@@ -366,7 +359,7 @@ if (process.argv[1] === import.meta.filename) {
   }
 
   try {
-    await runStages(id, flags, only);
+    await runStages(id, only);
   } catch (error) {
     console.error(`error: ${error.message}`);
     process.exitCode = 1;
