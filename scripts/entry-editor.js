@@ -20,7 +20,7 @@ const FIELDS = {
 };
 
 // A new render line is aligned against this one, and inserted after it.
-const ANGLE_ANCHOR = 'aliases';
+const VIEW_ANCHOR = 'aliases';
 
 // Splits '+++\n <front> \n+++ <body>'. Returns null when the fences are absent,
 // which is how a file that is not an entry document is told apart.
@@ -172,7 +172,7 @@ export function entryEditor(file) {
     get parts() {
       return read('parts');
     },
-    get angle() {
+    get view() {
       return read('render');
     },
     get isDraft() {
@@ -190,17 +190,17 @@ export function entryEditor(file) {
     setParts: (value) => write('parts', value),
 
     // Many entries predate automatic rendering, so add if missing
-    setAngle(value) {
+    setView(value) {
       const front = reread().front;
       if (locate(front, 'render')) return write('render', value);
 
-      const anchor = locate(front, ANGLE_ANCHOR);
+      const anchor = locate(front, VIEW_ANCHOR);
       if (!anchor) {
-        throw new Error(`${relative}: no ${ANGLE_ANCHOR} line to place render after`);
+        throw new Error(`${relative}: no ${VIEW_ANCHOR} line to place render after`);
       }
       // Line the new '=' up with the anchor's, and reuse its trailing gap.
       const eq = anchor.gap.indexOf('=');
-      const key = 'render'.padEnd(ANGLE_ANCHOR.length + eq) + anchor.gap.slice(eq);
+      const key = 'render'.padEnd(VIEW_ANCHOR.length + eq) + anchor.gap.slice(eq);
       const eol = front.indexOf('\n', anchor.end) + 1;
       save(front.slice(0, eol) + key + format(value, 'table') + '\n' + front.slice(eol));
     },

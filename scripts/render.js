@@ -27,19 +27,20 @@ const WHITE = '#ffffff';
 // Used only by an entry with no render line of its own, so it has to agree
 // with what the archetype writes into a new one — otherwise the same model
 // comes out from opposite sides depending on which entry it sits in.
-export const ANGLE = { lat: 30, lon: 45 };
+export const VIEW = { lat: 30, lon: 45, fov: 20 };
 
 const SCRATCH = path.join(root, '.ldview');
 
 // Everything else — seams, edges, lighting, curve quality — is inherited
 // from ldview.conf verbatim. That is the point of committing it.
-const overrides = (canvas) => ({
+const overrides = (canvas, fov) => ({
   SaveWidth: canvas,
   SaveHeight: canvas,
   SaveActualSize: 0,
   SaveZoomToFit: 1,
   SaveAlpha: 0,
   BackgroundColor3: 16777215,
+  FOV: fov,
 });
 
 function writeIni(file, values) {
@@ -58,11 +59,11 @@ function writeIni(file, values) {
   writeFileSync(file, [...lines, ...[...pending].map(([k, v]) => `${k}=${v}`), ''].join('\n'));
 }
 
-function snapshot(model, { lat, lon }) {
+function snapshot(model, { lat, lon, fov }) {
   mkdirSync(SCRATCH, { recursive: true });
   const ini = path.join(SCRATCH, 'render.ini');
   const out = path.join(SCRATCH, 'snapshot.png');
-  writeIni(ini, overrides(CONTENT));
+  writeIni(ini, overrides(CONTENT, fov));
 
   const { command, args } = resolveApp('ldview');
   execFileSync(
@@ -109,8 +110,8 @@ async function compress(png) {
 }
 
 // Renders model into target as an 800x800 PNG. Returns its size in bytes.
-export async function renderImage(model, target, { lat = ANGLE.lat, lon = ANGLE.lon } = {}) {
-  const { data, info } = await sharp(snapshot(model, { lat, lon }))
+export async function renderImage(model, target, { lat = VIEW.lat, lon = VIEW.lon, fov = VIEW.fov } = {}) {
+  const { data, info } = await sharp(snapshot(model, { lat, lon, fov }))
     .flatten({ background: WHITE })
     .trim({ threshold: 10 })
     .png()

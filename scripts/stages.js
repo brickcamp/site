@@ -24,7 +24,7 @@ import { addLink } from './link.js';
 import { RenameToMpd, modelFile, partIndex, partRefs, resolveRef } from './model.js';
 import { createPart, lookupPart } from './part.js';
 import { ask, closePrompt, confirm, isNo, isYes, question } from './prompt.js';
-import { ANGLE, renderImage } from './render.js';
+import { VIEW, renderImage } from './render.js';
 import { root } from './shared.js';
 
 const PLACEHOLDER_PARTS = ['3002', '3004'];
@@ -127,6 +127,12 @@ async function derivedParts(entry, index) {
   return derived;
 }
 
+// One number, offering what the last render used as the default.
+const askNumber = async (name, fallback, valid = () => true, hint = 'a number') => {
+  const ok = (a) => Number.isFinite(Number(a)) && valid(Number(a));
+  return Number(await ask(name, String(fallback), ok, hint));
+};
+
 const STAGES = [
   {
     name: 'scaffold',
@@ -152,24 +158,26 @@ const STAGES = [
     name: 'render',
     done: (entry) => existsSync(entry.image),
     async run(entry) {
-      // angle might have changed on a retry
+      // the view might have changed on a retry
       entry.doc.refresh();
 
-      let angle = entry.doc.angle ?? ANGLE;
+      // An entry written before a key existed is missing it, so VIEW fills in.
+      let view = { ...VIEW, ...entry.doc.view };
       for (;;) {
-        console.log(`rendering at lat ${angle.lat}, lon ${angle.lon}…`);
-        const bytes = await renderImage(entry.model, entry.image, angle);
+        console.log(`rendering at lat ${view.lat}, lon ${view.lon}, fov ${view.fov}…`);
+        const bytes = await renderImage(entry.model, entry.image, view);
 
-        // save angle so future re-renders look identical
-        entry.doc.setAngle(angle);
+        // save the view so future re-renders look identical
+        entry.doc.setView(view);
 
         console.log(`wrote ${relative(entry.image)} — ${(bytes / 1024).toFixed(1)} KB`);
         open(entry.image);
 
-        if (!(await confirm('change angle?', false))) return;
-        angle = {
-          lat: Number(await ask('lat', String(angle.lat), (a) => Number.isFinite(Number(a)), 'a number')),
-          lon: Number(await ask('lon', String(angle.lon), (a) => Number.isFinite(Number(a)), 'a number')),
+        if (!(await confirm('change view?', false))) return;
+        view = {
+          lat: await askNumber('lat', view.lat),
+          lon: await askNumber('lon', view.lon),
+          fov: await askNumber('fov', view.fov, (n) => n >= 1 && n <= 90, '1 to 90 degrees'),
         };
       }
     },
