@@ -32,7 +32,7 @@
 {{ end }}
 
 {{ define "main" }}
-<canvas id="threejs">
+<canvas id="threejs" class="d-block w-100 flex-grow-1" style="min-height: 320px; flex-basis: 0;">
 </canvas>
 
 {{ $ldraw := resources.Get "js/LDrawLoader.js" -}}
@@ -52,14 +52,18 @@
   import * as THREE from 'three';
   import {LDrawLoader} from 'three/ldraw';
 
+  const canvas    = document.getElementById("threejs");
   const scene     = new THREE.Scene();
   const camera    = new THREE.PerspectiveCamera();
-  const renderer  = new THREE.WebGLRenderer({ alpha: true, antialias: true, canvas: document.getElementById("threejs") });
+  const renderer  = new THREE.WebGLRenderer({ alpha: true, antialias: true, canvas: canvas });
   const loader    = new LDrawLoader();
   const groupName = "model";
 
   const elSegments = document.getElementById("segments-input");
   const elLayers   = document.getElementById("layers-input");
+
+  const viewDirection = new THREE.Vector3(1, 1, 1).normalize();
+  const viewMargin    = 1.0;
 
   initThree();
   initEventListeners();
@@ -68,12 +72,8 @@
   function initThree() {
     scene.add(new THREE.AmbientLight(0xffffff, 0.6));
 
-    camera.fov    = 50;
-    camera.aspect = document.documentElement.clientWidth / document.documentElement.clientHeight;
-    camera.near   = 1;
-    camera.far    = 100000;
-    camera.updateProjectionMatrix();
-    camera.position.set(400, 300, 400);
+    camera.fov = 50;
+    camera.position.copy(viewDirection).multiplyScalar(600);
     camera.lookAt(0, 0, 0);
 
     renderer.setClearColor(0x000000, 0);
@@ -87,7 +87,9 @@
   }
 
   function initEventListeners() {
-    window.addEventListener("resize", onWindowResized);
+    // Fires with the canvas' initial size too, which is what first sizes the
+    // renderer; `setSize` leaves the CSS box alone, so this cannot re-trigger.
+    new ResizeObserver(onCanvasResized).observe(canvas);
     elLayers.addEventListener("input", onInputChanged);
     elSegments.addEventListener("input", onInputChanged);
     document.getElementById("download-button").addEventListener("click", onDownload);
@@ -119,29 +121,54 @@
       group.position.sub(center);
       scene.add(group);
 
-      resetViewOnGroup(group);
+      zoomCameraToFit(group);
+      renderer.render(scene, camera);
     });
   }
 
-  function resetViewOnGroup(group) {
-    const size = new THREE.Vector3();
-    new THREE.Box3().setFromObject(group).getSize(size);
+  function resizeRenderer() {
+    const width  = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    if (width == 0 || height == 0) return false;
 
-    const pixelRatio = window.devicePixelRatio;
-    const width  = Math.floor( document.documentElement.clientWidth  * pixelRatio );
-    const height = Math.floor( document.documentElement.clientHeight * pixelRatio );
-
-    camera.aspect   = width / height;
-    const fov       = camera.fov * (Math.PI / 180);
-    const distanceV = size.y / (2 * Math.tan(fov / 2));
-    const distanceH = size.x / (2 * Math.tan(fov / 2) * camera.aspect);
-    const distance  = Math.max(distanceV, distanceH);
-    camera.updateProjectionMatrix();
-    camera.position.set(distance, distance, distance);
-    camera.lookAt(0, 0, 0);
-
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(width, height, false);
-    renderer.render(scene, camera);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    return true;
+  }
+
+  function zoomCameraToFit(group) {
+    const box    = new THREE.Box3().setFromObject(group);
+    const center = box.getCenter(new THREE.Vector3());
+    const radius = box.getBoundingSphere(new THREE.Sphere()).radius;
+
+    const distance = distanceToFit(box, center);
+    camera.position.copy(center).addScaledVector(viewDirection, distance);
+    camera.lookAt(center);
+    camera.near = Math.max(1, distance - radius);
+    camera.far  = distance + radius;
+    camera.updateProjectionMatrix();
+  }
+
+  function distanceToFit(box, center) {
+    const right  = new THREE.Vector3().crossVectors(viewDirection, camera.up).normalize();
+    const up     = new THREE.Vector3().crossVectors(right, viewDirection);
+    const tanV   = Math.tan(camera.fov * (Math.PI / 180) / 2);
+    const tanH   = tanV * camera.aspect;
+    const corner = new THREE.Vector3();
+
+    let distance = 0;
+    for (let i = 0; i < 8; i++) {
+      corner.set((i & 1) ? box.max.x : box.min.x,
+                 (i & 2) ? box.max.y : box.min.y,
+                 (i & 4) ? box.max.z : box.min.z).sub(center);
+      const depth = corner.dot(viewDirection);
+      distance = Math.max(distance,
+                          depth + Math.abs(corner.dot(right)) / tanH,
+                          depth + Math.abs(corner.dot(up))    / tanV);
+    }
+    return distance * viewMargin;
   }
 
   function getLDrawFile() {
@@ -191,13 +218,12 @@
     refreshTimeout = setTimeout(refresh, 100);
   }
 
-  var resizeTimeout;
-  function onWindowResized() {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-      const group = scene.getObjectByName(groupName);
-      if (group) resetViewOnGroup(group);      
-    }, 100);
+  function onCanvasResized() {
+    if (!resizeRenderer()) return;
+
+    const group = scene.getObjectByName(groupName);
+    if (group) zoomCameraToFit(group);
+    renderer.render(scene, camera);
   }
 
   function onDownload() {
