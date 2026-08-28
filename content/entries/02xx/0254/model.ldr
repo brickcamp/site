@@ -1,0 +1,16 @@
+0 Tiles In 2x2 Plate Underside
+0 Name: brickcamp-254.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
+1 0 0 -48 0 1 0 0 0 1 0 0 0 1 4032b.dat
+1 72 -16 -24 2 0 1 0 -1 0 0 0 0 1 3069b.dat
+1 71 2 -24 16 0 0 1 -1 0 0 0 -1 0 3069b.dat
+1 72 16 -24 -2 0 -1 0 -1 0 0 0 0 -1 3069b.dat
+1 71 -2 -24 -16 0 0 -1 -1 0 0 0 1 0 3069b.dat
+1 0 0 0 0 -1 0 0 0 -1 0 0 0 1 4032b.dat
+1 14 19 -14 37 0 1 0 -1 0 0 0 0 1 3070b.dat
+1 25 37 -14 51 0 0 1 -1 0 0 0 -1 0 3070b.dat
+1 14 51 -14 33 0 -1 0 -1 0 0 0 0 -1 3070b.dat
+1 25 33 -14 19 0 0 -1 -1 0 0 0 1 0 3070b.dat
+1 4 35 0 35 -1 0 0 0 -1 0 0 0 1 4032b.dat
