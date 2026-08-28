@@ -150,7 +150,8 @@ const STAGES = [
     async run(entry) {
       launch('leocad', [entry.model]);
       console.log(`LeoCAD is building ${relative(entry.model)} — save as you go.`);
-      console.log('preview the site with `hugo server -D` — a draft entry is invisible without it.');
+      // Keep alive through the build; closing the terminal is still fine, as stage gets re-detected.
+      await confirm('continue?');
     },
   },
 
