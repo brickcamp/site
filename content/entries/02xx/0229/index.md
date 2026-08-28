@@ -24,3 +24,11 @@ tags  = [
 >}}
 one way for a 16 sides round - "anything you want" ;-)
 {{< /linkbox >}}
+
+{{< linkbox
+    author="Michael Steindl"
+    date="2023-07-25"
+    image="link_02.jpg"
+    title="16-sides to center fixed"
+    url="https://www.flickr.com/photos/120453855@N06/53071182883"
+/>}}
