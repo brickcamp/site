@@ -9,7 +9,7 @@ import path from 'node:path';
 import sharp from 'sharp';
 import { entryEditor } from './entry-editor.js';
 import { entryFile } from './entry.js';
-import { UA } from './shared.js';
+import { get, UA } from './shared.js';
 import { collect } from './link-metadata.js';
 
 function entry(id) {
@@ -25,30 +25,38 @@ async function nextImageName(dir) {
   return `link_${String(Math.max(0, ...taken) + 1).padStart(2, '0')}.jpg`;
 }
 
-function fetchImageBytes(imageURL) {
-  // Some hosts (e.g. i.sstatic.net) sit behind Cloudflare bot checks that
-  // flag Node's fetch by its TLS/HTTP2 fingerprint even with a browser
-  // user-agent, while curl's fingerprint passes; shell out to it instead.
-  try {
-    return execFileSync('curl', [
-      '-sSL',
-      '--fail',
-      '--max-time',
-      '30',
-      '-A',
-      UA,
-      '-H',
-      `Referer: ${new URL(imageURL).origin}`,
-      imageURL,
-    ]);
-  } catch (error) {
-    const detail = error.stderr?.toString().trim() || error.message;
-    throw new Error(`image download failed: ${detail}`);
+// Bot checks weigh a client's TLS/HTTP fingerprint against the user-agent it
+// claims, and the two clients to hand fail opposite tests: some sites serve curl 
+// and block Node's fetch, some the reverse. So try both, and fail only if both fail.
+async function fetchImageBytes(imageURL) {
+  const referer = new URL(imageURL).origin;
+  const attempts = [
+    () => execFileSync(
+      'curl',
+      ['-sSL', '--fail', '--max-time', '30', '-A', UA, '-H', `Referer: ${referer}`, imageURL],
+      // stderr piped, not inherited: a first attempt that loses stays quiet.
+      { maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'pipe'] }
+    ),
+    async () => {
+      const response = await get(imageURL, { headers: { referer } });
+      if (!response.ok) throw new Error(`fetch returned ${response.status}`);
+      return Buffer.from(await response.arrayBuffer());
+    },
+  ];
+
+  const failures = [];
+  for (const attempt of attempts) {
+    try {
+      return await attempt();
+    } catch (error) {
+      failures.push(error.stderr?.toString().trim() || error.message);
+    }
   }
+  throw new Error(`image download failed: ${failures.join('; ')}`);
 }
 
 async function saveImage(imageURL, file) {
-  await sharp(fetchImageBytes(imageURL))
+  await sharp(await fetchImageBytes(imageURL))
     .resize(150, 150, { fit: 'cover' })
     .jpeg({ quality: 80, progressive: true, mozjpeg: true })
     .toFile(file);
