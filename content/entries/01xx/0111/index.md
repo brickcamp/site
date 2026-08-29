@@ -29,6 +29,16 @@ tags  = [
 This is pretty much old school, but for anyone who isn't aware of this technique its a nice way to build off the grid.
 {{< /linkbox >}}
 
+{{< linkbox
+    author="Gregory Brick"
+    date="2015-05-05"
+    image="link_02.jpg"
+    title="Angles"
+    url="https://www.flickr.com/photos/gregorybrick/17375124335"
+>}}
+In set 31036, Toy & Grocery shop, a door is placed at an angle (see step 23 in the instructions for the primary model). How did they make the angle? It's not a 3-4-5 triangle.
+{{< /linkbox >}}
+
 | ×   | 2     | 3     | 4     | 5     | 6     | 7     | 8     | 9     | 10    | 11    | 12    | 13    | 14   | 15   | 16   |
 | ---:| -----:| -----:| -----:| -----:| -----:| -----:| -----:| -----:| -----:| -----:| -----:| -----:| ----:| ----:| ----:|
 | 2   |       | 53.1  | 36.9  | 28.1  | 22.6  | 18.9  | 16.3  | 14.3  | 12.7  | 11.4  | 10.4  | 9.5   | 8.8  | 8.2  | 7.6  |
