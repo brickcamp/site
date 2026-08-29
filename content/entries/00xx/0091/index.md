@@ -28,3 +28,13 @@ tags  = [
 >}}
 This is one of many ways to make a nifty round shape fit into a brick-built hull. Go crazy and view it large.
 {{< /linkbox >}}
+
+{{< linkbox
+    author="The Magic Tuba Pixie"
+    date="2011-02-09"
+    image="link_02.jpg"
+    title="Fender / Mudguard technique."
+    url="https://www.flickr.com/photos/the-magic-tuba-pixie/5429053487"
+>}}
+Pnoi_APL asked for it. This is the technique I used for the Skipper Kite and a soon-to-be-photographed MOC, as well. No, the gap isn't completely closed, but it's real close...
+{{< /linkbox >}}
