@@ -1,0 +1,17 @@
+0 Slightly Angled Hinges
+0 Name: brickcamp-255.ldr
+0 Author: Tobias Buckdahn [brick.camp]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licensed under CC BY 4.0 : see https://brick.camp/legal
+1 25 -10 -40 10 1 0 0 0 1 0 0 0 1 4070.dat
+1 25 10 -40 10 1 0 0 0 1 0 0 0 1 4070.dat
+1 14 0 -48 10 1 0 0 0 1 0 0 0 1 3023b.dat
+1 14 0 -56 10 1 0 0 0 1 0 0 0 1 3023b.dat
+1 0 0 -80 10 1 0 0 0 1 0 0 0 1 11211.dat
+1 1 0 -70 -24 1 0 0 0 0 -1 0 1 0 3937.dat
+1 1 0 -30 -20 1 0 0 0 0 -1 0 1 0 3937.dat
+0 !LEOCAD PIECE PIVOT  0 10 0 1 0 0 0 1 0 0 0 1
+1 19 0 -28.9547 -19.9452 -1 0 0 0 -0.104528 0.994522 0 0.994522 0.104528 6134.dat
+0 !LEOCAD PIECE PIVOT  0 10 0 1 0 0 0 1 0 0 0 1
+1 19 0 -68.9344 -24.1387 -1 0 0 0 -0.104528 0.994522 0 0.994522 0.104528 6134.dat
+1 14 -10 -38.2625 -28.9589 0 0 -1 -0.994522 -0.104528 0 -0.104528 0.994522 0 3710.dat
