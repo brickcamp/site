@@ -1,0 +1,6 @@
+{{- if .Content -}}
+  {{/* add bootstrap styling to markdown tables */}}
+  {{- $old := "<table>" -}}
+  {{- $new := "<table class=\"d-block table table-responsive table-sm table-striped-columns\">" -}}
+  {{- replace .Content $old $new | safeHTML -}}
+{{- end -}}

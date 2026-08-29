@@ -30,7 +30,7 @@ I wrote a small computer program to calculate how you can build angled walls wit
 {{< /linkbox >}}
 
 | base    | diagonal | A°   | B°   |
-| ------- | -------- | ---- | ---- |
+|:-------:|:--------:|:----:|:----:|
 | 4 × 5   | 6        | 36.9 | 53.1 |
 | 6 × 13  | 14       | 22.6 | 67.4 |
 | 9 × 16  | 18       | 28.1 | 61.9 |
