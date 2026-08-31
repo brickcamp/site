@@ -5,6 +5,6 @@ aliases = [
 ]
 
 [params]
-rebrickablePage  = 'https://rebrickable.com/parts/2458/brick-special-1-x-2-with-pin/'
-rebrickableImage = 'https://cdn.rebrickable.com/media/parts/elements/4211087.jpg'
+rebrickablePage  = 'https://rebrickable.com/parts/44865/brick-special-1-x-2-with-pin-bottom-stud-holder/'
+rebrickableImage = 'https://cdn.rebrickable.com/media/parts/elements/6321769.jpg'
 +++
