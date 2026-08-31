@@ -106,11 +106,16 @@ function byFieldValue(objects, field, value) {
   return objects.filter((obj) => obj[field] === value);
 }
 
+// Dimensions are titled '1 x 2', but sometimes typed '1x2'. Collapsing them on both sides 
+// lets either form find either, also mid-word so results don't blink out between keystrokes.
+const forSearch = (text) => text.toLowerCase().replace(/(\d)\s*[x×]\s*/g, "$1x");
+
 function bySearch(objects, search) {
   if (!search) {
     return objects;
   }
-  return objects.filter((obj) => obj.title.toLowerCase().includes(search));
+  const needle = forSearch(search);
+  return objects.filter((obj) => forSearch(obj.title).includes(needle));
 }
 
 function shuffle(array) {

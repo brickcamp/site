@@ -114,6 +114,23 @@ test("the search box acts on parts only while the part list is open", async () =
   assert.deepEqual(picked.map((p) => p.id), ["3001"]);
 });
 
+test("a dimension matches however the query spells or spaces it", async () => {
+  use({
+    ...FILES,
+    "/data/filtered/__any-__any-__any/index.csv":
+      row("/entry/a/", "Jagged Wall", "s", "") + "\n" +
+      row("/entry/b/", "Plate 1 x 2 Ring", "l", ""),
+  });
+  for (const query of ["1x2", "1 x 2", "1×2", "1 x"]) {
+    const found = await lookup.scopedEntries(state({ query }));
+    assert.deepEqual(found.map((e) => e.title), ["Plate 1 x 2 Ring"], `query "${query}"`);
+  }
+
+  use();
+  const parts = await lookup.scopedParts(state({ base: "part", query: "2x3" }));
+  assert.deepEqual(parts.map((p) => p.id), ["3002"]);
+});
+
 test("no parts outside the part scope", async () => {
   assert.deepEqual(await lookup.scopedParts(state({ base: "shape" })), []);
 });
