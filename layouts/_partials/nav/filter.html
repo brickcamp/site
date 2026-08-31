@@ -52,7 +52,11 @@
 
 <div class="bg-body sticky-top border-bottom-on-sticky">
   <div class="container">
-    <nav id="filter-nav" class="d-flex flex-row flex-nowrap overflow-x-auto w-100 py-1">
+    <nav id="filter-nav" class="d-flex flex-row flex-nowrap align-items-center overflow-x-auto w-100 py-1">
+      {{/* No d-flex here: its !important beats [hidden], so the trail would never hide. */}}
+      <nav id="part-trail" aria-label="breadcrumb" hidden>
+        <ol class="breadcrumb flex-nowrap mb-0"></ol>
+      </nav>
       {{- partial "nav/dropdown.html" (dict "id" "type"  "items" $types) -}}
       {{- partial "nav/dropdown.html" (dict "id" "value" "items" $values) -}}
       {{- partial "nav/dropdown.html" (dict "id" "size"  "items" $sizes "class" "ms-auto") -}}

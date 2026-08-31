@@ -151,7 +151,7 @@ test("the trail leads back out, and only from somewhere", async () => {
 
   const inGroup = await lookup.scopedTrail(state({ base: "part", partgroup: "bricks" }));
   assert.deepEqual(inGroup, [
-    { title: "All parts", dim: "partgroup", value: ANY },
+    { title: "All", dim: "partgroup", value: ANY },
     { title: "Bricks", dim: "partgroup", value: "bricks" },
   ]);
 });
@@ -160,7 +160,7 @@ test("a part's own group leads the trail, whatever the URL says", async () => {
   const trail = await lookup.scopedTrail(
     state({ base: "part", part: "3001", partgroup: "nonesuch" }),
   );
-  assert.deepEqual(trail.map((crumb) => crumb.title), ["All parts", "Bricks", "Brick 2 x 4"]);
+  assert.deepEqual(trail.map((crumb) => crumb.title), ["All", "Bricks", "Brick 2 x 4"]);
 });
 
 test("the search box acts on parts only while the part list is open", async () => {

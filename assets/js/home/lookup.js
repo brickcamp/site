@@ -71,7 +71,7 @@ export async function scopedTrail(state) {
   const wanted = part ? part.partgroup : state.partgroup;
   const group = groups.find((candidate) => candidate.id === wanted);
 
-  const trail = [{ title: "All parts", dim: "partgroup", value: ANY }];
+  const trail = [{ title: "All", dim: "partgroup", value: ANY }];
   if (group) {
     trail.push({ title: group.title, dim: "partgroup", value: group.id });
   }

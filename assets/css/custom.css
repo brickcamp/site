@@ -49,6 +49,41 @@ body {
   z-index: 2;
 }
 
+#filter-nav > * {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* shrink to make room for sort/filter on small screens */
+#part-trail {
+  flex-shrink: 1;
+  min-width: 0;
+  padding-inline: 0.75rem;
+}
+
+#part-trail .breadcrumb-item {
+  flex-shrink: 0;
+}
+
+#part-trail .breadcrumb-item:last-child {
+  flex-shrink: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* hide part group on md screens, but keep it readable for screen readers */
+@media (max-width: 767.98px) {
+  #part-trail .breadcrumb-item:not(:first-child):not(:last-child) > a {
+    font-size: 0;
+  }
+
+  #part-trail .breadcrumb-item:not(:first-child):not(:last-child) > a::before {
+    content: "…";
+    font-size: 1rem;
+  }
+}
+
 #filter-nav .dropdown-toggle {
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #6c757d;
