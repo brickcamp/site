@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Axle and Pin Connector Triple - 120°'
+title      = 'Technic Axle and Pin Connector Triple - 120°'
+partgroups = ['technic-connectors']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/10288/technic-axle-and-pin-connector-triple-120-offset/'

@@ -1,5 +1,6 @@
 +++
-title   = 'Brick Special 1 x 2 with Masonry Brick Profile'
+title      = 'Brick Special 1 x 2 with Masonry Brick Profile'
+partgroups = ['bricks-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/98283/brick-special-1-x-2-with-masonry-brick-profile/'

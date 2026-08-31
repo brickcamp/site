@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Pin Connector Plate 1 x 2 x 1.66 with Two Holes On Top'
+title      = 'Technic Pin Connector Plate 1 x 2 x 1.66 with Two Holes On Top'
+partgroups = ['technic-connectors']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/32530/technic-pin-connector-plate-1-x-2-x-1-23-two-holes-on-top/'

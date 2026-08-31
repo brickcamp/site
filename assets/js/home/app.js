@@ -71,6 +71,7 @@ async function renderAll() {
 
   appView.renderEntries(entries, entriesShown);
   appView.renderParts(parts, partsShown);
+  appView.renderTrail(shown.trail);
   appView.renderScopeTabs(state);
   appView.renderFilterDropdowns(state);
 }
@@ -80,10 +81,11 @@ async function renderAll() {
 // no longer matches. Taking it as an argument is what keeps the tag and the
 // fetch it describes from ever coming apart.
 async function scopedItems(forState) {
-  const [entries, parts] = await Promise.all([
+  const [entries, parts, trail] = await Promise.all([
     appLookup.scopedEntries(forState),
     appLookup.scopedParts(forState),
+    appLookup.scopedTrail(forState),
   ]);
 
-  return { state: forState, entries: entries, parts: parts };
+  return { state: forState, entries: entries, parts: parts, trail: trail };
 }

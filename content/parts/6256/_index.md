@@ -1,5 +1,6 @@
 +++
-title   = 'Equipment Dish / Plate / Bowl 3 x 3'
+title      = 'Equipment Dish / Plate / Bowl 3 x 3'
+partgroups = ['minifig-accessories']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/6256/equipment-dish-plate-bowl-3-x-3-plain/'

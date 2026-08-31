@@ -4,6 +4,7 @@
 import { ANY, scopeFor } from "./scope.js";
 
 const PARTS_URL = "/parts/index.csv";
+const GROUPS_URL = "/partgroups/index.csv";
 const TITLE_ORDER_URL = "/data/sorted/title-asc/index.csv";
 
 const cache = new Map();
@@ -17,7 +18,7 @@ export function useFetch(fn) {
 }
 
 export async function scopedEntries(state) {
-  if (scopeFor(state).isPartList) {
+  if (!scopeFor(state).hasEntries) {
     return [];
   }
 
@@ -40,8 +41,44 @@ export async function scopedParts(state) {
     return parts.filter((part) => part.id === state.part);
   }
 
-  // Listing all parts is the one mode in which the search box acts on parts.
-  return bySearch(parts, state.query);
+  // Listing parts is the one mode in which the search box acts on parts.
+  if (state.partgroup !== ANY) {
+    const members = parts.filter((part) => part.partgroup === state.partgroup);
+    return bySearch(members, state.query);
+  }
+
+  // Matching single parts are not shown, if they are part of a matching group
+  const groups = bySearch(await fetchRows(GROUPS_URL, parseGroupRow), state.query);
+  const covered = new Set(groups.map((group) => group.id));
+  const loose = bySearch(parts, state.query).filter((part) => !covered.has(part.partgroup));
+  return [...groups, ...loose].sort((a, b) => a.title.localeCompare(b.title));
+}
+
+// The way back out of an open group or part, as crumbs. Each is a control
+// carrying the one dimension that leads to it; state.js does the rest, since
+// picking a group clears the part.
+export async function scopedTrail(state) {
+  if (!scopeFor(state).hasParts || (state.part === ANY && state.partgroup === ANY)) {
+    return [];
+  }
+
+  const parts = await fetchRows(PARTS_URL, parsePartRow);
+  const part = parts.find((candidate) => candidate.id === state.part);
+
+  // A hand-edited URL can name a group that does not hold the part. The part's
+  // own group is the truth, so that going up goes where the list came from.
+  const groups = await fetchRows(GROUPS_URL, parseGroupRow);
+  const wanted = part ? part.partgroup : state.partgroup;
+  const group = groups.find((candidate) => candidate.id === wanted);
+
+  const trail = [{ title: "All parts", dim: "partgroup", value: ANY }];
+  if (group) {
+    trail.push({ title: group.title, dim: "partgroup", value: group.id });
+  }
+  if (part) {
+    trail.push({ title: part.title, dim: "part", value: part.id });
+  }
+  return trail;
 }
 
 async function fetchSortOrder(state) {
@@ -57,8 +94,10 @@ async function fetchEntries(state) {
     return fetchRows("/parts/" + state.part + "/index.csv", parseEntryRow);
   }
 
-  // Lookup files are keyed by base and type only, never by value — entries carry
-  // values no dropdown lists — so the value filter has to run here.
+  if (state.partgroup !== ANY) {
+    return fetchRows("/partgroups/" + state.partgroup + "/index.csv", parseEntryRow);
+  }
+
   const scope = [state.base, state.type, ANY].join("-");
   const entries = await fetchRows("/data/filtered/" + scope + "/index.csv", parseEntryRow);
   if (state.value === ANY) {
@@ -141,12 +180,28 @@ function parseEntryRow(line) {
 
 // Part rows are written by layouts/parts/taxonomy.csv.
 function parsePartRow(line) {
-  const [id, title] = line.split("\t");
+  const [id, title, partgroup] = line.split("\t");
   return {
     id: id,
+    dim: "part",
     link: "#",
     image: "/parts/" + id + "/__image-min.webp",
     title: title,
+    partgroup: partgroup ?? "",
+  };
+}
+
+// Group rows are written by layouts/partgroups/taxonomy.csv. A group has no
+// image of its own — the row names the member's it borrows.
+function parseGroupRow(line) {
+  const [id, title, count, image] = line.split("\t");
+  return {
+    id: id,
+    dim: "partgroup",
+    link: "#",
+    image: image,
+    title: title,
+    note: count === "1" ? "1 part" : count + " parts",
   };
 }
 

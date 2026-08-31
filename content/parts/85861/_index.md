@@ -1,5 +1,6 @@
 +++
-title   = 'Plate Round 1 x 1 with Open Stud'
+title      = 'Plate Round 1 x 1 with Open Stud'
+partgroups = ['plates-round-curved-dishes']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/85861/plate-round-1-x-1-with-open-stud/'

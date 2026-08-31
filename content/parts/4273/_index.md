@@ -1,9 +1,10 @@
 +++
-title   = 'Technic Axle and Pin Connector Toggle Joint Toothed'
-aliases = [
+title      = 'Technic Axle and Pin Connector Toggle Joint Toothed'
+aliases    = [
   '/parts/4273a',
   '/parts/4273b',
 ]
+partgroups = ['technic-connectors']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/4273b/technic-axle-and-pin-connector-toggle-joint-toothed-with-slots/'

@@ -1,5 +1,6 @@
 +++
-title   = 'Brick Special 1 x 1 with Clip Horizontal'
+title      = 'Brick Special 1 x 1 with Clip Horizontal'
+partgroups = ['bricks-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/60476/brick-special-1-x-1-with-clip-horizontal/'

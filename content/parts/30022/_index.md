@@ -1,5 +1,6 @@
 +++
-title   = 'Panel, Trapezoid, Tipper End Flat without Pins'
+title      = 'Panel, Trapezoid, Tipper End Flat without Pins'
+partgroups = ['panels']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/30022/panel-trapezoid-tipper-end-flat-without-pins/'

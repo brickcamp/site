@@ -1,9 +1,10 @@
 +++
-title   = 'Brick Arch 1 x 5 x 4'
-aliases = [
+title      = 'Brick Arch 1 x 5 x 4'
+aliases    = [
   '/parts/14395',
   '/parts/76768',
 ]
+partgroups = ['bricks-curved']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/2339/brick-arch-1-x-5-x-4-continuous-bow/'

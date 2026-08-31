@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Axle Connector Hub with 3 Axles - 120°'
+title      = 'Technic Axle Connector Hub with 3 Axles - 120°'
+partgroups = ['technic-connectors']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/57585/technic-axle-connector-hub-with-3-axles-at-120/'

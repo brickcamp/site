@@ -1,8 +1,9 @@
 +++
-title   = 'Road Sign Clip-on 2.2 x 2.667 Triangular'
-aliases = [
+title      = 'Road Sign Clip-on 2.2 x 2.667 Triangular'
+aliases    = [
   '/parts/65676',
 ]
+partgroups = ['flags-banners-signs']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/30259/road-sign-clip-on-22-x-2667-triangular/'

@@ -1,8 +1,9 @@
 +++
-title   = 'Plate Special 1 x 1 with Clip Horizontal'
-aliases = [
+title      = 'Plate Special 1 x 1 with Clip Horizontal'
+aliases    = [
   '/parts/61252',
 ]
+partgroups = ['plates-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/6019/plate-special-1-x-1-with-clip-horizontal-thick-u-clip/'

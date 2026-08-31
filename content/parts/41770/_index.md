@@ -1,5 +1,6 @@
 +++
-title   = 'Wedge Plate 4 x 2 Left'
+title      = 'Wedge Plate 4 x 2 Left'
+partgroups = ['plates-wedged']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/41770/wedge-plate-4-x-2-left/'

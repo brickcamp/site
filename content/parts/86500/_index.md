@@ -1,8 +1,9 @@
 +++
-title   = 'Dome Hemisphere 4 x 4'
-aliases = [
+title      = 'Dome Hemisphere 4 x 4'
+aliases    = [
   '/parts/30208',
 ]
+partgroups = ['bricks-round-cones']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/86500/dome-hemisphere-4-x-4/'

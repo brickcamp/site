@@ -1,8 +1,9 @@
 +++
-title   = 'Brick 2 x 4 x 2 with Holes on Sides'
-aliases = [
+title      = 'Brick 2 x 4 x 2 with Holes on Sides'
+aliases    = [
   '/parts/6061b',
 ]
+partgroups = ['bricks-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/6061/brick-2-x-4-x-2-with-holes-on-sides/'

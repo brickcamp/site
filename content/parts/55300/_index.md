@@ -1,8 +1,9 @@
 +++
-title   = 'Tool Wrench / Spanner, Box'
-aliases = [
+title      = 'Tool Wrench / Spanner, Box'
+aliases    = [
   '/parts/604552',
 ]
+partgroups = ['minifig-shields-weapons-tools']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/55300/tool-wrench-spanner-box-6-rib-handle/'

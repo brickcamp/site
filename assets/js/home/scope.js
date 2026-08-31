@@ -50,14 +50,22 @@ export function scopeFor(state) {
   // so the dimensions that describe entries have nothing to act on.
   const isPartList = scope.from === "parts" && state.part === ANY;
 
+  // An open group is the one state that shows both lists at once — its members
+  // and the entries using any of them. Size and sort stay away even so: they
+  // are entry dimensions, and a dropdown over two lists that only moves one
+  // reads as broken.
+  const isGroupOpen = isPartList && state.partgroup !== ANY;
+
   return {
     hasTypes: scope.types.size > 0,
     hasValues:
       scope.values.size > 0 && (state.type === ANY || type?.hasValues !== false),
     hasParts: scope.from === "parts",
+    hasEntries: !isPartList || isGroupOpen,
     hasSize: !isPartList,
     hasSort: !isPartList,
     isPartList: isPartList,
+    isGroupOpen: isGroupOpen,
     labelFor: (dimension, value) => labelFor(scope, dimension, value),
   };
 }

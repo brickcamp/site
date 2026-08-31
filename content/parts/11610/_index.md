@@ -1,5 +1,6 @@
 +++
-title   = 'Cone 1 x 1 Inverted with Bar at Bottom / Ice Cream Cone'
+title      = 'Cone 1 x 1 Inverted with Bar at Bottom / Ice Cream Cone'
+partgroups = ['bricks-round-cones']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/11610/cone-1-x-1-inverted-with-bar-at-bottom-ice-cream-cone/'

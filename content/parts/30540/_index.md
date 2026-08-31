@@ -1,8 +1,9 @@
 +++
-title   = 'Hinge Brick 1 x 2 Locking with 2 Fingers Horizontal End'
-aliases = [
+title      = 'Hinge Brick 1 x 2 Locking with 2 Fingers Horizontal End'
+aliases    = [
   '/parts/54672',
 ]
+partgroups = ['hinges-arms-turntables']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/30540/hinge-brick-1-x-2-locking-with-2-fingers-horizontal-end-9-teeth/'

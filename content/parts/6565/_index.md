@@ -1,5 +1,6 @@
 +++
-title   = 'Wedge 3 x 2 Left'
+title      = 'Wedge 3 x 2 Left'
+partgroups = ['bricks-wedged']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/6565/wedge-3-x-2-left/'

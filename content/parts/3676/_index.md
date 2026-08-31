@@ -1,5 +1,6 @@
 +++
-title   = 'Slope Inverted 45° 2 x 2 Double Convex'
+title      = 'Slope Inverted 45° 2 x 2 Double Convex'
+partgroups = ['bricks-sloped']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/3676/slope-inverted-45-2-x-2-double-convex/'

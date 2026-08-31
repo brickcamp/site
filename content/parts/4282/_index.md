@@ -1,5 +1,6 @@
 +++
-title   = 'Plate 2 x 16'
+title      = 'Plate 2 x 16'
+partgroups = ['plates']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/4282/plate-2-x-16/'

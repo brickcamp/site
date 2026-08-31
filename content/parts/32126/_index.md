@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Axle and Pin Connector Toggle Joint Smooth'
+title      = 'Technic Axle and Pin Connector Toggle Joint Smooth'
+partgroups = ['technic-connectors']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/32126/technic-axle-and-pin-connector-toggle-joint-smooth/'

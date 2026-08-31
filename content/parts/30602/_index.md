@@ -1,5 +1,6 @@
 +++
-title   = 'Slope Curved 2 x 2 with Lip, No Studs'
+title      = 'Slope Curved 2 x 2 with Lip, No Studs'
+partgroups = ['bricks-curved']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/30602/slope-curved-2-x-2-with-lip-no-studs/'

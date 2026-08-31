@@ -1,5 +1,6 @@
 +++
-title   = 'Turntable 2 x 2 Plate - Top'
+title      = 'Turntable 2 x 2 Plate - Top'
+partgroups = ['hinges-arms-turntables']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/3679/turntable-2-x-2-plate-top/'

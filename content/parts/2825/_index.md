@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Beam 1 x 4 Thin with Stud Connector'
+title      = 'Technic Beam 1 x 4 Thin with Stud Connector'
+partgroups = ['technic-beams']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/2825/technic-beam-1-x-4-thin-with-stud-connector/'

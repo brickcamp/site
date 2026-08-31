@@ -29,6 +29,13 @@ Nothing joins these ends but a string convention; grep won't find them.
   keys, and the archetype is the only thing that puts them there. Rename one in
   `archetypes/entries.md` and the schema must follow — a required field then
   throws by name on every existing entry, an optional one goes quietly missing.
+- **Part groups.** A Rebrickable `part_cat_id` becomes a folder name by
+  `groupSlug` in `scripts/partgroup.js`, a part names that folder in its
+  `partgroups` front matter, `layouts/partgroups/*.csv` publish it, and
+  `lookup.js` reads it back as the `partgroup` dimension — one string, five
+  places, no compiler between them. A group's own `rebrickablePartCategory`
+  is what tells the script a category is claimed, so splitting one category
+  across two groups stops the script rather than misfiling into either.
 - **JS-only CSS classes.** purgecss's allowlist is `hugo_stats.json`: only
   classes a *template* mentions. A class named solely by a `classList.toggle`
   must be safelisted in `postcss.config.js` or it ships with no rule. The file is
@@ -52,5 +59,7 @@ follows base and type alone. Don't move it back into the build.
   is legal, and opens the scope.
 - **A draft is excluded from `.Pages`**, so no entry partial runs on one: only
   `hugo -D` checks a new entry.
+- **A part no entry names is no term**, so it is in no lookup file and in no
+  part list — and a part group counts and shows only the members that are.
 - Tag term pages are `render = 'never'`: a tag reaches `public/` only via a card
   or lookup file — renaming an unscoped tag changes no output.

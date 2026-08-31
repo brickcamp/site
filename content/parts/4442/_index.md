@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Plate 1 x 8 with Toothed Ends'
+title      = 'Technic Plate 1 x 8 with Toothed Ends'
+partgroups = ['technic-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/4442/technic-plate-1-x-8-with-toothed-ends/'

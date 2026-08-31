@@ -1,5 +1,6 @@
 +++
-title   = 'Hinge Brick 1 x 2 Base'
+title      = 'Hinge Brick 1 x 2 Base'
+partgroups = ['hinges-arms-turntables']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/3937/hinge-brick-1-x-2-base/'

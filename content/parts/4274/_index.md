@@ -1,8 +1,9 @@
 +++
-title   = 'Technic Pin 1/2'
-aliases = [
+title      = 'Technic Pin 1/2'
+aliases    = [
   '/parts/89678',
 ]
+partgroups = ['technic-pins']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/4274/technic-pin-12/'

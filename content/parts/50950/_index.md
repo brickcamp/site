@@ -1,5 +1,6 @@
 +++
-title   = 'Slope Curved 3 x 1'
+title      = 'Slope Curved 3 x 1'
+partgroups = ['bricks-curved']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/50950/slope-curved-3-x-1-no-studs/'

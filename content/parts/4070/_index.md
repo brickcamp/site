@@ -1,5 +1,6 @@
 +++
-title   = 'Brick Special 1 x 1 with Headlight'
+title      = 'Brick Special 1 x 1 with Headlight'
+partgroups = ['bricks-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/4070/brick-special-1-x-1-with-headlight/'

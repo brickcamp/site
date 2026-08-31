@@ -10,8 +10,10 @@ let root;
 let doc;
 let elSearchInput;
 let elScopeTabs;
+let elPartTrail;
 let elPartList;
 let elPartTemplate;
+let elCrumbTemplate;
 let elPartPagination;
 let elPartStatus;
 let elPartLoadMore;
@@ -24,6 +26,7 @@ let elEntryLoadMore;
 let elEntryColumnBreakpoints;
 let searchesEntries;
 let searchesParts;
+let searchesPartgroups;
 
 // Takes the root to render into, the callback for user intents, and the
 // callback for a "load more" click, so nothing is read from the DOM before a
@@ -33,8 +36,10 @@ export function mount(mountRoot, onIntent, onLoadMore) {
   doc = root.ownerDocument ?? root;
   elSearchInput = root.querySelector("#search-input");
   elScopeTabs = root.querySelectorAll("#scope-tabs [data-dim]");
+  elPartTrail = root.querySelector("#part-trail");
   elPartList = root.querySelector("#parts");
   elPartTemplate = root.querySelector("#part-template");
+  elCrumbTemplate = root.querySelector("#crumb-template");
   elPartPagination = root.querySelector("#parts-pagination");
   elPartStatus = root.querySelector("#parts-pagination-status");
   elPartLoadMore = root.querySelector("#parts-load-more");
@@ -49,6 +54,7 @@ export function mount(mountRoot, onIntent, onLoadMore) {
 
   searchesEntries = elSearchInput.placeholder;
   searchesParts = elSearchInput.dataset.placeholderParts ?? searchesEntries;
+  searchesPartgroups = elSearchInput.dataset.placeholderPartgroups ?? searchesParts;
 
   elPartLoadMore.addEventListener("click", () => onLoadMore("parts"));
   elEntryLoadMore.addEventListener("click", () => onLoadMore("entries"));
@@ -92,9 +98,15 @@ export function renderSearchQuery(state) {
   elSearchInput.value = state.query;
 }
 
-// The part list searches parts, every other scope searches entries — say which.
+// The part list searches parts, an open group searches both lists at once,
+// every other scope searches entries — say which.
 export function renderSearchPlaceholder(state) {
-  const text = appScope.scopeFor(state).isPartList ? searchesParts : searchesEntries;
+  const scope = appScope.scopeFor(state);
+  const text = scope.isGroupOpen
+    ? searchesPartgroups
+    : scope.isPartList
+      ? searchesParts
+      : searchesEntries;
   elSearchInput.placeholder = text;
   elSearchInput.setAttribute("aria-label", text.replace(/\.+$/, ""));
 }
@@ -154,6 +166,32 @@ export function renderParts(parts, shown, focusFromIndex) {
   renderPagination(elPartPagination, elPartStatus, elPartLoadMore, parts.length, shown, "parts");
 }
 
+// Empty above the part list itself, so the trail only appears once there is
+// somewhere to go back to.
+export function renderTrail(trail) {
+  elPartTrail.hidden = trail.length === 0;
+
+  const fragment = doc.createDocumentFragment();
+  trail.forEach((crumb, index) => {
+    const elCrumb = newItemFromTemplate(elCrumbTemplate, {
+      ...crumb,
+      id: crumb.value,
+      link: "#",
+    });
+
+    // The last crumb is where the reader already is: a label, not a control.
+    if (index === trail.length - 1) {
+      const elItem = elCrumb.firstElementChild;
+      elItem.classList.add("active");
+      elItem.setAttribute("aria-current", "page");
+      elItem.querySelector(".insert-link").replaceWith(doc.createTextNode(crumb.title));
+    }
+    fragment.appendChild(elCrumb);
+  });
+
+  elPartTrail.querySelector("ol").replaceChildren(fragment);
+}
+
 export function renderEntries(entries, shown, focusFromIndex) {
   renderItems(elEntryList, elEntryTemplate, entries, shown, focusFromIndex);
   renderPagination(elEntryPagination, elEntryStatus, elEntryLoadMore, entries.length, shown, "entries");
@@ -209,9 +247,18 @@ function newItemFromTemplate(template, item) {
     elTitle.innerText = item.title;
   }
 
+  // Only a group carries a note — what it holds, so the card reads as a bucket.
+  const elNote = result.querySelector(".insert-note");
+  if (elNote) {
+    elNote.innerText = item.note ?? "";
+    elNote.hidden = !item.note;
+  }
+
   // A card that declares a dimension is a control: the item's id is its value.
+  // Parts and groups share the template, so the item says which it sets.
   const elIntent = result.querySelector("[data-dim]");
   if (elIntent) {
+    elIntent.dataset.dim = item.dim ?? elIntent.dataset.dim;
     elIntent.dataset.value = item.id;
   }
 

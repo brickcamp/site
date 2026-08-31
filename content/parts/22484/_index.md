@@ -1,5 +1,6 @@
 +++
-title   = 'Bar 2L with Towball'
+title      = 'Bar 2L with Towball'
+partgroups = ['bars-ladders-fences']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/22484/bar-2l-with-towball/'

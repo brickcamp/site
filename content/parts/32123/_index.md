@@ -1,9 +1,10 @@
 +++
-title   = 'Technic Bush 1/2 Smooth'
-aliases = [
+title      = 'Technic Bush 1/2 Smooth'
+aliases    = [
   '/parts/32123a',
   '/parts/32123b',
 ]
+partgroups = ['technic-bushes']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/32123b/technic-bush-12-smooth-with-axle-hole-semi-reduced/'

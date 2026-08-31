@@ -1,8 +1,9 @@
 +++
-title   = 'Technic Axle 2'
-aliases = [
+title      = 'Technic Axle 2'
+aliases    = [
   '/parts/3704',
 ]
+partgroups = ['technic-axles']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/32062/technic-axle-2-notched/'

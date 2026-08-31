@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Axle 5'
+title      = 'Technic Axle 5'
+partgroups = ['technic-axles']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/32073/technic-axle-5/'

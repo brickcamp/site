@@ -1,5 +1,6 @@
 +++
-title   = 'Hinge Plate 1 x 4 [Vehicle Roof Holder]'
+title      = 'Hinge Plate 1 x 4 [Vehicle Roof Holder]'
+partgroups = ['hinges-arms-turntables']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/4315/hinge-vehicle-roof-holder-1-x-4/'

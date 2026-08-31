@@ -1,5 +1,6 @@
 +++
-title   = 'Plate Special 1 x 1 Rounded with Handle'
+title      = 'Plate Special 1 x 1 Rounded with Handle'
+partgroups = ['plates-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/26047/plate-special-1-x-1-rounded-with-handle/'

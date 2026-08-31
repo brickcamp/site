@@ -1,8 +1,9 @@
 +++
-title   = 'Plate 1 x 2'
-aliases = [
+title      = 'Plate 1 x 2'
+aliases    = [
   '/parts/3023a',
 ]
+partgroups = ['plates']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/3023/plate-1-x-2/'

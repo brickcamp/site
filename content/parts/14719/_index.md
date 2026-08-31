@@ -1,5 +1,6 @@
 +++
-title   = 'Tile 2 x 2 Corner'
+title      = 'Tile 2 x 2 Corner'
+partgroups = ['tiles']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/14719/tile-2-x-2-corner/'

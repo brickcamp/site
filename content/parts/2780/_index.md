@@ -1,9 +1,10 @@
 +++
-title   = 'Technic Pin with Friction'
-aliases = [
+title      = 'Technic Pin with Friction'
+aliases    = [
   '/parts/4459',
   '/parts/61332',
 ]
+partgroups = ['technic-pins']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/2780/technic-pin-with-friction-ridges-lengthwise-and-center-slots/'

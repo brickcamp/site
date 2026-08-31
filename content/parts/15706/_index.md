@@ -1,5 +1,6 @@
 +++
-title   = 'Wedge Plate 4 Stud 45° Angle Plate / A Plate'
+title      = 'Wedge Plate 4 Stud 45° Angle Plate / A Plate'
+partgroups = ['plates-wedged']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/15706/wedge-plate-4-stud-45-angle-plate/'

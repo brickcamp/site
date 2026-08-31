@@ -1,10 +1,11 @@
 +++
-title   = 'Slope 45° 2 x 1 Double / Inverted'
-aliases = [
+title      = 'Slope 45° 2 x 1 Double / Inverted'
+aliases    = [
   '/parts/3049a',
   '/parts/3049c',
   '/parts/3049d',
 ]
+partgroups = ['bricks-sloped']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/3049d/slope-45-2-x-1-double-inverted-with-bottom-stud-holder/'

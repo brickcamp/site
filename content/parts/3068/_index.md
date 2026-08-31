@@ -1,9 +1,10 @@
 +++
-title   = 'Tile 2 x 2'
-aliases = [
+title      = 'Tile 2 x 2'
+aliases    = [
   '/parts/3068a',
   '/parts/3068b',
 ]
+partgroups = ['tiles']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/3068b/tile-2-x-2-with-groove/'

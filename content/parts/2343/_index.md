@@ -1,5 +1,6 @@
 +++
-title   = 'Equipment Goblet / Glass'
+title      = 'Equipment Goblet / Glass'
+partgroups = ['minifig-accessories']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/2343/equipment-goblet-glass/'

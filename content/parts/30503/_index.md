@@ -1,5 +1,6 @@
 +++
-title   = 'Wedge Plate 4 x 4 Cut Corner'
+title      = 'Wedge Plate 4 x 4 Cut Corner'
+partgroups = ['plates-wedged']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/30503/wedge-plate-4-x-4-cut-corner/'

@@ -13,7 +13,7 @@ enableGitInfo = true
     disable = true
   [cascade.target]
     kind = '*'
-    path = '{/data,/data/**,/parts,/parts/**}'
+    path = '{/data,/data/**,/parts,/parts/**,/partgroups,/partgroups/**}'
 [[cascade]]
   [cascade.build]
     render = 'never'
@@ -24,7 +24,7 @@ enableGitInfo = true
   outputs = ["csv"]
   [cascade.target]
     kind = "{taxonomy,term}"
-    path = '{/parts,/parts/**}'
+    path = '{/parts,/parts/**,/partgroups,/partgroups/**}'
 [[cascade]]
   [cascade.build]
     render = 'never'
@@ -64,9 +64,10 @@ enableGitInfo = true
   description = 'A visual dictionary of LEGO® building techniques'
 
 [taxonomies]
-  part = 'parts'
-  uses = 'uses'
-  tag  = 'tags'
+  part      = 'parts'
+  partgroup = 'partgroups'
+  uses      = 'uses'
+  tag       = 'tags'
 
 [uglyURLs]
   _data = true

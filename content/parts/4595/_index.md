@@ -1,5 +1,6 @@
 +++
-title   = 'Brick Special 1 x 2 x 2/3 with Studs on Sides / Camera Brick'
+title      = 'Brick Special 1 x 2 x 2/3 with Studs on Sides / Camera Brick'
+partgroups = ['bricks-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/4595/brick-special-1-x-2-x-23-with-studs-on-sides/'

@@ -1,8 +1,9 @@
 +++
-title   = 'Cone 1 x 1'
-aliases = [
+title      = 'Cone 1 x 1'
+aliases    = [
   '/parts/4589',
 ]
+partgroups = ['bricks-round-cones']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/59900/cone-1-x-1-top-groove/'

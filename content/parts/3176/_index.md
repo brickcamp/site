@@ -1,5 +1,6 @@
 +++
-title   = 'Plate Special 3 x 2 with Rounded End, Hole'
+title      = 'Plate Special 3 x 2 with Rounded End, Hole'
+partgroups = ['plates-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/3176/plate-special-3-x-2-with-rounded-end-hole/'

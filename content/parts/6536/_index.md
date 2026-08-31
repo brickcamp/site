@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Axle and Pin Connector Perpendicular'
+title      = 'Technic Axle and Pin Connector Perpendicular'
+partgroups = ['technic-connectors']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/6536/technic-axle-and-pin-connector-perpendicular/'

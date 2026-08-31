@@ -1,5 +1,6 @@
 +++
-title   = 'Equipment Binoculars'
+title      = 'Equipment Binoculars'
+partgroups = ['minifig-accessories']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/30162/equipment-binoculars/'

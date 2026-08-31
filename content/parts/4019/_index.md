@@ -1,8 +1,9 @@
 +++
-title   = 'Technic Gear 16 Tooth'
-aliases = [
+title      = 'Technic Gear 16 Tooth'
+aliases    = [
   '/parts/94925',
 ]
+partgroups = ['technic-gears']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/4019/technic-gear-16-tooth-with-round-holes-old-style/'

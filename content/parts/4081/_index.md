@@ -1,9 +1,10 @@
 +++
-title   = 'Plate Special 1 x 1 with Clip Light'
-aliases = [
+title      = 'Plate Special 1 x 1 with Clip Light'
+aliases    = [
   '/parts/4081a',
   '/parts/4081b',
 ]
+partgroups = ['plates-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/4081b/plate-special-1-x-1-with-clip-light-bar-hole-thick-ring/'

@@ -1,8 +1,9 @@
 +++
-title   = 'Fence Spindled 4 x 4 x 2 Quarter Round'
-aliases = [
+title      = 'Fence Spindled 4 x 4 x 2 Quarter Round'
+aliases    = [
   '/parts/30056',
 ]
+partgroups = ['bars-ladders-fences']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/21229/fence-spindled-4-x-4-x-2-quarter-round-with-3-studs/'

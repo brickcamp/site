@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Pin 3/4'
+title      = 'Technic Pin 3/4'
+partgroups = ['technic-pins']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/32002/technic-pin-34/'

@@ -1,5 +1,6 @@
 +++
-title   = 'Hinge Brick 2 x 2 Top Plate Thin'
+title      = 'Hinge Brick 2 x 2 Top Plate Thin'
+partgroups = ['hinges-arms-turntables']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/6134/hinge-brick-2-x-2-top-plate-thin/'

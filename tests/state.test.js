@@ -21,9 +21,19 @@ test.beforeEach(() => {
 test("defaults open on everything, sorted by the catalog's default", () => {
   const s = at({});
   assert.deepEqual(s, {
-    base: ANY, type: ANY, value: ANY, part: ANY, size: ANY,
+    base: ANY, type: ANY, value: ANY, part: ANY, partgroup: ANY, size: ANY,
     sort: "date-desc", query: "", queryPending: false,
   });
+});
+
+test("picking a group drops the part; picking a part keeps the group", () => {
+  const inPart = at({ base: "part", partgroup: "bricks", part: "3001" });
+
+  const upToGroup = state.next(inPart, { partgroup: "plates" });
+  assert.equal(upToGroup.part, ANY);
+
+  const downToPart = state.next(upToGroup, { part: "3023" });
+  assert.equal(downToPart.partgroup, "plates");
 });
 
 test("switching base drops what only the old base could mean", () => {

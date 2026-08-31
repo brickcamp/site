@@ -1,5 +1,6 @@
 +++
-title   = 'Brick Special Octagonal 2 x 2 x 3 1/3 with Side Studs'
+title      = 'Brick Special Octagonal 2 x 2 x 3 1/3 with Side Studs'
+partgroups = ['bricks-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/6042/brick-special-octagonal-2-x-2-x-3-13-with-side-studs/'

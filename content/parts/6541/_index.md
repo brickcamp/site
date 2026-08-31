@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Brick 1 x 1'
+title      = 'Technic Brick 1 x 1'
+partgroups = ['technic-bricks']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/6541/technic-brick-1-x-1-with-pin-hole/'

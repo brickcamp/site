@@ -1,5 +1,6 @@
 +++
-title   = 'Brick Arch 1 x 3 x 2'
+title      = 'Brick Arch 1 x 3 x 2'
+partgroups = ['bricks-curved']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/88292/brick-arch-1-x-3-x-2/'

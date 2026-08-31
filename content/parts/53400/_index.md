@@ -1,9 +1,10 @@
 +++
-title   = 'Vehicle Track, Train, Curved (9V / RC)'
-aliases = [
+title      = 'Vehicle Track, Train, Curved (9V / RC)'
+aliases    = [
   '/parts/2827',
   '/parts/74747',
 ]
+partgroups = ['transportation-land']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/53400/vehicle-track-train-plastic-rc-trains-curved/'

@@ -1,8 +1,9 @@
 +++
-title   = 'Weapon Gun Ray / Sci Fi'
-aliases = [
+title      = 'Weapon Gun Ray / Sci Fi'
+aliases    = [
   '/parts/87993',
 ]
+partgroups = ['minifig-shields-weapons-tools']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/13608/weapon-gun-ray-sci-fi-rounded-heat-diffusers/'

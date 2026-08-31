@@ -1,8 +1,9 @@
 +++
-title   = 'Technic Link Tread Wide with Two Pin Holes'
-aliases = [
+title      = 'Technic Link Tread Wide with Two Pin Holes'
+aliases    = [
   '/parts/88323',
 ]
+partgroups = ['technic-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/57518/technic-link-tread-wide-with-two-pin-holes/'

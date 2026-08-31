@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Axle and Pin Connector Perpendicular 3L with Pin Hole'
+title      = 'Technic Axle and Pin Connector Perpendicular 3L with Pin Hole'
+partgroups = ['technic-connectors']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/32068/technic-axle-and-pin-connector-perpendicular-3l-with-pin-hole/'

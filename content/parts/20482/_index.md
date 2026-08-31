@@ -1,5 +1,6 @@
 +++
-title   = 'Tile Round 1 x 1 with Hollow Bar'
+title      = 'Tile Round 1 x 1 with Hollow Bar'
+partgroups = ['tiles-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/20482/tile-round-1-x-1-with-hollow-bar/'

@@ -1,8 +1,9 @@
 +++
-title   = 'Technic Pin Connector Round'
-aliases = [
+title      = 'Technic Pin Connector Round'
+aliases    = [
   '/parts/75535',
 ]
+partgroups = ['technic-connectors']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/62462/technic-pin-connector-round-slotted/'

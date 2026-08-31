@@ -1,5 +1,6 @@
 +++
-title   = 'Tile Round 2 x 2 with Hole'
+title      = 'Tile Round 2 x 2 with Hole'
+partgroups = ['tiles-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/15535/tile-round-2-x-2-with-hole/'

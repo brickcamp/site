@@ -1,5 +1,6 @@
 +++
-title   = 'Slope Inverted 65° 6 x 6 x 2 Quad with Cutouts'
+title      = 'Slope Inverted 65° 6 x 6 x 2 Quad with Cutouts'
+partgroups = ['bricks-sloped']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/30373/slope-inverted-65-6-x-6-x-2-quad-with-cutouts/'

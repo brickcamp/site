@@ -1,5 +1,6 @@
 +++
-title   = 'Brick Special 1 x 4 with Groove/Channel'
+title      = 'Brick Special 1 x 4 with Groove/Channel'
+partgroups = ['bricks-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/2653/brick-special-1-x-4-with-groove/'

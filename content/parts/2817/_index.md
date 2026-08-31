@@ -1,5 +1,6 @@
 +++
-title   = 'Plate Special 2 x 2 with 2 Pin Holes'
+title      = 'Plate Special 2 x 2 with 2 Pin Holes'
+partgroups = ['plates-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/2817/plate-special-2-x-2-with-2-pin-holes/'

@@ -1,5 +1,6 @@
 +++
-title   = 'Bracket 2 x 2 - 1 x 4'
+title      = 'Bracket 2 x 2 - 1 x 4'
+partgroups = ['supports-girders-cranes']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/2422/bracket-2-x-2-1-x-4/'

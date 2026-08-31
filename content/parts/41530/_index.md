@@ -1,5 +1,6 @@
 +++
-title   = 'Propeller 8 Blade 5 Diameter'
+title      = 'Propeller 8 Blade 5 Diameter'
+partgroups = ['transportation-sea-air']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/41530/propeller-8-blade-5-diameter/'

@@ -1,5 +1,6 @@
 +++
-title   = 'Plate Round 1 x 1'
+title      = 'Plate Round 1 x 1'
+partgroups = ['plates-round-curved-dishes']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/6141/plate-round-1-x-1-with-solid-stud/'

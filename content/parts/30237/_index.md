@@ -1,9 +1,10 @@
 +++
-title   = 'Brick Special 1 x 2 with Vertical Clip'
-aliases = [
+title      = 'Brick Special 1 x 2 with Vertical Clip'
+aliases    = [
   '/parts/30237a',
   '/parts/30237b',
 ]
+partgroups = ['bricks-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/30237a/brick-special-1-x-2-with-vertical-clip-thick-u-clip/'

@@ -1,5 +1,6 @@
 +++
-title   = 'Brick Round 4 x 4 with 4 Side Pin Holes and Center Axle Hole'
+title      = 'Brick Round 4 x 4 with 4 Side Pin Holes and Center Axle Hole'
+partgroups = ['bricks-round-cones']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/6222/brick-round-4-x-4-with-4-side-pin-holes-and-center-axle-hole/'

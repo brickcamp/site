@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Pin Connector Plate with One Hole (Single on Bottom)'
+title      = 'Technic Pin Connector Plate with One Hole (Single on Bottom)'
+partgroups = ['technic-connectors']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/32529/technic-pin-connector-plate-with-one-hole-single-on-bottom/'

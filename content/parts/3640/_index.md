@@ -1,5 +1,6 @@
 +++
-title   = 'Hinge Plate 2 x 4 with Articulated Joint - Female'
+title      = 'Hinge Plate 2 x 4 with Articulated Joint - Female'
+partgroups = ['hinges-arms-turntables']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/3640/hinge-plate-2-x-4-with-articulated-joint-female/'

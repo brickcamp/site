@@ -1,5 +1,6 @@
 +++
-title   = 'Fence Lattice 1 x 4 x 2'
+title      = 'Fence Lattice 1 x 4 x 2'
+partgroups = ['bars-ladders-fences']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/3185/fence-lattice-1-x-4-x-2/'

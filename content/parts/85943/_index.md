@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Brick 1 x 2 and Dual Beam Extensions'
+title      = 'Technic Brick 1 x 2 and Dual Beam Extensions'
+partgroups = ['technic-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/85943/technic-brick-1-x-2-with-hole-and-dual-beam-extensions/'

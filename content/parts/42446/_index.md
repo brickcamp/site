@@ -1,8 +1,9 @@
 +++
-title   = 'Minifig Neckwear Bracket with Stud'
-aliases = [
+title      = 'Minifig Neckwear Bracket with Stud'
+aliases    = [
   '/parts/28974',
 ]
+partgroups = ['minifig-neckwear']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/42446/minifig-neckwear-bracket-one-stud/'

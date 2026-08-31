@@ -1,9 +1,10 @@
 +++
-title   = 'Panel 1 x 2 x 1'
-aliases = [
+title      = 'Panel 1 x 2 x 1'
+aliases    = [
   '/parts/4865a',
   '/parts/4865b',
 ]
+partgroups = ['panels']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/4865a/panel-1-x-2-x-1-square-corners/'

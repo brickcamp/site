@@ -1,5 +1,6 @@
 +++
-title   = 'Brick Special 1 x 4 with 4 Studs on One Side'
+title      = 'Brick Special 1 x 4 with 4 Studs on One Side'
+partgroups = ['bricks-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/30414/brick-special-1-x-4-with-4-studs-on-one-side/'

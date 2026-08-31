@@ -4,6 +4,9 @@
 
 {{ define "main" }}
 <div class="container">
+  <nav id="part-trail" class="mb-3" aria-label="breadcrumb" hidden>
+    <ol class="breadcrumb mb-0"></ol>
+  </nav>
   <div id="parts" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 g-2 g-md-3 mb-3 justify-content-center">
   </div>
   <div id="parts-pagination" class="text-center mb-3" hidden>
@@ -30,8 +33,15 @@
           </a>          
         </div>
       </div>
+      <span class="insert-note badge text-bg-secondary position-absolute bottom-0 end-0" hidden></span>
     </div>
   </div>
+</template>
+
+<template id="crumb-template">
+  <li class="breadcrumb-item">
+    <a class="insert-title insert-link text-decoration-none" data-dim="partgroup"></a>
+  </li>
 </template>
 
 <template id="entry-template">

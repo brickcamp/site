@@ -1,5 +1,6 @@
 +++
-title   = 'Plant, Flower, Plate Round 1 x 1 with 4 Petals'
+title      = 'Plant, Flower, Plate Round 1 x 1 with 4 Petals'
+partgroups = ['plants-trees']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/33291/plant-flower-plate-round-1-x-1-with-4-petals/'

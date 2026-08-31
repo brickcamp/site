@@ -3,6 +3,7 @@ const STATE_PARAMS = Object.freeze({
   type: "type",
   value: "value",
   part: "part",
+  partgroup: "partgroup",
   size: "size",
   sort: "sort",
   query: "q",

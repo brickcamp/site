@@ -1,5 +1,6 @@
 +++
-title   = 'Plate Special 1 x 4 with Wheels Holder'
+title      = 'Plate Special 1 x 4 with Wheels Holder'
+partgroups = ['plates-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/2926/plate-special-1-x-4-with-wheels-holder/'

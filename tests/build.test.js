@@ -22,7 +22,7 @@ const skip = built ? false : "no build in public/ — run `hugo` first";
 
 const ANY = scope.ANY;
 const state = (patch) => ({
-  base: ANY, type: ANY, value: ANY, part: ANY, size: ANY,
+  base: ANY, type: ANY, value: ANY, part: ANY, partgroup: ANY, size: ANY,
   sort: scope.sortDefault(), query: "", ...patch,
 });
 
@@ -113,19 +113,73 @@ test("a scoped entry's values are the ones the value filter matches on", { skip 
   }
 });
 
-test("the part list parses, and a listed part leads to entries", { skip }, async () => {
-  await loadCatalog();
+// The part scope, on the real build: which scope reads from parts is itself a
+// string convention (a filter's `from`), so ask the catalog rather than assume.
+async function partScope() {
   const catalog = await (await serve("/data/scopes/index.json")).json();
-  const partScope = catalog.scopes.find((s) => s.from === "parts");
-  assert.ok(partScope, "no scope reads from parts");
+  const found = catalog.scopes.find((s) => s.from === "parts");
+  assert.ok(found, "no scope reads from parts");
+  return found.slug;
+}
 
-  const parts = await lookup.scopedParts(state({ base: partScope.slug }));
-  assert.ok(parts.length > 0, "the part list is empty");
-  for (const part of parts) {
-    assert.ok(part.id, "a part row has no id");
-    assert.ok(part.title, `part ${part.id} has no title`);
+test("the part list opens on groups, each leading somewhere", { skip }, async () => {
+  await loadCatalog();
+  const base = await partScope();
+
+  const listed = await lookup.scopedParts(state({ base: base }));
+  assert.ok(listed.length > 0, "the part list is empty");
+
+  const groups = listed.filter((item) => item.dim === "partgroup");
+  assert.ok(groups.length > 0, "no group in the part list — check the partgroups CSV path");
+
+  for (const group of groups) {
+    assert.ok(group.title, `group ${group.id} has no title`);
+    assert.match(group.image, /^\/parts\/.+\/__image-min\.webp$/, `group ${group.id} borrows no image`);
+
+    const members = await lookup.scopedParts(state({ base: base, partgroup: group.id }));
+    assert.ok(members.length > 0, `group ${group.id} lists no parts`);
+    assert.equal(group.note, `${members.length} part${members.length === 1 ? "" : "s"}`);
+
+    const entries = await lookup.scopedEntries(state({ base: base, partgroup: group.id }));
+    assert.ok(entries.length > 0, `group ${group.id} holds parts but no entries`);
   }
+});
 
-  const entries = await lookup.scopedEntries(state({ base: partScope.slug, part: parts[0].id }));
-  assert.ok(entries.length > 0, `part ${parts[0].id} is listed but has no entries`);
+test("every part is in the list, once, under a group or on its own", { skip }, async () => {
+  await loadCatalog();
+  const base = await partScope();
+
+  const all = await lookup.scopedParts(state({ base: base, part: "__none__" }));
+  const listed = await lookup.scopedParts(state({ base: base }));
+  const groups = listed.filter((item) => item.dim === "partgroup").map((item) => item.id);
+
+  const seen = new Set(listed.filter((item) => item.dim === "part").map((item) => item.id));
+  for (const group of groups) {
+    for (const member of await lookup.scopedParts(state({ base: base, partgroup: group }))) {
+      assert.ok(!seen.has(member.id), `part ${member.id} is listed twice`);
+      seen.add(member.id);
+    }
+  }
+  assert.equal(seen.size, 0 + (await countParts()), "a part is in no group and in no list");
+  assert.equal(all.length, 0, "a part filter that matches nothing still returned rows");
+});
+
+async function countParts() {
+  const res = await serve("/parts/index.csv");
+  return (await res.text()).trim().split("\n").filter(Boolean).length;
+}
+
+test("a listed part leads to entries", { skip }, async () => {
+  await loadCatalog();
+  const base = await partScope();
+
+  const listed = await lookup.scopedParts(state({ base: base }));
+  const group = listed.find((item) => item.dim === "partgroup");
+  const [member] = await lookup.scopedParts(state({ base: base, partgroup: group.id }));
+
+  assert.ok(member.id, "a part row has no id");
+  assert.ok(member.title, `part ${member.id} has no title`);
+
+  const entries = await lookup.scopedEntries(state({ base: base, part: member.id }));
+  assert.ok(entries.length > 0, `part ${member.id} is listed but has no entries`);
 });

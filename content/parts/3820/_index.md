@@ -1,5 +1,6 @@
 +++
-title   = 'Minifig Hand'
+title      = 'Minifig Hand'
+partgroups = ['minifig-upper-body']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/3820/minifig-hand/'

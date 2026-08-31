@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Wedge Belt Wheel (Pulley)'
+title      = 'Technic Wedge Belt Wheel (Pulley)'
+partgroups = ['wheels-tyres']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/4185/technic-wedge-belt-wheel-aka-pulley/'

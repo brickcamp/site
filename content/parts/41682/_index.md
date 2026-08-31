@@ -1,5 +1,6 @@
 +++
-title   = 'Bracket 2 x 2 with 1 x 2 Vertical Studs'
+title      = 'Bracket 2 x 2 with 1 x 2 Vertical Studs'
+partgroups = ['plates-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/41682/bracket-2-x-2-with-1-x-2-vertical-studs/'

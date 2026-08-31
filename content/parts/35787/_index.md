@@ -1,5 +1,6 @@
 +++
-title   = 'Tile 45° Cut 2 x 2 (Triangle)'
+title      = 'Tile 45° Cut 2 x 2 (Triangle)'
+partgroups = ['tiles-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/35787/tile-45-cut-2-x-2-triangle/'

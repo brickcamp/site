@@ -1,5 +1,6 @@
 +++
-title   = 'Weapon Gun / Blaster 1 x 2 x 2/3 with Studs on Sides and Handle'
+title      = 'Weapon Gun / Blaster 1 x 2 x 2/3 with Studs on Sides and Handle'
+partgroups = ['minifig-shields-weapons-tools']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/15071/weapon-gun-blaster-1-x-2-x-23-with-studs-on-sides-and-handle/'

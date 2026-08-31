@@ -1,5 +1,6 @@
 +++
-title   = 'Bracket 1 x 2 - 1 x 2'
+title      = 'Bracket 1 x 2 - 1 x 2'
+partgroups = ['plates-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/99781/bracket-1-x-2-1-x-2/'

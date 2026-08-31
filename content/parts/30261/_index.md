@@ -1,5 +1,6 @@
 +++
-title   = 'Road Sign Clip-on 2 x 2 Round'
+title      = 'Road Sign Clip-on 2 x 2 Round'
+partgroups = ['flags-banners-signs']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/30261/road-sign-clip-on-2-x-2-round/'

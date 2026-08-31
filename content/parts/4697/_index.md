@@ -1,9 +1,10 @@
 +++
-title   = 'Pneumatic T-Piece (T Bar)'
-aliases = [
+title      = 'Pneumatic T-Piece (T Bar)'
+aliases    = [
   '/parts/4697a',
   '/parts/4697b',
 ]
+partgroups = ['pneumatics']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/4697b/pneumatic-t-piece-t-bar-new-style/'

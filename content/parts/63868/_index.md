@@ -1,5 +1,6 @@
 +++
-title   = 'Plate Special 1 x 2 with Clip Horizontal on End'
+title      = 'Plate Special 1 x 2 with Clip Horizontal on End'
+partgroups = ['plates-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/63868/plate-special-1-x-2-with-clip-horizontal-on-end/'

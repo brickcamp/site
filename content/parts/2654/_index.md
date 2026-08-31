@@ -1,5 +1,6 @@
 +++
-title   = 'Plate Round 2 x 2 with Rounded Bottom / Boat Stud'
+title      = 'Plate Round 2 x 2 with Rounded Bottom / Boat Stud'
+partgroups = ['plates-round-curved-dishes']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/2654/plate-round-2-x-2-with-rounded-bottom-boat-stud/'

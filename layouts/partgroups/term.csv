@@ -1,0 +1,17 @@
+{{/* Every entry naming any part in this group, deduplicated: an entry that
+     uses two parts of one group belongs in it once. */}}
+{{- $entries := slice -}}
+{{- $seen    := dict -}}
+{{- range .Pages -}}
+  {{- range .Pages -}}
+    {{- if not (index $seen .RelPermalink) -}}
+      {{- $seen    = merge $seen (dict .RelPermalink true) -}}
+      {{- $entries = $entries | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- range sort $entries "Title" -}}
+  {{- $line := partial "entries/getLookupRow" (dict "page" .) -}}
+{{ printf "%s\n" $line }}
+{{- end -}}

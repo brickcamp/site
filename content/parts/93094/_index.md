@@ -1,5 +1,6 @@
 +++
-title   = 'Lipstick'
+title      = 'Lipstick'
+partgroups = ['minifig-accessories']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/93094pat0001/lipstick-with-light-bluish-gray-handle/'

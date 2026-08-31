@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Connector Beam 3 x 3'
+title      = 'Technic Connector Beam 3 x 3'
+partgroups = ['technic-beams']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/39793/technic-connector-beam-3-x-3/'

@@ -94,6 +94,19 @@ in case the image is missing or needs to be swapped.
 with the part image downloaded next to it. 
 Adding new parts needs a [Rebrickable API](https://rebrickable.com/api/) key in `.env`.
 
+A part also joins a **part group** — the browsing buckets the part list opens
+on, in `content/partgroups/`, one per Rebrickable part category. `npm run new`
+files a new part and creates the group page if it is the first of its kind, so
+this is only for parts added by hand or filed wrong:
+
+```sh
+npm run partgroups             # report what is unfiled
+npm run partgroups -- --write  # file it, creating the group pages it needs
+```
+
+It never re-files a part that already names a group; move one by editing its
+`partgroups` front matter.
+
 ## License
 
 The repository splits three ways:

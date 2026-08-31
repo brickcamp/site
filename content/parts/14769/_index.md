@@ -1,8 +1,9 @@
 +++
-title   = 'Tile Round 2 x 2'
-aliases = [
+title      = 'Tile Round 2 x 2'
+aliases    = [
   '/parts/4150',
 ]
+partgroups = ['tiles-round-curved']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/14769/tile-round-2-x-2-with-bottom-stud-holder/'

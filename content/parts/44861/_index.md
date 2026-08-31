@@ -1,8 +1,9 @@
 +++
-title   = 'Plate Special 1 x 2, Top Clip'
-aliases = [
+title      = 'Plate Special 1 x 2, Top Clip'
+aliases    = [
   '/parts/92280',
 ]
+partgroups = ['plates-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/44861/plate-special-1-x-2-top-clip-open-o/'

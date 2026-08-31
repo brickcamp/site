@@ -7,6 +7,7 @@ function defaults() {
     type: appScope.ANY,
     value: appScope.ANY,
     part: appScope.ANY,
+    partgroup: appScope.ANY,
     size: appScope.ANY,
     sort: appScope.sortDefault(),
     query: "",
@@ -21,12 +22,25 @@ export function next(previous, patch) {
 
   // Reset base-specific state on switching base
   if ("base" in patch) {
-    result = { ...result, type: appScope.ANY, value: appScope.ANY, part: appScope.ANY };
+    result = {
+      ...result,
+      type: appScope.ANY,
+      value: appScope.ANY,
+      part: appScope.ANY,
+      partgroup: appScope.ANY,
+    };
+  }
+
+  // Picking a group leaves the part behind — the two crumbs of the trail are
+  // set from one control each, so "up" and "all parts" need no patch of their
+  // own. Picking a part keeps the group, which is what the trail leads back to.
+  if ("partgroup" in patch) {
+    result = { ...result, part: appScope.ANY };
   }
 
   // Reset search when it switches between parts and entries
   const opensPartList = "base" in patch && appScope.scopeFor(result).isPartList;
-  if ("part" in patch || opensPartList) {
+  if ("part" in patch || "partgroup" in patch || opensPartList) {
     result = { ...result, query: "", queryPending: false };
   }
 
@@ -65,6 +79,10 @@ export function normalize(input) {
 
   if (!result.value || !appScope.scopeFor(result).hasValues) {
     result = { ...result, value: appScope.ANY };
+  }
+
+  if (!appScope.scopeFor(result).hasParts) {
+    result = { ...result, partgroup: appScope.ANY };
   }
 
   if (!appScope.scopeFor(result).hasSize) {

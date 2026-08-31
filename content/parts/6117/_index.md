@@ -1,5 +1,6 @@
 +++
-title   = 'Tool Chainsaw Blade'
+title      = 'Tool Chainsaw Blade'
+partgroups = ['minifig-shields-weapons-tools']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/6117/tool-chainsaw-blade/'

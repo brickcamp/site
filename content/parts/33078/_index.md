@@ -1,5 +1,6 @@
 +++
-title   = 'Food Hot Dog / Sausage'
+title      = 'Food Hot Dog / Sausage'
+partgroups = ['minifig-accessories']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/33078/food-hot-dog-sausage/'

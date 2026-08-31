@@ -1,12 +1,13 @@
 +++
-title   = 'Hinge Plate 1 x 4 Swivel Top / Base'
-aliases = [
+title      = 'Hinge Plate 1 x 4 Swivel Top / Base'
+aliases    = [
   '/parts/1927',
   '/parts/2429',
   '/parts/2430',
   '/parts/80133',
   '/parts/80134',
 ]
+partgroups = ['hinges-arms-turntables']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/73983/hinge-plate-1-x-4-swivel-top-base-solid-clip-complete-assembly/'

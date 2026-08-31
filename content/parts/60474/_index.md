@@ -1,5 +1,6 @@
 +++
-title   = 'Plate Round 4 x 4 with Pin Hole'
+title      = 'Plate Round 4 x 4 with Pin Hole'
+partgroups = ['plates-round-curved-dishes']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/60474/plate-round-4-x-4-with-pin-hole/'

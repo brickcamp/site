@@ -1,8 +1,9 @@
 +++
-title   = 'Technic Plate 2 x 4 with 3 Holes'
-aliases = [
+title      = 'Technic Plate 2 x 4 with 3 Holes'
+aliases    = [
   '/parts/3020',
 ]
+partgroups = ['plates-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/3709/technic-plate-2-x-4-3-holes/'

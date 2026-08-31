@@ -1,5 +1,6 @@
 +++
-title   = 'Brick Curved 2 x 2, Two Top Studs'
+title      = 'Brick Curved 2 x 2, Two Top Studs'
+partgroups = ['bricks-curved']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/30165/brick-curved-2-x-2-two-top-studs/'

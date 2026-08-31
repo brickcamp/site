@@ -1,5 +1,6 @@
 +++
-title   = 'Tile 1 x 2 with Stud Notch Left'
+title      = 'Tile 1 x 2 with Stud Notch Left'
+partgroups = ['tiles-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/5091/tile-1-x-2-with-stud-notch-left/'

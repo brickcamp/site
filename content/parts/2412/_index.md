@@ -1,9 +1,10 @@
 +++
-title   = 'Tile Special 1 x 2 Grille'
-aliases = [
+title      = 'Tile Special 1 x 2 Grille'
+aliases    = [
   '/parts/2412a',
   '/parts/2412b',
 ]
+partgroups = ['tiles-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/2412b/tile-special-1-x-2-grille-with-bottom-groove/'

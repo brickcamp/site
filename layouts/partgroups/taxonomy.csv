@@ -1,0 +1,42 @@
+{{/* The part group list, read back by parseGroupRow() in
+     assets/js/home/lookup.js — so change the columns there and here together.
+
+     A group has no image of its own: it borrows a member's, named by the
+     group's imageFrom param, or the first member by title. */}}
+{{- $rows := slice -}}
+{{- range .Data.Terms -}}
+  {{- $page := .Page -}}
+
+  {{/* A part no entry names is no term, so it is not in the part list — and
+       so it is not in a group's count, or the image the group borrows. */}}
+  {{- $members := slice -}}
+  {{- range sort .Pages "Title" -}}
+    {{- if gt (len .Pages) 0 -}}
+      {{- $members = $members | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if eq (len $members) 0 -}}
+    {{- continue -}}
+  {{- end -}}
+
+  {{- $image := "" -}}
+  {{- with $page.Params.imageFrom -}}
+    {{- $image = printf "/parts/%s/__image-min.webp" . -}}
+  {{- else -}}
+    {{- with index $members 0 -}}
+      {{- $image = printf "/parts/%s/__image-min.webp" (path.BaseName .Path) -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $rows = $rows | append (dict
+      "slug"  (path.BaseName $page.Path)
+      "title" $page.Title
+      "count" (len $members)
+      "image" $image
+  ) -}}
+{{- end -}}
+
+{{- range sort $rows "title" -}}
+  {{- $line := partial "csv/getRow" (slice .slug .title .count .image) -}}
+{{- printf "%s\n" $line -}}
+{{- end -}}

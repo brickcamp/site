@@ -1,5 +1,6 @@
 +++
-title   = 'Bar 3L'
+title      = 'Bar 3L'
+partgroups = ['bars-ladders-fences']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/87994/bar-3l/'

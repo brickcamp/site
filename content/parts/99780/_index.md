@@ -1,5 +1,6 @@
 +++
-title   = 'Bracket 1 x 2 - 1 x 2 Inverted'
+title      = 'Bracket 1 x 2 - 1 x 2 Inverted'
+partgroups = ['plates-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/99780/bracket-1-x-2-1-x-2-inverted/'

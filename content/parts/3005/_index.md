@@ -1,5 +1,6 @@
 +++
-title   = 'Brick 1 x 1'
+title      = 'Brick 1 x 1'
+partgroups = ['bricks']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/3005/brick-1-x-1/'

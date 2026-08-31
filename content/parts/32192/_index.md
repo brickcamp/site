@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Axle and Pin Connector Angled #4 - 135°'
+title      = 'Technic Axle and Pin Connector Angled #4 - 135°'
+partgroups = ['technic-connectors']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/32192/technic-axle-and-pin-connector-angled-4-135/'

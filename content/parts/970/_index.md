@@ -1,5 +1,6 @@
 +++
-title   = 'Hips and Blue Legs'
+title      = 'Hips and Blue Legs'
+partgroups = ['minifig-lower-body']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/970c28/hips-and-blue-legs/'

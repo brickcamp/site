@@ -5,8 +5,9 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { envKey, get, root, tomlQuote } from './shared.js';
+import { groupForCategory, withGroup } from './partgroup.js';
 
-function frontMatter(part) {
+function frontMatter(part, group) {
   const aliases = [...new Set([...(part.molds ?? []), ...(part.alternates ?? [])])]
     .map((id) => `/parts/${id}`)
     .sort();
@@ -19,7 +20,7 @@ function frontMatter(part) {
   out += `rebrickablePage  = ${tomlQuote(part.part_url ?? '')}\n`;
   out += `rebrickableImage = ${tomlQuote(part.part_img_url ?? '')}\n`;
   out += `+++\n`;
-  return out;
+  return group ? withGroup(out, group) : out;
 }
 
 // What Rebrickable knows about a part, page or no page — the parts stage
@@ -44,9 +45,10 @@ export async function createPart(number) {
   }
 
   const part = await lookupPart(number);
+  const group = await groupForCategory(part.part_cat_id);
 
   await mkdir(dir, { recursive: true });
-  await writeFile(path.join(dir, '_index.md'), frontMatter(part));
+  await writeFile(path.join(dir, '_index.md'), frontMatter(part, group));
 
   if (part.part_img_url) {
     const image = await get(part.part_img_url);

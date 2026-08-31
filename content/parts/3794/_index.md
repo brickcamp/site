@@ -1,10 +1,11 @@
 +++
-title   = 'Plate Special 1 x 2 with 1 Stud (Jumper)'
-aliases = [
+title      = 'Plate Special 1 x 2 with 1 Stud (Jumper)'
+aliases    = [
   '/parts/15573',
   '/parts/3794a',
   '/parts/3794b',
 ]
+partgroups = ['plates-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/3794b/plate-special-1-x-2-with-1-stud-with-groove-jumper/'

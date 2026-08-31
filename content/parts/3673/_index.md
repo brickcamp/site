@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Pin without Friction'
+title      = 'Technic Pin without Friction'
+partgroups = ['technic-pins']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/3673/technic-pin-without-friction-ridges-lengthwise/'

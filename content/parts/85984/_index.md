@@ -1,5 +1,6 @@
 +++
-title   = 'Slope 30° 1 x 2 x 2/3'
+title      = 'Slope 30° 1 x 2 x 2/3'
+partgroups = ['bricks-sloped']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/85984/slope-30-1-x-2-x-23/'

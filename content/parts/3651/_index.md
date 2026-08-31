@@ -1,5 +1,6 @@
 +++
-title   = 'Technic Axle and Pin Connector'
+title      = 'Technic Axle and Pin Connector'
+partgroups = ['technic-connectors']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/3651/technic-axle-and-pin-connector/'

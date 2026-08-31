@@ -1,5 +1,6 @@
 +++
-title   = 'Pneumatic Hose Connector with Axle Connector'
+title      = 'Pneumatic Hose Connector with Axle Connector'
+partgroups = ['pneumatics']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/99021/pneumatic-hose-connector-with-axle-connector/'

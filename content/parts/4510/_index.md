@@ -1,5 +1,6 @@
 +++
-title   = 'Plate Special 1 x 8 with Door Rail'
+title      = 'Plate Special 1 x 8 with Door Rail'
+partgroups = ['plates-special']
 
 [params]
 rebrickablePage  = 'https://rebrickable.com/parts/4510/plate-special-1-x-8-with-door-rail/'

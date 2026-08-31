@@ -6,6 +6,10 @@
 {{- range (sort $entries "Title") -}}
   {{- partial "tags/saveMinifiedPartImage" . -}}
   {{- $partNumber := path.BaseName .Page.Path -}}
-  {{- $line := partial "csv/getRow" (slice $partNumber .Page.Title) -}}
+  {{- $group := "" -}}
+  {{- with .Params.partgroups -}}
+    {{- $group = index . 0 -}}
+  {{- end -}}
+  {{- $line := partial "csv/getRow" (slice $partNumber .Page.Title $group) -}}
 {{- printf "%s\n" $line -}}
 {{- end -}}
