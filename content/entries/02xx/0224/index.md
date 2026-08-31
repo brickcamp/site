@@ -1,5 +1,5 @@
 +++
-title = 'Hinge Plate 4x4/1x4 Cheese Angle'
+title = 'Hinge Plate 4 x 4/1 x 4 Cheese Angle'
 date  = '2026-02-22'
 
 url   = '/entry/hinge-plate-4x4-1x4-cheese-angle/'

@@ -1,5 +1,5 @@
 +++
-title = 'Wedge Plates 4x2 with 1x2 Plate'
+title = 'Wedge Plates 4 x 2 with 1 x 2 Plate'
 date  = '2026-01-08'
 
 url     = '/entry/wedge-plates-4x2-connected-with-1x2-plate/'

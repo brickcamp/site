@@ -1,5 +1,5 @@
 +++
-title = 'Round Plate In Arch Bricks'
+title = 'Round Plate in Arch Bricks'
 date  = '2026-08-23'
 
 url     = '/entry/round-plate-in-arch-bricks/'

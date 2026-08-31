@@ -1,5 +1,5 @@
 +++
-title = 'Angled Plate in Slope 2x1 Double Square'
+title = 'Angled Plate in Slope 2 x 1 Double Square'
 date  = '2026-02-20'
 
 url   = '/entry/slope-2x1-double-square-with-angled-plate/'

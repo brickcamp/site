@@ -1,5 +1,5 @@
 +++
-title = 'Tiles In 2x2 Plate Underside'
+title = 'Tiles in 2 x 2 Plate Underside'
 date  = '2026-08-28'
 
 url     = '/entry/tiles-in-2x2-plate-underside/'

@@ -1,5 +1,5 @@
 +++
-title = '1x1 Sidestud Bricks Angled 45°'
+title = '1 x 1 Sidestud Bricks Angled 45°'
 date  = '2026-02-14'
 url   = '/entry/brick-1x1-sidestuds-angled-45deg/'
 aliases = ['/e/219']

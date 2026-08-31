@@ -1,5 +1,5 @@
 +++
-title = 'Technic Bricks 1×1 Axle Hole SNOT'
+title = 'Technic Bricks 1 x 1 Axle Hole SNOT'
 date  = '2026-07-30'
 
 url   = '/entry/technic-bricks-1x1-axle-hole-snot/'

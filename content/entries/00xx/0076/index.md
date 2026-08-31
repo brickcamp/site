@@ -1,5 +1,5 @@
 +++
-title = 'Pneumatic T with Plate 1x4 Offset'
+title = 'Pneumatic T with Plate 1 x 4 Offset'
 date  = '2015-09-14'
 
 url     = '/entry/pneumatic-t-and-plate-1x4-offset-snot/'

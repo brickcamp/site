@@ -1,5 +1,5 @@
 +++
-title = 'Jagged 1x1 Bricks'
+title = 'Jagged 1 x 1 Bricks'
 date  = '2026-08-17'
 
 url     = '/entry/jagged-1x1-bricks/'

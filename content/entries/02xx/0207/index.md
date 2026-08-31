@@ -1,5 +1,5 @@
 +++
-title = 'Connector Beam 3x3 SNOT'
+title = 'Connector Beam 3 x 3 SNOT'
 date  = '2025-12-28'
 
 url     = '/entry/connector-beam-3x3-snot/'

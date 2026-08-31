@@ -1,5 +1,5 @@
 +++
-title = 'Cheese Clipped To Octagonal Bar Holder'
+title = 'Cheese Clipped to Octagonal Bar Holder'
 date  = '2026-08-13'
 
 url     = '/entry/cheese-clipped-to-octagonal-bar-holder/'

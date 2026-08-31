@@ -1,5 +1,5 @@
 +++
-title = '1x5 Plate Octagon'
+title = '1 x 5 Plate Octagon'
 date  = '2026-08-08'
 
 url     = '/entry/1x5-plate-octagon/'

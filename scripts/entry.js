@@ -8,6 +8,7 @@ import path from 'node:path';
 import { entryEditor } from './entry-editor.js';
 import { gitAuthor, stubModel } from './model.js';
 import { root } from './shared.js';
+import { titleCase } from './title.js';
 
 // Trailing-x width of each bucket level above an entry, top to leaf.
 // Twin constant: $layers in layouts/_partials/entries/validateIds.html.
@@ -43,7 +44,7 @@ export function createEntry(slug) {
   // stdin stays ours: the caller is usually mid-question on the terminal.
   execFileSync('hugo', ['new', relative], { cwd: root, stdio: ['ignore', 'inherit', 'inherit'] });
 
-  const title = slug.split('-').map((word) => word[0].toUpperCase() + word.slice(1)).join(' ');
+  const title = titleCase(slug);
   const doc = entryEditor(file);
   doc.setTitle(title);
   doc.setUrl(`/entry/${slug}/`);

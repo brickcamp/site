@@ -26,6 +26,7 @@ import { createPart, lookupPart } from './part.js';
 import { ask, closePrompt, confirm, isNo, isYes, question } from './prompt.js';
 import { VIEW, renderImage } from './render.js';
 import { root } from './shared.js';
+import { titleIssues } from './title.js';
 
 const PLACEHOLDER_PARTS = ['3002', '3004'];
 
@@ -258,6 +259,13 @@ const STAGES = [
     name: 'commit',
     done: (entry) => git('status', '--porcelain', '--', entry.dir).trim() === '',
     async run(entry) {
+      // Last gate on the title: the one set at scaffold time was only a guess
+      // from the slug, and renaming an entry on the way here is the norm.
+      const issues = titleIssues(entry.doc.title);
+      if (issues.length) {
+        throw new Error(`title "${entry.doc.title}": ${issues.join('; ')}`);
+      }
+
       const parts = git('status', '--porcelain', '--', path.join(root, 'content', 'parts'))
         .split('\n')
         .filter(Boolean)

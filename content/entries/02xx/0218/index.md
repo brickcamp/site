@@ -1,5 +1,5 @@
 +++
-title = 'Towball Between Clips'
+title = 'Towball between Clips'
 date  = '2026-02-13'
 url   = '/entry/towball-between-clips/'
 aliases = ['/e/218']

@@ -1,5 +1,5 @@
 +++
-title = 'Technic Brick 1x2 Stacked Hexagonal'
+title = 'Technic Brick 1 x 2 Stacked Hexagonal'
 date  = '2026-02-26'
 
 url     = '/entry/technic-brick-1x2-stacked-hexagonal/'
