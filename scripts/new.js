@@ -1,56 +1,72 @@
 #!/usr/bin/env node
-// The one command behind npm run new: asks what to add — an entry, a link,
-// a link image or a part — and for the details, then does it. A new entry
-// carries straight on into the stage runner that walks it to a commit.
+// The one command behind npm run new: asks what to add — an entry, a link, an
+// image or a part — and for the details, then does it. Picking "entry" is
+// itself the answer to "shall I scaffold?", so it goes straight into the
+// stage runner, which owns scaffolding and everything after it.
 
-import { createEntry, highestId, isEntryId, isSlug } from './entry.js';
+import { highestId, isEntryId } from './entry.js';
 import { addLink, addLinkImage } from './link.js';
 import { createPart } from './part.js';
-import { ask, closePrompt } from './prompt.js';
 import { runStages } from './stages.js';
+import { Abort, ask, bye, clear, red, say, select } from './tui.js';
 
-const KINDS = {
-  e: 'entry', entry: 'entry',
-  l: 'link', link: 'link',
-  i: 'link image', image: 'link image', 'link image': 'link image',
-  p: 'part', part: 'part',
-};
-const kind = KINDS[
-  (await ask('add entry, link, link image or part (e/l/i/p)',
-             'entry',
-             (answer) => answer.toLowerCase() in KINDS,
-             'answer entry, link, link image or part')
-  ).toLowerCase()
+const KINDS = [
+  { label: 'Entry', description: 'a technique: model, render, parts, sources, commit' },
+  { label: 'Link', description: 'a source url on an entry that already exists' },
+  { label: 'Image', description: 'a source url whose preview image you point at' },
+  { label: 'Part', description: 'a part page, pulled from Rebrickable' },
 ];
 
-let run;
-if (kind === 'entry') {
-  const slug = await ask('url slug', undefined, isSlug, 'lowercase, digits, dashes');
-  run = () => runStages(createEntry(slug));
-} else if (kind === 'part') {
-  const numbers = (
-    await ask('part number(s)', undefined, (answer) => answer !== '', 'one or more, space-separated')
-  ).split(/\s+/);
-  run = async () => {
+clear();
+say();
+
+// Esc at any of these questions is "never mind", not an error: nothing has
+// been written yet, and the stage runner has its own answer to esc.
+try {
+  await create();
+} catch (error) {
+  if (error instanceof Abort) bye(0);
+  say(`${red('error')}: ${error.message}`);
+  process.exitCode = 1;
+}
+bye(process.exitCode ?? 0);
+
+async function create() {
+  const { label } = await select({
+    question: 'What would you like to create?',
+    options: KINDS,
+    hint: '↑↓ to move  ·  enter to choose  ·  or press e, l, i, p',
+  });
+
+  if (label === 'Entry') return runStages();
+
+  if (label === 'Part') {
+    const numbers = (
+      await ask({
+        prompt: '  part number(s)',
+        valid: (answer) => answer !== '',
+        hint: 'one or more, space-separated',
+      })
+    ).split(/\s+/);
     for (const number of numbers) {
       await createPart(number).catch((error) => {
-        console.error(`error: ${error.message}`);
+        say(`${red('error')}: ${error.message}`);
         process.exitCode = 1;
       });
     }
-  };
-} else {
-  const id = await ask('entry number', String(highestId()), isEntryId, 'an entry number, digits only');
-  const url = await ask(kind === 'link' ? 'url' : 'image url', undefined,
-    (answer) => URL.canParse(answer), 'a full url, including https://');
-  run = () => (kind === 'link' ? addLink(id, url) : addLinkImage(id, url));
-}
+    return undefined;
+  }
 
-try {
-  await run();
-} catch (error) {
-  console.error(`error: ${error.message}`);
-  process.exitCode = 1;
-} finally {
-  closePrompt();
+  const id = await ask({
+    prompt: '  entry number',
+    fallback: String(highestId()),
+    valid: isEntryId,
+    hint: 'an entry number, digits only',
+  });
+  const url = await ask({
+    prompt: label === 'Link' ? '  url' : '  image url',
+    valid: (answer) => URL.canParse(answer),
+    hint: 'a full url, including https://',
+  });
+  return label === 'Link' ? addLink(id, url) : addLinkImage(id, url);
 }

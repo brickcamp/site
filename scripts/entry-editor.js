@@ -181,6 +181,9 @@ export function entryEditor(file) {
     get hasLinkbox() {
       return (sec?.body ?? '').includes('{{< linkbox');
     },
+    get linkboxes() {
+      return ((sec?.body ?? '').match(/\{\{< linkbox/g) ?? []).length;
+    },
 
     linksTo: (url) => (sec?.body ?? '').includes(`url="${url}"`),
     refresh: reread,
