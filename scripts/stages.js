@@ -6,7 +6,7 @@
 //
 //   npm run entry [id]
 //
-// Building the model takes an hour, so nothing here assumes the terminal
+// Modelling can take a while, so nothing here assumes the terminal
 // stayed open. Every stage detects on its own whether it is already done by
 // looking at the entry folder — there is no progress file — which is also
 // what makes each of them individually re-runnable and idempotent. The board
